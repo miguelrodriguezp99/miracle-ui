@@ -2,7 +2,11 @@ import options from "./constants";
 import PropTypes from "prop-types";
 import React from "react";
 
-export const Card = ({ children, color = "primary", size = "md" }) => {
+export const Card = ({
+  children = "Children",
+  color = "primary",
+  size = "md",
+}) => {
   return <div>{children}</div>;
 };
 
