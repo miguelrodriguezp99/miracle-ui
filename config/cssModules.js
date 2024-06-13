@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const cssModules = () => async (config) => {
   config.module.rules.find(
-    (rule) => rule.test.toString() === "/\\.css$/"
+    (rule) => rule.test.toString() === "/\\.css.module$/"
   ).exclude = /\.module\.css$/;
 
   config.module.rules.push({
