@@ -1,6 +1,6 @@
 {
   "name": "mirakle-ui-react",
-  "version": "1.0.21",
+  "version": "1.0.4",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -31,9 +31,7 @@
     "chromatic": "npx chromatic --project-token=chpt_1a2c38b0d2ea6e6"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -69,5 +67,8 @@
     "typescript": "^5.4.5",
     "vite": "^5.2.0"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
