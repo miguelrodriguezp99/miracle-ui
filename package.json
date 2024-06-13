@@ -1,6 +1,6 @@
 {
   "name": "mirakle-ui-react",
-  "version": "1.0.1",
+  "version": "1.0.21",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -69,8 +69,5 @@
     "typescript": "^5.4.5",
     "vite": "^5.2.0"
   },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+  "peerDependencies": {}
 }
