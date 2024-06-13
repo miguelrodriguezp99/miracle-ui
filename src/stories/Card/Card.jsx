@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import classNames from "classnames";
 
-import styles from "./card.module.css";
+import styles from "./Card.module.css";
 // import { getClasses } from "../../helpers/styles";
 
 export const Card = ({
@@ -13,6 +13,19 @@ export const Card = ({
   isClickable,
   isDraggable,
 }) => {
+  return (
+    <div
+      className={classNames(styles.card, {
+        [styles[`color-${color}`]]: color, //just applies if the color exists
+        [styles[`size-${size}`]]: size,
+        [styles["is-clickable"]]: isClickable,
+        [styles["is-draggable"]]: isDraggable,
+      })}
+    >
+      {children}
+    </div>
+  );
+
   // const getStyles = getClasses(styles)({
   //   color,
   //   size,
@@ -28,19 +41,6 @@ export const Card = ({
   //     {children}
   //   </div>
   // );
-
-  return (
-    <div
-      className={classNames(styles.card, {
-        [styles[`color-${color}`]]: color, //just applies if the color exists
-        [styles[`size-${size}`]]: size,
-        [styles["is-clickable"]]: isClickable,
-        [styles["is-draggable"]]: isDraggable,
-      })}
-    >
-      {children}
-    </div>
-  );
 };
 
 Card.propTypes = {
