@@ -1,0 +1,41 @@
+.card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 12px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-sm);
+    transition: box-shadow 0.3s ease-in;
+}
+
+.color-primary{
+    color: white;
+    background-color: var(--color-primary);
+}
+
+.color-secondary{
+    color: white;
+    background-color: var(--color-secondary);
+}
+
+.size-sm{
+    font-size: 1.2rem;
+}
+
+.size-md{
+    font-size: 1.6rem;
+}
+
+.size-lg{
+    font-size: 2rem;
+}
+
+.is-clickable{
+    cursor: pointer;
+}
+
+.is-draggable{
+    cursor: grab;
+    user-select: none;
+}
