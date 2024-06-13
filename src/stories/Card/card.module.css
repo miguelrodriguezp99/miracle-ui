@@ -19,6 +19,11 @@
     background-color: var(--color-secondary);
 }
 
+.color-tertiary{
+    color: white;
+    background-color: black;
+}
+
 .size-sm{
     font-size: 1.2rem;
 }
