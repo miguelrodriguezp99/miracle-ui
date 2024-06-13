@@ -1,6 +1,6 @@
 import Card from "./Card";
 import { options } from "./constants";
-import styles from "./Card.module.css";
+import styles from "./card.module.css";
 import {
   getListTemplate,
   getOptionsArgTypes,

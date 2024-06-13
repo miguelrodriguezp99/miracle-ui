@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import classNames from "classnames";
 
-import styles from "./Card.module.css";
+import styles from "./card.module.css";
 // import { getClasses } from "../../helpers/styles";
 
 export const Card = ({
