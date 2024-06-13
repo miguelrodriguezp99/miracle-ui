@@ -1,11 +1,15 @@
 {
   "name": "mirakle-ui-react",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelrodriguezp99/miracle-ui.git"
+  },
   "types": "dist/index.d.ts",
   "type": "module",
   "author": "miguelrguez99",

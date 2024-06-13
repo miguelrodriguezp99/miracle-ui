@@ -20,6 +20,7 @@ export default [
         sourcemap: true,
       },
     ],
+    external: ["react", "react-dom"],
     plugins: [
       typescript({
         exclude: ["**/*.stories.ts"], // Excluir archivos .stories.ts
