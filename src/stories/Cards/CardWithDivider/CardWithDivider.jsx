@@ -26,8 +26,8 @@ export const CardWithDivider = ({
       <div className={styles["card-header"]}>
         <img src={imageRoute} alt="image" className={styles["card-image"]} />
         <div>
-          <h2 className={styles.title}>I'm a title</h2>
-          <p className={styles.subtitle}>I'm a subtitle</p>
+          <h2 className={styles.title}>I'm a title!</h2>
+          <p className={styles.subtitle}>I'm a subtitle!</p>
         </div>
       </div>
 
