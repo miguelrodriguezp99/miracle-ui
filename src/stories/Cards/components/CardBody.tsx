@@ -1,7 +1,12 @@
+import React from "react";
 import styles from "./../card.module.css";
 import PropTypes from "prop-types";
 
-export const CardBody = ({ children }) => {
+interface CardBodyProps {
+  children: React.ReactNode;
+}
+
+export const CardBody = ({ children }: CardBodyProps) => {
   return <div className={styles["card-body"]}>{children}</div>;
 };
 

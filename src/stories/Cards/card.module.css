@@ -1,33 +1,37 @@
 .card {
-    border-radius: 10px;  
+    border-radius: 10px;
+    font-family: sans-serif;
 }
 
 .card-header{
     display: flex;
     gap: 15px;
     padding: 10px;
+    align-items: center;
 }
 
 .card-body{
     display: flex;
     gap: 10px;
-    padding: 10px;
+    padding: 15px;
+    font-size: 1.2rem;
     color: rgb(211, 210, 210);
 }
 
 .card-footer{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 15px;
 }
 
 .title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1;
     font-weight: 600;
 }
 
 .subtitle {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.56);
 }
@@ -56,11 +60,11 @@
 }
 
 .size-md{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .size-lg{
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .width-full {
@@ -83,15 +87,17 @@
 
 
 .card-image{
+    display: flex;
     width: 75px;
     height: 75px;
     border-radius: 10px;
     object-fit: cover;
+
 }
 
 
 a {
-    font-size: inherit;
+    font-size: 1.2rem;
     font-weight: inherit;
     color: #006FEE;
     text-decoration: none;

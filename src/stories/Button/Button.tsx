@@ -13,10 +13,10 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
+  primary = true,
   size = 'medium',
   backgroundColor,
-  label,
+  label = "SOY EL MEJOR BOTON!!",
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';

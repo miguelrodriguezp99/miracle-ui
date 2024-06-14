@@ -1,7 +1,14 @@
+import React from "react";
 import styles from "./../card.module.css";
 import PropTypes from "prop-types";
 
-export const CardHeader = ({ imageRoute, title, subtitle }) => {
+interface CardHeaderProps {
+  imageRoute: string;
+  title: string;
+  subtitle: string;
+}
+
+export const CardHeader = ({ imageRoute, title, subtitle }: CardHeaderProps) => {
   return (
     <div className={styles["card-header"]}>
       <img src={imageRoute} alt="image" className={styles["card-image"]} />

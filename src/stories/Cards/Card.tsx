@@ -5,14 +5,23 @@ import classNames from "classnames";
 import styles from "./card.module.css";
 // import { getClasses } from "../../helpers/styles";
 
+interface CardProps {
+  children?: React.ReactNode;
+  color?: "primary" | "secondary" | "tertiary";
+  size?: "sm" | "md" | "lg";
+  cardWidth?: "full" | "half";
+  isClickable?: boolean;
+  isDraggable?: boolean;
+}
+
 export const Card = ({
   children = "Children",
   color = "primary",
   size = "md",
   cardWidth = "full",
-  isClickable,
-  isDraggable,
-}) => {
+  isClickable = false,
+  isDraggable = false,
+}: CardProps) => {
   return (
     <div
       className={classNames(styles.card, {
