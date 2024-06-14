@@ -1,31 +1,66 @@
-# React + TypeScript + Vite
+# Mirakle UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://github.com/miguelrodriguezp99/miracle-ui/assets/72866796/33c42d25-c3cf-405a-a99f-c1196a08e428" alt="Mirakle UI Logo">
+</p>
 
-Currently, two official plugins are available:
+## Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to Mirakle UI, a comprehensive library of ready-to-use React components. Designed for flexibility and ease of use, Mirakle UI allows you to quickly integrate high-quality UI components into any React project.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To install Mirakle UI in your React project, simply run:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
+```
+npm i mirakle-ui-react
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-  "# miracle-ui"
+## Usage
+
+Once installed, you can start importing and using the components in your project:
+
+```
+import { Button, Card } from 'mirakle-ui-react';
+
+function App() {
+  return (
+    <div>
+      <Card>
+        <h1>Welcome to Mirakle UI</h1>
+        <Button>Click Me</Button>
+      </Card>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Landing Page
+
+We are also working on a comprehensive landing page where you can visually explore all the components Mirakle UI offers. Stay tuned for updates!
+
+[Link to Landing Page](#)
+
+## Storybook
+
+Explore our components and see them in action with our Storybook. You can find the live Storybook here:
+
+[Mirakle UI Storybook](https://main--66685fb204b9df24515e1b9b.chromatic.com)
+
+## Contributing
+
+We welcome contributions! If you have suggestions or improvements, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any inquiries, please reach out to your-email@example.com.
+
+---
+
+Thank you for using Mirakle UI! We hope our components make your development process faster and more enjoyable.
