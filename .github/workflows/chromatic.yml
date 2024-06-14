@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: List files
-        run: ls -R src/stories/Card/
+        run: ls -R src/stories/Cards/
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
