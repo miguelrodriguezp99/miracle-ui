@@ -1,7 +1,7 @@
 import options from "./constants";
 import PropTypes from "prop-types";
 import React from "react";
-import classNames from "classnames";
+// import classNames from "classnames";
 import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
@@ -11,29 +11,14 @@ import Divider from "../Divider/Divider";
 interface CardWithDividerProps {
   children?: React.ReactNode;
   imageRoute?: string;
-  color?: "primary" | "secondary" | "tertiary";
-  size?: "sm" | "md" | "lg";
-  isClickable?: boolean;
-  isDraggable?: boolean;
 }
 
 export const CardWithDivider = ({
   children = "Make beautiful websites regardless of your design experience.",
   imageRoute = "https://plus.unsplash.com/premium_photo-1714051661316-4432704b02f8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  color = "primary",
-  size = "md",
-  isClickable,
-  isDraggable,
 }: CardWithDividerProps) => {
   return (
-    <div
-      className={classNames(styles["card"], {
-        [styles[`color-${color}`]]: color, //just applies if the color exists
-        [styles[`size-${size}`]]: size,
-        [styles["is-clickable"]]: isClickable,
-        [styles["is-draggable"]]: isDraggable,
-      })}
-    >
+    <>
       <CardHeader
         imageRoute={imageRoute}
         title="Card with divider"
@@ -69,7 +54,7 @@ export const CardWithDivider = ({
           </svg>
         </a>
       </div>
-    </div>
+    </>
   );
 };
 

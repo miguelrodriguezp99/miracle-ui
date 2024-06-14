@@ -14,7 +14,7 @@
     display: flex;
     gap: 10px;
     padding: 15px;
-    font-size: 1.2rem;
+    font-size: 20px;
     color: rgb(211, 210, 210);
 }
 
@@ -25,13 +25,13 @@
 }
 
 .title {
-    font-size: 1.3rem;
+    font-size: 22px;
     line-height: 1;
     font-weight: 600;
 }
 
 .subtitle {
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.56);
 }
@@ -85,19 +85,16 @@
 }
 
 
-
 .card-image{
     display: flex;
     width: 75px;
     height: 75px;
     border-radius: 10px;
     object-fit: cover;
-
 }
 
-
 a {
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: inherit;
     color: #006FEE;
     text-decoration: none;
