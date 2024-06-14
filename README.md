@@ -1,6 +1,8 @@
 # Mirakle UI
 
-![Mirakle UI Logo](https://github.com/miguelrodriguezp99/miracle-ui/assets/72866796/33c42d25-c3cf-405a-a99f-c1196a08e428)
+<p align="center">
+  <img src="https://github.com/miguelrodriguezp99/miracle-ui/assets/72866796/33c42d25-c3cf-405a-a99f-c1196a08e428" alt="Mirakle UI Logo">
+</p>
 
 
 ## Introduction
