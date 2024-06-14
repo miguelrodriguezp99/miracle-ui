@@ -1,4 +1,4 @@
-import options from "./constants";
+import options from "../CardWithDivider/constants";
 import PropTypes from "prop-types";
 import React from "react";
 import classNames from "classnames";
@@ -25,22 +25,6 @@ export const Card = ({
       {children}
     </div>
   );
-
-  // const getStyles = getClasses(styles)({
-  //   color,
-  //   size,
-  // });
-
-  // return (
-  //   <div
-  //     className={getStyles("card", ["color", "size"], {
-  //       "is-clickable": isClickable,
-  //       "is-draggable": isDraggable,
-  //     })}
-  //   >
-  //     {children}
-  //   </div>
-  // );
 };
 
 Card.propTypes = {
@@ -52,3 +36,19 @@ Card.propTypes = {
 };
 
 export default Card;
+
+// const getStyles = getClasses(styles)({
+//   color,
+//   size,
+// });
+
+// return (
+//   <div
+//     className={getStyles("card", ["color", "size"], {
+//       "is-clickable": isClickable,
+//       "is-draggable": isDraggable,
+//     })}
+//   >
+//     {children}
+//   </div>
+// );

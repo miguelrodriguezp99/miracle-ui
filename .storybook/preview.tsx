@@ -1,5 +1,6 @@
 import React, { CSSProperties } from 'react';
 import type { Preview } from "@storybook/react";
+import { background, themes } from '@storybook/theming';
 import "../styles/global.css";
 import "../styles/tokens.css";
 
@@ -12,9 +13,12 @@ const styles: CSSProperties = {
   flexWrap: "wrap",
   height: "100%",
   gap: "10px 30px",
+  backgroundColor: 'black',
 };
 
+
 const preview: Preview = {
+
   decorators: [
     (Story) => (
       <div style={styles}>
@@ -25,11 +29,27 @@ const preview: Preview = {
   ],
 
   parameters: {
+    backgrounds: {
+      default: 'dark',
+      values: [
+        {
+          name: 'dark',
+          value: '#000000',
+        },
+        {
+          name: 'light',
+          value: '#ffffff',
+        },
+      ],
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    docs: {
+      theme: themes.dark,
     },
   },
 };

@@ -9,9 +9,13 @@
     transition: box-shadow 0.3s ease-in;
 }
 
+.card-divider{
+    min-width: 300px;
+}
+
 .color-primary{
     color: white;
-    background-color: var(--color-primary);
+    background-color: #18181B;
 }
 
 .color-secondary{
@@ -20,8 +24,8 @@
 }
 
 .color-tertiary{
-    color: white;
-    background-color: orange;
+    color: #18181B;
+    background-color: #ddd;
 }
 
 .size-sm{

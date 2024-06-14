@@ -1,17 +1,17 @@
-import Card from "./Card";
+import Card from ".";
 import { options } from "./constants";
 import styles from "./card.module.css";
 import {
   getListTemplate,
   getOptionsArgTypes,
   getTemplate,
-} from "../../../helpers/storybook";
+} from "../../../../helpers/storybook";
 
 const Template = getTemplate(Card, styles);
 const listTemplate = getListTemplate(Card, styles);
 
 export default {
-  title: "Card",
+  title: "Components/Cards/Card",
   component: Card,
   args: {
     children: "Card content",

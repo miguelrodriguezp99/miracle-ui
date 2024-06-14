@@ -1,6 +1,6 @@
 {
   "name": "mirakle-ui-react",
-  "version": "1.0.4",
+  "version": "0.0.0",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -45,9 +45,11 @@
     "@storybook/addon-onboarding": "^8.1.6",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
     "@storybook/blocks": "^8.1.6",
+    "@storybook/manager-api": "^8.1.9",
     "@storybook/react": "^8.1.6",
     "@storybook/react-vite": "^8.1.6",
     "@storybook/test": "^8.1.6",
+    "@storybook/theming": "^8.1.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
