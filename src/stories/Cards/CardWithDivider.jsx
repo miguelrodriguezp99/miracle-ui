@@ -4,6 +4,9 @@ import React from "react";
 import classNames from "classnames";
 
 import styles from "./card.module.css";
+import CardHeader from "./components/CardHeader";
+import CardBody from "./components/CardBody";
+import Divider from "../Divider/Divider";
 // import { getClasses } from "../../helpers/styles";
 
 export const CardWithDivider = ({
@@ -16,26 +19,24 @@ export const CardWithDivider = ({
 }) => {
   return (
     <div
-      className={classNames(styles["card-with-divider"], {
+      className={classNames(styles["card"], {
         [styles[`color-${color}`]]: color, //just applies if the color exists
         [styles[`size-${size}`]]: size,
         [styles["is-clickable"]]: isClickable,
         [styles["is-draggable"]]: isDraggable,
       })}
     >
-      <div className={styles["card-header"]}>
-        <img src={imageRoute} alt="image" className={styles["card-image"]} />
-        <div>
-          <h2 className={styles.title}>I'm a title!</h2>
-          <p className={styles.subtitle}>I'm a subtitle!</p>
-        </div>
-      </div>
+      <CardHeader
+        imageRoute={imageRoute}
+        title="Card with divider"
+        subtitle="Make beautiful websites regardless of your design experience."
+      />
 
-      <div className={styles.divider} />
+      <Divider />
 
-      <div className={styles["card-body"]}>{children}</div>
+      <CardBody>{children}</CardBody>
 
-      <div className={styles.divider} />
+      <Divider />
 
       <div className={styles["card-footer"]}>
         <a href="#" className={styles.link}>

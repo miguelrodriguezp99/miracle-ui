@@ -1,20 +1,23 @@
 import Card from ".";
 import { options } from "./constants";
 import styles from "./card.module.css";
+import CardWithDivider from "./CardWithDivider";
 import {
   getListTemplate,
   getOptionsArgTypes,
   getTemplate,
-} from "../../../../helpers/storybook";
+} from "../../../helpers/storybook";
+import CardBody from "./components/CardBody";
 
 const Template = getTemplate(Card, styles);
 const listTemplate = getListTemplate(Card, styles);
 
 export default {
-  title: "Components/Cards/Card",
+  title: "Components/Card",
   component: Card,
+  subcomponents: { Card, CardWithDivider },
   args: {
-    children: "Card content",
+    children: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
   },
   argTypes: {
     color: getOptionsArgTypes(options.colors),
@@ -24,10 +27,25 @@ export default {
 
 /* Individual templates */
 export const Default = Template.bind({});
+Default.args = {
+  children: <CardBody children="I'm a card" />,
+};
 export const Clickable = Template.bind({});
-Clickable.args = { isClickable: true };
+Clickable.args = {
+  isClickable: true,
+  children: <CardBody children="I'm a clickable card" />,
+};
 export const Draggable = Template.bind({});
-Draggable.args = { isDraggable: true };
+Draggable.args = {
+  isDraggable: true,
+  children: <CardBody children="I'm a draggable card" />,
+};
+
+export const WithDiv = Template.bind({});
+WithDiv.args = {
+  children: <CardWithDivider />,
+  cardWidth: "half",
+};
 
 /* List templates */
 export const Colors = listTemplate.bind({});

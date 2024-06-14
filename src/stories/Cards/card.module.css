@@ -1,0 +1,107 @@
+.card {
+    border-radius: 10px;  
+}
+
+.card-header{
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+}
+
+.card-body{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    color: rgb(211, 210, 210);
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.card-divider{
+    min-width: 300px;
+}
+
+.color-primary{
+    color: white;
+    background-color: #18181B;
+}
+
+.color-secondary{
+    color: white;
+    background-color: var(--color-secondary);
+}
+
+.color-tertiary{
+    color: #18181B;
+    background-color: #ddd;
+}
+
+.size-sm{
+    font-size: 1.2rem;
+}
+
+.size-md{
+    font-size: 1.6rem;
+}
+
+.size-lg{
+    font-size: 2rem;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.width-half {
+    width: 450px;
+}
+
+.is-clickable{
+    cursor: pointer;
+}
+
+.is-draggable{
+    cursor: grab;
+    user-select: none;
+}
+
+
+
+.card-image{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+a {
+    font-size: inherit;
+    font-weight: inherit;
+    color: #006FEE;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 100%;
+    transition: opacity 0.1s ease-in-out;
+}
+
+a:hover {
+    opacity: 80%;
+}
