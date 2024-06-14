@@ -18,6 +18,7 @@ npm i mirakle-ui-react
 
 Once installed, you can start importing and using the components in your project:
 
+```
 import { Button, Card } from 'mirakle-ui-react';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
 }
 
 export default App;
+```
 
 ## Landing Page
 
