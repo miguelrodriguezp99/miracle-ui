@@ -2,6 +2,7 @@ import Card from ".";
 import { options } from "./constants";
 import styles from "./card.module.css";
 import CardWithDivider from "./CardWithDivider";
+import CardWithImage from "./CardWithImage";
 import {
   getListTemplate,
   getOptionsArgTypes,
@@ -22,6 +23,17 @@ export default {
   argTypes: {
     color: getOptionsArgTypes(options.colors),
     size: getOptionsArgTypes(options.sizes),
+    cardWidth: {
+      control: {
+        type: "select",
+        options: ["sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl"],
+      },
+    },
+    padding: {
+      control: {
+        type: "select",
+      },
+    },
   },
 };
 
@@ -44,7 +56,15 @@ Draggable.args = {
 export const WithDiv = Template.bind({});
 WithDiv.args = {
   children: <CardWithDivider />,
-  cardWidth: "half",
+  cardWidth: "3xl",
+  padding: "none",
+};
+
+export const WithImage = Template.bind({});
+WithImage.args = {
+  children: <CardWithImage />,
+  cardWidth: "md",
+  padding: "sm",
 };
 
 /* List templates */

@@ -6,14 +6,12 @@
 .card-header{
     display: flex;
     gap: 15px;
-    padding: 10px;
     align-items: center;
 }
 
 .card-body{
     display: flex;
     gap: 10px;
-    padding: 15px;
     font-size: 20px;
     color: rgb(211, 210, 210);
 }
@@ -26,14 +24,28 @@
 
 .title {
     font-size: 22px;
-    line-height: 1;
+    line-height: 0.5;
     font-weight: 600;
+}
+
+.title-with-desc {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 0.5;
 }
 
 .subtitle {
     font-size: 14px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.56);
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    line-height: 0;
 }
 
 .card-divider{
@@ -67,13 +79,7 @@
     font-size: 1.6rem;
 }
 
-.width-full {
-    width: 100%;
-}
 
-.width-half {
-    width: 450px;
-}
 
 .is-clickable{
     cursor: pointer;
@@ -107,4 +113,89 @@ a {
 
 a:hover {
     opacity: 80%;
+}
+
+
+/* WIDTHS */
+
+.width-2xs{
+    width: 100px;
+}
+
+.width-xs{
+    width: 150px;
+}
+
+.width-sm{
+    width: 200px;
+}
+
+.width-md{
+    width: 250px;
+}
+
+.width-lg{
+    width: 300px;
+}
+
+.width-xl{
+    width: 350px;
+}
+
+.width-2xl{
+    width: 400px;
+}
+
+.width-3xl{
+    width: 450px;
+}
+
+.width-full{
+    width: 100%;
+}
+
+/* PADDINGS */
+
+.padding-none{
+    padding: 0;
+}
+
+.padding-xs{
+    padding: 5px;
+}
+
+.padding-sm{
+    padding: 10px;
+}
+
+.padding-md{
+    padding: 15px;
+}
+
+.padding-lg{
+    padding: 20px;
+}
+
+.padding-hsm{
+    padding: 0px 10px;
+}
+
+.padding-hmd{
+    padding: 0px 15px;
+}
+
+.padding-hlg{
+    padding: 0px 20px;
+}
+
+.padding-vsm{
+    padding: 10px 0px;
+}
+
+.padding-vmd{
+    padding: 15px 0px;
+}
+
+.padding-vlg{
+    padding: 20px 0px;
 }

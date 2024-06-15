@@ -9,7 +9,8 @@ interface CardProps {
   children?: React.ReactNode;
   color?: "primary" | "secondary" | "tertiary";
   size?: "sm" | "md" | "lg";
-  cardWidth?: "full" | "half";
+  cardWidth?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
+  padding?: "none" | "sm" | "md" | "lg";
   isClickable?: boolean;
   isDraggable?: boolean;
 }
@@ -19,6 +20,7 @@ export const Card = ({
   color = "primary",
   size = "md",
   cardWidth = "full",
+  padding,
   isClickable = false,
   isDraggable = false,
 }: CardProps) => {
@@ -27,6 +29,7 @@ export const Card = ({
       className={classNames(styles.card, {
         [styles[`color-${color}`]]: color, //just applies if the color exists
         [styles[`size-${size}`]]: size,
+        [styles[`padding-${padding}`]]: padding,
         [styles["is-clickable"]]: isClickable,
         [styles["is-draggable"]]: isDraggable,
         [styles[`width-${cardWidth}`]]: cardWidth,
@@ -42,6 +45,7 @@ Card.propTypes = {
   color: PropTypes.oneOf(options.colors),
   size: PropTypes.oneOf(options.sizes),
   cardWidth: PropTypes.oneOf(options.cardWidth),
+  padding: PropTypes.oneOf(options.padding),
   isClickable: PropTypes.bool,
   isDraggable: PropTypes.bool,
 };
