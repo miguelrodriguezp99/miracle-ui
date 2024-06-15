@@ -6,6 +6,7 @@ import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
 import Divider from "../Divider/Divider";
+import { Image } from "../Image/Image";
 // import { getClasses } from "../../helpers/styles";
 
 interface CardWithDividerProps {
@@ -20,10 +21,21 @@ export const CardWithDivider = ({
     <>
       <CardHeader
         padding="sm"
-        imageRoute={"hero-card-complete.jpeg"}
-        title="Card with divider"
-        subtitle="Make beautiful websites regardless of your design experience."
-      />
+      >
+        <Image
+          route="hero-card-complete.jpeg"
+          alt="image"
+          width="75px"
+          height="75px"
+        />
+
+        <div>
+          <h2 className={styles.title}>Card with divider</h2>
+          <p className={styles.subtitle}>Make beautiful websites regardless of your design experience.</p>
+        </div>
+
+
+      </CardHeader>
 
       <Divider />
 

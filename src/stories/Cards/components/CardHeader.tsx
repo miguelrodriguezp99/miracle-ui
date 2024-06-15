@@ -5,33 +5,28 @@ import { paddingTypes } from "../constants";
 import classNames from "classnames";
 
 interface CardHeaderProps {
-  imageRoute: string;
-  title: string;
-  subtitle: string;
-  description?: string;
   padding?: paddingTypes;
+  children?: React.ReactNode;
 }
 
-export const CardHeader = ({ imageRoute, title, subtitle, description, padding }: CardHeaderProps) => {
+export const CardHeader = ({ children, padding }: CardHeaderProps) => {
   return (
     <div className={classNames(styles["card-header"], {
       [styles[`padding-${padding}`]]: padding,
     })}>
-      {imageRoute && <img src={imageRoute} alt="image" className={styles["card-image"]} />}
-      <div>
+      {children}
+      {/* <div>
         <h2 className={description ? styles["title-with-desc"] : styles.title}>{title}</h2>
         <p className={styles.subtitle}>{subtitle}</p>
         {description && <p className={styles.description}>{description}</p>}
-      </div>
+      </div> */}
     </div>
   );
 };
 
 CardHeader.propTypes = {
-  imageRoute: PropTypes.string,
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  description: PropTypes.string,
+  children: PropTypes.node,
+  padding: PropTypes.oneOf(["none", "sm", "md", "lg"]),
 };
 
 export default CardHeader;

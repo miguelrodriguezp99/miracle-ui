@@ -4,28 +4,29 @@ import React from "react";
 import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
+import { Image } from "../Image/Image";
 
 // import { getClasses } from "../../helpers/styles";
 
-interface CardWithImageProps {
-    children?: React.ReactNode;
-    imageRoute?: string;
-}
 
-export const CardWithImage = ({
-    imageRoute,
-}: CardWithImageProps) => {
+
+export const CardWithImage = () => {
     return (
         <>
-            <CardHeader
-                imageRoute={imageRoute ? imageRoute : ""}
-                title="Daily Mix"
-                subtitle="12 Tracks"
-                description="Frontend Radio"
-            />
-
+            <CardHeader>
+                <div>
+                    <h2 className={styles["title-with-desc"]}>Daily Mix</h2>
+                    <p className={styles.subtitle}>12 Tracks</p>
+                    <p className={styles.description}>Fontend Radio</p>
+                </div>
+            </CardHeader>
             <CardBody padding="none">
-                <img src="hero-card-complete.jpeg" alt="image" className={styles["card-image"]} />
+                <Image
+                    route="hero-card-complete.jpeg"
+                    alt="image"
+                    width="100%"
+                    height="177px"
+                />
             </CardBody>
         </>
     );
