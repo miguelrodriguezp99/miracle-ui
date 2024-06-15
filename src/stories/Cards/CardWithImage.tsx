@@ -8,21 +8,28 @@ import { Image } from "../Image/Image";
 
 // import { getClasses } from "../../helpers/styles";
 
+interface CardWithImageProps {
+    title?: string;
+    subtitle?: string;
+    description?: string;
+}
 
-
-export const CardWithImage = () => {
+export const CardWithImage = ({
+    title = "Daily Mix",
+    subtitle = "12 Tracks",
+    description = "Frontend Radio" }: CardWithImageProps) => {
     return (
         <>
             <CardHeader>
                 <div>
-                    <h2 className={styles["title-with-desc"]}>Daily Mix</h2>
-                    <p className={styles.subtitle}>12 Tracks</p>
-                    <p className={styles.description}>Fontend Radio</p>
+                    <h2 className={styles["title-with-desc"]}>{title}</h2>
+                    <p className={styles.subtitle}>{subtitle}</p>
+                    <p className={styles.description}>{description}</p>
                 </div>
             </CardHeader>
             <CardBody padding="none">
                 <Image
-                    route="hero-card-complete.jpeg"
+                    route="https://nextui.org/images/hero-card-complete.jpeg"
                     alt="image"
                     width="100%"
                     height="177px"
@@ -33,7 +40,6 @@ export const CardWithImage = () => {
 };
 
 CardWithImage.propTypes = {
-    children: PropTypes.node,
     color: PropTypes.oneOf(options.colors),
     size: PropTypes.oneOf(options.sizes),
     isClickable: PropTypes.bool,

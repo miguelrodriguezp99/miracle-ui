@@ -16,7 +16,6 @@ const listTemplate = getListTemplate(Card, styles);
 export default {
   title: "Components/Card",
   component: Card,
-  subcomponents: { Card, CardWithDivider },
   args: {
     children: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
   },
@@ -34,6 +33,7 @@ export default {
         type: "select",
       },
     },
+    children: { control: { disable: true } },
   },
 };
 

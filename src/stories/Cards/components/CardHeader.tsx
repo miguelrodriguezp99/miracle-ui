@@ -15,11 +15,6 @@ export const CardHeader = ({ children, padding }: CardHeaderProps) => {
       [styles[`padding-${padding}`]]: padding,
     })}>
       {children}
-      {/* <div>
-        <h2 className={description ? styles["title-with-desc"] : styles.title}>{title}</h2>
-        <p className={styles.subtitle}>{subtitle}</p>
-        {description && <p className={styles.description}>{description}</p>}
-      </div> */}
     </div>
   );
 };

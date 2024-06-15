@@ -41,7 +41,6 @@ export const Card = ({
 };
 
 Card.propTypes = {
-  children: PropTypes.node,
   color: PropTypes.oneOf(options.colors),
   size: PropTypes.oneOf(options.sizes),
   cardWidth: PropTypes.oneOf(options.cardWidth),

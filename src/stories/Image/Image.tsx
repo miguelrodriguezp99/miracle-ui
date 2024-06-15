@@ -14,3 +14,5 @@ export const Image = ({ route, width, height }: ImageProps) => {
         <img src={route} alt="image" width={width} height={height} className={styles.image} />
     );
 }
+
+export default Image;
