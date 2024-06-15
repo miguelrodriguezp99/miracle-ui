@@ -57,7 +57,7 @@ export const WithDiv = Template.bind({});
 WithDiv.args = {
   children: <CardWithDivider />,
   cardWidth: "3xl",
-  padding: "none",
+  padding: "hsm",
 };
 
 export const WithImage = Template.bind({});

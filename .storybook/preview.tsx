@@ -1,31 +1,39 @@
-import React, { CSSProperties } from 'react';
+import React from 'react';
 import type { Preview } from "@storybook/react";
-import { background, themes } from '@storybook/theming';
+import { themes } from '@storybook/theming';
 import "../styles/global.css";
 import "../styles/tokens.css";
 
-const styles: CSSProperties = {
+interface Styles {
+  __sb: any;
+}
+
+
+const getStyles = ({ __sb }: any) => ({
   display: "flex",
-  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  alignContent: "center",
+  margin: "0",
+  flexDirection: __sb?.fd || "column",
   maxHeight: "auto",
-  justifyContent: "flex-start",
-  alignContent: "flex-start",
-  flexWrap: "wrap",
-  height: "100%",
+  flexWrap: __sb?.fw || "wrap",
+  height: "100vh",
   gap: "10px 30px",
-  backgroundColor: 'black',
-};
+  backgroundColor: 'transparent',
+});
 
 
 const preview: Preview = {
 
   decorators: [
-    (Story) => (
-      <div style={styles}>
+    (Story, { parameters }) => (
+      <div style={getStyles(parameters)}>
         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
         <Story />
       </div>
     ),
+
   ],
 
   parameters: {
@@ -40,6 +48,11 @@ const preview: Preview = {
           name: 'light',
           value: '#ffffff',
         },
+        {
+          name: 'blue',
+          value: '#3A10E5',
+        }
+
       ],
     },
     controls: {
@@ -50,6 +63,10 @@ const preview: Preview = {
     },
     docs: {
       theme: themes.dark,
+      themes: {
+        dark: themes.dark,
+        light: themes.normal,
+      },
     },
   },
 };
