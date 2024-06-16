@@ -7,12 +7,14 @@ import classNames from "classnames";
 interface CardHeaderProps {
   padding?: paddingTypes; // Quiero que pueda recibir más de un tipo de padding a la vez
   children?: React.ReactNode;
+  absolute?: boolean;
 }
 
-export const CardHeader = ({ children, padding = "none" }: CardHeaderProps) => {
+export const CardHeader = ({ children, padding = "none", absolute }: CardHeaderProps) => {
   return (
     <div className={classNames(styles["card-header"], {
       [styles[`padding-${padding}`]]: padding,
+      [styles["absolute-header"]]: absolute,
     })}>
       {children}
     </div>

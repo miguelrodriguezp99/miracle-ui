@@ -28,7 +28,7 @@ export const CardWithBlurredFooter = ({
                     height="200px"
                 />
 
-                <CardFooter padding="none" absolute isBlurred>
+                <CardFooter padding="none" margin="vxs" absolute isBlurred >
                     <div className={styles["blurred-footer-container"]}>
                         <p>Available soon</p>
                         <button>Notify me</button>

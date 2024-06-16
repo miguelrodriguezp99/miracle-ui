@@ -2,6 +2,7 @@ import Card from ".";
 import { options } from "./constants";
 import styles from "./card.module.css";
 import CardWithDivider from "./CardWithDivider";
+import CardCover from "./CardCover";
 import CardWithBlurredFooter from "./CardWithBlurredFooter";
 import CardWithImage from "./CardWithImage";
 import {
@@ -72,6 +73,12 @@ WithImage.args = {
   children: <CardWithImage />,
   cardWidth: "md",
   padding: "sm",
+};
+
+export const WithCover = Template.bind({});
+WithCover.args = {
+  children: <CardCover />,
+  cardWidth: "none",
 };
 
 export const WithBlurredFooter = Template.bind({});

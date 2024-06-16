@@ -33,6 +33,18 @@
     line-height: 0;
 }
 
+.title-cover{
+    font-size: 14px;
+    line-height: 0;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.subtitle-cover {
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .subtitle {
     font-size: 14px;
     font-weight: 400;
@@ -196,6 +208,61 @@ a:hover {
     padding: 20px 0px;
 }
 
+/* MARGINS */
+
+.margin-none{
+    margin: 0;
+}
+
+.margin-xs{
+    margin: 5px;
+}
+
+.margin-sm{
+    margin: 10px;
+}
+
+.margin-md{
+    margin: 15px;
+}
+
+.margin-lg{
+    margin: 20px;
+}
+
+.margin-hxs{
+    margin: 0px 5px;
+}
+
+.margin-hsm{
+    margin: 0px 10px;
+}
+
+.margin-hmd{
+    margin: 0px 15px;
+}
+
+.margin-hlg{
+    margin: 0px 20px;
+}
+
+.margin-vxs{
+    margin: 5px 0px;
+}
+
+.margin-vsm{
+    margin: 10px 0px;
+}
+
+.margin-vmd{
+    margin: 15px 0px;
+}
+
+.margin-vlg{
+    margin: 20px 0px;
+}
+
+
 .relative {
     position: relative;
 }
@@ -205,20 +272,26 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.absolute-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .is-blurred {
     background-color: transparent;
     backdrop-filter: blur(8px);
-    border-radius: 10px;
-    width: 95%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .blurred-footer-container{
+    border-radius: 10px;
+    width: 95%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content:space-evenly;
     margin: 0 auto;
@@ -237,6 +310,7 @@ a:hover {
         border-radius: 16px;
         padding: 0 12px;
         color: white;
+        transition: all 0.2s ease-in-out;
     }
 
     button:hover {
