@@ -28,7 +28,7 @@ export const CardWithDivider = ({
   return (
     <>
       <CardHeader
-        padding="sm"
+        padding="md"
       >
         <Image
           route="https://nextui.org/images/hero-card-complete.jpeg"
@@ -45,11 +45,11 @@ export const CardWithDivider = ({
 
       <Divider />
 
-      <CardBody padding="sm">{children}</CardBody>
+      <CardBody padding="md">{children}</CardBody>
 
       <Divider />
 
-      <CardFooter>
+      <CardFooter padding="md">
         <a href="#" className={styles.link}>
           {linkText}
           <svg
@@ -74,7 +74,6 @@ export const CardWithDivider = ({
 
 CardWithDivider.propTypes = {
   color: PropTypes.oneOf(options.colors),
-  size: PropTypes.oneOf(options.sizes),
   isClickable: PropTypes.bool,
   isDraggable: PropTypes.bool,
 };

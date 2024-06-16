@@ -6,5 +6,6 @@ export { default as CardFooter } from "./Cards/components/CardFooter";
 export { default as CardWithDivider } from "./Cards/CardWithDivider";
 export { default as CardWithImage } from "./Cards/CardWithImage";
 export { default as CardStyles } from "./Cards/card.module.css";
+export { default as CardWithBlurredFooter } from "./Cards/CardWithBlurredFooter";
 export { default as Image } from "./Image";
 export { default as Divider } from "./Divider/Divider";

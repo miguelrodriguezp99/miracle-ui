@@ -2,6 +2,7 @@ import Card from ".";
 import { options } from "./constants";
 import styles from "./card.module.css";
 import CardWithDivider from "./CardWithDivider";
+import CardWithBlurredFooter from "./CardWithBlurredFooter";
 import CardWithImage from "./CardWithImage";
 import {
   getListTemplate,
@@ -21,7 +22,6 @@ export default {
   },
   argTypes: {
     color: getOptionsArgTypes(options.colors),
-    size: getOptionsArgTypes(options.sizes),
     cardWidth: {
       control: {
         type: "select",
@@ -31,6 +31,7 @@ export default {
     padding: {
       control: {
         type: "select",
+        options: options.padding,
       },
     },
     children: { control: { disable: true } },
@@ -41,23 +42,29 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
   children: <CardBody children="I'm a card" />,
+  cardWidth: "3xl",
+  padding: "md",
 };
 export const Clickable = Template.bind({});
 Clickable.args = {
   isClickable: true,
   children: <CardBody children="I'm a clickable card" />,
+  cardWidth: "3xl",
+  padding: "md",
 };
 export const Draggable = Template.bind({});
 Draggable.args = {
   isDraggable: true,
   children: <CardBody children="I'm a draggable card" />,
+  cardWidth: "3xl",
+  padding: "md",
 };
 
 export const WithDiv = Template.bind({});
 WithDiv.args = {
   children: <CardWithDivider />,
   cardWidth: "3xl",
-  padding: "hsm",
+  padding: "none",
 };
 
 export const WithImage = Template.bind({});
@@ -67,15 +74,17 @@ WithImage.args = {
   padding: "sm",
 };
 
+export const WithBlurredFooter = Template.bind({});
+WithBlurredFooter.args = {
+  children: <CardWithBlurredFooter />,
+  cardWidth: "sm",
+  padding: "none",
+};
+
 /* List templates */
 export const Colors = listTemplate.bind({});
 Colors.args = {
   items: options.colors.map((color) => ({ color })),
-};
-
-export const Sizes = listTemplate.bind({});
-Sizes.args = {
-  items: options.sizes.map((size) => ({ size })),
 };
 
 /*

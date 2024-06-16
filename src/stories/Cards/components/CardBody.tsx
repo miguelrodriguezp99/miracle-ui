@@ -2,16 +2,18 @@ import React from "react";
 import styles from "./../card.module.css";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { paddingTypes } from "../constants";
+import options, { paddingTypes } from "../constants";
 
 interface CardBodyProps {
   children: React.ReactNode;
   padding?: paddingTypes;
+  relative?: boolean;
 }
 
-export const CardBody = ({ children, padding = "md" }: CardBodyProps) => {
+export const CardBody = ({ children, padding = "none", relative }: CardBodyProps) => {
   return <div className={classNames(styles["card-body"], {
     [styles[`padding-${padding}`]]: padding,
+    [styles["relative"]]: relative
   })}>
     {children}
   </div>;
@@ -19,6 +21,7 @@ export const CardBody = ({ children, padding = "md" }: CardBodyProps) => {
 
 CardBody.propTypes = {
   children: PropTypes.node,
+  package: PropTypes.oneOf(options.padding),
 };
 
 export default CardBody;

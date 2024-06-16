@@ -1,12 +1,12 @@
 .card {
     border-radius: 10px;
     font-family: sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .card-header{
     display: flex;
     gap: 15px;
-    align-items: center;
 }
 
 .card-body{
@@ -18,13 +18,11 @@
 
 .card-footer{
     display: flex;
-    justify-content: space-between;
-
 }
 
 .title {
     font-size: 22px;
-    line-height: 0.5;
+    line-height: 0;
     font-weight: 600;
 }
 
@@ -78,8 +76,6 @@
 .size-lg{
     font-size: 1.6rem;
 }
-
-
 
 .is-clickable{
     cursor: pointer;
@@ -199,3 +195,54 @@ a:hover {
 .padding-vlg{
     padding: 20px 0px;
 }
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.is-blurred {
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    width: 95%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blurred-footer-container{
+    display: flex;
+    justify-content:space-evenly;
+    margin: 0 auto;
+    gap: 5px;
+    padding: 3px 0px;
+    
+    p {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.214);
+        border: none;
+        border-radius: 16px;
+        padding: 0 12px;
+        color: white;
+    }
+
+    button:hover {
+        background-color: rgba(0, 0, 0, 0.407);
+        cursor: pointer;
+    }
+
+}
+

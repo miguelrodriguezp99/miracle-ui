@@ -1,51 +1,51 @@
 import options from "./constants";
 import PropTypes from "prop-types";
 import React from "react";
-import styles from "./card.module.css";
-import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
 import { Image } from "../Image/Image";
+import { CardFooter } from "./components";
+import styles from "./card.module.css";
 
 // import { getClasses } from "../../helpers/styles";
 
-interface CardWithImageProps {
+interface CardWithBlurredFooterProps {
     title?: string;
     subtitle?: string;
     description?: string;
     imgRoute?: string;
 }
 
-export const CardWithImage = ({
-    title = "Daily Mix",
-    subtitle = "12 Tracks",
-    description = "Frontend Radio",
+export const CardWithBlurredFooter = ({
     imgRoute = "https://nextui.org/images/hero-card-complete.jpeg",
-}: CardWithImageProps) => {
+}: CardWithBlurredFooterProps) => {
     return (
         <>
-            <CardHeader>
-                <div>
-                    <h3 className={styles["title-with-desc"]}>{title}</h3>
-                    <p className={styles.subtitle}>{subtitle}</p>
-                    <p className={styles.description}>{description}</p>
-                </div>
-            </CardHeader>
-            <CardBody padding="none">
+            <CardBody padding="none" relative>
                 <Image
                     route={imgRoute}
                     alt="image"
                     width="100%"
-                    height="177px"
+                    height="200px"
                 />
+
+                <CardFooter padding="none" absolute isBlurred>
+                    <div className={styles["blurred-footer-container"]}>
+                        <p>Available soon</p>
+                        <button>Notify me</button>
+                    </div>
+                </CardFooter>
+
             </CardBody>
+
+
         </>
     );
 };
 
-CardWithImage.propTypes = {
+CardWithBlurredFooter.propTypes = {
     color: PropTypes.oneOf(options.colors),
     isClickable: PropTypes.bool,
     isDraggable: PropTypes.bool,
 };
 
-export default CardWithImage;
+export default CardWithBlurredFooter;

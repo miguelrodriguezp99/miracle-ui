@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./../card.module.css";
 import PropTypes from "prop-types";
-import { paddingTypes } from "../constants";
+import options, { paddingTypes } from "../constants";
 import classNames from "classnames";
 
 interface CardHeaderProps {
-  padding?: paddingTypes;
+  padding?: paddingTypes; // Quiero que pueda recibir más de un tipo de padding a la vez
   children?: React.ReactNode;
 }
 
-export const CardHeader = ({ children, padding }: CardHeaderProps) => {
+export const CardHeader = ({ children, padding = "none" }: CardHeaderProps) => {
   return (
     <div className={classNames(styles["card-header"], {
       [styles[`padding-${padding}`]]: padding,
@@ -21,7 +21,7 @@ export const CardHeader = ({ children, padding }: CardHeaderProps) => {
 
 CardHeader.propTypes = {
   children: PropTypes.node,
-  padding: PropTypes.oneOf(["none", "sm", "md", "lg"]),
+  padding: PropTypes.oneOf(options.padding),
 };
 
 export default CardHeader;
