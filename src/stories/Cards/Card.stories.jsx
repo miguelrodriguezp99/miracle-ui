@@ -1,10 +1,11 @@
 import Card from ".";
-import { options } from "./constants";
+import { options, products } from "./constants";
 import styles from "./card.module.css";
 import CardWithDivider from "./CardWithDivider";
 import CardCover from "./CardCover";
 import CardWithBlurredFooter from "./CardWithBlurredFooter";
 import CardWithImage from "./CardWithImage";
+import CardProduct from "./CardProduct";
 import {
   getListTemplate,
   getOptionsArgTypes,
@@ -29,6 +30,7 @@ export default {
         options: ["sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl"],
       },
     },
+    parameters: {},
     padding: {
       control: {
         type: "select",
@@ -86,6 +88,30 @@ WithBlurredFooter.args = {
   children: <CardWithBlurredFooter />,
   cardWidth: "sm",
   padding: "none",
+};
+
+export const WithProduct = () => {
+  return (
+    <div
+      style={{
+        display: "grid",
+        placeItems: "center",
+        gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))",
+        gap: "10px",
+        width: "65%",
+      }}
+    >
+      {products.map((product, index) => (
+        <Card key={index} isClickable cardWidth="none">
+          <CardProduct
+            title={product.title}
+            price={product.price}
+            imgRoute={product.imgRoute}
+          />
+        </Card>
+      ))}
+    </div>
+  );
 };
 
 /* List templates */
