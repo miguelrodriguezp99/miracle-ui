@@ -30,14 +30,17 @@ export default {
         options: ["sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl"],
       },
     },
-    parameters: {},
     padding: {
       control: {
         type: "select",
         options: options.padding,
       },
     },
-    children: { control: { disable: true } },
+    isClickable: { control: "boolean" }, // Definir isClickable en argTypes
+    isDraggable: { control: "boolean" }, // Definir isDraggable en argTypes
+
+    // hide children from the controls panel
+    children: { table: { disable: true } },
   },
 };
 
@@ -90,7 +93,7 @@ WithBlurredFooter.args = {
   padding: "none",
 };
 
-export const WithProduct = () => {
+export const WithProduct = (args) => {
   return (
     <div
       style={{
@@ -102,7 +105,7 @@ export const WithProduct = () => {
       }}
     >
       {products.map((product, index) => (
-        <Card key={index} isClickable cardWidth="none">
+        <Card key={index} {...args} cardWidth="none">
           <CardProduct
             title={product.title}
             price={product.price}

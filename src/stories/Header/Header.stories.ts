@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { Header } from './Header';
+import { Header, HeaderProps } from './Header';
 
-const meta = {
-  title: 'Example/Header',
+const meta: Meta<HeaderProps> = {
+  title: 'Components/Header',
   component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
