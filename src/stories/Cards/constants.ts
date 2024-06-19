@@ -1,12 +1,16 @@
+// constants.ts
+
 export const options = {
-  colors: ["primary", "secondary", "tertiary"],
-  cardWidth: ["2xs", "xs", "sm", "md", "lg", "xl", "2xl", "3xl", "full"],
-  padding: ["none", "sm", "md", "lg", "hsm", "hmd", "hlg", "vsm", "vmd", "vlg"],
-  margin: ["none", "sm", "md", "lg", "hxs", "hsm", "hmd", "hlg", "vxs", "vsm", "vmd", "vlg"],
+  colors: ["default", "primary", "secondary", "success", "warning", "danger"] as const,
+  cardWidth: ["2xs", "xs", "sm", "md", "lg", "xl", "2xl", "3xl", "full"] as const,
+  padding: ["none", "sm", "md", "lg", "hsm", "hmd", "hlg", "vsm", "vmd", "vlg"] as const,
+  margin: ["none", "sm", "md", "lg", "hxs", "hsm", "hmd", "hlg", "vxs", "vsm", "vmd", "vlg"] as const,
 };
 
-export type paddingTypes = "none" | "sm" | "md" | "lg" | "hsm" | "hmd" | "hlg" | "vsm" | "vmd" | "vlg";
-export type marginTypes = "none" | "sm" | "md" | "lg" | "hxs" | "hsm" | "hmd" | "hlg" | "vxs" | "vsm" | "vmd" | "vlg";
+export type ColorTypes = typeof options.colors[number];
+export type CardWidthTypes = typeof options.cardWidth[number];
+export type PaddingTypes = typeof options.padding[number];
+export type MarginTypes = typeof options.margin[number];
 
 export const products = [
   {
@@ -49,10 +53,6 @@ export const products = [
     price: "$6.00",
     imgRoute: "https://nextui.org/images/fruit-8.jpeg",
   },
-
-  
-
-]
-
+];
 
 export default options;

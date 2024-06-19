@@ -143,7 +143,7 @@ export const WithProduct = (args) => {
       }}
     >
       {products.map((product, index) => (
-        <Card key={index} {...args} cardWidth="none">
+        <Card key={index} {...args} cardWidth="none" isClickable>
           <CardProduct
             title={product.title}
             price={product.price}
@@ -158,7 +158,31 @@ export const WithProduct = (args) => {
 /* List templates */
 export const Colors = listTemplate.bind({});
 Colors.args = {
+  padding: "sm",
   items: options.colors.map((color) => ({ color })),
+};
+
+export const Paddings = (args) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+        width: "65%",
+      }}
+    >
+      {listTemplate(args)}
+    </div>
+  );
+};
+
+Paddings.args = {
+  cardWidth: "full",
+  items: options.padding.map((padding) => ({
+    padding,
+    children: "Padding: " + padding,
+  })),
 };
 
 /*

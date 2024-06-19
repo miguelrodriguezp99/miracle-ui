@@ -131,9 +131,14 @@
   min-width: 300px;
 }
 
+.color-default {
+  color: white;
+  background-color: var(--color-default);
+}
+
 .color-primary {
   color: white;
-  background-color: #18181b;
+  background-color: var(--color-primary);
 }
 
 .color-secondary {
@@ -141,9 +146,19 @@
   background-color: var(--color-secondary);
 }
 
-.color-tertiary {
-  color: #18181b;
-  background-color: #ddd;
+.color-success {
+  color: black;
+  background-color: var(--color-success);
+}
+
+.color-warning {
+  color: black;
+  background-color: var(--color-warning);
+}
+
+.color-danger {
+  color: white;
+  background-color: var(--color-danger);
 }
 
 .is-clickable {

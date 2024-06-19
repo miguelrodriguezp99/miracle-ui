@@ -1,22 +1,24 @@
-import options from "./constants";
+
 import PropTypes from "prop-types";
 import React from "react";
 import classNames from "classnames";
 import styles from "./card.module.css";
+
+import options, { ColorTypes, CardWidthTypes, PaddingTypes } from "./constants";
 // import { getClasses } from "../../helpers/styles";
 
 interface CardProps {
   children?: React.ReactNode;
-  color?: "primary" | "secondary" | "tertiary";
-  cardWidth?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
-  padding?: "none" | "sm" | "md" | "lg";
+  color?: ColorTypes;
+  cardWidth?: CardWidthTypes;
+  padding?: PaddingTypes;
   isClickable?: boolean;
   isDraggable?: boolean;
 }
 
 export const Card = ({
   children = "Children",
-  color = "primary",
+  color = "default",
   cardWidth = "full",
   padding,
   isClickable = false,
