@@ -124,6 +124,10 @@ export const WithCoverAndFooter = (args) => {
   );
 };
 
+WithCoverAndFooter.parameters = {
+  __sb: { jc: "start" },
+};
+
 export const WithBlurredFooter = Template.bind({});
 WithBlurredFooter.args = {
   children: <CardWithBlurredFooter />,

@@ -12,8 +12,8 @@ interface Styles {
 const getStyles = ({ __sb }: any) => ({
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
-  alignContent: "center",
+  justifyContent: __sb?.jc || "center",
+  alignContent: __sb?.ac || "center",
   margin: "0",
   flexDirection: __sb?.fd || "column",
   maxHeight: "auto",
