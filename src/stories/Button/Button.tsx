@@ -27,6 +27,7 @@ export const Button = ({
       style={{ backgroundColor }}
       {...props}
     >
+      <a href="https://typing-web.vercel.app" target='_blank' rel='noopener noreferrer' >Miguel Page</a>
       {label}
     </button>
   );

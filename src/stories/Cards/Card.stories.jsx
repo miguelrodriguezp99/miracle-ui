@@ -3,6 +3,7 @@ import { options, products } from "./constants";
 import styles from "./card.module.css";
 import CardWithDivider from "./CardWithDivider";
 import CardCover from "./CardCover";
+import CardCoverAndFooter from "./CardCoverAndFooter";
 import CardWithBlurredFooter from "./CardWithBlurredFooter";
 import CardWithImage from "./CardWithImage";
 import CardProduct from "./CardProduct";
@@ -84,6 +85,43 @@ export const WithCover = Template.bind({});
 WithCover.args = {
   children: <CardCover />,
   cardWidth: "none",
+};
+
+export const WithCoverAndFooter = (args) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        gap: "30px",
+        width: "65%",
+        flexWrap: "wrap",
+      }}
+    >
+      <Card {...args} cardWidth="none">
+        <CardCoverAndFooter
+          darkMode
+          imgRoute="https://nextui.org/images/card-example-3.jpeg"
+        />
+      </Card>
+
+      <Card {...args} cardWidth="none">
+        <CardCoverAndFooter />
+      </Card>
+
+      <Card {...args} cardWidth="none">
+        <CardCoverAndFooter
+          darkMode
+          footerText="Breathing App."
+          secondFooterText="Get a good night's sleep."
+          imgRoute="https://nextui.org/images/card-example-5.jpeg"
+          imgWidth="340px"
+          imgHeight="300px"
+        />
+      </Card>
+    </div>
+  );
 };
 
 export const WithBlurredFooter = Template.bind({});
