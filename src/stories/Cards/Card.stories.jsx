@@ -94,6 +94,8 @@ export const WithCoverAndFooter = (args) => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
+        alignItems: "center",
+        height: "100%",
         gap: "30px",
         width: "65%",
         flexWrap: "wrap",
@@ -125,7 +127,7 @@ export const WithCoverAndFooter = (args) => {
 };
 
 WithCoverAndFooter.parameters = {
-  __sb: { jc: "start" },
+  __sb: { jc: "start", ac: "center" },
 };
 
 export const WithBlurredFooter = Template.bind({});
@@ -141,22 +143,35 @@ export const WithProduct = (args) => {
       style={{
         display: "grid",
         placeItems: "center",
-        gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))",
-        gap: "10px",
-        width: "65%",
+        width: "100%",
+        height: "100%",
       }}
     >
-      {products.map((product, index) => (
-        <Card key={index} {...args} cardWidth="none" isClickable>
-          <CardProduct
-            title={product.title}
-            price={product.price}
-            imgRoute={product.imgRoute}
-          />
-        </Card>
-      ))}
+      <div
+        style={{
+          display: "grid",
+          placeItems: "center",
+          gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))",
+          gap: "10px",
+          width: "65%",
+        }}
+      >
+        {products.map((product, index) => (
+          <Card key={index} {...args} cardWidth="none" isClickable>
+            <CardProduct
+              title={product.title}
+              price={product.price}
+              imgRoute={product.imgRoute}
+            />
+          </Card>
+        ))}
+      </div>
     </div>
   );
+};
+
+WithProduct.parameters = {
+  __sb: { jc: "start", ac: "center" },
 };
 
 /* List templates */
