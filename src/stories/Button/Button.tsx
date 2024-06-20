@@ -5,7 +5,7 @@ import { SemanticColor } from '../../lib/colors';
 import classNames from 'classnames';
 import { ButtonVariants, ButtonSizes, ButtonRadius } from './constants';
 
-interface ButtonProps {
+export type ButtonProps = {
   isClickable?: boolean;
   isDisabled?: boolean;
   disabledRipple?: boolean;

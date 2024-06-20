@@ -13,8 +13,28 @@
 }
 
 .button:hover {
-  opacity: 0.8;
-  transition: opacity 0.3s ease; /* Nueva transición para hover */
+  background-color: var(--color-default-button-opacity);
+  transition: all 0.3s ease;
+}
+
+.primary:hover {
+  background-color: var(--color-primary-opacity);
+}
+
+.secondary:hover {
+  background-color: var(--color-secondary-opacity);
+}
+
+.success:hover {
+  background-color: var(--color-success-opacity);
+}
+
+.warning:hover {
+  background-color: var(--color-warning-opacity);
+}
+
+.danger:hover {
+  background-color: var(--color-danger-opacity);
 }
 
 .small {
@@ -69,29 +89,41 @@
 .success,
 .warning,
 .danger {
-  --color: var(--color-default);
+  --color: var(--color-default-button);
+  --opacity-color: var(--color-default-button-opacity);
+  --opacity-color2: var(--color-default-button-opacity-2);
 }
 
 .primary {
   --color: var(--color-primary);
+  --opacity-color: var(--color-primary-opacity);
+  --opacity-color2: var(--color-primary-opacity-2);
 }
 
 .secondary {
   --color: var(--color-secondary);
+  --opacity-color: var(--color-secondary-opacity);
+  --opacity-color2: var(--color-secondary-opacity-2);
 }
 
 .success {
   --color: var(--color-success);
+  --opacity-color: var(--color-success-opacity);
+  --opacity-color2: var(--color-success-opacity-2);
   color: black;
 }
 
 .warning {
   --color: var(--color-warning);
+  --opacity-color: var(--color-warning-opacity);
+  --opacity-color2: var(--color-warning-opacity-2);
   color: black;
 }
 
 .danger {
   --color: var(--color-danger);
+  --opacity-color: var(--color-danger-opacity);
+  --opacity-color2: var(--color-danger-opacity-2);
 }
 
 .button {
@@ -102,6 +134,24 @@
   background-color: transparent;
   color: var(--color);
   border: 2px solid var(--color);
+}
+
+.bordered:hover {
+  background-color: transparent;
+  border-color: var(--opacity-color);
+}
+
+.light {
+  background-color: transparent;
+  color: var(--color);
+}
+
+.light:hover {
+  background-color: var(--opacity-color2);
+}
+
+.default {
+  color: white;
 }
 
 .button:active {

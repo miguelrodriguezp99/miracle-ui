@@ -8,11 +8,7 @@ import CardCoverAndFooter from "./CardCoverAndFooter";
 import CardWithBlurredFooter from "./CardWithBlurredFooter";
 import CardWithImage from "./CardWithImage";
 import CardProduct from "./CardProduct";
-import {
-  getListTemplate,
-  getOptionsArgTypes,
-  getTemplate,
-} from "../../../helpers/storybook";
+import { getListTemplate, getTemplate } from "../../../helpers/storybook";
 import CardBody from "./components/CardBody";
 
 const Template = getTemplate(Card, styles);
@@ -25,7 +21,10 @@ export default {
     children: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
   },
   argTypes: {
-    color: getOptionsArgTypes(semanticColors),
+    color: {
+      options: Object.values(semanticColors),
+      control: { type: "select" },
+    },
     cardWidth: {
       control: {
         type: "select",
@@ -179,7 +178,7 @@ WithProduct.parameters = {
 export const Colors = listTemplate.bind({});
 Colors.args = {
   padding: "sm",
-  items: semanticColors.map((color) => ({ color })),
+  items: Object.values(semanticColors).map((color) => ({ color })),
 };
 
 export const Paddings = (args) => {

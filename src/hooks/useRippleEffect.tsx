@@ -28,7 +28,7 @@ const useRippleEffect = ({ disabledRipple, color, variant, isClickable = true, r
 
             if (variant === 'bordered') {
                 ripples.classList.add(`ripple-bordered-${color}`);
-            } else if (color === semanticColors[3] || color === semanticColors[4]
+            } else if (color === semanticColors.success || color === semanticColors.warning
             ) {
                 ripples.classList.add('ripple-dark');
             } else {
