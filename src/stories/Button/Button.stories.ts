@@ -34,3 +34,17 @@ export const Primary: Story = {
     label: 'Button',
   },
 };
+
+export const IsDisabled: Story = {
+  args: {
+    label: 'Button',
+    isDisabled: true,
+  },
+};
+
+export const DisabledRipple: Story = {
+  args: {
+    label: 'Button',
+    disabledRipple: true,
+  },
+};

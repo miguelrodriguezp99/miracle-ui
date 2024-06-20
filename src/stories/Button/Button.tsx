@@ -14,22 +14,26 @@ interface ButtonProps {
   label: string;
   color?: SemanticColor;
   variant?: ButtonVariants;
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
 }
 
 export const Button = ({
-  label = "SOY EL MEJOR BOTON!!",
+  label = "Button",
   disabledRipple = false,
   size = "medium",
   radius = "full",
   isClickable = true,
   isDisabled = false,
   color = "primary",
-  variant = "solid"
+  variant = "solid",
+  startContent,
+  endContent,
 }: ButtonProps) => {
 
   const buttonRef = useRef<HTMLAnchorElement | null>(null);
 
-  useRippleEffect({ disabledRipple, ref: buttonRef });
+  useRippleEffect({ disabledRipple, color, variant, ref: buttonRef });
 
   return (
     <a
@@ -44,7 +48,9 @@ export const Button = ({
         [styles[`${variant}`]]: variant
       })}
     >
+      {startContent}
       {label}
+      {endContent}
     </a>
   );
 };

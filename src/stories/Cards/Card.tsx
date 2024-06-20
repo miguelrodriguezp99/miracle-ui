@@ -31,7 +31,7 @@ export const Card = ({
 
   const cardRef = useRef<HTMLDivElement | null>(null);
 
-  useRippleEffect({ disabledRipple, isClickable, ref: cardRef });
+  useRippleEffect({ disabledRipple, color, isClickable, ref: cardRef });
   return (
     <div
       ref={cardRef}

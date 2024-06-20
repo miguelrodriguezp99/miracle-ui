@@ -57,13 +57,44 @@ svg {
 
 .ripple {
   position: absolute;
-  background: rgba(255, 255, 255, 0.5);
   transform: translate(-50%, -50%);
   pointer-events: none;
   border-radius: 50%;
   width: 0;
   height: 0;
   animation: animate 1s linear;
+}
+
+.ripple-light {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.ripple-dark {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.ripple-bordered-default {
+  background-color: var(--color-default);
+}
+
+.ripple-bordered-primary {
+  background-color: var(--color-primary);
+}
+
+.ripple-bordered-secondary {
+  background-color: var(--color-secondary);
+}
+
+.ripple-bordered-success {
+  background-color: var(--color-success);
+}
+
+.ripple-bordered-warning {
+  background-color: var(--color-warning);
+}
+
+.ripple-bordered-danger {
+  background-color: var(--color-danger);
 }
 
 @keyframes animate {

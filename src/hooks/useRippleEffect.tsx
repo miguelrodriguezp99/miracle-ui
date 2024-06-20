@@ -1,13 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
+import { semanticColors, SemanticColor } from '../lib/colors';
+import { ButtonVariants } from '../stories/Button/constants';
 
 type Props = {
     ref: React.RefObject<HTMLElement>;
     disabledRipple?: boolean;
     isClickable?: boolean;
+    color?: SemanticColor;
+    variant?: ButtonVariants;
 };
 
-const useRippleEffect = ({ disabledRipple, isClickable = true, ref }: Props) => {
+const useRippleEffect = ({ disabledRipple, color, variant, isClickable = true, ref }: Props) => {
     useEffect(() => {
         if (disabledRipple) return;
         if (!isClickable) return;
@@ -20,7 +24,17 @@ const useRippleEffect = ({ disabledRipple, isClickable = true, ref }: Props) => 
             const y = e.clientY - rect.top;
 
             const ripples = document.createElement('span');
-            ripples.className = "ripple";
+            ripples.classList.add('ripple');
+
+            if (variant === 'bordered') {
+                ripples.classList.add(`ripple-bordered-${color}`);
+            } else if (color === semanticColors[3] || color === semanticColors[4]
+            ) {
+                ripples.classList.add('ripple-dark');
+            } else {
+                ripples.classList.add('ripple-light');
+            }
+
             ripples.style.left = `${x}px`;
             ripples.style.top = `${y}px`;
             ref.current.appendChild(ripples);
@@ -35,7 +49,7 @@ const useRippleEffect = ({ disabledRipple, isClickable = true, ref }: Props) => 
         return () => {
             ref.current?.removeEventListener('click', handleClick);
         };
-    }, [disabledRipple, ref]);
+    }, [disabledRipple, color, variant, ref]);
 };
 
 export default useRippleEffect;
