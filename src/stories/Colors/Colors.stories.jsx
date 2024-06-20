@@ -13,7 +13,7 @@ export const SemanticColors = () => (
   <div className={styles.container}>
     <h1>Semantic colors</h1>
     <div className={styles["colors-container"]}>
-      {semanticColors.map((color) => (
+      {Object.keys(semanticColors).map((color) => (
         <div
           key={color}
           className={`${styles[`color-${color}`]} ${styles["color-card"]}`}
