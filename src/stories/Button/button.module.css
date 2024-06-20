@@ -1,7 +1,6 @@
 .button {
   position: relative;
   display: inline-block;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +9,12 @@
   overflow: hidden;
   user-select: none;
   transition: transform 0.1s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease; /* Nueva transición para hover */
 }
 
 .small {
