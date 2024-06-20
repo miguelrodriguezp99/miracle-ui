@@ -2,26 +2,47 @@ import React, { useRef } from 'react';
 import styles from './button.module.css';
 import useRippleEffect from '../../hooks/useRippleEffect';
 import { SemanticColor } from '../../lib/colors';
+import classNames from 'classnames';
+import { ButtonVariants, ButtonSizes, ButtonRadius } from './constants';
 
 interface ButtonProps {
   isClickable?: boolean;
+  isDisabled?: boolean;
+  disabledRipple?: boolean;
+  size?: ButtonSizes;
+  radius?: ButtonRadius;
   label: string;
   color?: SemanticColor;
+  variant?: ButtonVariants;
 }
 
 export const Button = ({
   label = "SOY EL MEJOR BOTON!!",
+  disabledRipple = false,
+  size = "medium",
+  radius = "full",
   isClickable = true,
+  isDisabled = false,
+  color = "primary",
+  variant = "solid"
 }: ButtonProps) => {
 
   const buttonRef = useRef<HTMLAnchorElement | null>(null);
 
-  useRippleEffect({ isClickable, ref: buttonRef });
+  useRippleEffect({ disabledRipple, ref: buttonRef });
 
   return (
     <a
       ref={buttonRef}
-      className={styles.button}
+      className={classNames(styles.button, {
+        [styles[`${color}`]]: color,
+        [styles[`${size}`]]: size,
+        [styles["is-clickable"]]: isClickable,
+        [styles["button-active"]]: isClickable,
+        [styles["is-disabled"]]: isDisabled,
+        [styles[`radius-${radius}`]]: radius,
+        [styles[`${variant}`]]: variant
+      })}
     >
       {label}
     </a>

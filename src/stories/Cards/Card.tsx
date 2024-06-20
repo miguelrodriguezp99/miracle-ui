@@ -16,6 +16,7 @@ interface CardProps {
   padding?: PaddingTypes;
   isClickable?: boolean;
   isDraggable?: boolean;
+  disabledRipple?: boolean;
 }
 
 export const Card = ({
@@ -25,11 +26,12 @@ export const Card = ({
   padding,
   isClickable = false,
   isDraggable = false,
+  disabledRipple = false,
 }: CardProps) => {
 
   const cardRef = useRef<HTMLDivElement | null>(null);
 
-  useRippleEffect({ isClickable, ref: cardRef });
+  useRippleEffect({ disabledRipple, isClickable, ref: cardRef });
   return (
     <div
       ref={cardRef}

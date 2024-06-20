@@ -3,11 +3,13 @@ import { useEffect } from 'react';
 
 type Props = {
     ref: React.RefObject<HTMLElement>;
+    disabledRipple?: boolean;
     isClickable?: boolean;
 };
 
-const useRippleEffect = ({ isClickable, ref }: Props) => {
+const useRippleEffect = ({ disabledRipple, isClickable = true, ref }: Props) => {
     useEffect(() => {
+        if (disabledRipple) return;
         if (!isClickable) return;
 
         const handleClick = (e: MouseEvent) => {
@@ -33,7 +35,7 @@ const useRippleEffect = ({ isClickable, ref }: Props) => {
         return () => {
             ref.current?.removeEventListener('click', handleClick);
         };
-    }, [isClickable, ref]);
+    }, [disabledRipple, ref]);
 };
 
 export default useRippleEffect;
