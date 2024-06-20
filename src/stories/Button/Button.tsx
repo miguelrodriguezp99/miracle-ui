@@ -1,35 +1,28 @@
-import React from 'react';
-import './button.css';
+import React, { useRef } from 'react';
+import styles from './button.module.css';
+import useRippleEffect from '../../hooks/useRippleEffect';
 
 interface ButtonProps {
-  primary?: boolean;
-  backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
+  isClickable?: boolean;
   label: string;
-  onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
-  primary = true,
-  size = 'medium',
-  backgroundColor,
   label = "SOY EL MEJOR BOTON!!",
-  ...props
+  isClickable = true,
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+
+  const buttonRef = useRef<HTMLAnchorElement | null>(null);
+
+  useRippleEffect({ isClickable, ref: buttonRef });
+
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
+    <a
+      ref={buttonRef}
+      className={styles.button}
     >
-      <a href="https://typing-web.vercel.app" target='_blank' rel='noopener noreferrer' >Miguel Page</a>
       {label}
-    </button>
+    </a>
   );
 };
 

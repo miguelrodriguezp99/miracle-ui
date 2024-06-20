@@ -1,10 +1,10 @@
-import options from "./constants";
 import PropTypes from "prop-types";
 import React from "react";
 import CardBody from "./components/CardBody";
 import { Image } from "../Image/Image";
 import { CardFooter } from "./components";
 import styles from "./card.module.css";
+import { semanticColors } from "../../lib/colors";
 
 // import { getClasses } from "../../helpers/styles";
 
@@ -43,7 +43,7 @@ export const CardWithBlurredFooter = ({
 };
 
 CardWithBlurredFooter.propTypes = {
-    color: PropTypes.oneOf(options.colors),
+    color: PropTypes.oneOf(semanticColors),
     isClickable: PropTypes.bool,
     isDraggable: PropTypes.bool,
 };

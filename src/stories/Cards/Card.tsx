@@ -1,15 +1,17 @@
 
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useRef } from "react";
 import classNames from "classnames";
 import styles from "./card.module.css";
 
-import options, { ColorTypes, CardWidthTypes, PaddingTypes } from "./constants";
+import options, { CardWidthTypes, PaddingTypes } from "./constants";
+import { semanticColors, SemanticColor } from "../../lib/colors";
+import useRippleEffect from "../../hooks/useRippleEffect";
 // import { getClasses } from "../../helpers/styles";
 
 interface CardProps {
   children?: React.ReactNode;
-  color?: ColorTypes;
+  color?: SemanticColor;
   cardWidth?: CardWidthTypes;
   padding?: PaddingTypes;
   isClickable?: boolean;
@@ -24,13 +26,19 @@ export const Card = ({
   isClickable = false,
   isDraggable = false,
 }: CardProps) => {
+
+  const cardRef = useRef<HTMLDivElement | null>(null);
+
+  useRippleEffect({ isClickable, ref: cardRef });
   return (
     <div
+      ref={cardRef}
       className={classNames(styles.card, {
         [styles[`color-${color}`]]: color, //just applies if the color exists
         [styles[`padding-${padding}`]]: padding,
         [styles["is-clickable"]]: isClickable,
         [styles["is-draggable"]]: isDraggable,
+        [styles["card-active"]]: isClickable || isDraggable,
         [styles[`width-${cardWidth}`]]: cardWidth,
       })}
     >
@@ -40,7 +48,7 @@ export const Card = ({
 };
 
 Card.propTypes = {
-  color: PropTypes.oneOf(options.colors),
+  color: PropTypes.oneOf(semanticColors),
   cardWidth: PropTypes.oneOf(options.cardWidth),
   padding: PropTypes.oneOf(options.padding),
   isClickable: PropTypes.bool,

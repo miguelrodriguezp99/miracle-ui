@@ -1,5 +1,6 @@
 import Card from ".";
 import { options, products } from "./constants";
+import { semanticColors } from "../../lib/colors";
 import styles from "./card.module.css";
 import CardWithDivider from "./CardWithDivider";
 import CardCover from "./CardCover";
@@ -24,7 +25,7 @@ export default {
     children: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
   },
   argTypes: {
-    color: getOptionsArgTypes(options.colors),
+    color: getOptionsArgTypes(semanticColors),
     cardWidth: {
       control: {
         type: "select",
@@ -178,7 +179,7 @@ WithProduct.parameters = {
 export const Colors = listTemplate.bind({});
 Colors.args = {
   padding: "sm",
-  items: options.colors.map((color) => ({ color })),
+  items: semanticColors.map((color) => ({ color })),
 };
 
 export const Paddings = (args) => {
@@ -225,7 +226,7 @@ export default {
     children: "Card content",
   },
   argTypes: {
-    color: getOptionsArgTypes(options.colors),
+    color: getOptionsArgTypes(semanticColors),
     size: getOptionsArgTypes(options.sizes),
   },
 };
@@ -244,7 +245,7 @@ export const Draggable = Template.bind({});
 Draggable.args = { isDraggable: true };
 
 // export const Colors = () =>
-//   options.colors.map((color, index) => {
+//   semanticColors.map((color, index) => {
 //     return <Card key={index} color={color} />;
 //   });
 
@@ -259,7 +260,7 @@ Draggable.args = { isDraggable: true };
 
 export const Colors = listTemplate.bind({});
 Colors.args = {
-  items: options.colors.map((color) => ({ color })),
+  items: semanticColors.map((color) => ({ color })),
 };
 
 export const Sizes = listTemplate.bind({});

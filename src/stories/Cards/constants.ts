@@ -1,13 +1,12 @@
 // constants.ts
 
 export const options = {
-  colors: ["default", "primary", "secondary", "success", "warning", "danger"] as const,
   cardWidth: ["2xs", "xs", "sm", "md", "lg", "xl", "2xl", "3xl", "full"] as const,
   padding: ["none", "sm", "md", "lg", "hsm", "hmd", "hlg", "vsm", "vmd", "vlg"] as const,
   margin: ["none", "sm", "md", "lg", "hxs", "hsm", "hmd", "hlg", "vxs", "vsm", "vmd", "vlg"] as const,
 };
 
-export type ColorTypes = typeof options.colors[number];
+
 export type CardWidthTypes = typeof options.cardWidth[number];
 export type PaddingTypes = typeof options.padding[number];
 export type MarginTypes = typeof options.margin[number];

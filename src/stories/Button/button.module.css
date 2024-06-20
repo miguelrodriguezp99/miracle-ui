@@ -1,0 +1,40 @@
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 36px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  color: white;
+  overflow: hidden;
+  user-select: none;
+  transition: transform 0.1s ease;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.ripple {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

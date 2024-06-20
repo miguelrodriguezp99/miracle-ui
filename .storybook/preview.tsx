@@ -11,7 +11,7 @@ interface Styles {
 
 const getStyles = ({ __sb }: any) => ({
   display: "flex",
-  alignItems: "center",
+  alignItems: __sb?.ai || "center",
   justifyContent: __sb?.jc || "center",
   alignContent: __sb?.ac || "center",
   margin: "0",
@@ -37,6 +37,11 @@ const preview: Preview = {
   ],
 
   parameters: {
+    options: {
+      storySort: {
+        order: ['Foundations', 'Components'], // Define the order of the stories
+      },
+    },
     backgrounds: {
       default: 'dark',
       values: [

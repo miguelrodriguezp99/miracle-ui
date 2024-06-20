@@ -1,4 +1,5 @@
 .image {
-    border-radius: 10px;
-    object-fit: cover;
+  border-radius: 10px;
+  object-fit: cover;
+  z-index: 0;
 }

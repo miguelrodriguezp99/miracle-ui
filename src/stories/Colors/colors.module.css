@@ -1,0 +1,55 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.colors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin: 0;
+}
+
+.color-card {
+  margin: 8px;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-default {
+  color: white;
+  background-color: var(--color-default);
+}
+
+.color-primary {
+  color: white;
+  background-color: var(--color-primary);
+}
+
+.color-secondary {
+  color: white;
+  background-color: var(--color-secondary);
+}
+
+.color-success {
+  color: black;
+  background-color: var(--color-success);
+}
+
+.color-warning {
+  color: black;
+  background-color: var(--color-warning);
+}
+
+.color-danger {
+  color: white;
+  background-color: var(--color-danger);
+}

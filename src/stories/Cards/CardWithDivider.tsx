@@ -1,4 +1,3 @@
-import options from "./constants";
 import PropTypes from "prop-types";
 import React from "react";
 // import classNames from "classnames";
@@ -8,6 +7,7 @@ import CardBody from "./components/CardBody";
 import Divider from "../Divider/Divider";
 import { Image } from "../Image/Image";
 import { CardFooter } from "./components/CardFooter";
+import { semanticColors } from "../../lib/colors";
 // import { getClasses } from "../../helpers/styles";
 
 interface CardWithDividerProps {
@@ -73,7 +73,7 @@ export const CardWithDivider = ({
 };
 
 CardWithDivider.propTypes = {
-  color: PropTypes.oneOf(options.colors),
+  color: PropTypes.oneOf(semanticColors),
   isClickable: PropTypes.bool,
   isDraggable: PropTypes.bool,
 };

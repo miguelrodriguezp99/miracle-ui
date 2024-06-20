@@ -54,3 +54,28 @@ svg {
   --color-warning: #f5a524;
   --color-danger: #f31260;
 }
+
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  animation: animate 1s linear;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0px;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

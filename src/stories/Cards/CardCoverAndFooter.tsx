@@ -1,4 +1,3 @@
-import options from "./constants";
 import PropTypes from "prop-types";
 import React from "react";
 import styles from "./card.module.css";
@@ -6,6 +5,7 @@ import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
 import { Image } from "../Image/Image";
 import { CardFooter } from "./components";
+import { semanticColors } from "../../lib/colors";
 
 // import { getClasses } from "../../helpers/styles";
 
@@ -68,7 +68,7 @@ export const CardCoverAndFooter = ({
 };
 
 CardCoverAndFooter.propTypes = {
-    color: PropTypes.oneOf(options.colors),
+    color: PropTypes.oneOf(semanticColors),
     isClickable: PropTypes.bool,
     isDraggable: PropTypes.bool,
 };
