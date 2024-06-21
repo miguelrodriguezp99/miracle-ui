@@ -60,11 +60,6 @@ export const DisabledRipple: Story = {
   },
 };
 
-export const Example: Story = {
-  args: {
-    label: 'Button',
-  },
-};
 
 export const GroupButtons: Story = {
   render: () => (
