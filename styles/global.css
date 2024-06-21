@@ -56,26 +56,33 @@ svg {
   --color-warning: #f5a524;
   --color-danger: #f31260;
 
-  --color-default-button-opacity: rgb(57, 57, 63, 0.7);
-  --color-primary-opacity: rgb(0, 111, 238, 0.7);
-  --color-secondary-opacity: rgb(147, 83, 211, 0.7);
-  --color-success-opacity: rgb(23, 201, 100, 0.7);
-  --color-warning-opacity: rgb(245, 165, 36, 0.7);
-  --color-danger-opacity: rgb(243, 18, 96, 0.7);
+  --color-default-button-1: #313136;
+  --color-primary-1: #005bc4;
+  --color-secondary-1: #6020a0;
+  --color-success-1: #12a150;
+  --color-warning-1: #c4841d;
+  --color-danger-1: #c20e4d;
 
-  --color-default-button-opacity-2: rgb(57, 57, 63, 0.5);
-  --color-primary-opacity-2: rgb(0, 111, 238, 0.3);
-  --color-secondary-opacity-2: rgb(147, 83, 211, 0.3);
-  --color-success-opacity-2: rgb(23, 201, 100, 0.3);
-  --color-warning-opacity-2: rgb(245, 165, 36, 0.3);
-  --color-danger-opacity-2: rgb(243, 18, 96, 0.3);
+  --color-default-button-2: #4f4f57;
+  --color-primary-2: #004493;
+  --color-secondary-2: #481878;
+  --color-success-2: #0e793c;
+  --color-warning-2: #936316;
+  --color-danger-2: #920b3a;
 
-  --color-default-button-opacity-3: rgb(57, 57, 63, 0.5);
-  --color-primary-opacity-3: rgba(0, 89, 192, 0.3);
-  --color-secondary-opacity-3: rgba(102, 58, 145, 0.3);
-  --color-success-opacity-3: rgba(17, 145, 72, 0.3);
-  --color-warning-opacity-3: rgba(177, 118, 24, 0.3);
-  --color-danger-opacity-3: rgba(183, 17, 75, 0.3);
+  --color-default-button-3: #2a2a2f;
+  --color-primary-3: #002e62;
+  --color-secondary-3: #301050;
+  --color-success-3: #095028;
+  --color-warning-3: #62420e;
+  --color-danger-3: #610726;
+
+  --color-default-button-4: #1e1e22;
+  --color-primary-4: #001731;
+  --color-secondary-4: #180828;
+  --color-success-4: #052814;
+  --color-warning-4: #312107;
+  --color-danger-4: #310413;
 }
 
 .ripple {

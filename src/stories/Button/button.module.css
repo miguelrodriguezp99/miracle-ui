@@ -1,47 +1,52 @@
 .button {
   position: relative;
-  display: inline-block;
   display: flex;
+  gap: 8px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  text-align: center;
   color: white;
   overflow: hidden;
   user-select: none;
   transition: transform 0.1s ease;
   cursor: pointer;
+  box-sizing: border-box;
   will-change: transform;
+  border: none;
+  text-wrap: nowrap;
 }
 
 .button:hover {
-  background-color: var(--color-default-button-opacity);
+  background-color: var(--color-default-button-1);
   transition: all 0.3s ease;
 }
 
 .primary:hover {
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary-1);
 }
 
 .secondary:hover {
-  background-color: var(--color-secondary-opacity);
+  background-color: var(--color-secondary-1);
 }
 
 .success:hover {
-  background-color: var(--color-success-opacity);
+  background-color: var(--color-success-1);
 }
 
 .warning:hover {
-  background-color: var(--color-warning-opacity);
+  background-color: var(--color-warning-1);
 }
 
 .danger:hover {
-  background-color: var(--color-danger-opacity);
+  background-color: var(--color-danger-1);
 }
 
 .small {
   height: 32px;
   min-width: 64px;
-  padding: 0 12px;
+  width: fit-content;
+  padding: 0px 12px;
   font-size: 12px;
 }
 
@@ -91,46 +96,52 @@
 .warning,
 .danger {
   --color: var(--color-default-button);
-  --opacity-color: var(--color-default-button-opacity);
-  --opacity-color2: var(--color-default-button-opacity-2);
-  --opacity-color3: var(--color-default-button-opacity-3);
+  --opacity-color: var(--color-default-button-1);
+  --opacity-color2: var(--color-default-button-2);
+  --opacity-color3: var(--color-default-button-3);
+  --opacity-color4: var(--color-default-button-4);
 }
 
 .primary {
   --color: var(--color-primary);
-  --opacity-color: var(--color-primary-opacity);
-  --opacity-color2: var(--color-primary-opacity-2);
-  --opacity-color3: var(--color-primary-opacity-3);
+  --opacity-color: var(--color-primary-1);
+  --opacity-color2: var(--color-primary-2);
+  --opacity-color3: var(--color-primary-3);
+  --opacity-color4: var(--color-primary-4);
 }
 
 .secondary {
   --color: var(--color-secondary);
-  --opacity-color: var(--color-secondary-opacity);
-  --opacity-color2: var(--color-secondary-opacity-2);
-  --opacity-color3: var(--color-secondary-opacity-3);
+  --opacity-color: var(--color-secondary-1);
+  --opacity-color2: var(--color-secondary-2);
+  --opacity-color3: var(--color-secondary-3);
+  --opacity-color4: var(--color-secondary-4);
 }
 
 .success {
   --color: var(--color-success);
-  --opacity-color: var(--color-success-opacity);
-  --opacity-color2: var(--color-success-opacity-2);
-  --opacity-color3: var(--color-success-opacity-3);
+  --opacity-color: var(--color-success-1);
+  --opacity-color2: var(--color-success-2);
+  --opacity-color3: var(--color-success-3);
+  --opacity-color4: var(--color-success-4);
   color: black;
 }
 
 .warning {
   --color: var(--color-warning);
-  --opacity-color: var(--color-warning-opacity);
-  --opacity-color2: var(--color-warning-opacity-2);
-  --opacity-color3: var(--color-warning-opacity-3);
+  --opacity-color: var(--color-warning-1);
+  --opacity-color2: var(--color-warning-2);
+  --opacity-color3: var(--color-warning-3);
+  --opacity-color4: var(--color-warning-4);
   color: black;
 }
 
 .danger {
   --color: var(--color-danger);
-  --opacity-color: var(--color-danger-opacity);
-  --opacity-color2: var(--color-danger-opacity-2);
-  --opacity-color3: var(--color-danger-opacity-3);
+  --opacity-color: var(--color-danger-1);
+  --opacity-color2: var(--color-danger-2);
+  --opacity-color3: var(--color-danger-3);
+  --opacity-color4: var(--color-danger-4);
 }
 
 .button {
@@ -155,17 +166,17 @@
 
 .light:hover {
   opacity: 1;
-  background-color: var(--opacity-color2);
+  background-color: var(--opacity-color3);
 }
 
 .flat {
-  background-color: var(--opacity-color2);
+  background-color: var(--opacity-color3);
   color: var(--color);
 }
 
 .flat:hover {
   opacity: 1;
-  background-color: var(--opacity-color3);
+  background-color: var(--opacity-color4);
 }
 
 .faded {

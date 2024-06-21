@@ -6,6 +6,7 @@ import CardBody from "./components/CardBody";
 import { Image } from "../Image/Image";
 import { CardFooter } from "./components";
 import { semanticColors } from "../../lib/colors";
+import Button from "../Button";
 
 // import { getClasses } from "../../helpers/styles";
 
@@ -59,7 +60,8 @@ export const CardCoverAndFooter = ({
 
                             {secondFooterText && <p>{secondFooterText}</p>}
                         </div>
-                        <button className={styles["test-button"]}>{buttonText}</button>
+                        {/* <button className={styles["test-button"]}>{buttonText}</button> */}
+                        <Button label={buttonText} size="small" radius="large" />
                     </div>
                 </CardFooter>
             </CardBody>
