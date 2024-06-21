@@ -199,6 +199,10 @@
   color: var(--color);
 }
 
+.default.ghost {
+  color: white;
+}
+
 .ghost:hover {
   opacity: 1;
   background-color: var(--color) !important;
