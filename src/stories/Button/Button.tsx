@@ -13,9 +13,10 @@ export type ButtonProps = {
   isClickable?: boolean;
   isDisabled?: boolean;
   disabledRipple?: boolean;
-  label: string;
+  label?: string;
   startContent?: React.JSX.Element;
   endContent?: React.ReactNode;
+  isIconOnly?: boolean;
   onClick?: () => void;
 }
 
@@ -30,6 +31,7 @@ export const Button = ({
   variant = "solid",
   startContent,
   endContent,
+  isIconOnly,
   onClick,
 }: ButtonProps) => {
 
@@ -46,7 +48,8 @@ export const Button = ({
         [styles["button-active"]]: isClickable,
         [styles["is-disabled"]]: isDisabled,
         [styles[`radius-${radius}`]]: radius,
-        [styles[`${variant}`]]: variant
+        [styles[`${variant}`]]: variant,
+        [styles["is-icon-only"]]: isIconOnly,
       })}
       onClick={onClick}
     >

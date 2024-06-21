@@ -121,3 +121,13 @@ export const WithEndContent: Story = {
     radius: 'medium',
   },
 };
+
+export const WithIcon: Story = {
+  args: {
+    label: '',
+    isIconOnly: true,
+    endContent: <CameraIcon />,
+    color: "success",
+    radius: 'medium',
+  },
+};

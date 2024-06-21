@@ -213,3 +213,8 @@
 .success.ghost:hover {
   color: black;
 }
+
+.is-icon-only {
+  min-width: 40px;
+  padding: 0;
+}
