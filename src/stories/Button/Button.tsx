@@ -6,14 +6,14 @@ import classNames from 'classnames';
 import { ButtonVariants, ButtonSizes, ButtonRadius } from './constants';
 
 export type ButtonProps = {
+  color?: SemanticColor;
+  variant?: ButtonVariants;
+  size?: ButtonSizes;
+  radius?: ButtonRadius;
   isClickable?: boolean;
   isDisabled?: boolean;
   disabledRipple?: boolean;
-  size?: ButtonSizes;
-  radius?: ButtonRadius;
   label: string;
-  color?: SemanticColor;
-  variant?: ButtonVariants;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
 }

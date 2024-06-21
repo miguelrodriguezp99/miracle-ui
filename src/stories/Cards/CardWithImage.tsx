@@ -43,7 +43,7 @@ export const CardWithImage = ({
 };
 
 CardWithImage.propTypes = {
-    color: PropTypes.oneOf(semanticColors),
+    color: PropTypes.oneOf(Object.entries(semanticColors)),
     isClickable: PropTypes.bool,
     isDraggable: PropTypes.bool,
 };

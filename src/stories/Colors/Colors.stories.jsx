@@ -24,7 +24,3 @@ export const SemanticColors = () => (
     </div>
   </div>
 );
-
-semanticColors.parameters = {
-  __sb: { jc: "start" },
-};

@@ -50,7 +50,7 @@ export const Card = ({
 };
 
 Card.propTypes = {
-  color: PropTypes.oneOf(semanticColors),
+  color: PropTypes.oneOf(Object.entries(semanticColors)),
   cardWidth: PropTypes.oneOf(options.cardWidth),
   padding: PropTypes.oneOf(options.padding),
   isClickable: PropTypes.bool,

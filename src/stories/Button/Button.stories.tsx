@@ -23,7 +23,15 @@ const meta: Meta<typeof Button> = {
     radius: {
       options: Object.values(radius),
       control: { type: 'select' },
-    }
+    },
+
+    endContent: {
+      table: { disable: true },
+    },
+
+    startContent: {
+      table: { disable: true },
+    },
   },
 };
 export default meta;

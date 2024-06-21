@@ -127,7 +127,7 @@ export const WithCoverAndFooter = (args) => {
 };
 
 WithCoverAndFooter.parameters = {
-  __sb: { jc: "start", ac: "center" },
+  __sb: { ac: "center" },
 };
 
 export const WithBlurredFooter = Template.bind({});
