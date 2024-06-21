@@ -72,16 +72,16 @@ export const GroupButtons: Story = {
             gap: '16px',
           }}>
             {
-              Object.values(variants).map((variant) => (
+              Object.values(variants).map((variant, index) => (
                 <Button
-                  key={`${color}-${variant}`}
+                  key={`${color}-${variant}-${index}`}
                   color={color}
                   variant={variant}
                   label="Button"
                 />
-
               ))
             }
+
           </div>
         ))
       }

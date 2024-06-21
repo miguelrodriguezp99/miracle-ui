@@ -10,6 +10,7 @@
   user-select: none;
   transition: transform 0.1s ease;
   cursor: pointer;
+  will-change: transform;
 }
 
 .button:hover {
@@ -92,24 +93,28 @@
   --color: var(--color-default-button);
   --opacity-color: var(--color-default-button-opacity);
   --opacity-color2: var(--color-default-button-opacity-2);
+  --opacity-color3: var(--color-default-button-opacity-3);
 }
 
 .primary {
   --color: var(--color-primary);
   --opacity-color: var(--color-primary-opacity);
   --opacity-color2: var(--color-primary-opacity-2);
+  --opacity-color3: var(--color-primary-opacity-3);
 }
 
 .secondary {
   --color: var(--color-secondary);
   --opacity-color: var(--color-secondary-opacity);
   --opacity-color2: var(--color-secondary-opacity-2);
+  --opacity-color3: var(--color-secondary-opacity-3);
 }
 
 .success {
   --color: var(--color-success);
   --opacity-color: var(--color-success-opacity);
   --opacity-color2: var(--color-success-opacity-2);
+  --opacity-color3: var(--color-success-opacity-3);
   color: black;
 }
 
@@ -117,6 +122,7 @@
   --color: var(--color-warning);
   --opacity-color: var(--color-warning-opacity);
   --opacity-color2: var(--color-warning-opacity-2);
+  --opacity-color3: var(--color-warning-opacity-3);
   color: black;
 }
 
@@ -124,6 +130,7 @@
   --color: var(--color-danger);
   --opacity-color: var(--color-danger-opacity);
   --opacity-color2: var(--color-danger-opacity-2);
+  --opacity-color3: var(--color-danger-opacity-3);
 }
 
 .button {
@@ -147,7 +154,29 @@
 }
 
 .light:hover {
+  opacity: 1;
   background-color: var(--opacity-color2);
+}
+
+.flat {
+  background-color: var(--opacity-color2);
+  color: var(--color);
+}
+
+.flat:hover {
+  opacity: 1;
+  background-color: var(--opacity-color3);
+}
+
+.faded {
+  background-color: #27272a;
+  border: 2px solid #3e3e43;
+  color: var(--color);
+}
+
+.faded:hover {
+  opacity: 1;
+  background-color: #212123;
 }
 
 .default {
@@ -156,4 +185,27 @@
 
 .button:active {
   transform: scale(0.98);
+}
+
+.shadow {
+  box-shadow:
+    0 10px 15px -3px var(--opacity-color),
+    0 4px 6px -4px var(--opacity-color);
+}
+
+.ghost {
+  background-color: transparent;
+  border: 2px solid var(--color);
+  color: var(--color);
+}
+
+.ghost:hover {
+  opacity: 1;
+  background-color: var(--color) !important;
+  color: white;
+}
+
+.warning.ghost:hover,
+.success.ghost:hover {
+  color: black;
 }

@@ -26,7 +26,7 @@ const useRippleEffect = ({ disabledRipple, color, variant, isClickable = true, r
             const ripples = document.createElement('span');
             ripples.classList.add('ripple');
 
-            if (variant === 'bordered') {
+            if (variant === 'bordered' || variant === 'flat' || variant === 'faded') {
                 ripples.classList.add(`ripple-bordered-${color}`);
             } else if (color === semanticColors.success || color === semanticColors.warning
             ) {

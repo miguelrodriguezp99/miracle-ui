@@ -5,7 +5,8 @@ export const variants = {
     flat: "flat",
     faded: "faded",
     shadow: "shadow",
-    ghost: "ghost"
+    ghost: "ghost",
+
   } as const;
   export type ButtonVariants = typeof variants[keyof typeof variants];
   
