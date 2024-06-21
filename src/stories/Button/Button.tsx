@@ -14,8 +14,9 @@ export type ButtonProps = {
   isDisabled?: boolean;
   disabledRipple?: boolean;
   label: string;
-  startContent?: React.ReactNode;
+  startContent?: React.JSX.Element;
   endContent?: React.ReactNode;
+  onClick?: () => void;
 }
 
 export const Button = ({
@@ -29,10 +30,10 @@ export const Button = ({
   variant = "solid",
   startContent,
   endContent,
+  onClick,
 }: ButtonProps) => {
 
   const buttonRef = useRef<HTMLAnchorElement | null>(null);
-
   useRippleEffect({ disabledRipple, color, variant, ref: buttonRef });
 
   return (
@@ -47,6 +48,7 @@ export const Button = ({
         [styles[`radius-${radius}`]]: radius,
         [styles[`${variant}`]]: variant
       })}
+      onClick={onClick}
     >
       {startContent}
       {label}

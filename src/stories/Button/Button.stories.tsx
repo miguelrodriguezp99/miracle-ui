@@ -3,6 +3,8 @@ import { Button } from './Button';
 import { semanticColors } from '../../lib/colors';
 import { radius, sizes, variants } from './constants';
 import React from 'react';
+import { CameraIcon } from '../../Icons/CameraIcon';
+import { UserIcon } from '../../Icons/UserIcon';
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -98,3 +100,24 @@ export const GroupButtons: Story = {
 };
 
 
+
+export const WithStartContent: Story = {
+  args: {
+    label: 'Delete user',
+    startContent: <UserIcon />,
+    variant: "bordered",
+    color: "danger",
+    radius: 'medium',
+  },
+};
+
+
+
+export const WithEndContent: Story = {
+  args: {
+    label: 'Take a photo',
+    endContent: <CameraIcon />,
+    color: "success",
+    radius: 'medium',
+  },
+};
