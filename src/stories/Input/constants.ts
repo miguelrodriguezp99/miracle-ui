@@ -7,14 +7,14 @@ export const variants = {
   shadow: "shadow",
   ghost: "ghost",
 } as const;
-export type ButtonVariants = (typeof variants)[keyof typeof variants];
+export type InputVariants = (typeof variants)[keyof typeof variants];
 
 export const sizes = {
   small: "small",
   medium: "medium",
   large: "large",
 } as const;
-export type ButtonSizes = (typeof sizes)[keyof typeof sizes];
+export type InputSizes = (typeof sizes)[keyof typeof sizes];
 
 export const radius = {
   none: "none",
@@ -23,4 +23,4 @@ export const radius = {
   large: "large",
   full: "full",
 } as const;
-export type ButtonRadius = (typeof radius)[keyof typeof radius];
+export type InputRadius = (typeof radius)[keyof typeof radius];
