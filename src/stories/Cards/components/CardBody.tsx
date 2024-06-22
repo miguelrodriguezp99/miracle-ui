@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./../card.module.css";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import options, { paddingTypes } from "../constants";
+import options, { PaddingTypes } from "../constants";
 
 interface CardBodyProps {
   children: React.ReactNode;
-  padding?: paddingTypes;
+  padding?: PaddingTypes;
   relative?: boolean;
 }
 

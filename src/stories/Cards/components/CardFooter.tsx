@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./../card.module.css";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import options, { paddingTypes, marginTypes } from "../constants";
+import options, { PaddingTypes, MarginTypes } from "../constants";
 
 type Props = {
     children: React.ReactNode;
-    padding?: paddingTypes;
-    margin?: marginTypes;
+    padding?: PaddingTypes;
+    margin?: MarginTypes;
     absolute?: boolean;
     isBlurred?: boolean;
 }

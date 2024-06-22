@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./../card.module.css";
 import PropTypes from "prop-types";
-import options, { paddingTypes } from "../constants";
+import options, { PaddingTypes } from "../constants";
 import classNames from "classnames";
 
 interface CardHeaderProps {
-  padding?: paddingTypes; // Quiero que pueda recibir más de un tipo de padding a la vez
+  padding?: PaddingTypes;
   children?: React.ReactNode;
   absolute?: boolean;
 }
