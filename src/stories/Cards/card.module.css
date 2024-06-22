@@ -31,9 +31,10 @@
 }
 
 .card-footer-cover {
-  width: 100%;
+  width: auto;
   padding: 12px;
   display: flex;
+
   justify-content: space-between;
   font-size: 12px;
   border-radius: 0 0 10px 10px;
@@ -63,7 +64,9 @@
   gap: 5px;
 
   p {
+    text-wrap: pretty;
     margin-right: 10px;
+    width: fit-content;
   }
 }
 

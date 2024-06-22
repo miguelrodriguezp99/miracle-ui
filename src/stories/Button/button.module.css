@@ -61,6 +61,7 @@
   position: relative;
   display: flex;
   gap: 8px;
+  min-width: fit-content;
   justify-content: center;
   align-items: center;
   text-decoration: none;

@@ -63,7 +63,9 @@ export const CardCoverAndFooter = ({
                             {secondFooterText && <p>{secondFooterText}</p>}
                         </div>
                         {/* <button className={styles["test-button"]}>{buttonText}</button> */}
-                        <Button onClick={onClick} label={buttonText} size="small" radius="large" />
+                        <div>
+                            <Button onClick={onClick} label={buttonText} size="small" radius="large" />
+                        </div>
                     </div>
                 </CardFooter>
             </CardBody>
