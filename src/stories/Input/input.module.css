@@ -4,7 +4,6 @@
 
 .input {
   display: block;
-  padding: 24px 24px 10px 10px; /* Padding: top, right, bottom, left */
   width: 100%;
   color: white;
   appearance: none;
@@ -28,15 +27,187 @@
   position: absolute;
   color: rgb(161, 161, 170);
   transition: all 0.15s ease;
-  transform-origin: left top; /* Ensures the label scales from the top-left corner */
+  transform-origin: left top;
   transform: translateY(0) scale(1);
-  top: 16px; /* Align with padding top of input */
-  left: 9px; /* Align with padding left of input */
   pointer-events: none;
 }
 
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
-  transform: translateY(-2px) scale(0.75); /* Adjust translateY to match input padding */
-  top: 8px; /* Adjust top for the scaled label */
+  transform: translateY(-2px) scale(0.75);
+  top: 8px;
+}
+
+.small {
+  padding: 20px 24px 10px 16px;
+}
+
+.medium {
+  padding: 24px 24px 10px 16px;
+}
+
+.large {
+  padding: 30px 30px 10px 20px;
+}
+
+.label.label-small,
+.label.label-medium {
+  top: 18px;
+  left: 16px;
+}
+
+.label.label-large {
+  top: 20px;
+  left: 19px;
+}
+
+.width-small {
+  width: 200px;
+}
+
+.width-medium {
+  width: 280px;
+}
+
+.width-large {
+  width: 400px;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.border-radius-none {
+  border-radius: 0;
+}
+
+.border-radius-small {
+  border-radius: 8px;
+}
+
+.border-radius-medium {
+  border-radius: 12px;
+}
+
+.border-radius-large {
+  border-radius: 14px;
+}
+
+.border-radius-full {
+  border-radius: 9999px;
+}
+
+.default,
+.primary,
+.secondary,
+.success,
+.warning,
+.danger {
+  --color: var(--color-default-button);
+  --color-2: var(--color-default-button-1);
+  --color-3: var(--color-default-button-2);
+  --color-4: var(--color-default-button-3);
+  --color-5: var(--color-default-button-4);
+}
+
+.primary {
+  --color: var(--color-primary);
+  --color-2: var(--color-primary-1);
+  --color-3: var(--color-primary-2);
+  --color-4: var(--color-primary-3);
+  --color-5: var(--color-primary-4);
+}
+
+.secondary {
+  --color: var(--color-secondary);
+  --color-2: var(--color-secondary-1);
+  --color-3: var(--color-secondary-2);
+  --color-4: var(--color-secondary-3);
+  --color-5: var(--color-secondary-4);
+}
+
+.success {
+  --color: var(--color-success);
+  --color-2: var(--color-success-1);
+  --color-3: var(--color-success-2);
+  --color-4: var(--color-success-3);
+  --color-5: var(--color-success-4);
+}
+
+.warning {
+  --color: var(--color-warning);
+  --color-2: var(--color-warning-1);
+  --color-3: var(--color-warning-2);
+  --color-4: var(--color-warning-3);
+  --color-5: var(--color-warning-4);
+}
+
+.danger {
+  --color: var(--color-danger);
+  --color-2: var(--color-danger-1);
+  --color-3: var(--color-danger-2);
+  --color-4: var(--color-danger-3);
+  --color-5: var(--color-danger-4);
+}
+
+.input {
+  background-color: var(--color-5);
+  color: var(--color-2);
+}
+
+.input:hover {
+  background-color: var(--color-4);
+}
+
+.label {
+  color: var(--color);
+}
+
+.bordered {
+  box-sizing: border-box;
+  .input {
+    border: 2px solid #555252;
+    background-color: transparent;
+  }
+
+  .input:focus {
+    border-color: var(--color);
+  }
+
+  .label {
+    color: var(--color);
+  }
+}
+
+.underlined {
+  .input {
+    border: none;
+    border-bottom: 2px solid #555252;
+    background-color: transparent;
+    border-radius: 0;
+    padding-left: 5px;
+  }
+
+  .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: var(--color);
+    transition: transform 0.3s ease;
+  }
+
+  .input:focus ~ .underline,
+  .input:not(:placeholder-shown) ~ .underline {
+    transform: scaleX(1);
+  }
+
+  .label {
+    color: var(--color);
+    top: 20px;
+    left: 5px;
+    transition: all 0.15s ease;
+  }
 }

@@ -21,6 +21,7 @@ interface CardCoverAndFooterProps {
     footerText?: string;
     secondFooterText?: string;
     buttonText?: string;
+    onClick?: () => void;
 }
 
 export const CardCoverAndFooter = ({
@@ -33,6 +34,7 @@ export const CardCoverAndFooter = ({
     footerText = "Available soon. Get notified.",
     secondFooterText,
     buttonText = "Notify Me",
+    onClick,
 }: CardCoverAndFooterProps) => {
     return (
         <>
@@ -61,7 +63,7 @@ export const CardCoverAndFooter = ({
                             {secondFooterText && <p>{secondFooterText}</p>}
                         </div>
                         {/* <button className={styles["test-button"]}>{buttonText}</button> */}
-                        <Button label={buttonText} size="small" radius="large" />
+                        <Button onClick={onClick} label={buttonText} size="small" radius="large" />
                     </div>
                 </CardFooter>
             </CardBody>

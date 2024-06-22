@@ -96,52 +96,52 @@
 .warning,
 .danger {
   --color: var(--color-default-button);
-  --opacity-color: var(--color-default-button-1);
-  --opacity-color2: var(--color-default-button-2);
-  --opacity-color3: var(--color-default-button-3);
-  --opacity-color4: var(--color-default-button-4);
+  --color-2: var(--color-default-button-1);
+  --color-3: var(--color-default-button-2);
+  --color-4: var(--color-default-button-3);
+  --color-5: var(--color-default-button-4);
 }
 
 .primary {
   --color: var(--color-primary);
-  --opacity-color: var(--color-primary-1);
-  --opacity-color2: var(--color-primary-2);
-  --opacity-color3: var(--color-primary-3);
-  --opacity-color4: var(--color-primary-4);
+  --color-2: var(--color-primary-1);
+  --color-3: var(--color-primary-2);
+  --color-4: var(--color-primary-3);
+  --color-5: var(--color-primary-4);
 }
 
 .secondary {
   --color: var(--color-secondary);
-  --opacity-color: var(--color-secondary-1);
-  --opacity-color2: var(--color-secondary-2);
-  --opacity-color3: var(--color-secondary-3);
-  --opacity-color4: var(--color-secondary-4);
+  --color-2: var(--color-secondary-1);
+  --color-3: var(--color-secondary-2);
+  --color-4: var(--color-secondary-3);
+  --color-5: var(--color-secondary-4);
 }
 
 .success {
   --color: var(--color-success);
-  --opacity-color: var(--color-success-1);
-  --opacity-color2: var(--color-success-2);
-  --opacity-color3: var(--color-success-3);
-  --opacity-color4: var(--color-success-4);
+  --color-2: var(--color-success-1);
+  --color-3: var(--color-success-2);
+  --color-4: var(--color-success-3);
+  --color-5: var(--color-success-4);
   color: black;
 }
 
 .warning {
   --color: var(--color-warning);
-  --opacity-color: var(--color-warning-1);
-  --opacity-color2: var(--color-warning-2);
-  --opacity-color3: var(--color-warning-3);
-  --opacity-color4: var(--color-warning-4);
+  --color-2: var(--color-warning-1);
+  --color-3: var(--color-warning-2);
+  --color-4: var(--color-warning-3);
+  --color-5: var(--color-warning-4);
   color: black;
 }
 
 .danger {
   --color: var(--color-danger);
-  --opacity-color: var(--color-danger-1);
-  --opacity-color2: var(--color-danger-2);
-  --opacity-color3: var(--color-danger-3);
-  --opacity-color4: var(--color-danger-4);
+  --color-2: var(--color-danger-1);
+  --color-3: var(--color-danger-2);
+  --color-4: var(--color-danger-3);
+  --color-5: var(--color-danger-4);
 }
 
 .button {
@@ -156,7 +156,7 @@
 
 .bordered:hover {
   background-color: transparent;
-  border-color: var(--opacity-color);
+  border-color: var(--color-2);
 }
 
 .light {
@@ -166,17 +166,17 @@
 
 .light:hover {
   opacity: 1;
-  background-color: var(--opacity-color3);
+  background-color: var(--color-4);
 }
 
 .flat {
-  background-color: var(--opacity-color3);
+  background-color: var(--color-4);
   color: var(--color);
 }
 
 .flat:hover {
   opacity: 1;
-  background-color: var(--opacity-color4);
+  background-color: var(--color-5);
 }
 
 .faded {
@@ -200,8 +200,8 @@
 
 .shadow {
   box-shadow:
-    0 10px 15px -3px var(--opacity-color),
-    0 4px 6px -4px var(--opacity-color);
+    0 10px 15px -3px var(--color-2),
+    0 4px 6px -4px var(--color-2);
 }
 
 .ghost {
