@@ -78,7 +78,6 @@
 
 .label {
   position: absolute;
-  color: rgb(161, 161, 170);
   transition: all 0.15s ease;
   transform-origin: left top;
   transform: translateY(0) scale(1);
@@ -161,7 +160,7 @@
 }
 
 .label {
-  color: var(--color);
+  color: rgb(182, 180, 180);
 }
 
 .bordered {
