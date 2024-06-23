@@ -58,12 +58,15 @@
 .input {
   display: block;
   width: 100%;
-  color: white;
   appearance: none;
   border-radius: 0.375rem;
   background-color: hsl(240 3.7% 15.88%);
   transition: background-color 0.2s ease-in;
   border: none;
+}
+
+.input::placeholder {
+  color: var(--color);
 }
 
 .input:hover {
@@ -76,19 +79,30 @@
     var(--tw-ring-color);
 }
 
+.default {
+  .input {
+    color: white;
+  }
+}
+
 .label {
   position: absolute;
   transition: all 0.15s ease;
   transform-origin: left top;
   transform: translateY(0) scale(1);
   pointer-events: none;
+  color: var(--color);
 }
 
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
   transform: translateY(-2px) scale(0.75);
   top: 8px;
-  color: white;
+}
+
+.input.has-placeholder + .label {
+  transform: translateY(-2px) scale(0.75);
+  top: 8px;
 }
 
 .small {
@@ -159,8 +173,10 @@
   background-color: var(--color-4);
 }
 
-.label {
-  color: rgb(182, 180, 180);
+.default {
+  .label {
+    color: rgb(182, 180, 180);
+  }
 }
 
 .bordered {
@@ -229,4 +245,9 @@
       color: var(--color);
     }
   }
+}
+
+.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }

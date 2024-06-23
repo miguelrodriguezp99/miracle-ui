@@ -16,15 +16,17 @@ type Props = {
     variant?: InputVariants;
     width?: InputWidth;
     radius?: InputRadius;
+    isDisabled?: boolean;
 };
 
 export const Input = ({
     color = "default",
-    placeholder = "",
+    placeholder,
     size = "medium",
     width = "medium",
     radius = "medium",
     variant = "flat",
+    isDisabled = false,
 }: Props) => {
     return (
         <div
@@ -32,14 +34,17 @@ export const Input = ({
                 [styles[`width-${width}`]]: width,
                 [styles[color]]: color,
                 [styles[variant]]: variant,
+                [styles["is-disabled"]]: isDisabled,
             })}
         >
             <input
                 id="email"
                 className={classNames(styles.input, styles[size], {
                     [styles[`border-radius-${radius}`]]: radius,
+                    'has-placeholder': placeholder,
                 })}
                 placeholder={placeholder}
+                disabled={isDisabled}
             />
             <label
                 htmlFor="email"

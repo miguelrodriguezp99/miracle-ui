@@ -27,6 +27,9 @@ const meta: Meta<typeof Input> = {
       options: Object.values(widths),
       control: { type: 'select' },
     },
+    placeholder: {
+      control: { type: 'text' },
+    },
   },
 };
 export default meta;
@@ -34,6 +37,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-
+  args: {
+  },
 };
 
