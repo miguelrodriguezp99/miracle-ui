@@ -41,7 +41,7 @@ export const Input = ({
                 id="email"
                 className={classNames(styles.input, styles[size], {
                     [styles[`border-radius-${radius}`]]: radius,
-                    'has-placeholder': placeholder,
+                    [styles['has-placeholder']]: placeholder,
                 })}
                 placeholder={placeholder}
                 disabled={isDisabled}
