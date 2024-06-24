@@ -21,7 +21,7 @@ type Props = {
 
 export const Input = ({
     color = "default",
-    placeholder,
+    placeholder = "",
     size = "medium",
     width = "medium",
     radius = "medium",
@@ -41,7 +41,7 @@ export const Input = ({
                 id="email"
                 className={classNames(styles.input, styles[size], {
                     [styles[`border-radius-${radius}`]]: radius,
-                    [styles['has-placeholder']]: placeholder,
+                    [styles['has-placeholder']]: placeholder != "",
                 })}
                 placeholder={placeholder}
                 disabled={isDisabled}
