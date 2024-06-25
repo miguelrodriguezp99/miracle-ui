@@ -34,7 +34,7 @@
   width: auto;
   padding: 12px;
   display: flex;
-
+  width: 100%;
   justify-content: space-between;
   font-size: 12px;
   border-radius: 0 0 10px 10px;
@@ -61,6 +61,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   gap: 5px;
 
   p {

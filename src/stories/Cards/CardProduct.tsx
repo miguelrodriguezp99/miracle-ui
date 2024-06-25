@@ -12,22 +12,25 @@ interface CardProductProps {
     title?: string;
     price?: string;
     imgRoute?: string;
+    imgWidth?: string;
+    imgHeight?: string;
 }
 
 export const CardProduct = ({
     title = "Orange",
     price = "$10.00",
+    imgWidth = "180px",
+    imgHeight = "140px",
     imgRoute = "https://nextui.org/images/fruit-1.jpeg"
 }: CardProductProps) => {
     return (
         <>
-
             <CardBody padding="none" relative>
                 <Image
                     route={imgRoute}
                     alt="image"
-                    width="180px"
-                    height="140px"
+                    width={imgWidth}
+                    height={imgHeight}
                 />
             </CardBody>
             <CardFooter padding="none">
