@@ -30,3 +30,27 @@ export const radius = {
   full: "full",
 } as const;
 export type InputRadius = (typeof radius)[keyof typeof radius];
+
+export const inputTypes = {
+  text: "text",
+  email: "email",
+  password: "password",
+  number: "number",
+  date: "date",
+  tel: "tel",
+  url: "url",
+  search: "search",
+  color: "color",
+  checkbox: "checkbox",
+  radio: "radio",
+  range: "range",
+  file: "file",
+  hidden: "hidden",
+  image: "image",
+  reset: "reset",
+  submit: "submit",
+  button: "button",
+} as const;
+
+export type InputTypes = (typeof inputTypes)[keyof typeof inputTypes];
+

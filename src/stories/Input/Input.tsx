@@ -2,6 +2,7 @@ import React from "react";
 import {
     InputRadius,
     InputSizes,
+    InputTypes,
     InputVariants,
     InputWidth,
 } from "./constants";
@@ -17,6 +18,7 @@ type Props = {
     width?: InputWidth;
     radius?: InputRadius;
     isDisabled?: boolean;
+    type?: InputTypes;
 };
 
 export const Input = ({
@@ -27,6 +29,7 @@ export const Input = ({
     radius = "medium",
     variant = "flat",
     isDisabled = false,
+    type = "text",
 }: Props) => {
     return (
         <div
@@ -39,6 +42,7 @@ export const Input = ({
         >
             <input
                 id="email"
+                type={type}
                 className={classNames(styles.input, styles[size], {
                     [styles[`border-radius-${radius}`]]: radius,
                     [styles['has-placeholder']]: placeholder != "",
