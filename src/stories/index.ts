@@ -8,4 +8,5 @@ export { default as CardWithImage } from "./Cards/CardWithImage";
 export { default as CardStyles } from "./Cards/card.module.css";
 export { default as CardWithBlurredFooter } from "./Cards/CardWithBlurredFooter";
 export { default as Image } from "./Image";
-export { default as Divider } from "./Divider/Divider";
+export { default as Divider } from "./Divider";
+export { default as Avatar } from "./Avatar";

@@ -13,8 +13,21 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
     args: {
     },
 };
+
+export const WithText: Story = {
+    args: {
+        name: "John Doe",
+    },
+};
+
+export const WithImage: Story = {
+    args: {
+        avatar: "./src/stories/assets/hero-card-complete.jpeg",
+    },
+};
+
 

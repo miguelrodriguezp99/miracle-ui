@@ -1,0 +1,69 @@
+.avatar-container {
+  background-color: rgb(54, 51, 51);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.size-sm {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.size-md {
+  width: 64px;
+  height: 64px;
+  font-size: 20px;
+}
+
+.size-lg {
+  width: 90px;
+  height: 90px;
+  font-size: 30px;
+}
+
+.size-xl {
+  width: 120px;
+  height: 120px;
+  font-size: 40px;
+}
+
+.radius-none {
+  border-radius: 0;
+}
+
+.radius-small {
+  border-radius: 4px;
+}
+
+.radius-medium {
+  border-radius: 8px;
+}
+
+.radius-large {
+  border-radius: 16px;
+}
+
+.radius-xl {
+  border-radius: 32px;
+}
+
+.radius-full {
+  border-radius: 9999px;
+}
