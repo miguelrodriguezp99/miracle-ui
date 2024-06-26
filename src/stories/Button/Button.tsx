@@ -1,11 +1,15 @@
 import React, { useRef } from 'react';
+import PropTypes from "prop-types";
+import "./../styles/global.css";
 import styles from './button.module.css';
 import useRippleEffect from '../../hooks/useRippleEffect';
-import { SemanticColor } from '../../lib/colors';
+import { SemanticColor, semanticColors } from '../../lib/colors';
 import classNames from 'classnames';
-import { ButtonVariants, ButtonSizes, ButtonRadius } from './constants';
+import { ButtonVariants, ButtonSizes, ButtonRadius, variants, sizes, radius } from './constants';
 
-export type ButtonProps = {
+
+
+interface ButtonProps {
   color?: SemanticColor;
   variant?: ButtonVariants;
   size?: ButtonSizes;
@@ -59,5 +63,21 @@ export const Button = ({
     </a>
   );
 };
+
+Button.propTypes = {
+  color: PropTypes.oneOf(Object.entries(semanticColors)),
+  variant: PropTypes.oneOf(Object.entries(variants)),
+  size: PropTypes.oneOf(Object.entries(sizes)),
+  radius: PropTypes.oneOf(Object.entries(radius)),
+  isClickable: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  disabledRipple: PropTypes.bool,
+  label: PropTypes.string,
+  startContent: PropTypes.element,
+  endContent: PropTypes.node,
+  isIconOnly: PropTypes.bool,
+  onClick: PropTypes.func,
+};
+
 
 export default Button

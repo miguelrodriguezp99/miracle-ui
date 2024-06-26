@@ -1,0 +1,10 @@
+.eyeSlashFilledIcon {
+  color: white !important;
+}
+
+.eyeFilledIcon {
+  color: white;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}

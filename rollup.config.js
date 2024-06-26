@@ -20,15 +20,13 @@ export default [
         sourcemap: true,
       },
     ],
-    external: ["react", "react-dom"],
+    // external: ["react", "react-dom"],
     plugins: [
-      typescript({
-        exclude: ["**/*.stories.ts"], // Excluir archivos .stories.ts
-      }),
+      typescript(),
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      postcss(), // Agrega el plugin postcss
+      postcss(),
       terser(),
     ],
   },

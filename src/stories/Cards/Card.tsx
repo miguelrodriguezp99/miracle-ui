@@ -58,19 +58,3 @@ Card.propTypes = {
 };
 
 export default Card;
-
-// const getStyles = getClasses(styles)({
-//   color,
-//   size,
-// });
-
-// return (
-//   <div
-//     className={getStyles("card", ["color", "size"], {
-//       "is-clickable": isClickable,
-//       "is-draggable": isDraggable,
-//     })}
-//   >
-//     {children}
-//   </div>
-// );

@@ -1,6 +1,6 @@
 {
   "name": "mirakle-ui-react",
-  "version": "0.0.11",
+  "version": "0.0.14",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -22,6 +22,8 @@
   ],
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs",
+    "clean": "if exist dist ( rd /S /Q dist)",
+    "updateLink": "npm run clean && tsc && npm rm mirakle-ui-react -g && npm link",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

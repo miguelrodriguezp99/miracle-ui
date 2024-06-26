@@ -8,6 +8,7 @@ import { UserIcon } from '../../Icons/UserIcon';
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
+  // @ts-expect-error typescript doesn't like the component assignment
   component: Button,
   argTypes: {
     color: {

@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: fit-content;
 }
 
 .text-container {
@@ -21,8 +22,8 @@
 }
 
 .size-sm {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   font-size: 12px;
 }
 
