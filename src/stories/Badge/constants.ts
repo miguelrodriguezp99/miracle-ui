@@ -1,11 +1,18 @@
 export const variants = {
+    solid: "solid",
     flat: "flat",
-    bordered: "bordered",
     faded: "faded",
-    underlined: "underlined",
   } as const;
   export type BadgeVariants = (typeof variants)[keyof typeof variants];
   
+  export const positions = {
+    tl: "tl",
+    tr: "tr",
+    bl: "bl",
+    br: "br",
+  };
+  export type BadgePosition = (typeof positions)[keyof typeof positions];
+
   export const sizes = {
     sm: "sm",
     md: "md",

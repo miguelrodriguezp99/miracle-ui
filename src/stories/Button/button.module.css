@@ -101,8 +101,8 @@
 }
 
 .faded {
-  background-color: #27272a;
-  border: 2px solid #3e3e43;
+  background-color: var(--color-faded);
+  border: 2px solid var(--color-faded-1);
   color: var(--color);
 }
 

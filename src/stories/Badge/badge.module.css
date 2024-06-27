@@ -13,22 +13,53 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.25rem;
-  height: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
 }
 
 .square {
-  top: 5%;
-  right: 5%;
-  transform: translate(50%, -50%);
+  --offset: 5%;
 }
 
 .circular {
-  top: 15%;
-  right: 15%;
+  --offset: 15%;
+}
+
+.bordered {
+  border: 2px solid var(--color-5);
+}
+
+.tr {
+  top: var(--offset);
+  right: var(--offset);
   transform: translate(50%, -50%);
 }
 
-.badge .bordered {
-  border: 2px solid var(--color);
+.tl {
+  top: var(--offset);
+  left: var(--offset);
+  transform: translate(-50%, -50%);
+}
+
+.br {
+  bottom: var(--offset);
+  right: var(--offset);
+  transform: translate(50%, 50%);
+}
+
+.bl {
+  bottom: var(--offset);
+  left: var(--offset);
+  transform: translate(-50%, 50%);
+}
+
+.badge.faded {
+  background-color: var(--color-faded);
+  border: 2px solid var(--color-faded-1);
+  color: var(--color);
+}
+
+.badge.flat {
+  background-color: var(--color-4);
+  color: var(--color);
 }

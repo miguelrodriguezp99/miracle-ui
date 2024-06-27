@@ -83,6 +83,9 @@ svg {
   --color-success-4: #052814;
   --color-warning-4: #312107;
   --color-danger-4: #310413;
+
+  --color-faded: #27272a;
+  --color-faded-1: #3e3e43;
 }
 
 .default,
