@@ -41,3 +41,30 @@ export const Primary: Story = {
   },
 };
 
+export const Faded: Story = {
+  args: {
+    variant: 'faded',
+    color: "secondary"
+  },
+};
+
+export const Bordered: Story = {
+  args: {
+    variant: 'bordered',
+    color: "success"
+  },
+};
+
+export const Underlined: Story = {
+  args: {
+    variant: 'underlined',
+    color: 'primary',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    isDisabled: true,
+  },
+};
+

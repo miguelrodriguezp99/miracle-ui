@@ -87,7 +87,7 @@
 
 .label {
   position: absolute;
-  transition: all 0.15s ease;
+  transition: all 0.3s ease;
   transform-origin: left top;
   transform: translateY(0) scale(1);
   pointer-events: none;
@@ -193,6 +193,15 @@
   .label {
     color: var(--color);
   }
+  .input:focus ~ .underline,
+  .input:not(:placeholder-shown) ~ .underline {
+    transform: scaleX(1);
+  }
+
+  .label {
+    color: var(--color);
+    transition: all 0.3s ease;
+  }
 }
 
 .underlined {
@@ -224,7 +233,7 @@
     color: var(--color);
     top: 20px;
     left: 5px;
-    transition: all 0.15s ease;
+    transition: all 0.3s ease;
   }
 }
 
@@ -244,6 +253,17 @@
     ~ .label {
       color: var(--color);
     }
+  }
+
+  .input:focus ~ .underline,
+  .input:not(:placeholder-shown) ~ .underline {
+    transform: scaleX(1);
+  }
+
+  .label {
+    color: var(--color);
+
+    transition: all 0.3s ease;
   }
 }
 
