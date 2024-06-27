@@ -14,7 +14,6 @@ type Props = {
 const useRippleEffect = ({ disabledRipple, color, variant, isClickable = true, ref }: Props) => {
 
     useEffect(() => {
-        console.log('useRippleEffect hook!!!');
         if (disabledRipple) return;
         if (!isClickable) return;
         if (!ref.current) return;
