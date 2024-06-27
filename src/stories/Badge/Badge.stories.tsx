@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Badge } from './Badge';
-import { radii, sizes, variants } from './constants';
+import { radii, variants } from './constants';
 import { semanticColors } from '../../lib/colors';
 import Avatar from '../Avatar';
 import React from 'react';
@@ -9,10 +9,6 @@ const meta: Meta<typeof Badge> = {
     title: 'Components/Badge',
     component: Badge,
     argTypes: {
-        size: {
-            options: Object.values(sizes),
-            control: { type: 'select' },
-        },
         color: {
             options: Object.values(semanticColors),
             control: { type: 'select' },

@@ -1,13 +1,12 @@
 import React from "react";
 import { SemanticColor, semanticColors } from "../../lib/colors";
-import { BadgeRadius, BadgeSizes, BadgePosition, positions, BadgeVariants, variants } from "./constants";
+import { BadgeRadius, BadgePosition, positions, BadgeVariants, variants } from "./constants";
 import styles from "./badge.module.css";
 import classNames from "classnames";
 import Avatar from "../Avatar";
 
 type Props = {
     color: SemanticColor;
-    size: BadgeSizes;
     variant: BadgeVariants;
     radius: BadgeRadius;
     position: BadgePosition;
