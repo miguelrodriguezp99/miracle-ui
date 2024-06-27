@@ -12,6 +12,7 @@ type Props = {
     size?: AvatarSizes;
     color?: SemanticColor;
     bordered?: boolean;
+    isDisabled?: boolean;
 };
 
 export const Avatar = ({
@@ -21,6 +22,7 @@ export const Avatar = ({
     size = sizes.md,
     bordered = false,
     color = semanticColors.default,
+    isDisabled,
 }: Props) => {
     let content;
 
@@ -59,6 +61,7 @@ export const Avatar = ({
                 [styles[`radius-${radius}`]]: radius,
                 [styles[color]]: color,
                 [styles["bordered"]]: bordered,
+                [styles["disabled"]]: isDisabled,
             })}
         >
             {content}

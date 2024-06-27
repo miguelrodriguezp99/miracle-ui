@@ -48,4 +48,9 @@ export const WithBorder: Story = {
     },
 };
 
+export const Disabled = {
+    args: {
+        isDisabled: true,
+    },
+};
 

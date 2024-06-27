@@ -132,3 +132,8 @@
 .bordered {
   outline: 3px solid var(--color);
 }
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
