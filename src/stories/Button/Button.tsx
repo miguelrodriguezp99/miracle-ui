@@ -46,7 +46,7 @@ export const Button = ({
     <a
       ref={buttonRef}
       className={classNames(styles.button, {
-        [styles[`${color}`]]: color,
+        [`${color}`]: color,
         [styles[`${size}`]]: size,
         [styles["is-clickable"]]: isClickable,
         [styles["button-active"]]: isClickable,
