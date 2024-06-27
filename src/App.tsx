@@ -1,18 +1,18 @@
 
 import React from 'react'
 
-import { Button, Card, Avatar } from './stories'
+import { Button, Card, Avatar, CardWithDivider } from './stories'
 
 function App() {
 
     return (
         <>
 
-            <Button label="Button" radius='large' />
-            <Card cardWidth='2xl' padding='none' >
-                <h1>Card!</h1>
+            <Button variant='solid' color='danger' />
+            <Card cardWidth='3xl'>
+                <CardWithDivider />
             </Card>
-            <Avatar />
+            <Avatar size='md' />
 
         </>
     )

@@ -1,18 +1,23 @@
 import React from "react";
 import styles from "./avatar.module.css";
 import classNames from "classnames";
+import { AvatarSizes } from "./constants";
+import { SemanticColor } from "../../lib/colors";
 
 export type AvatarIconProps = {
-    size: string;
+    size: AvatarSizes;
+    color: SemanticColor;
+
 }
 
-export const AvatarIcon = ({ size }: AvatarIconProps) => {
+export const AvatarIcon = ({ size, color }: AvatarIconProps) => {
     return (
         <svg
             id="Layer_1"
             viewBox="0 0 128 128"
             className={classNames(styles["avatar-image"], {
                 [styles[`size-${size}`]]: size,
+                [styles[`avatar-${color}`]]: color,
             })}
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"

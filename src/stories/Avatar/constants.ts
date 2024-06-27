@@ -22,7 +22,7 @@ export const variants = {
   
   export type AvatarWidth = (typeof widths)[keyof typeof widths];
   
-  export const radius = {
+  export const radii = {
     none: "none",
     sm: "sm",
     md: "md",
@@ -30,5 +30,5 @@ export const variants = {
     xl: "xl",
     full: "full",
   } as const;
-  export type AvatarRadius = (typeof radius)[keyof typeof radius];
+  export type AvatarRadius = (typeof radii)[keyof typeof radii];
   

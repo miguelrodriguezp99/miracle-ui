@@ -1,12 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Avatar } from './Avatar';
-import { } from './constants';
-import { } from '../../lib/colors';
+import { radii, sizes } from './constants';
+import { semanticColors } from '../../lib/colors';
 
 const meta: Meta<typeof Avatar> = {
     title: 'Components/Avatar',
     component: Avatar,
     argTypes: {
+        size: {
+            options: Object.values(sizes),
+            control: { type: 'select' },
+        },
+        color: {
+            options: Object.values(semanticColors),
+            control: { type: 'select' },
+        },
+        radius: {
+            options: Object.values(radii),
+            control: { type: 'select' },
+        },
     },
 };
 export default meta;
@@ -27,6 +39,12 @@ export const WithText: Story = {
 export const WithImage: Story = {
     args: {
         avatar: "./src/stories/assets/hero-card-complete.jpeg",
+    },
+};
+
+export const WithBorder: Story = {
+    args: {
+        bordered: true,
     },
 };
 
