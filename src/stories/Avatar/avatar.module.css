@@ -130,10 +130,43 @@
 }
 
 .bordered {
-  outline: 3px solid var(--color);
+  border: 3px solid var(--color);
 }
 
 .disabled {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .avatar-container {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .avatar-container:not(:first-child) {
+    margin-left: -1.2rem;
+  }
+
+  .avatar-container:not(:hover) {
+    z-index: 1;
+  }
+}
+
+.horizontal {
+  .avatar-container:hover {
+    transform: translateX(-0.5rem);
+    z-index: 1; /* Mantiene el z-index constante */
+  }
+}
+
+.vertical {
+  .avatar-container:hover {
+    transform: translateY(-1rem);
+    z-index: 1; /* Mantiene el z-index constante */
+  }
 }

@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Avatar } from './Avatar';
+import { AvatarGroup as Group } from './AvatarGroup'; // Renamed the import to resolve the conflict
 import { radii, sizes } from './constants';
 import { semanticColors } from '../../lib/colors';
+import React from 'react';
 
 const meta: Meta<typeof Avatar> = {
     title: 'Components/Avatar',
@@ -48,9 +50,19 @@ export const WithBorder: Story = {
     },
 };
 
-export const Disabled = {
+export const Disabled: Story = {
     args: {
         isDisabled: true,
     },
 };
+
+export const AvatarGroup: Story = {
+    render: () => (
+        <Group animation='horizontal'> {/* Use the renamed import */}
+            <Avatar name="John Doe" bordered />
+            <Avatar name="John Doe" bordered />
+            <Avatar name="John Doe" bordered />
+        </Group>
+    )
+}
 
