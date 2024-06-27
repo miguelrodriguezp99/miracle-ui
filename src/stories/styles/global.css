@@ -202,3 +202,39 @@ svg {
     opacity: 0;
   }
 }
+
+/* VARIANTS */
+
+.bordered {
+  background-color: transparent;
+  color: var(--color);
+  border: 2px solid var(--color);
+}
+
+.light {
+  background-color: transparent;
+  color: var(--color);
+}
+
+.flat {
+  background-color: var(--color-4);
+  color: var(--color);
+}
+
+.faded {
+  background-color: var(--color-faded);
+  border: 2px solid var(--color-faded-1);
+  color: var(--color);
+}
+
+.shadow {
+  box-shadow:
+    0 10px 15px -3px var(--color-2),
+    0 4px 6px -4px var(--color-2);
+}
+
+.ghost {
+  background-color: transparent;
+  border: 2px solid var(--color);
+  color: var(--color);
+}

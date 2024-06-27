@@ -1,11 +1,12 @@
 .avatar-container {
-  background-color: var(--color-4);
+  background-color: var(--color-2);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: fit-content;
+  color: var(--color);
 }
 
 .text-container {

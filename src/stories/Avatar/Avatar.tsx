@@ -45,7 +45,7 @@ export const Avatar = ({
             <div
                 className={classNames(styles[`text-container`], {
                     [styles[`size-${size}`]]: size,
-                    [styles[`${color}`]]: color,
+                    [`${color}`]: color,
                 })}
             >
                 {name}
@@ -59,9 +59,9 @@ export const Avatar = ({
         <div
             className={classNames(styles["avatar-container"], {
                 [styles[`radius-${radius}`]]: radius,
-                [styles[color]]: color,
                 [styles["bordered"]]: bordered,
                 [styles["disabled"]]: isDisabled,
+                [`${color}`]: color,
             })}
         >
             {content}
