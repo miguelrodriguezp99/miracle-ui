@@ -166,7 +166,7 @@
 
 .vertical {
   .avatar-container:hover {
-    transform: translateY(-1rem);
+    transform: translateY(-0.75rem);
     z-index: 1; /* Mantiene el z-index constante */
   }
 }
