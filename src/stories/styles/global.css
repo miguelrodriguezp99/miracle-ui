@@ -49,21 +49,21 @@ svg {
 
 :root {
   --color-default: #18181b;
-  --color-default-button: #39393f;
+  --color-default-button: #424247;
   --color-primary: #006fee;
   --color-secondary: #9353d3;
   --color-success: #17c964;
   --color-warning: #f5a524;
   --color-danger: #f31260;
 
-  --color-default-button-1: #313136;
+  --color-default-button-1: #39393e;
   --color-primary-1: #005bc4;
   --color-secondary-1: #6020a0;
   --color-success-1: #12a150;
   --color-warning-1: #c4841d;
   --color-danger-1: #c20e4d;
 
-  --color-default-button-2: #4f4f57;
+  --color-default-button-2: #39393d;
   --color-primary-2: #004493;
   --color-secondary-2: #481878;
   --color-success-2: #0e793c;
@@ -83,6 +83,65 @@ svg {
   --color-success-4: #052814;
   --color-warning-4: #312107;
   --color-danger-4: #310413;
+}
+
+.default,
+.primary,
+.secondary,
+.success,
+.warning,
+.danger {
+  --color: var(--color-default-button);
+  --color-2: var(--color-default-button-1);
+  --color-3: var(--color-default-button-2);
+  --color-4: var(--color-default-button-3);
+  --color-5: var(--color-default-button-4);
+  color: white;
+}
+
+.primary {
+  --color: var(--color-primary);
+  --color-2: var(--color-primary-1);
+  --color-3: var(--color-primary-2);
+  --color-4: var(--color-primary-3);
+  --color-5: var(--color-primary-4);
+  color: white;
+}
+
+.secondary {
+  --color: var(--color-secondary);
+  --color-2: var(--color-secondary-1);
+  --color-3: var(--color-secondary-2);
+  --color-4: var(--color-secondary-3);
+  --color-5: var(--color-secondary-4);
+  color: white;
+}
+
+.success {
+  --color: var(--color-success);
+  --color-2: var(--color-success-1);
+  --color-3: var(--color-success-2);
+  --color-4: var(--color-success-3);
+  --color-5: var(--color-success-4);
+  color: black;
+}
+
+.warning {
+  --color: var(--color-warning);
+  --color-2: var(--color-warning-1);
+  --color-3: var(--color-warning-2);
+  --color-4: var(--color-warning-3);
+  --color-5: var(--color-warning-4);
+  color: black;
+}
+
+.danger {
+  --color: var(--color-danger);
+  --color-2: var(--color-danger-1);
+  --color-3: var(--color-danger-2);
+  --color-4: var(--color-danger-3);
+  --color-5: var(--color-danger-4);
+  color: white;
 }
 
 .ripple {
