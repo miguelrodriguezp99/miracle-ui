@@ -4,11 +4,12 @@
 .success,
 .warning,
 .danger {
-  --color: var(--color-default-button);
+  --color: rgb(175, 172, 172);
   --color-2: var(--color-default-button-1);
   --color-3: var(--color-default-button-2);
   --color-4: var(--color-default-button-3);
   --color-5: var(--color-default-button-4);
+  color: white;
 }
 
 .primary {
@@ -17,6 +18,7 @@
   --color-3: var(--color-primary-2);
   --color-4: var(--color-primary-3);
   --color-5: var(--color-primary-4);
+  color: white;
 }
 
 .secondary {
@@ -25,6 +27,7 @@
   --color-3: var(--color-secondary-2);
   --color-4: var(--color-secondary-3);
   --color-5: var(--color-secondary-4);
+  color: white;
 }
 
 .success {
@@ -33,6 +36,7 @@
   --color-3: var(--color-success-2);
   --color-4: var(--color-success-3);
   --color-5: var(--color-success-4);
+  color: black;
 }
 
 .warning {
@@ -41,6 +45,7 @@
   --color-3: var(--color-warning-2);
   --color-4: var(--color-warning-3);
   --color-5: var(--color-warning-4);
+  color: black;
 }
 
 .danger {
@@ -49,6 +54,7 @@
   --color-3: var(--color-danger-2);
   --color-4: var(--color-danger-3);
   --color-5: var(--color-danger-4);
+  color: white;
 }
 
 .input-container {
@@ -65,24 +71,23 @@
   border: none;
 }
 
-.input::placeholder {
-  color: var(--color);
+.input {
+  background-color: var(--color-5);
+  color: var(--color-2);
 }
 
 .input:hover {
-  background-color: hsl(240 5.26% 26.08%);
+  background-color: var(--color-4);
+}
+
+.input::placeholder {
+  color: var(--color);
 }
 
 .input:focus {
   outline: none;
   box-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width))
     var(--tw-ring-color);
-}
-
-.default {
-  .input {
-    color: white;
-  }
 }
 
 .label {
@@ -162,21 +167,6 @@
 
 .border-radius-full {
   border-radius: 9999px;
-}
-
-.input {
-  background-color: var(--color-5);
-  color: var(--color-2);
-}
-
-.input:hover {
-  background-color: var(--color-4);
-}
-
-.default {
-  .label {
-    color: rgb(182, 180, 180);
-  }
 }
 
 .bordered {
@@ -262,7 +252,6 @@
 
   .label {
     color: var(--color);
-
     transition: all 0.3s ease;
   }
 }

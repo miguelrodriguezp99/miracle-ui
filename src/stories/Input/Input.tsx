@@ -7,7 +7,7 @@ import {
     InputWidth,
 } from "./constants";
 import styles from "./input.module.css";
-import { SemanticColor } from "../../lib/colors";
+import { SemanticColor, semanticColors } from "../../lib/colors";
 import classNames from "classnames";
 
 type Props = {
@@ -22,7 +22,7 @@ type Props = {
 };
 
 export const Input = ({
-    color = "default",
+    color = semanticColors.default,
     placeholder = "",
     size = "medium",
     width = "medium",

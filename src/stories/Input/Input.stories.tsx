@@ -58,13 +58,14 @@ export const Bordered: Story = {
 export const Underlined: Story = {
   args: {
     variant: 'underlined',
-    color: 'primary',
+    color: 'danger',
   },
 };
 
 export const Disabled: Story = {
   args: {
     isDisabled: true,
+
   },
 };
 
