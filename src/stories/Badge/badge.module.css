@@ -1,0 +1,34 @@
+.badge-container {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  background-color: var(--color);
+  padding: 0.1rem;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+  line-height: normal;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.square {
+  top: 5%;
+  right: 5%;
+  transform: translate(50%, -50%);
+}
+
+.circular {
+  top: 15%;
+  right: 15%;
+  transform: translate(50%, -50%);
+}
+
+.badge .bordered {
+  border: 2px solid var(--color);
+}
