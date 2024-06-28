@@ -13,13 +13,6 @@ export const positions = {
 };
 export type BadgePosition = (typeof positions)[keyof typeof positions];
 
-// export const sizes = {
-//   sm: "sm",
-//   md: "md",
-//   lg: "lg",
-// } as const;
-// export type BadgeSizes = (typeof sizes)[keyof typeof sizes];
-
 export const widths = {
   sm: "sm",
   md: "md",

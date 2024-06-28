@@ -1,0 +1,114 @@
+.checkbox-label {
+  position: relative;
+  font-size: inherit;
+  cursor: pointer;
+  color: white;
+}
+
+.font-sm {
+  font-size: 1rem;
+}
+
+.font-md {
+  font-size: 1.25rem;
+}
+
+.font-lg {
+  font-size: 1.5rem;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.input-check {
+  position: relative;
+  display: inline-block;
+
+  top: 3px;
+  margin-right: 5px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  transition: 0.2s ease-in-out;
+}
+
+.sm {
+  top: 3px;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  --height: 4px;
+  --width: 8px;
+  --top: 4px;
+  --left: 3px;
+  --border: 1px;
+}
+
+.md {
+  top: 4px;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  --height: 6px;
+  --width: 12px;
+  --top: 6px;
+  --left: 4px;
+  --border: 1px;
+}
+
+.lg {
+  top: 6px;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+  --height: 8px;
+  --width: 16px;
+  --top: 8px;
+  --left: 7px;
+  --border: 2px;
+}
+
+.checkbox-input:checked + .input-check {
+  background-color: rgb(3, 70, 255);
+  border-color: rgb(3, 70, 255);
+}
+
+.input-check::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+
+.input-check::before {
+  top: var(--top);
+  left: var(--left);
+}
+
+.checkbox-input:checked + .input-check::before {
+  animation: checkgrow 0.3s linear 0.2s both;
+}
+
+@keyframes checkgrow {
+  0% {
+    height: 0px;
+    width: 0px;
+  }
+
+  25% {
+    border-bottom: var(--border) solid #fff;
+    border-left: var(--border) solid #fff;
+    height: var(--height);
+    width: 0px;
+  }
+
+  100% {
+    border-bottom: var(--border) solid #fff;
+    border-left: var(--border) solid #fff;
+    height: var(--height);
+    width: var(--width);
+  }
+}
