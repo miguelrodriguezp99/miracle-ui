@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Checkbox } from './Checkbox';
 
-import { semanticColors } from '../../lib/colors';
+import { semanticColorsCheckbox } from '../../lib/colors';
+import { radii, sizes } from './constants';
 
 
 const meta: Meta<typeof Checkbox> = {
@@ -9,7 +10,18 @@ const meta: Meta<typeof Checkbox> = {
     component: Checkbox,
     argTypes: {
         color: {
-            options: Object.values(semanticColors),
+            options: Object.values(semanticColorsCheckbox),
+            control: { type: 'select' },
+        },
+        textColor: {
+            control: { type: 'boolean' },
+        },
+        size: {
+            options: Object.values(sizes),
+            control: { type: 'select' },
+        },
+        radius: {
+            options: Object.values(radii),
             control: { type: 'select' },
         },
 
