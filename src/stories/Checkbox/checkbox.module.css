@@ -119,6 +119,11 @@
   animation: checkgrow 0.3s linear 0.2s both;
 }
 
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 @keyframes checkgrow {
   0% {
     height: 0px;

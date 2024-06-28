@@ -36,3 +36,14 @@ export const Default: Story = {
     },
 };
 
+export const Disabled: Story = {
+    args: {
+        isDisabled: true,
+    },
+};
+
+export const DefaultSelected: Story = {
+    args: {
+        isChecked: true,
+    },
+};
