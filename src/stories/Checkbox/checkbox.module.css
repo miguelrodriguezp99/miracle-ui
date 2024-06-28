@@ -44,25 +44,25 @@
   --height: 4px;
   --width: 8px;
   --top: 4px;
-  --left: 3px;
+  --left: 4px;
   --border: 1px;
 }
 
 .md {
   top: 4px;
-  margin-right: 10px;
+  margin-right: 7px;
   width: 24px;
   height: 24px;
   --height: 6px;
   --width: 12px;
-  --top: 6px;
-  --left: 4px;
+  --top: 5px;
+  --left: 5px;
   --border: 1px;
 }
 
 .lg {
   top: 4px;
-  margin-right: 15px;
+  margin-right: 10px;
   width: 32px;
   height: 32px;
   --height: 8px;
@@ -106,7 +106,7 @@
   position: absolute;
   width: 0px;
   height: 0px;
-  transform: rotate(-45deg);
+  transform: rotate(-55deg);
   transition: 0.5s;
 }
 

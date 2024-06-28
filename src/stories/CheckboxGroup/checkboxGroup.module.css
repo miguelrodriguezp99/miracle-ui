@@ -1,0 +1,36 @@
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.vertical.gap-sm {
+  gap: 5px;
+}
+
+.vertical.gap-md {
+  gap: 10px;
+}
+
+.vertical.gap-lg {
+  gap: 15px;
+}
+
+.horizontal.gap-sm {
+  gap: 15px;
+}
+
+.horizontal.gap-md {
+  gap: 20px;
+}
+
+.horizontal.gap-lg {
+  gap: 25px;
+}

@@ -8,11 +8,11 @@ import { CheckboxRadius, CheckboxSize } from "./constants";
 import classNames from "classnames";
 
 type Props = {
-  color: SemanticColorCheckbox;
+  color?: SemanticColorCheckbox;
   textColor?: boolean;
-  size: CheckboxSize;
-  text: string;
-  radius: CheckboxRadius;
+  size?: CheckboxSize;
+  text?: string;
+  radius?: CheckboxRadius;
   isDisabled?: boolean;
   isChecked?: boolean;
   name?: string;
@@ -26,7 +26,7 @@ export const Checkbox = ({
   textColor,
   radius = "md",
   text = "Checkbox",
-  size = "lg",
+  size = "md",
   isDisabled = false,
   isChecked = false,
   name,
