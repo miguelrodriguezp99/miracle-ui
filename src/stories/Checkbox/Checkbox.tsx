@@ -24,7 +24,7 @@ type Props = {
 export const Checkbox = ({
   color = semanticColorsCheckbox.none,
   textColor,
-  radius = "md",
+  radius = "sm",
   text = "Checkbox",
   size = "md",
   isDisabled = false,
