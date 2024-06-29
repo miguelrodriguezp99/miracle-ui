@@ -24,13 +24,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: [<Checkbox />, <Checkbox />, <Checkbox />],
+    children: [
+      <Checkbox key={1} />,
+      <Checkbox key={2} />,
+      <Checkbox key={3} />,
+    ],
   },
 };
 
 export const Horizontal: Story = {
   args: {
-    children: [<Checkbox />, <Checkbox />, <Checkbox />],
+    children: [
+      <Checkbox key={1} />,
+      <Checkbox key={2} />,
+      <Checkbox key={3} />,
+    ],
     direction: directions.horizontal,
   },
 };
