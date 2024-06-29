@@ -27,3 +27,10 @@ export const Default: Story = {
     children: [<Checkbox />, <Checkbox />, <Checkbox />],
   },
 };
+
+export const Horizontal: Story = {
+  args: {
+    children: [<Checkbox />, <Checkbox />, <Checkbox />],
+    direction: directions.horizontal,
+  },
+};

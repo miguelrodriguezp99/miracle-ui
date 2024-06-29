@@ -1,7 +1,15 @@
-.divider{
-    height: 0.01rem;
-    background-color: #dddddd3b;
-    width: 100%;
-    border-radius: 5px;
+.divider {
+  background-color: var(--color-3);
 }
 
+.horizontal {
+  width: 100%;
+  height: 0.01rem;
+  border-radius: 5px;
+}
+
+.vertical {
+  height: 100%;
+  width: 0.01rem;
+  border-radius: 5px;
+}
