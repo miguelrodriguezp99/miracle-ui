@@ -1,0 +1,31 @@
+.dropdown {
+  min-width: 200px;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.menu {
+  list-style: none;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 2.2em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 0%;
+  opacity: 0;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  z-index: 1;
+}
+
+.menuOpen {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
