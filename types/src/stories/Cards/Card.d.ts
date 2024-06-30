@@ -14,8 +14,8 @@ interface CardProps {
 export declare const Card: {
     ({ children, color, cardWidth, padding, isClickable, isDraggable, disabledRipple, }: CardProps): React.JSX.Element;
     propTypes: {
-        color: PropTypes.Requireable<[string, "default" | "primary" | "secondary" | "success" | "warning" | "danger"]>;
-        cardWidth: PropTypes.Requireable<"full" | "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl">;
+        color: PropTypes.Requireable<[string, "danger" | "default" | "primary" | "secondary" | "success" | "warning"]>;
+        cardWidth: PropTypes.Requireable<"sm" | "md" | "lg" | "full" | "2xs" | "xs" | "xl" | "2xl" | "3xl">;
         padding: PropTypes.Requireable<"none" | "sm" | "md" | "lg" | "hsm" | "hmd" | "hlg" | "vsm" | "vmd" | "vlg">;
         isClickable: PropTypes.Requireable<boolean>;
         isDraggable: PropTypes.Requireable<boolean>;

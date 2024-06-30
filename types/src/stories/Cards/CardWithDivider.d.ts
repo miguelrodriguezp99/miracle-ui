@@ -11,7 +11,7 @@ interface CardWithDividerProps {
 export declare const CardWithDivider: {
     ({ children, title, subtitle, linkText, }: CardWithDividerProps): React.JSX.Element;
     propTypes: {
-        color: PropTypes.Requireable<[string, "default" | "primary" | "secondary" | "success" | "warning" | "danger"]>;
+        color: PropTypes.Requireable<[string, "danger" | "default" | "primary" | "secondary" | "success" | "warning"]>;
         isClickable: PropTypes.Requireable<boolean>;
         isDraggable: PropTypes.Requireable<boolean>;
     };

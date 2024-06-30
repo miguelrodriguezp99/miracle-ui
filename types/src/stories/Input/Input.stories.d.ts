@@ -4,3 +4,7 @@ declare const meta: Meta<typeof Input>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Primary: Story;
+export declare const Faded: Story;
+export declare const Bordered: Story;
+export declare const Underlined: Story;
+export declare const Disabled: Story;

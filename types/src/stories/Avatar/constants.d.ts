@@ -18,7 +18,7 @@ export declare const widths: {
     readonly full: "full";
 };
 export type AvatarWidth = (typeof widths)[keyof typeof widths];
-export declare const radius: {
+export declare const radii: {
     readonly none: "none";
     readonly sm: "sm";
     readonly md: "md";
@@ -26,4 +26,4 @@ export declare const radius: {
     readonly xl: "xl";
     readonly full: "full";
 };
-export type AvatarRadius = (typeof radius)[keyof typeof radius];
+export type AvatarRadius = (typeof radii)[keyof typeof radii];

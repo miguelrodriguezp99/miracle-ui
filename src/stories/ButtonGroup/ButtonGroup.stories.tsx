@@ -16,9 +16,9 @@ export const Primary: Story = {
   args: {
     children: (
       <>
-        <Button label="One" radius="none" color="primary" size="medium" />
-        <Button label="Two" radius="none" color="primary" size="medium" />
-        <Button label="Three" radius="none" color="primary" size="medium" />
+        <Button label="One" radius="none" color="primary" size="md" />
+        <Button label="Two" radius="none" color="primary" size="md" />
+        <Button label="Three" radius="none" color="primary" size="md" />
       </>
     ),
   },
@@ -33,42 +33,42 @@ export const BigGroup: Story = {
           radius="none"
           color="success"
           variant="bordered"
-          size="medium"
+          size="md"
         />
         <Button
           label="Two"
           radius="none"
           color="success"
           variant="bordered"
-          size="medium"
+          size="md"
         />
         <Button
           label="Three"
           radius="none"
           color="success"
           variant="bordered"
-          size="medium"
+          size="md"
         />
         <Button
           label="Four"
           radius="none"
           color="success"
           variant="bordered"
-          size="medium"
+          size="md"
         />
         <Button
           label="Five"
           radius="none"
           color="success"
           variant="bordered"
-          size="medium"
+          size="md"
         />
         <Button
           label="Six"
           radius="none"
           color="success"
           variant="bordered"
-          size="medium"
+          size="md"
         />
       </>
     ),

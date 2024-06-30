@@ -27,9 +27,7 @@ export const CardWithDivider = ({
 }: CardWithDividerProps) => {
   return (
     <>
-      <CardHeader
-        padding="md"
-      >
+      <CardHeader padding="md">
         <Image
           route="https://nextui.org/images/hero-card-complete.jpeg"
           alt="image"
@@ -43,11 +41,11 @@ export const CardWithDivider = ({
         </div>
       </CardHeader>
 
-      <Divider />
+      <Divider color="default" />
 
       <CardBody padding="md">{children}</CardBody>
 
-      <Divider />
+      <Divider color="default" />
 
       <CardFooter padding="md">
         <a href="#" className={styles.link}>

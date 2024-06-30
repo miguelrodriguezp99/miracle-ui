@@ -41,21 +41,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-    label: "Button",
-  },
+  args: {},
 };
 
 export const IsDisabled: Story = {
   args: {
-    label: "Button",
     isDisabled: true,
   },
 };
 
 export const DisabledRipple: Story = {
   args: {
-    label: "Button",
     disabledRipple: true,
   },
 };
@@ -82,7 +78,6 @@ export const GroupButtons: Story = {
               key={`${color}-${variant}-${index}`}
               color={color}
               variant={variant}
-              label="Button"
             />
           ))}
         </div>
@@ -97,7 +92,7 @@ export const WithStartContent: Story = {
     startContent: <UserIcon />,
     variant: "bordered",
     color: semanticColors.danger,
-    radius: "medium",
+    radius: "md",
   },
 };
 
@@ -106,7 +101,7 @@ export const WithEndContent: Story = {
     label: "Take a photo",
     endContent: <CameraIcon />,
     color: "success",
-    radius: "medium",
+    radius: "md",
   },
 };
 
@@ -116,6 +111,6 @@ export const WithIcon: Story = {
     isIconOnly: true,
     endContent: <CameraIcon />,
     color: "success",
-    radius: "medium",
+    radius: "md",
   },
 };

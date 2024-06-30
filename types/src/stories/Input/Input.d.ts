@@ -10,6 +10,9 @@ type Props = {
     radius?: InputRadius;
     isDisabled?: boolean;
     type?: InputTypes;
+    value?: string;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onValueChange?: (value: string) => void;
 };
-export declare const Input: ({ color, placeholder, size, width, radius, variant, isDisabled, type, }: Props) => React.JSX.Element;
+export declare const Input: ({ color, placeholder, size, width, radius, variant, isDisabled, type, value, onChange, onValueChange, }: Props) => React.JSX.Element;
 export default Input;

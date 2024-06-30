@@ -82,21 +82,21 @@
   transition: all 0.3s ease;
 }
 
-.small {
+.sm {
   height: 32px;
   width: fit-content;
   padding: 0px 12px;
   font-size: 12px;
 }
 
-.medium {
+.md {
   height: 40px;
   padding: 0 16px;
   font-size: 14px;
   width: fit-content;
 }
 
-.large {
+.lg {
   height: 48px;
   padding: 0 24px;
   width: fit-content;
@@ -107,15 +107,15 @@
   border-radius: 0;
 }
 
-.radius-small {
+.radius-sm {
   border-radius: 8px;
 }
 
-.radius-medium {
+.radius-md {
   border-radius: 12px;
 }
 
-.radius-large {
+.radius-lg {
   border-radius: 14px;
 }
 

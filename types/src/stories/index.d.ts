@@ -11,3 +11,4 @@ export { default as CardWithBlurredFooter } from "./Cards/CardWithBlurredFooter"
 export { default as Image } from "./Image";
 export { default as Divider } from "./Divider";
 export { default as Avatar } from "./Avatar";
+export { default as Input } from "./Input";

@@ -24,13 +24,14 @@ interface ButtonProps {
   startContent?: React.JSX.Element;
   endContent?: React.ReactNode;
   isIconOnly?: boolean;
+  children?: React.ReactNode;
   onClick?: () => void;
 }
 
 export const Button = ({
-  label = "Button",
+  children = "Button",
   disabledRipple = false,
-  size = sizes.medium,
+  size = sizes.md,
   radius = "full",
   isClickable = true,
   isDisabled = false,
@@ -60,7 +61,7 @@ export const Button = ({
       onClick={onClick}
     >
       {startContent}
-      {label}
+      {children}
       {endContent}
     </a>
   );

@@ -9,7 +9,7 @@ interface CardCoverProps {
 export declare const CardCover: {
     ({ title, subtitle, imgRoute }: CardCoverProps): React.JSX.Element;
     propTypes: {
-        color: PropTypes.Requireable<[string, "default" | "primary" | "secondary" | "success" | "warning" | "danger"]>;
+        color: PropTypes.Requireable<[string, "danger" | "default" | "primary" | "secondary" | "success" | "warning"]>;
         isClickable: PropTypes.Requireable<boolean>;
         isDraggable: PropTypes.Requireable<boolean>;
     };
