@@ -1,0 +1,14 @@
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonGroup > :first-child {
+  border-top-left-radius: 14px !important;
+  border-bottom-left-radius: 14px !important;
+}
+
+.buttonGroup > :last-child {
+  border-top-right-radius: 14px !important;
+  border-bottom-right-radius: 14px !important;
+}
