@@ -61,7 +61,7 @@ export const Button = ({
       onClick={onClick}
     >
       {startContent}
-      {children}
+      {!isIconOnly && children}
       {endContent}
     </a>
   );

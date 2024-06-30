@@ -4,7 +4,7 @@ import { semanticColors } from "../../lib/colors";
 import { sizes } from "./constants";
 
 const meta: Meta<typeof CircularProgress> = {
-  title: "Components/CircularProgess",
+  title: "Components/CircularProgress",
   component: CircularProgress,
   argTypes: {
     color: {
