@@ -1,13 +1,16 @@
-import React, { useRef } from 'react';
-import PropTypes from "prop-types";
+import React, { useRef } from "react";
 import "./../styles/global.css";
-import styles from './button.module.css';
-import useRippleEffect from '../../hooks/useRippleEffect';
-import { SemanticColor, semanticColors } from '../../lib/colors';
-import classNames from 'classnames';
-import { ButtonVariants, ButtonSizes, ButtonRadius, variants, sizes, radius } from './constants';
-
-
+import styles from "./button.module.css";
+import useRippleEffect from "../../hooks/useRippleEffect";
+import { SemanticColor, semanticColors } from "../../lib/colors";
+import classNames from "classnames";
+import {
+  ButtonVariants,
+  ButtonSizes,
+  ButtonRadius,
+  variants,
+  sizes,
+} from "./constants";
 
 interface ButtonProps {
   color?: SemanticColor;
@@ -27,18 +30,17 @@ interface ButtonProps {
 export const Button = ({
   label = "Button",
   disabledRipple = false,
-  size = "medium",
+  size = sizes.medium,
   radius = "full",
   isClickable = true,
   isDisabled = false,
-  color = "primary",
-  variant = "solid",
+  color = semanticColors.primary,
+  variant = variants.solid,
   startContent,
   endContent,
   isIconOnly,
   onClick,
 }: ButtonProps) => {
-
   const buttonRef = useRef<HTMLAnchorElement | null>(null);
   useRippleEffect({ disabledRipple, color, variant, ref: buttonRef });
 
@@ -46,7 +48,7 @@ export const Button = ({
     <a
       ref={buttonRef}
       className={classNames(styles.button, {
-        [`${color}`]: color,
+        [styles[`${color}`]]: color,
         [styles[`${size}`]]: size,
         [styles["is-clickable"]]: isClickable,
         [styles["button-active"]]: isClickable,
@@ -64,20 +66,4 @@ export const Button = ({
   );
 };
 
-Button.propTypes = {
-  color: PropTypes.oneOf(Object.entries(semanticColors)),
-  variant: PropTypes.oneOf(Object.entries(variants)),
-  size: PropTypes.oneOf(Object.entries(sizes)),
-  radius: PropTypes.oneOf(Object.entries(radius)),
-  isClickable: PropTypes.bool,
-  isDisabled: PropTypes.bool,
-  disabledRipple: PropTypes.bool,
-  label: PropTypes.string,
-  startContent: PropTypes.element,
-  endContent: PropTypes.node,
-  isIconOnly: PropTypes.bool,
-  onClick: PropTypes.func,
-};
-
-
-export default Button
+export default Button;

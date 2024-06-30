@@ -1,4 +1,3 @@
-
 import PropTypes from "prop-types";
 import React, { useRef } from "react";
 import classNames from "classnames";
@@ -28,7 +27,6 @@ export const Card = ({
   isDraggable = false,
   disabledRipple = false,
 }: CardProps) => {
-
   const cardRef = useRef<HTMLDivElement | null>(null);
 
   useRippleEffect({ disabledRipple, color, isClickable, ref: cardRef });

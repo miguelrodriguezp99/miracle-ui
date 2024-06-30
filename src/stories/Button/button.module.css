@@ -1,3 +1,62 @@
+.default,
+.primary,
+.secondary,
+.success,
+.warning,
+.danger {
+  --color: var(--color-default-button);
+  --color-2: var(--color-default-button-1);
+  --color-3: var(--color-default-button-2);
+  --color-4: var(--color-default-button-3);
+  --color-5: var(--color-default-button-4);
+  color: white;
+}
+
+.primary {
+  --color: var(--color-primary);
+  --color-2: var(--color-primary-1);
+  --color-3: var(--color-primary-2);
+  --color-4: var(--color-primary-3);
+  --color-5: var(--color-primary-4);
+  color: white;
+}
+
+.secondary {
+  --color: var(--color-secondary);
+  --color-2: var(--color-secondary-1);
+  --color-3: var(--color-secondary-2);
+  --color-4: var(--color-secondary-3);
+  --color-5: var(--color-secondary-4);
+  color: white;
+}
+
+.success {
+  --color: var(--color-success);
+  --color-2: var(--color-success-1);
+  --color-3: var(--color-success-2);
+  --color-4: var(--color-success-3);
+  --color-5: var(--color-success-4);
+  color: black;
+}
+
+.warning {
+  --color: var(--color-warning);
+  --color-2: var(--color-warning-1);
+  --color-3: var(--color-warning-2);
+  --color-4: var(--color-warning-3);
+  --color-5: var(--color-warning-4);
+  color: black;
+}
+
+.danger {
+  --color: var(--color-danger);
+  --color-2: var(--color-danger-1);
+  --color-3: var(--color-danger-2);
+  --color-4: var(--color-danger-3);
+  --color-5: var(--color-danger-4);
+  color: white;
+}
+
 .button {
   background-color: var(--color);
   position: relative;
@@ -75,6 +134,10 @@
   border: 2px solid var(--color);
 }
 
+.default:is(.bordered) {
+  color: white;
+}
+
 .bordered:hover {
   background-color: transparent;
   border-color: var(--color-2);
@@ -111,10 +174,6 @@
   background-color: #212123;
 }
 
-.default {
-  color: white;
-}
-
 .button:active {
   transform: scale(0.98);
 }
@@ -131,7 +190,7 @@
   color: var(--color);
 }
 
-.default.ghost {
+.default {
   color: white;
 }
 
