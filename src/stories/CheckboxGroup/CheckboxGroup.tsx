@@ -25,3 +25,5 @@ export const CheckboxGroup = ({
     </div>
   );
 };
+
+export default CheckboxGroup;
