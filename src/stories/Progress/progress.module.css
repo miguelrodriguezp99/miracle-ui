@@ -1,0 +1,82 @@
+.progressContainer {
+  max-width: 400px;
+  width: 100%;
+}
+
+.progressSecondContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.progressWrap {
+  background-color: hsl(240 5.2% 33.92% / 0.5);
+  overflow: hidden;
+}
+
+.progress {
+  background-color: var(--color);
+}
+
+.size-sm {
+  height: 0.25rem;
+}
+
+.size-md {
+  height: 0.75rem;
+}
+
+.size-lg {
+  height: 1.25rem;
+}
+
+.radius-sm {
+  border-radius: var(--radius-small);
+}
+
+.radius-md {
+  border-radius: var(--radius-medium);
+}
+
+.radius-lg {
+  border-radius: var(--radius-large);
+}
+
+.radius-full {
+  border-radius: var(--radius-full);
+}
+
+.text-sm {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-md {
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height-medium);
+}
+
+.text-lg {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-large);
+}
+
+.is-indeterminate {
+  animation: progress 1s infinite linear;
+}
+
+@keyframes progress {
+  0% {
+    transform: translate(-50%) scaleX(0.2);
+  }
+  100% {
+    transform: translate(100%) scaleX(1);
+  }
+}
