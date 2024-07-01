@@ -9,7 +9,7 @@
   text-align: center;
   overflow: hidden;
   user-select: none;
-  transition: transform 0.1s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   box-sizing: border-box;
   will-change: transform;
@@ -66,4 +66,12 @@
   width: 40px;
   padding: 0;
   min-width: 2.5rem;
+}
+
+.black-text {
+  color: #000 !important;
+}
+
+.white-text {
+  color: #fff !important;
 }

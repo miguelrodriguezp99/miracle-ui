@@ -218,13 +218,12 @@ svg {
 
 /* VARIANTS */
 
-.button {
+.solid {
   background-color: var(--color);
 }
 
-.button:hover {
+.has-hover.solid:hover {
   background-color: var(--color-2);
-  transition: all 0.3s ease;
 }
 
 .bordered {
@@ -274,9 +273,14 @@ svg {
 }
 
 .shadow {
+  background-color: var(--color);
   box-shadow:
     0 10px 15px -3px var(--color-2),
     0 4px 6px -4px var(--color-2);
+}
+
+.has-hover.shadow:hover {
+  background-color: var(--color-2);
 }
 
 .ghost {
@@ -297,5 +301,20 @@ svg {
 }
 
 .button.default {
-  color: white;
+  color: hsl(210 5.56% 92.94%);
+}
+
+.listItem.solid {
+  background-color: transparent;
+  color: var(--color);
+}
+
+.has-hover.listItem.solid:hover {
+  opacity: 1;
+  background-color: var(--color) !important;
+  color: hsl(210 5.56% 92.94%);
+}
+
+.listItem.default {
+  color: hsl(210 5.56% 92.94%);
 }

@@ -20,13 +20,15 @@ function App() {
     >
       <Dropdown>
         <DropdownTrigger>
-          <Button variant="bordered">Open Menu</Button>
+          <Button radius="md" variant="bordered" color="default" blackText>
+            Open Menu
+          </Button>
         </DropdownTrigger>
         <DropdownMenu aria-label="Static Actions">
           <DropdownItem key="new">New file</DropdownItem>
           <DropdownItem key="copy">Copy link</DropdownItem>
           <DropdownItem key="edit">Edit file</DropdownItem>
-          <DropdownItem key="delete" className="text-danger" color="danger">
+          <DropdownItem key="delete" color="danger" variant="solid">
             Delete file
           </DropdownItem>
         </DropdownMenu>

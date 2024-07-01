@@ -1,20 +1,36 @@
 import React from "react";
 import styles from "./../dropdown.module.css";
+import "./../../styles/global.css";
+
+import { DropdownVariants, variants } from "../constants";
+import { SemanticColor, semanticColors } from "../../../lib/colors";
+import classNames from "classnames";
 
 interface DropdownItemProps {
   children: React.ReactNode;
-  key: string;
-  className?: string;
-  color?: string;
+  color?: SemanticColor;
+  variant?: DropdownVariants;
+  disabledRipple?: boolean;
 }
 
-const DropdownItem: React.FC<DropdownItemProps> = ({
+const DropdownItem = ({
   children,
-  className,
-  color,
-}) => {
-  const itemClass = `${className ? className : ""} ${color === "danger" ? styles.danger : ""}`;
-  return <li className={itemClass}>{children}</li>;
+  color = semanticColors.default,
+  variant = variants.solid,
+}: DropdownItemProps) => {
+  return (
+    <li
+      className={classNames(
+        styles.listItem,
+        "listItem",
+        "has-hover",
+        color,
+        variant
+      )}
+    >
+      <span>{children}</span>
+    </li>
+  );
 };
 
 export default DropdownItem;

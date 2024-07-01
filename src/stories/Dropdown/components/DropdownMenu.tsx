@@ -10,9 +10,9 @@ interface DropdownMenuProps {
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ children }) => {
   const { isOpen } = useContext(DropdownContext);
   return (
-    <ul className={`${styles.menu} ${isOpen ? styles.menuOpen : ""}`}>
-      {children}
-    </ul>
+    <div className={`${styles.listWrapper} ${isOpen ? styles.menuOpen : ""}`}>
+      <ul className={`${styles.list}`}>{children}</ul>
+    </div>
   );
 };
 

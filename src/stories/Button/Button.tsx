@@ -25,6 +25,8 @@ interface ButtonProps {
   endContent?: React.ReactNode;
   isIconOnly?: boolean;
   children?: React.ReactNode;
+  blackText?: boolean;
+  whiteText?: boolean;
   onClick?: () => void;
 }
 
@@ -40,10 +42,18 @@ export const Button = ({
   startContent,
   endContent,
   isIconOnly,
+  blackText,
+  whiteText,
   onClick,
 }: ButtonProps) => {
   const buttonRef = useRef<HTMLAnchorElement | null>(null);
-  useRippleEffect({ disabledRipple, color, variant, ref: buttonRef });
+  useRippleEffect({
+    disabledRipple,
+    color,
+    variant,
+    ref: buttonRef,
+    blackText,
+  });
 
   return (
     <a
@@ -59,6 +69,8 @@ export const Button = ({
 
         {
           [styles["is-clickable"]]: isClickable,
+          [styles["black-text"]]: blackText,
+          [styles["white-text"]]: whiteText,
           [styles["is-disabled"]]: isDisabled,
           [styles["is-icon-only"]]: isIconOnly,
         }

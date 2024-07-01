@@ -1,15 +1,9 @@
-export const sizes = {
-  sm: "sm",
-  md: "md",
-  lg: "lg",
+export const variants = {
+  solid: "solid",
+  bordered: "bordered",
+  light: "light",
+  flat: "flat",
+  faded: "faded",
+  ghost: "ghost",
 } as const;
-export type ProgressSizes = (typeof sizes)[keyof typeof sizes];
-
-export const radii = {
-  none: "none",
-  sm: "sm",
-  md: "md",
-  lg: "lg",
-  full: "full",
-} as const;
-export type ProgressRadius = (typeof radii)[keyof typeof radii];
+export type DropdownVariants = (typeof variants)[keyof typeof variants];
