@@ -88,7 +88,7 @@ export const GroupButtons: Story = {
 
 export const WithStartContent: Story = {
   args: {
-    label: "Delete user",
+    children: "Delete user",
     startContent: <UserIcon />,
     variant: "bordered",
     color: semanticColors.danger,
@@ -98,7 +98,7 @@ export const WithStartContent: Story = {
 
 export const WithEndContent: Story = {
   args: {
-    label: "Take a photo",
+    children: "Take a photo",
     endContent: <CameraIcon />,
     color: "success",
     radius: "md",
@@ -107,7 +107,6 @@ export const WithEndContent: Story = {
 
 export const WithIcon: Story = {
   args: {
-    label: "",
     isIconOnly: true,
     endContent: <CameraIcon />,
     color: "success",

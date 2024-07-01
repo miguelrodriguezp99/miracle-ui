@@ -1,8 +1,8 @@
 .button {
   position: relative;
-  display: flex;
+  display: inline-flex;
   gap: 8px;
-  width: fit-content;
+  min-width: 5rem;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -65,4 +65,5 @@
 .is-icon-only {
   width: 40px;
   padding: 0;
+  min-width: 2.5rem;
 }

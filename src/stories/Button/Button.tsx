@@ -66,7 +66,7 @@ export const Button = ({
       onClick={isClickable && !isDisabled ? onClick : undefined}
     >
       {startContent}
-      {children}
+      {!isIconOnly && children}
       {endContent}
     </a>
   );
