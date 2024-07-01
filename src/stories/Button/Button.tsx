@@ -48,17 +48,22 @@ export const Button = ({
   return (
     <a
       ref={buttonRef}
-      className={classNames(styles.button, {
-        [styles[`${color}`]]: color,
-        [styles[`${size}`]]: size,
-        [styles["is-clickable"]]: isClickable,
-        [styles["button-active"]]: isClickable,
-        [styles["is-disabled"]]: isDisabled,
-        [styles[`radius-${radius}`]]: radius,
-        [styles[`${variant}`]]: variant,
-        [styles["is-icon-only"]]: isIconOnly,
-      })}
-      onClick={onClick}
+      className={classNames(
+        "button",
+        "has-hover",
+        color,
+        variant,
+        styles.button,
+        styles[size],
+        styles[`radius-${radius}`],
+
+        {
+          [styles["is-clickable"]]: isClickable,
+          [styles["is-disabled"]]: isDisabled,
+          [styles["is-icon-only"]]: isIconOnly,
+        }
+      )}
+      onClick={isClickable && !isDisabled ? onClick : undefined}
     >
       {startContent}
       {children}

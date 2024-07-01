@@ -1,64 +1,4 @@
-.default,
-.primary,
-.secondary,
-.success,
-.warning,
-.danger {
-  --color: var(--color-default-button);
-  --color-2: var(--color-default-button-1);
-  --color-3: var(--color-default-button-2);
-  --color-4: var(--color-default-button-3);
-  --color-5: var(--color-default-button-4);
-  color: white;
-}
-
-.primary {
-  --color: var(--color-primary);
-  --color-2: var(--color-primary-1);
-  --color-3: var(--color-primary-2);
-  --color-4: var(--color-primary-3);
-  --color-5: var(--color-primary-4);
-  color: white;
-}
-
-.secondary {
-  --color: var(--color-secondary);
-  --color-2: var(--color-secondary-1);
-  --color-3: var(--color-secondary-2);
-  --color-4: var(--color-secondary-3);
-  --color-5: var(--color-secondary-4);
-  color: white;
-}
-
-.success {
-  --color: var(--color-success);
-  --color-2: var(--color-success-1);
-  --color-3: var(--color-success-2);
-  --color-4: var(--color-success-3);
-  --color-5: var(--color-success-4);
-  color: black;
-}
-
-.warning {
-  --color: var(--color-warning);
-  --color-2: var(--color-warning-1);
-  --color-3: var(--color-warning-2);
-  --color-4: var(--color-warning-3);
-  --color-5: var(--color-warning-4);
-  color: black;
-}
-
-.danger {
-  --color: var(--color-danger);
-  --color-2: var(--color-danger-1);
-  --color-3: var(--color-danger-2);
-  --color-4: var(--color-danger-3);
-  --color-5: var(--color-danger-4);
-  color: white;
-}
-
 .button {
-  background-color: var(--color);
   position: relative;
   display: flex;
   gap: 8px;
@@ -73,13 +13,7 @@
   cursor: pointer;
   box-sizing: border-box;
   will-change: transform;
-  border: none;
   text-wrap: nowrap;
-}
-
-.button:hover {
-  background-color: var(--color-2);
-  transition: all 0.3s ease;
 }
 
 .sm {
@@ -126,83 +60,6 @@
 .is-disabled {
   pointer-events: none;
   opacity: 0.5;
-}
-
-.bordered {
-  background-color: transparent;
-  color: var(--color);
-  border: 2px solid var(--color);
-}
-
-.default:is(.bordered) {
-  color: white;
-}
-
-.bordered:hover {
-  background-color: transparent;
-  border-color: var(--color-2);
-}
-
-.light {
-  background-color: transparent;
-  color: var(--color);
-}
-
-.light:hover {
-  opacity: 1;
-  background-color: var(--color-4);
-}
-
-.flat {
-  background-color: var(--color-4);
-  color: var(--color);
-}
-
-.flat:hover {
-  opacity: 1;
-  background-color: var(--color-5);
-}
-
-.faded {
-  background-color: var(--color-faded);
-  border: 2px solid var(--color-faded-1);
-  color: var(--color);
-}
-
-.faded:hover {
-  opacity: 1;
-  background-color: #212123;
-}
-
-.button:active {
-  transform: scale(0.98);
-}
-
-.shadow {
-  box-shadow:
-    0 10px 15px -3px var(--color-2),
-    0 4px 6px -4px var(--color-2);
-}
-
-.ghost {
-  background-color: transparent;
-  border: 2px solid var(--color);
-  color: var(--color);
-}
-
-.default {
-  color: white;
-}
-
-.ghost:hover {
-  opacity: 1;
-  background-color: var(--color) !important;
-  color: white;
-}
-
-.warning.ghost:hover,
-.success.ghost:hover {
-  color: black;
 }
 
 .is-icon-only {

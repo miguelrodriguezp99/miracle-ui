@@ -218,10 +218,24 @@ svg {
 
 /* VARIANTS */
 
+.button {
+  background-color: var(--color);
+}
+
+.button:hover {
+  background-color: var(--color-2);
+  transition: all 0.3s ease;
+}
+
 .bordered {
   background-color: transparent;
   color: var(--color);
   border: 2px solid var(--color);
+}
+
+.has-hover.bordered:hover {
+  background-color: transparent;
+  border-color: var(--color-2);
 }
 
 .light {
@@ -229,15 +243,34 @@ svg {
   color: var(--color);
 }
 
+.has-hover.light:hover {
+  opacity: 1;
+  background-color: var(--color-4);
+}
+
 .flat {
   background-color: var(--color-4);
   color: var(--color);
+}
+
+.has-hover.flat:hover {
+  opacity: 1;
+  background-color: var(--color-5);
 }
 
 .faded {
   background-color: var(--color-faded);
   border: 2px solid var(--color-faded-1);
   color: var(--color);
+}
+
+.has-hover.faded:hover {
+  opacity: 1;
+  background-color: #212123;
+}
+
+.button:active {
+  transform: scale(0.98);
 }
 
 .shadow {
@@ -250,4 +283,19 @@ svg {
   background-color: transparent;
   border: 2px solid var(--color);
   color: var(--color);
+}
+
+.has-hover.ghost:hover {
+  opacity: 1;
+  background-color: var(--color) !important;
+  color: white;
+}
+
+.has-hover.warning.ghost:hover,
+.has-hover.success.ghost:hover {
+  color: black;
+}
+
+.button.default {
+  color: white;
 }
