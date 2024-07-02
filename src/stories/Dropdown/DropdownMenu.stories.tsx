@@ -26,24 +26,26 @@ export const Primary: Story = {
   },
   render: (args) => (
     <>
-      <DropdownTrigger>
-        <Button
-          radius="md"
-          variant="bordered"
-          color="default"
-          blackText={!args.isBlackBackground}
-        >
-          Open Menu
-        </Button>
-      </DropdownTrigger>
-      <DropdownMenu aria-label="Static Actions">
-        <DropdownItem key="new">New file</DropdownItem>
-        <DropdownItem key="copy">Copy link</DropdownItem>
-        <DropdownItem key="edit">Edit file</DropdownItem>
-        <DropdownItem key="delete" color="danger" variant="solid">
-          Delete file
-        </DropdownItem>
-      </DropdownMenu>
+      <Dropdown>
+        <DropdownTrigger>
+          <Button
+            radius="md"
+            variant="bordered"
+            color="default"
+            blackText={!args.isBlackBackground}
+          >
+            Open Menu
+          </Button>
+        </DropdownTrigger>
+        <DropdownMenu aria-label="Static Actions">
+          <DropdownItem key="new">New file</DropdownItem>
+          <DropdownItem key="copy">Copy link</DropdownItem>
+          <DropdownItem key="edit">Edit file</DropdownItem>
+          <DropdownItem key="delete" color="danger" variant="solid">
+            Delete file
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
     </>
   ),
 };
