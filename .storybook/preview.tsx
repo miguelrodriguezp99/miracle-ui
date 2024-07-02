@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 import type { Preview } from "@storybook/react";
-import { themes } from '@storybook/theming';
+import { themes } from "@storybook/theming";
 import "../styles/global.css";
-
 
 interface Styles {
   __sb: any;
 }
-
 
 const getStyles = ({ __sb }: any) => ({
   display: "flex",
@@ -20,44 +18,45 @@ const getStyles = ({ __sb }: any) => ({
   flexWrap: __sb?.fw || "wrap",
   height: "100vh",
   gap: "10px 30px",
-  backgroundColor: 'transparent',
+  backgroundColor: "transparent",
 });
 
-
 const preview: Preview = {
-
   decorators: [
-    (Story, { parameters }) => (
-      <div style={getStyles(parameters)}>
-        {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
-        <Story />
-      </div>
-    ),
+    (Story, context) => {
+      const background = context.globals.backgrounds?.value;
+      const isBlackBackground = background === "#000000";
+      const styles = getStyles(context.parameters);
 
+      return (
+        <div style={styles}>
+          <Story {...context} args={{ ...context.args, isBlackBackground }} />
+        </div>
+      );
+    },
   ],
 
   parameters: {
     options: {
       storySort: {
-        order: ['Foundations', 'Components'], // Define the order of the stories
+        order: ["Foundations", "Components"], // Define the order of the stories
       },
     },
     backgrounds: {
-      default: 'dark',
+      default: "dark",
       values: [
         {
-          name: 'dark',
-          value: '#000000',
+          name: "dark",
+          value: "#000000",
         },
         {
-          name: 'light',
-          value: '#ffffff',
+          name: "light",
+          value: "#ffffff",
         },
         {
-          name: 'blue',
-          value: '#3A10E5',
-        }
-
+          name: "blue",
+          value: "#3A10E5",
+        },
       ],
     },
     controls: {
