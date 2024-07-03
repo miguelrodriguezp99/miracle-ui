@@ -3,10 +3,6 @@ import type { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import "../styles/global.css";
 
-interface Styles {
-  __sb: any;
-}
-
 const getStyles = ({ __sb }: any) => ({
   display: "flex",
   alignItems: __sb?.ai || "center",
@@ -24,13 +20,17 @@ const getStyles = ({ __sb }: any) => ({
 const preview: Preview = {
   decorators: [
     (Story, context) => {
-      const background = context.globals.backgrounds?.value;
+      const background = context.globals.backgrounds?.value || "#000000";
       const isBlackBackground = background === "#000000";
       const styles = getStyles(context.parameters);
 
       return (
         <div style={styles}>
-          <Story {...context} args={{ ...context.args, isBlackBackground }} />
+          <Story
+            {...context}
+            args={{ ...context.args, isBlackBackground }}
+            isBlackBackground={isBlackBackground}
+          />
         </div>
       );
     },
@@ -39,24 +39,15 @@ const preview: Preview = {
   parameters: {
     options: {
       storySort: {
-        order: ["Foundations", "Components"], // Define the order of the stories
+        order: ["Foundations", "Components"],
       },
     },
     backgrounds: {
       default: "dark",
       values: [
-        {
-          name: "dark",
-          value: "#000000",
-        },
-        {
-          name: "light",
-          value: "#ffffff",
-        },
-        {
-          name: "blue",
-          value: "#3A10E5",
-        },
+        { name: "dark", value: "#000000" },
+        { name: "light", value: "#ffffff" },
+        { name: "blue", value: "#3A10E5" },
       ],
     },
     controls: {
