@@ -74,13 +74,12 @@
   gap: 0.5rem;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
+  text-align: center;
   cursor: pointer;
   outline: 2px solid transparent;
   outline-offset: 2px;
   transition: all 0.3s ease;
-}
-
-.menuOpen {
 }
 
 .menuOpen.bottom {
@@ -101,4 +100,14 @@
 .menuOpen.right {
   transform: translateY(-50%) scale(1);
   opacity: 1;
+}
+
+.startContent {
+  display: flex;
+  align-items: center;
+}
+
+.span {
+  display: flex;
+  flex: 1;
 }

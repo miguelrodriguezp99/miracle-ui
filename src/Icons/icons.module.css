@@ -8,3 +8,35 @@
   width: 20px;
   height: 20px;
 }
+
+.newFileIcon {
+  color: var(--color-1);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.copyLinkIcon {
+  color: var(--color-1);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.editFileIcon {
+  color: var(--color-1);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.deleteFileIcon {
+  color: var(--color-1);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  pointer-events: none;
+  flex-shrink: 0;
+}

@@ -99,6 +99,8 @@ svg {
   --line-height-small: 1.25rem;
   --line-height-medium: 1.5rem;
   --line-height-large: 1.75rem;
+
+  --text: hsl(210 5.56% 92.94%);
 }
 
 .default,
@@ -306,15 +308,34 @@ svg {
 
 .listItem.solid {
   background-color: transparent;
-  color: var(--color);
+}
+
+.listItem.default {
+  --color-4: hsl(0, 0%, 24%);
+}
+
+.listItem.success {
+  color: var(--text);
 }
 
 .has-hover.listItem.solid:hover {
   opacity: 1;
-  background-color: var(--color) !important;
+  background-color: var(--color-4) !important;
   color: hsl(210 5.56% 92.94%);
 }
 
-.listItem.default {
-  color: hsl(210 5.56% 92.94%);
+.listItem.danger {
+  color: var(--color);
+}
+
+.icon {
+  color: var(--color);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.default.icon {
+  color: hsl(200, 2%, 62%);
 }

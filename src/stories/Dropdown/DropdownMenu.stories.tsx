@@ -6,6 +6,10 @@ import DropdownItem from "./components/DropdownItem";
 import DropdownMenu from "./components/DropdownMenu";
 import DropdownTrigger from "./components/DropdownTrigger";
 import { DropdownPositions, positions } from "./constants";
+import { NewFileIcon } from "../../Icons/NewFileIcon";
+import { CopyLinkIcon } from "../../Icons/CopyLinkIcon";
+import { EditFileIcon } from "../../Icons/EditFileIcon";
+import { DeleteFileIcon } from "../../Icons/DeleteFileIcon";
 
 interface DropdownArgs {
   isBlackBackground: boolean;
@@ -59,6 +63,120 @@ export const Primary: Story = {
           <DropdownItem key="copy">Copy link</DropdownItem>
           <DropdownItem key="edit">Edit file</DropdownItem>
           <DropdownItem key="delete" color="danger" variant="solid">
+            Delete file
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </>
+  ),
+};
+
+export const WithStarContent: Story = {
+  args: {
+    isBlackBackground: true,
+    offset: 0,
+    position: positions.bottom,
+  },
+  render: ({ isBlackBackground, offset, position }) => (
+    <>
+      <Dropdown>
+        <DropdownTrigger>
+          <Button
+            radius="md"
+            variant="bordered"
+            color="default"
+            blackText={!isBlackBackground}
+          >
+            Open Menu
+          </Button>
+        </DropdownTrigger>
+        <DropdownMenu
+          position={position}
+          offset={offset}
+          aria-label="Static Actions"
+        >
+          <DropdownItem
+            startContent={<NewFileIcon />}
+            color="primary"
+            key="new"
+          >
+            New file
+          </DropdownItem>
+          <DropdownItem
+            startContent={<CopyLinkIcon />}
+            color="default"
+            key="copy"
+          >
+            Copy link
+          </DropdownItem>
+          <DropdownItem
+            startContent={<EditFileIcon />}
+            color="success"
+            key="edit"
+          >
+            Edit file
+          </DropdownItem>
+          <DropdownItem
+            startContent={<DeleteFileIcon />}
+            key="delete"
+            color="danger"
+            variant="solid"
+          >
+            Delete file
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </>
+  ),
+};
+
+export const WithEndContent: Story = {
+  args: {
+    isBlackBackground: true,
+    offset: 0,
+    position: positions.bottom,
+  },
+  render: ({ isBlackBackground, offset, position }) => (
+    <>
+      <Dropdown>
+        <DropdownTrigger>
+          <Button
+            radius="md"
+            variant="bordered"
+            color="default"
+            blackText={!isBlackBackground}
+          >
+            Open Menu
+          </Button>
+        </DropdownTrigger>
+        <DropdownMenu
+          position={position}
+          offset={offset}
+          aria-label="Static Actions"
+        >
+          <DropdownItem endContent={<NewFileIcon />} color="primary" key="new">
+            New file
+          </DropdownItem>
+          <DropdownItem
+            endContent={<CopyLinkIcon />}
+            color="default"
+            key="copy"
+          >
+            Copy link
+          </DropdownItem>
+          <DropdownItem
+            endContent={<EditFileIcon />}
+            color="success"
+            key="edit"
+          >
+            Edit file
+          </DropdownItem>
+          <DropdownItem
+            endContent={<DeleteFileIcon />}
+            key="delete"
+            color="danger"
+            variant="solid"
+          >
             Delete file
           </DropdownItem>
         </DropdownMenu>
