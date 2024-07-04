@@ -15,7 +15,9 @@ interface ButtonProps {
     endContent?: React.ReactNode;
     isIconOnly?: boolean;
     children?: React.ReactNode;
+    blackText?: boolean;
+    whiteText?: boolean;
     onClick?: () => void;
 }
-export declare const Button: ({ children, disabledRipple, size, radius, isClickable, isDisabled, color, variant, startContent, endContent, isIconOnly, onClick, }: ButtonProps) => React.JSX.Element;
+export declare const Button: ({ children, disabledRipple, size, radius, isClickable, isDisabled, color, variant, startContent, endContent, isIconOnly, blackText, whiteText, onClick, }: ButtonProps) => React.JSX.Element;
 export default Button;

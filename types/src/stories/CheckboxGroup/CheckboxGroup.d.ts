@@ -6,4 +6,4 @@ type Props = {
     gap?: CheckboxGap;
 };
 export declare const CheckboxGroup: ({ children, gap, direction, }: Props) => React.JSX.Element;
-export {};
+export default CheckboxGroup;

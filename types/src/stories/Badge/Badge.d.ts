@@ -12,4 +12,4 @@ type Props = {
     bordered: boolean;
 };
 export declare const Badge: ({ children, variant, color, position, isCircular, badgeContent, bordered, }: Props) => React.JSX.Element;
-export {};
+export default Badge;
