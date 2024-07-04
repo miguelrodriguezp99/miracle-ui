@@ -17,7 +17,7 @@ interface DropdownItemProps {
 
 const DropdownItem = ({
   children,
-  color = semanticColors.success,
+  color = semanticColors.default,
   variant = variants.solid,
   startContent,
   endContent,
