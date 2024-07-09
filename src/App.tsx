@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "./stories/Slider";
 
 function App() {
   return (
@@ -9,8 +10,11 @@ function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "black",
       }}
-    ></div>
+    >
+      <Slider />
+    </div>
   );
 }
 

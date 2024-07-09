@@ -176,6 +176,7 @@ export const WithEndContent: Story = {
             key="delete"
             color="danger"
             variant="solid"
+            onClick={() => alert("Delete file")}
           >
             Delete file
           </DropdownItem>
