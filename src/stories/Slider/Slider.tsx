@@ -43,10 +43,18 @@ export const Slider = () => {
     setIsDragging(true);
   };
 
+  const handleTrackClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const trackElement = e.currentTarget;
+    const { left, width } = trackElement.getBoundingClientRect();
+    let newValue = (e.clientX - left) / width;
+    newValue = Math.max(0, Math.min(newValue, 1));
+    setValue(newValue);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.trackWrapper}>
-        <div className={styles.track}>
+        <div className={styles.track} onMouseDown={handleTrackClick}>
           <div
             className={styles.filler}
             style={{
