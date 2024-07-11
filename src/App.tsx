@@ -8,12 +8,17 @@ function App() {
       style={{
         height: "100vh",
         display: "flex",
+        flexDirection: "column",
+        gap: "1rem",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "darkgray",
       }}
     >
-      <Slider />
+      <Slider size="sm" direction="horizontal" color="secondary" />
+      <Slider size="md" direction="horizontal" color="secondary" />
+
+      <Slider size="lg" direction="horizontal" color="secondary" />
     </div>
   );
 }

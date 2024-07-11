@@ -9,18 +9,9 @@
   flex-direction: column;
 }
 
-.container.vertical {
-  max-height: 28rem;
-  height: 100%;
-
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
 .trackWrapper {
   position: relative;
   display: flex;
-
   gap: 0.5rem;
 }
 
@@ -49,8 +40,27 @@
   border-bottom: none;
   border-left-width: calc(1.5rem / 2);
   border-right-width: calc(1.5rem / 2);
-  border-inline-start-color: hsl(212, 99%, 41%);
+  border-inline-start-color: var(--color-2);
   border-right-color: transparent;
+}
+
+.track.horizontal.sm {
+  height: 0.25rem;
+}
+
+.track.horizontal.md {
+  height: 0.75rem;
+}
+
+.track.horizontal.lg {
+  height: 1.75rem;
+}
+
+.track.vertical {
+  max-height: 28rem;
+  height: 100%;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 .track.vertical {
@@ -59,7 +69,8 @@
   border-left: none;
   border-right: none;
   border-top: none;
-  border-bottom-color: hsl(212, 99%, 41%);
+  border-bottom-width: calc(1.5rem / 2);
+  border-bottom-color: var(--color-2);
 }
 
 .filler {
@@ -68,12 +79,13 @@
 
 .filler.horizontal {
   height: 100%;
-  background-color: hsl(212, 99%, 41%);
+  background-color: var(--color-2);
 }
 
 .filler.vertical {
   width: 100%;
-  background-color: hsl(212, 99%, 41%);
+  /* background-color: hsl(212, 99%, 41%); */
+  background-color: var(--color-2);
   bottom: 0;
 }
 
@@ -84,7 +96,7 @@
   align-items: center;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: hsl(212, 99%, 41%);
+  background-color: var(--color-2);
   border-radius: 50%;
   position: absolute;
   cursor: grab;
@@ -101,8 +113,16 @@
 
 .thumb.horizontal {
   left: 50%;
-  top: 44%;
+  top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.thumb.horizontal.lg {
+  left: 50%;
+  top: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  box-shadow: none;
 }
 
 .thumb.vertical {

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "./slider.module.css";
 import classNames from "classnames";
-import { directions, SliderDirection } from "./constants";
+import { directions, sizes, SliderDirection, SliderSizes } from "./constants";
+import { SemanticColor, semanticColors } from "../../lib/colors";
 
 type Props = {
-  color: string;
-  size?: string;
+  color: SemanticColor;
+  size?: SliderSizes;
   isDisabled?: boolean;
   direction?: SliderDirection;
   name?: string;
@@ -13,7 +14,9 @@ type Props = {
 
 export const Slider = ({
   isDisabled,
-  direction = directions.vertical,
+  direction = directions.horizontal,
+  color = semanticColors.primary,
+  size = sizes.md,
 }: Props) => {
   const [value, setValue] = useState(0.5);
   const [isDragging, setIsDragging] = useState(false);
@@ -78,10 +81,11 @@ export const Slider = ({
 
   return (
     <div
-      className={classNames(styles.container, {
+      className={classNames(styles.container, color, {
         [styles.disabled]: isDisabled,
         [styles.vertical]: direction === directions.vertical,
         [styles.horizontal]: direction === directions.horizontal,
+        [styles.size]: size,
       })}
     >
       <div
@@ -91,7 +95,7 @@ export const Slider = ({
         })}
       >
         <div
-          className={classNames(styles.track, {
+          className={classNames(styles.track, styles[size], {
             [styles.vertical]: direction === directions.vertical,
             [styles.horizontal]: direction === directions.horizontal,
           })}
@@ -105,7 +109,7 @@ export const Slider = ({
             style={fillerStyle}
           ></div>
           <div
-            className={classNames(styles.thumb, {
+            className={classNames(styles.thumb, styles[size], {
               [styles.vertical]: direction === directions.vertical,
               [styles.horizontal]: direction === directions.horizontal,
             })}
