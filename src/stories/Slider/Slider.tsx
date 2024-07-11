@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import styles from "./slider.module.css";
+import classNames from "classnames";
+import { directions, SliderDirection } from "./constants";
 
-// type Props = {
-//   color: string;
-//   size?: string;
-//   isDisabled?: boolean;
+type Props = {
+  color: string;
+  size?: string;
+  isDisabled?: boolean;
+  direction?: SliderDirection;
+  name?: string;
+};
 
-//   name?: string;
-// };
-
-export const Slider = () => {
+export const Slider = ({
+  isDisabled,
+  direction = directions.vertical,
+}: Props) => {
   const [value, setValue] = useState(0.5);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -18,8 +23,14 @@ export const Slider = () => {
       if (isDragging) {
         const trackElement = document.querySelector(`.${styles.track}`);
         if (trackElement) {
-          const { left, width } = trackElement.getBoundingClientRect();
-          let newValue = (e.clientX - left) / width;
+          const { left, top, width, height } =
+            trackElement.getBoundingClientRect();
+          let newValue;
+          if (direction === directions.horizontal) {
+            newValue = (e.clientX - left) / width;
+          } else {
+            newValue = 1 - (e.clientY - top) / height;
+          }
           newValue = Math.max(0, Math.min(newValue, 1));
           setValue(newValue);
         }
@@ -37,7 +48,7 @@ export const Slider = () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
     };
-  }, [isDragging]);
+  }, [direction, isDragging]);
 
   const handleMouseDown = () => {
     setIsDragging(true);
@@ -45,29 +56,61 @@ export const Slider = () => {
 
   const handleTrackClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const trackElement = e.currentTarget;
-    const { left, width } = trackElement.getBoundingClientRect();
-    let newValue = (e.clientX - left) / width;
+    const { left, top, width, height } = trackElement.getBoundingClientRect();
+    let newValue;
+    if (direction === directions.horizontal) {
+      newValue = (e.clientX - left) / width;
+    } else {
+      newValue = 1 - (e.clientY - top) / height;
+    }
     newValue = Math.max(0, Math.min(newValue, 1));
     setValue(newValue);
   };
 
+  const thumbPositionStyle =
+    direction === directions.horizontal
+      ? { left: `${value * 100}%` }
+      : { bottom: `${value * 100}%` };
+  const fillerStyle =
+    direction === directions.horizontal
+      ? { width: `${value * 100}%` }
+      : { height: `${value * 100}%` };
+
   return (
-    <div className={styles.container}>
-      <div className={styles.trackWrapper}>
-        <div className={styles.track} onMouseDown={handleTrackClick}>
+    <div
+      className={classNames(styles.container, {
+        [styles.disabled]: isDisabled,
+        [styles.vertical]: direction === directions.vertical,
+        [styles.horizontal]: direction === directions.horizontal,
+      })}
+    >
+      <div
+        className={classNames(styles.trackWrapper, {
+          [styles.vertical]: direction === directions.vertical,
+          [styles.horizontal]: direction === directions.horizontal,
+        })}
+      >
+        <div
+          className={classNames(styles.track, {
+            [styles.vertical]: direction === directions.vertical,
+            [styles.horizontal]: direction === directions.horizontal,
+          })}
+          onMouseDown={handleTrackClick}
+        >
           <div
-            className={styles.filler}
-            style={{
-              left: "0%",
-              width: value * 100 + "%",
-            }}
+            className={classNames(styles.filler, {
+              [styles.vertical]: direction === directions.vertical,
+              [styles.horizontal]: direction === directions.horizontal,
+            })}
+            style={fillerStyle}
           ></div>
           <div
-            className={styles.thumb}
+            className={classNames(styles.thumb, {
+              [styles.vertical]: direction === directions.vertical,
+              [styles.horizontal]: direction === directions.horizontal,
+            })}
             data-dragging={isDragging}
-            style={{
-              left: value * 100 + "%",
-            }}
+            style={thumbPositionStyle}
             onMouseDown={handleMouseDown}
           >
             <div className={styles.inputContainer}>
@@ -78,7 +121,11 @@ export const Slider = () => {
                 min="0"
                 max="1"
                 step="0.01"
-                aria-orientation="horizontal"
+                aria-orientation={
+                  direction === directions.horizontal
+                    ? "horizontal"
+                    : "vertical"
+                }
                 aria-valuetext={value.toString()}
                 aria-describedby=""
                 aria-details=""
