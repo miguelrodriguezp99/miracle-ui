@@ -9,6 +9,14 @@
   flex-direction: column;
 }
 
+.container.vertical {
+  max-height: 28rem;
+  height: 100%;
+
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
 .labelContainer {
   display: flex;
   justify-content: space-between;
@@ -204,9 +212,8 @@
 
 .step {
   position: absolute;
-
   top: 50%;
-  background: gray;
+  background: rgb(147, 144, 144);
   border-radius: 99999px;
   transform: translate(-50%, -50%);
 }

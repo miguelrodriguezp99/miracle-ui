@@ -15,16 +15,22 @@ function App() {
         backgroundColor: "darkgray",
       }}
     >
-      <Slider
+      {/* <Slider
         showSteps
         label="Hello"
         size="sm"
+        direction="vertical"
+        color="secondary"
+      /> */}
+      <Slider size="md" direction="vertical" color="secondary" />
+
+      {/* <Slider
+        showSteps
+        step={20}
+        size="lg"
         direction="horizontal"
         color="secondary"
-      />
-      <Slider size="md" direction="horizontal" color="secondary" />
-
-      <Slider showSteps size="lg" direction="horizontal" color="secondary" />
+      /> */}
     </div>
   );
 }

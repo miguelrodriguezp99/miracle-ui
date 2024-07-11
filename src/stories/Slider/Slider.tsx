@@ -28,7 +28,7 @@ export const Slider = ({
 }: Props) => {
   const [value, setValue] = useState(0.5);
   const [isDragging, setIsDragging] = useState(false);
-  const totalSteps = 100 / step;
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (isDragging) {
@@ -43,6 +43,11 @@ export const Slider = ({
             newValue = 1 - (e.clientY - top) / height;
           }
           newValue = Math.max(0, Math.min(newValue, 1));
+
+          if (showSteps) {
+            const stepValue = step / 100;
+            newValue = Math.round(newValue / stepValue) * stepValue;
+          }
           setValue(newValue);
         }
       }
@@ -59,7 +64,7 @@ export const Slider = ({
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
     };
-  }, [direction, isDragging]);
+  }, [direction, isDragging, showSteps, step]);
 
   const handleMouseDown = () => {
     setIsDragging(true);
@@ -75,6 +80,12 @@ export const Slider = ({
       newValue = 1 - (e.clientY - top) / height;
     }
     newValue = Math.max(0, Math.min(newValue, 1));
+
+    if (showSteps) {
+      const stepValue = step / 100;
+      newValue = Math.round(newValue / stepValue) * stepValue;
+    }
+
     setValue(newValue);
   };
 
@@ -87,13 +98,15 @@ export const Slider = ({
       ? { width: `${value * 100}%` }
       : { height: `${value * 100}%` };
 
+  const steps = showSteps ? Math.round(100 / step) : 0;
+
   return (
     <div
       className={classNames(styles.container, color, {
         [styles.disabled]: isDisabled,
         [styles.vertical]: direction === directions.vertical,
         [styles.horizontal]: direction === directions.horizontal,
-        [styles.size]: size,
+        [styles[size]]: size,
       })}
     >
       {label && (
@@ -154,16 +167,23 @@ export const Slider = ({
                 aria-details=""
                 type="range"
                 value={value}
-                onChange={(e) => setValue(parseFloat(e.target.value))}
+                onChange={(e) => {
+                  const newValue = parseFloat(e.target.value);
+                  if (showSteps) {
+                    const stepValue = step / 100;
+                    setValue(Math.round(newValue / stepValue) * stepValue);
+                  } else {
+                    setValue(newValue);
+                  }
+                }}
               />
             </div>
           </div>
 
           {showSteps && (
             <div className={styles.steps}>
-              {Array.from({ length: totalSteps }).map((_, index) => {
-                const stepValue = step * (index / 100);
-                const isStepActive = value > stepValue;
+              {Array.from({ length: steps + 1 }).map((_, index) => {
+                const position = (index * step) / 100;
                 return (
                   <div
                     key={index}
@@ -173,22 +193,13 @@ export const Slider = ({
                     })}
                     style={{
                       [direction === directions.horizontal ? "left" : "bottom"]:
-                        `${step * index}%`,
-                      backgroundColor: isStepActive ? "var(--color-3)" : "",
+                        `${position * 100}%`,
+                      backgroundColor:
+                        value >= position ? "var(--color-3)" : "",
                     }}
                   />
                 );
               })}
-              <div
-                className={classNames(styles.step, {
-                  [styles.vertical]: direction === directions.vertical,
-                  [styles.horizontal]: direction === directions.horizontal,
-                })}
-                style={{
-                  [direction === directions.horizontal ? "left" : "bottom"]:
-                    `100%`,
-                }}
-              />
             </div>
           )}
         </div>
