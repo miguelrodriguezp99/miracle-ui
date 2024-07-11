@@ -7,20 +7,28 @@ import { SemanticColor, semanticColors } from "../../lib/colors";
 type Props = {
   color: SemanticColor;
   size?: SliderSizes;
+  label?: string;
   isDisabled?: boolean;
   direction?: SliderDirection;
   name?: string;
+  blackText?: boolean;
+  showSteps?: boolean;
+  step?: number;
 };
 
 export const Slider = ({
   isDisabled,
+  label,
+  blackText = false,
   direction = directions.horizontal,
   color = semanticColors.primary,
   size = sizes.md,
+  showSteps = false,
+  step = 5,
 }: Props) => {
   const [value, setValue] = useState(0.5);
   const [isDragging, setIsDragging] = useState(false);
-
+  const totalSteps = 100 / step;
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (isDragging) {
@@ -88,6 +96,17 @@ export const Slider = ({
         [styles.size]: size,
       })}
     >
+      {label && (
+        <div
+          className={classNames(styles.labelContainer, {
+            [styles.blackText]: blackText,
+          })}
+        >
+          <label className={styles.label}>{label}</label>
+          <label className={styles.label}>{value.toFixed(2)}</label>
+        </div>
+      )}
+
       <div
         className={classNames(styles.trackWrapper, {
           [styles.vertical]: direction === directions.vertical,
@@ -139,6 +158,39 @@ export const Slider = ({
               />
             </div>
           </div>
+
+          {showSteps && (
+            <div className={styles.steps}>
+              {Array.from({ length: totalSteps }).map((_, index) => {
+                const stepValue = step * (index / 100);
+                const isStepActive = value > stepValue;
+                return (
+                  <div
+                    key={index}
+                    className={classNames(styles.step, styles[size], {
+                      [styles.vertical]: direction === directions.vertical,
+                      [styles.horizontal]: direction === directions.horizontal,
+                    })}
+                    style={{
+                      [direction === directions.horizontal ? "left" : "bottom"]:
+                        `${step * index}%`,
+                      backgroundColor: isStepActive ? "var(--color-3)" : "",
+                    }}
+                  />
+                );
+              })}
+              <div
+                className={classNames(styles.step, {
+                  [styles.vertical]: direction === directions.vertical,
+                  [styles.horizontal]: direction === directions.horizontal,
+                })}
+                style={{
+                  [direction === directions.horizontal ? "left" : "bottom"]:
+                    `100%`,
+                }}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
