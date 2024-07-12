@@ -111,7 +111,7 @@ export const Slider = ({
     }
   };
 
-  const updateValueFromTouchEvent = (touch: React.Touch) => {
+  const updateValueFromTouchEvent = (touch: Touch) => {
     const trackElement = document.querySelector(`.${styles.track}`);
     if (trackElement) {
       const { left, top, width, height } = trackElement.getBoundingClientRect();
@@ -129,11 +129,29 @@ export const Slider = ({
     newValue = Math.max(0, Math.min(newValue, 1)) * maxValue;
 
     if (showSteps) {
-      const stepValue = (step / 100) * maxValue;
-      newValue = Math.round(newValue / stepValue) * stepValue;
+      const stepValue = (step / 100) * maxValue; // Calculate step value based on maxValue
+      newValue = Math.round(newValue / stepValue) * stepValue; // Apply step
     }
 
     setValue(newValue);
+  };
+
+  const handleIncrement = () => {
+    setValue((prev) => {
+      const incrementValue = showSteps
+        ? (step / 100) * maxValue
+        : 0.1 * maxValue; // Adjust increment value
+      return Math.min(prev + incrementValue, maxValue);
+    });
+  };
+
+  const handleDecrement = () => {
+    setValue((prev) => {
+      const decrementValue = showSteps
+        ? (step / 100) * maxValue
+        : 0.1 * maxValue; // Adjust decrement value
+      return Math.max(prev - decrementValue, 0);
+    });
   };
 
   const thumbPositionStyle =
@@ -190,18 +208,7 @@ export const Slider = ({
                   direction === directions.vertical,
               })}
             >
-              <Button
-                isIconOnly
-                onClick={() =>
-                  //@ts-expect-error error
-                  setValue((prev) => {
-                    if (showSteps) {
-                      return Math.max(prev - step, 0);
-                    }
-                    return Math.max(prev - 0.1 * maxValue, 0);
-                  })
-                }
-              >
+              <Button isIconOnly onClick={handleDecrement}>
                 {startContent}
               </Button>
             </div>
@@ -236,7 +243,7 @@ export const Slider = ({
                   aria-labelledby="react-aria8368235164-:rm:"
                   min="0"
                   max={maxValue}
-                  step="0.01"
+                  step={showSteps ? `${(step / 100) * maxValue}` : "any"} // Adjust step attribute
                   aria-orientation={
                     direction === directions.horizontal
                       ? "horizontal"
@@ -290,18 +297,7 @@ export const Slider = ({
                 [styles.endContentVertical]: direction === directions.vertical,
               })}
             >
-              <Button
-                isIconOnly
-                onClick={() =>
-                  //@ts-expect-error error
-                  setValue((prev) => {
-                    if (startContent && showSteps) {
-                      return Math.min(prev + step, maxValue);
-                    }
-                    return Math.min(prev + 0.1 * maxValue, maxValue);
-                  })
-                }
-              >
+              <Button isIconOnly onClick={handleIncrement}>
                 {endContent}
               </Button>
             </div>

@@ -25,7 +25,7 @@ function App() {
         color="secondary"
         value={value}
         onChange={setValue}
-        maxValue={100}
+        maxValue={150}
         step={20}
         showSteps
       />
@@ -38,7 +38,7 @@ function App() {
         size="md"
         direction="horizontal"
         color="primary"
-        maxValue={100}
+        maxValue={150}
         showSteps
         step={20}
       />
@@ -48,7 +48,7 @@ function App() {
         size="lg"
         direction="horizontal"
         color="secondary"
-        maxValue={100}
+        maxValue={150}
         value={value}
         onChange={setValue}
       />

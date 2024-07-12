@@ -89,6 +89,9 @@ WithLabels.args = {
   size: sizes.md,
   label: "Volume",
   value: 0.5,
+  showSteps: true,
+  maxValue: 1,
+  step: 10,
   onChange: () => {},
 };
 
@@ -119,6 +122,7 @@ WithIconsSteps.args = {
   startContent: <VolumeLowIcon />,
   endContent: <VolumeHighIcon />,
   showSteps: true,
+  maxValue: 1,
   step: 20,
   value: 0.5,
   onChange: () => {},
