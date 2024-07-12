@@ -108,7 +108,7 @@ export const WithEndContent: Story = {
 export const WithIcon: Story = {
   args: {
     isIconOnly: true,
-    endContent: <CameraIcon />,
+    children: <CameraIcon />,
     color: "success",
     radius: "md",
   },

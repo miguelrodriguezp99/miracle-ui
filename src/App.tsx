@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "./stories/Slider";
 import "./App.css";
+import { VolumeLowIcon } from "./Icons/VolumeLowIcon";
+import { VolumeHighIcon } from "./Icons/VolumeHighIcon";
 
 function App() {
+  const [value, setValue] = useState(0.5);
   return (
     <div
       style={{
@@ -15,22 +18,40 @@ function App() {
         backgroundColor: "darkgray",
       }}
     >
-      {/* <Slider
-        showSteps
+      <Slider
         label="Hello"
         size="sm"
-        direction="vertical"
+        direction="horizontal"
         color="secondary"
-      /> */}
-      <Slider size="md" direction="vertical" color="secondary" />
-
-      {/* <Slider
+        value={value}
+        onChange={setValue}
+        maxValue={100}
+        step={20}
         showSteps
+      />
+
+      <Slider
+        value={value}
+        onChange={setValue}
+        startContent={<VolumeLowIcon />}
+        endContent={<VolumeHighIcon />}
+        size="md"
+        direction="horizontal"
+        color="primary"
+        maxValue={100}
+        showSteps
+        step={20}
+      />
+
+      <Slider
         step={20}
         size="lg"
         direction="horizontal"
         color="secondary"
-      /> */}
+        maxValue={100}
+        value={value}
+        onChange={setValue}
+      />
     </div>
   );
 }

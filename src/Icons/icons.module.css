@@ -40,3 +40,19 @@
   pointer-events: none;
   flex-shrink: 0;
 }
+
+.volumeLowIcon {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.volumeHighIcon {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  pointer-events: none;
+  flex-shrink: 0;
+}

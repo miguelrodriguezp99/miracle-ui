@@ -64,6 +64,7 @@
 
 .is-icon-only {
   width: 40px;
+  min-height: 40px;
   padding: 0;
   min-width: 2.5rem;
 }

@@ -79,6 +79,7 @@ export const Button = ({
     >
       {startContent}
       {!isIconOnly && children}
+      {isIconOnly && <div>{children}</div>}
       {endContent}
     </a>
   );
