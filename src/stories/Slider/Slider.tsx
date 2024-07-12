@@ -38,27 +38,22 @@ export const Slider = ({
   onChange: setValue,
 }: Props) => {
   const [isDragging, setIsDragging] = useState(false);
+  const [touchIdentifier, setTouchIdentifier] = useState<number | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (isDragging) {
-        const trackElement = document.querySelector(`.${styles.track}`);
-        if (trackElement) {
-          const { left, top, width, height } =
-            trackElement.getBoundingClientRect();
-          let newValue;
-          if (direction === directions.horizontal) {
-            newValue = (e.clientX - left) / width;
-          } else {
-            newValue = 1 - (e.clientY - top) / height;
-          }
-          newValue = Math.max(0, Math.min(newValue, 1)) * maxValue;
+        updateValueFromMouseEvent(e);
+      }
+    };
 
-          if (showSteps) {
-            const stepValue = (step / 100) * maxValue;
-            newValue = Math.round(newValue / stepValue) * stepValue;
-          }
-          setValue(newValue);
+    const handleTouchMove = (e: TouchEvent) => {
+      if (isDragging && touchIdentifier !== null) {
+        const touch = Array.from(e.changedTouches).find(
+          (touch) => touch.identifier === touchIdentifier
+        );
+        if (touch) {
+          updateValueFromTouchEvent(touch);
         }
       }
     };
@@ -67,28 +62,70 @@ export const Slider = ({
       setIsDragging(false);
     };
 
+    const handleTouchEnd = (e: TouchEvent) => {
+      const touch = Array.from(e.changedTouches).find(
+        (touch) => touch.identifier === touchIdentifier
+      );
+      if (touch) {
+        updateValueFromTouchEvent(touch);
+      }
+      setIsDragging(false);
+      setTouchIdentifier(null);
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
-  }, [direction, isDragging, showSteps, step, maxValue, setValue]);
+  }, [isDragging, touchIdentifier]);
 
   const handleMouseDown = () => {
     setIsDragging(true);
   };
 
-  const handleTrackClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const trackElement = e.currentTarget;
-    const { left, top, width, height } = trackElement.getBoundingClientRect();
-    let newValue;
-    if (direction === directions.horizontal) {
-      newValue = (e.clientX - left) / width;
-    } else {
-      newValue = 1 - (e.clientY - top) / height;
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touch = e.changedTouches[0];
+    setTouchIdentifier(touch.identifier);
+    setIsDragging(true);
+    updateValueFromTouchEvent(touch);
+  };
+
+  const updateValueFromMouseEvent = (e: MouseEvent) => {
+    const trackElement = document.querySelector(`.${styles.track}`);
+    if (trackElement) {
+      const { left, top, width, height } = trackElement.getBoundingClientRect();
+      let newValue;
+      if (direction === directions.horizontal) {
+        newValue = (e.clientX - left) / width;
+      } else {
+        newValue = 1 - (e.clientY - top) / height;
+      }
+      updateValue(newValue);
     }
+  };
+
+  const updateValueFromTouchEvent = (touch: React.Touch) => {
+    const trackElement = document.querySelector(`.${styles.track}`);
+    if (trackElement) {
+      const { left, top, width, height } = trackElement.getBoundingClientRect();
+      let newValue;
+      if (direction === directions.horizontal) {
+        newValue = (touch.clientX - left) / width;
+      } else {
+        newValue = 1 - (touch.clientY - top) / height;
+      }
+      updateValue(newValue);
+    }
+  };
+
+  const updateValue = (newValue: number) => {
     newValue = Math.max(0, Math.min(newValue, 1)) * maxValue;
 
     if (showSteps) {
@@ -156,7 +193,7 @@ export const Slider = ({
               <Button
                 isIconOnly
                 onClick={() =>
-                  //@ts-expect-error - Noticed
+                  //@ts-expect-error error
                   setValue((prev) => {
                     if (showSteps) {
                       return Math.max(prev - step, 0);
@@ -174,7 +211,8 @@ export const Slider = ({
               [styles.vertical]: direction === directions.vertical,
               [styles.horizontal]: direction === directions.horizontal,
             })}
-            onMouseDown={handleTrackClick}
+            onMouseDown={handleMouseDown}
+            onTouchStart={handleTouchStart}
           >
             <div
               className={classNames(styles.filler, {
@@ -190,7 +228,6 @@ export const Slider = ({
               })}
               data-dragging={isDragging}
               style={thumbPositionStyle}
-              onMouseDown={handleMouseDown}
             >
               <div className={styles.inputContainer}>
                 <input
@@ -256,7 +293,7 @@ export const Slider = ({
               <Button
                 isIconOnly
                 onClick={() =>
-                  //@ts-expect-error - Noticed
+                  //@ts-expect-error error
                   setValue((prev) => {
                     if (startContent && showSteps) {
                       return Math.min(prev + step, maxValue);
