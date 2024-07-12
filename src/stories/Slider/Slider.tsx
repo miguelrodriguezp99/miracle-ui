@@ -134,7 +134,12 @@ export const Slider = ({
         </div>
       )}
 
-      <div>
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <div
           className={classNames(styles.trackWrapper, {
             [styles.vertical]: direction === directions.vertical,
@@ -200,7 +205,6 @@ export const Slider = ({
                       ? "horizontal"
                       : "vertical"
                   }
-                  aria-valuetext={value.toString()}
                   aria-describedby=""
                   aria-details=""
                   type="range"

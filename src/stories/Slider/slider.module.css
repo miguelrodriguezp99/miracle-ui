@@ -43,13 +43,7 @@
 .trackWrapper.vertical {
   align-items: center;
   justify-content: center;
-  display: flex;
-  flex-direction: column-reverse;
   height: 100%;
-}
-
-.endContentVertical {
-  margin-bottom: 5px;
 }
 
 .track {
@@ -214,11 +208,6 @@
 .disabled {
   pointer-events: none;
   opacity: 0.5;
-}
-
-.steps {
-  position: relative;
-  width: 100%;
 }
 
 .step {
