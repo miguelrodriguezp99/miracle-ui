@@ -1,9 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import React, { useState } from "react";
+import type { Meta, StoryFn as Story } from "@storybook/react";
 import { Slider } from "./Slider";
-import { semanticColors } from "../../lib/colors";
-import { sizes } from "./constants";
-import { useState } from "react";
-import React from "react";
+import { SemanticColor, semanticColors } from "../../lib/colors";
+import { sizes, SliderDirection, SliderSizes } from "./constants";
 import { VolumeLowIcon } from "../../Icons/VolumeLowIcon";
 import { VolumeHighIcon } from "../../Icons/VolumeHighIcon";
 
@@ -22,121 +21,114 @@ const meta: Meta<typeof Slider> = {
     isDisabled: {
       control: { type: "boolean" },
     },
+    maxValue: {
+      control: { type: "number" },
+    },
+    showSteps: {
+      control: { type: "boolean" },
+    },
+    step: {
+      control: { type: "number" },
+    },
+    direction: {
+      control: { type: "radio", options: ["horizontal", "vertical"] },
+    },
+    label: {
+      control: { type: "text" },
+    },
   },
 };
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type SliderProps = React.ComponentProps<typeof Slider>;
 
-//@ts-expect-error ts-migrate(7006) FIXME: Parameter 'args' implicitly has an 'any' type.
-export const Default: Story = () => {
-  // Utilizar useState para gestionar el estado del Slider
+const Template: Story<SliderProps> = (
+  args: React.JSX.IntrinsicAttributes & {
+    color: SemanticColor;
+    size?: SliderSizes;
+    label?: string;
+    isDisabled?: boolean;
+    direction?: SliderDirection;
+    name?: string;
+    blackText?: boolean;
+    showSteps?: boolean;
+    step?: number;
+    maxValue?: number;
+    startContent?: React.ReactNode;
+    endContent?: React.ReactNode;
+    value: number;
+    onChange: (value: number) => void;
+  }
+) => {
   const [sliderValue, setSliderValue] = useState(0.5);
 
-  const handleChange = (newValue: number) => {
-    setSliderValue(newValue);
-  };
-
-  return (
-    <Slider
-      color={semanticColors.primary}
-      size={sizes.md}
-      isDisabled={false}
-      label="Slider"
-      value={sliderValue}
-      onChange={handleChange}
-    />
-  );
+  return <Slider {...args} value={sliderValue} onChange={setSliderValue} />;
 };
 
-//@ts-expect-error ts-migrate(7006) FIXME: Parameter 'args' implicitly has an 'any' type.
-export const Vertical: Story = () => {
-  // Utilizar useState para gestionar el estado del Slider
-  const [sliderValue, setSliderValue] = useState(0.5);
-
-  const handleChange = (newValue: number) => {
-    setSliderValue(newValue);
-  };
-
-  return (
-    <Slider
-      color={semanticColors.warning}
-      size={sizes.md}
-      isDisabled={false}
-      direction="vertical"
-      value={sliderValue}
-      onChange={handleChange}
-    />
-  );
+export const Primary = Template.bind({});
+Primary.args = {
+  color: semanticColors.primary,
+  size: sizes.md,
+  isDisabled: false,
+  value: 0.5,
+  onChange: () => {},
 };
 
-//@ts-expect-error ts-migrate(7006) FIXME: Parameter 'args' implicitly has an 'any' type.
-export const WithLabel: Story = () => {
-  // Utilizar useState para gestionar el estado del Slider
-  const [sliderValue, setSliderValue] = useState(0.5);
-
-  const handleChange = (newValue: number) => {
-    setSliderValue(newValue);
-  };
-
-  return (
-    <Slider
-      label="Percentage"
-      color={semanticColors.secondary}
-      size={sizes.md}
-      isDisabled={false}
-      direction="horizontal"
-      value={sliderValue}
-      onChange={handleChange}
-    />
-  );
+export const Vertical = Template.bind({});
+Vertical.args = {
+  color: semanticColors.secondary,
+  size: sizes.md,
+  direction: "vertical",
+  value: 0.5,
+  onChange: () => {},
 };
 
-//@ts-expect-error ts-migrate(7006) FIXME: Parameter 'args' implicitly has an 'any' type.
-export const WithSteps: Story = () => {
-  // Utilizar useState para gestionar el estado del Slider
-  const [sliderValue, setSliderValue] = useState(0.5);
-
-  const handleChange = (newValue: number) => {
-    setSliderValue(newValue);
-  };
-
-  return (
-    <Slider
-      label="Percentage"
-      color={semanticColors.secondary}
-      size={sizes.md}
-      isDisabled={false}
-      direction="horizontal"
-      value={sliderValue}
-      onChange={handleChange}
-      showSteps
-      step={20}
-    />
-  );
+export const WithLabels = Template.bind({});
+WithLabels.args = {
+  color: semanticColors.primary,
+  size: sizes.md,
+  label: "Volume",
+  value: 0.5,
+  onChange: () => {},
 };
 
-//@ts-expect-error ts-migrate(7006) FIXME: Parameter 'args' implicitly has an 'any' type.
-export const WithIcons: Story = () => {
-  // Utilizar useState para gestionar el estado del Slider
-  const [sliderValue, setSliderValue] = useState(0.5);
+export const WithIcons = Template.bind({});
+WithIcons.args = {
+  color: semanticColors.primary,
+  size: sizes.md,
+  startContent: <VolumeLowIcon />,
+  endContent: <VolumeHighIcon />,
+  value: 0.5,
+  onChange: () => {},
+};
 
-  const handleChange = (newValue: number) => {
-    setSliderValue(newValue);
-  };
+export const WithSteps = Template.bind({});
+WithSteps.args = {
+  color: semanticColors.primary,
+  size: sizes.md,
+  showSteps: true,
+  step: 20,
+  value: 0.5,
+  onChange: () => {},
+};
 
-  return (
-    <Slider
-      value={sliderValue}
-      onChange={handleChange}
-      startContent={<VolumeLowIcon />}
-      endContent={<VolumeHighIcon />}
-      size="md"
-      direction="horizontal"
-      color="primary"
-      maxValue={100}
-      showSteps
-      step={20}
-    />
-  );
+export const WithIconsSteps = Template.bind({});
+WithIconsSteps.args = {
+  color: semanticColors.primary,
+  size: sizes.md,
+  startContent: <VolumeLowIcon />,
+  endContent: <VolumeHighIcon />,
+  showSteps: true,
+  step: 20,
+  value: 0.5,
+  onChange: () => {},
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  color: semanticColors.primary,
+  size: sizes.md,
+  isDisabled: true,
+  value: 0.5,
+  onChange: () => {},
 };
