@@ -24,6 +24,7 @@ type Props = {
 };
 
 export const Slider = ({
+  name,
   isDisabled,
   label,
   blackText = false,
@@ -249,6 +250,7 @@ export const Slider = ({
               <div className={styles.inputContainer}>
                 <input
                   tabIndex={0}
+                  name={name}
                   id="react-aria8368235164-:rm:-0"
                   aria-labelledby="react-aria8368235164-:rm:"
                   min="0"
