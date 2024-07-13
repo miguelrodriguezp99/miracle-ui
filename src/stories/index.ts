@@ -21,7 +21,7 @@ export { default as CircularProgress } from "./CircularProgress";
 export { default as Divider } from "./Divider";
 
 /* DROPDOWN */
-export { default } from "./Dropdown";
+export { default as Dropdown } from "./Dropdown/Dropdown";
 export { default as DropdownTrigger } from "./Dropdown/components/DropdownTrigger";
 export { default as DropdownMenu } from "./Dropdown/components/DropdownMenu";
 export { default as DropdownItem } from "./Dropdown/components/DropdownItem";

@@ -33,7 +33,7 @@
   top: 3px;
   margin-right: 5px;
   border: 2px solid #ccc;
-  transition: 0.2s ease-in-out;
+  transition: 0.5s;
 }
 
 .sm {
@@ -44,7 +44,7 @@
   --height: 4px;
   --width: 8px;
   --top: 4px;
-  --left: 4px;
+  --left: 3px;
   --border: 1px;
 }
 
@@ -55,9 +55,9 @@
   height: 24px;
   --height: 6px;
   --width: 12px;
-  --top: 5px;
-  --left: 5px;
-  --border: 1px;
+  --top: 6px;
+  --left: 4px;
+  --border: 2px;
 }
 
 .lg {
@@ -69,7 +69,7 @@
   --width: 16px;
   --top: 8px;
   --left: 7px;
-  --border: 2px;
+  --border: 3px;
 }
 
 .radius-none {
@@ -99,6 +99,7 @@
 .checkbox-input:checked + .input-check {
   background-color: var(--color);
   border-color: var(--color);
+  animation: animate 0.7s ease;
 }
 
 .input-check::before {
@@ -124,23 +125,19 @@
   opacity: 0.5;
 }
 
-@keyframes checkgrow {
-  0% {
-    height: 0px;
-    width: 0px;
-  }
+.input-check::before {
+  content: "";
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  width: var(--width);
+  height: var(--height);
+  border-bottom: var(--border) solid #fff;
+  border-left: var(--border) solid #fff;
+  transform: scale(0) rotate(-45deg);
+  transition: 0.5s;
+}
 
-  25% {
-    border-bottom: var(--border) solid #fff;
-    border-left: var(--border) solid #fff;
-    height: var(--height);
-    width: 0px;
-  }
-
-  100% {
-    border-bottom: var(--border) solid #fff;
-    border-left: var(--border) solid #fff;
-    height: var(--height);
-    width: var(--width);
-  }
+label input:checked ~ .input-check::before {
+  transform: scale(1) rotate(-50deg);
 }
