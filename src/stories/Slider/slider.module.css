@@ -90,9 +90,13 @@
   border-left: none;
   border-right: none;
   border-top-width: calc(1.5rem / 2);
-  border-top-color: hsla(240, 5%, 50%, 0.411);
+  border-top-color: hsla(240, 5%, 55%, 0.411);
   border-bottom-width: calc(1.5rem / 2);
   border-bottom-color: var(--color-2);
+}
+
+.track.vertical.maxValued {
+  border-top-color: var(--color-2);
 }
 
 .track.vertical.sm {

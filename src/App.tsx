@@ -35,7 +35,7 @@ function App() {
         onChange={setValue}
         startContent={<VolumeLowIcon />}
         endContent={<VolumeHighIcon />}
-        size="md"
+        size="lg"
         direction="vertical"
         color="primary"
         maxValue={150}

@@ -219,6 +219,7 @@ export const Slider = ({
             className={classNames(styles.track, styles[size], {
               [styles.vertical]: direction === directions.vertical,
               [styles.horizontal]: direction === directions.horizontal,
+              [styles.maxValued]: value === maxValue,
             })}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
