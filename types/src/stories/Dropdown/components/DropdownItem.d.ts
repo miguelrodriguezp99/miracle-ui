@@ -7,6 +7,9 @@ interface DropdownItemProps {
     color?: SemanticColor;
     variant?: DropdownVariants;
     disabledRipple?: boolean;
+    startContent?: React.ReactNode;
+    endContent?: React.ReactNode;
+    onClick?: () => void;
 }
-declare const DropdownItem: ({ children, color, variant, }: DropdownItemProps) => React.JSX.Element;
+declare const DropdownItem: ({ children, color, variant, startContent, endContent, onClick, }: DropdownItemProps) => React.JSX.Element;
 export default DropdownItem;

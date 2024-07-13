@@ -12,7 +12,7 @@ export declare const CardFooter: {
     ({ children, padding, margin, absolute, isBlurred }: Props): React.JSX.Element;
     propTypes: {
         children: PropTypes.Requireable<PropTypes.ReactNodeLike>;
-        padding: PropTypes.Requireable<"none" | "sm" | "md" | "lg" | "hsm" | "hmd" | "hlg" | "vsm" | "vmd" | "vlg">;
+        padding: PropTypes.Requireable<"sm" | "md" | "lg" | "none" | "hsm" | "hmd" | "hlg" | "vsm" | "vmd" | "vlg">;
     };
 };
 export default CardFooter;

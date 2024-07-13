@@ -12,3 +12,5 @@ declare const meta: Meta<typeof Dropdown>;
 export default meta;
 type Story = StoryObj<DropdownArgs>;
 export declare const Primary: Story;
+export declare const WithStarContent: Story;
+export declare const WithEndContent: Story;
