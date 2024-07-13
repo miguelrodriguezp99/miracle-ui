@@ -42,19 +42,19 @@
 }
 
 .radius-sm {
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 .radius-md {
-  border-radius: 12px;
+  border-radius: var(--radius-md);
 }
 
 .radius-lg {
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
 }
 
 .radius-full {
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
 }
 
 .is-disabled {

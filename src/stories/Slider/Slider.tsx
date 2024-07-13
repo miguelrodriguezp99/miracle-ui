@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import styles from "./slider.module.css";
 import classNames from "classnames";
@@ -186,7 +187,13 @@ export const Slider = ({
             [styles.blackText]: blackText,
           })}
         >
-          <label className={styles.label}>{label}</label>
+          <label
+            className={classNames(styles.label, {
+              [styles[size]]: size,
+            })}
+          >
+            {label}
+          </label>
           <label className={styles.label}>{formatLabelValue(value)}</label>
         </div>
       )}

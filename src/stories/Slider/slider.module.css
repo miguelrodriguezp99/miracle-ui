@@ -26,8 +26,19 @@
   color: black;
 }
 
-.label {
-  font-size: 1rem;
+.label.sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  margin-bottom: 8px;
+}
+
+.label.md {
+  font-size: var(--font-size-md);
+  margin-bottom: 5px;
+}
+
+.label.lg {
+  font-size: var(--font-size-lg);
 }
 
 .trackWrapper {
@@ -90,7 +101,7 @@
   border-left: none;
   border-right: none;
   border-top-width: calc(1.5rem / 2);
-  border-top-color: hsla(240, 5%, 55%, 0.411);
+  border-top-color: hsla(240, 5%, 14%, 0.411);
   border-bottom-width: calc(1.5rem / 2);
   border-bottom-color: var(--color-2);
 }

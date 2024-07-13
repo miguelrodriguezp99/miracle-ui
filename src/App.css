@@ -87,18 +87,18 @@ svg {
   --color-faded: #27272a;
   --color-faded-1: #3e3e43;
 
-  --radius-small: 8px;
-  --radius-medium: 12px;
-  --radius-large: 14px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
   --radius-full: 9999px;
 
-  --font-size-small: 0.875rem;
-  --font-size-medium: 1rem;
-  --font-size-large: 1.125rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
 
-  --line-height-small: 1.25rem;
-  --line-height-medium: 1.5rem;
-  --line-height-large: 1.75rem;
+  --line-height-sm: 1.25rem;
+  --line-height-md: 1.5rem;
+  --line-height-lg: 1.75rem;
 
   --text: hsl(210 5.56% 92.94%);
 }

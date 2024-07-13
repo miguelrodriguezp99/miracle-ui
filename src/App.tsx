@@ -33,10 +33,33 @@ function App() {
       <Slider
         value={value}
         onChange={setValue}
-        startContent={<VolumeLowIcon />}
-        endContent={<VolumeHighIcon />}
+        label="Volume"
         size="lg"
-        direction="vertical"
+        direction="horizontal"
+        color="primary"
+        maxValue={150}
+        showSteps
+        step={20}
+      />
+
+      <Slider
+        value={value}
+        onChange={setValue}
+        label="Volume"
+        size="md"
+        direction="horizontal"
+        color="primary"
+        maxValue={150}
+        showSteps
+        step={20}
+      />
+
+      <Slider
+        value={value}
+        onChange={setValue}
+        label="Volume"
+        size="sm"
+        direction="horizontal"
         color="primary"
         maxValue={150}
         showSteps

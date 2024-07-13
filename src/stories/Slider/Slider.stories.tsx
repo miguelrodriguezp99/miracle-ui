@@ -60,7 +60,7 @@ const Template: Story<SliderProps> = (
     onChange: (value: number) => void;
   }
 ) => {
-  const [sliderValue, setSliderValue] = useState(0.5);
+  const [sliderValue, setSliderValue] = useState(0.4);
 
   return <Slider {...args} value={sliderValue} onChange={setSliderValue} />;
 };
@@ -119,6 +119,20 @@ export const WithIconsSteps = Template.bind({});
 WithIconsSteps.args = {
   color: semanticColors.primary,
   size: sizes.md,
+  startContent: <VolumeLowIcon />,
+  endContent: <VolumeHighIcon />,
+  showSteps: true,
+  maxValue: 1,
+  step: 20,
+  value: 0.4,
+  onChange: () => {},
+};
+
+export const WithIconsStepsVertical = Template.bind({});
+WithIconsStepsVertical.args = {
+  color: semanticColors.primary,
+  size: sizes.md,
+  direction: "vertical",
   startContent: <VolumeLowIcon />,
   endContent: <VolumeHighIcon />,
   showSteps: true,

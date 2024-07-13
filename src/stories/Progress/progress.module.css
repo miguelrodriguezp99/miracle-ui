@@ -38,15 +38,15 @@
 }
 
 .radius-sm {
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
 }
 
 .radius-md {
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
 }
 
 .radius-lg {
-  border-radius: var(--radius-large);
+  border-radius: var(--radius-lg);
 }
 
 .radius-full {
@@ -54,18 +54,18 @@
 }
 
 .text-sm {
-  font-size: var(--font-size-small);
-  line-height: var(--line-height-small);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
 }
 
 .text-md {
-  font-size: var(--font-size-medium);
-  line-height: var(--line-height-medium);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
 }
 
 .text-lg {
-  font-size: var(--font-size-large);
-  line-height: var(--line-height-large);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
 }
 
 .is-indeterminate {
