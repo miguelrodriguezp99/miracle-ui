@@ -18,7 +18,7 @@ function App() {
         backgroundColor: "darkgray",
       }}
     >
-      <Slider
+      {/* <Slider
         label="Hello"
         size="sm"
         direction="horizontal"
@@ -28,9 +28,22 @@ function App() {
         maxValue={150}
         step={20}
         showSteps
-      />
+      /> */}
 
       <Slider
+        value={value}
+        onChange={setValue}
+        startContent={<VolumeLowIcon />}
+        endContent={<VolumeHighIcon />}
+        size="md"
+        direction="vertical"
+        color="primary"
+        maxValue={150}
+        showSteps
+        step={20}
+      />
+
+      {/* <Slider
         value={value}
         onChange={setValue}
         startContent={<VolumeLowIcon />}
@@ -41,9 +54,9 @@ function App() {
         maxValue={150}
         showSteps
         step={20}
-      />
+      /> */}
 
-      <Slider
+      {/* <Slider
         step={20}
         size="lg"
         direction="horizontal"
@@ -51,7 +64,7 @@ function App() {
         maxValue={150}
         value={value}
         onChange={setValue}
-      />
+      /> */}
     </div>
   );
 }

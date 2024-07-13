@@ -91,7 +91,7 @@ export const Slider = ({
   };
 
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    const touch = e.changedTouches[0];
+    const touch = e.changedTouches[0] as unknown as Touch;
     setTouchIdentifier(touch.identifier);
     setIsDragging(true);
     updateValueFromTouchEvent(touch);
@@ -137,6 +137,7 @@ export const Slider = ({
   };
 
   const handleIncrement = () => {
+    //@ts-expect-error types
     setValue((prev) => {
       const incrementValue = showSteps
         ? (step / 100) * maxValue
@@ -146,6 +147,7 @@ export const Slider = ({
   };
 
   const handleDecrement = () => {
+    //@ts-expect-error types
     setValue((prev) => {
       const decrementValue = showSteps
         ? (step / 100) * maxValue
@@ -270,6 +272,10 @@ export const Slider = ({
               <div className={styles.steps}>
                 {Array.from({ length: steps + 1 }).map((_, index) => {
                   const position = (index * step) / 100;
+                  const isActiveStep =
+                    direction === directions.horizontal
+                      ? value / maxValue >= position
+                      : value / maxValue >= 1 - position;
                   return (
                     <div
                       key={index}
@@ -279,11 +285,9 @@ export const Slider = ({
                           direction === directions.horizontal,
                       })}
                       style={{
-                        [direction === directions.horizontal
-                          ? "left"
-                          : "bottom"]: `${position * 100}%`,
-                        backgroundColor:
-                          value / maxValue >= position ? "var(--color-3)" : "",
+                        [direction === directions.horizontal ? "left" : "top"]:
+                          `${position * 100}%`,
+                        backgroundColor: isActiveStep ? "var(--color-3)" : "",
                       }}
                     />
                   );
