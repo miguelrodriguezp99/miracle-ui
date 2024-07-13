@@ -12,14 +12,14 @@ import classNames from "classnames";
 import Avatar from "../Avatar";
 
 type Props = {
-  color: SemanticColor;
-  variant: BadgeVariants;
-  radius: BadgeRadius;
-  position: BadgePosition;
+  color?: SemanticColor;
+  variant?: BadgeVariants;
+  radius?: BadgeRadius;
+  position?: BadgePosition;
   children: React.ReactNode;
-  badgeContent: string | React.ReactNode;
-  isCircular: boolean;
-  bordered: boolean;
+  badgeContent?: string | React.ReactNode;
+  isCircular?: boolean;
+  bordered?: boolean;
 };
 
 export const Badge = ({

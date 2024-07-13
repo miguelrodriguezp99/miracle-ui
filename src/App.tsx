@@ -3,116 +3,94 @@ import Slider from "./stories/Slider";
 import "./App.css";
 import { VolumeLowIcon } from "./Icons/VolumeLowIcon";
 import { VolumeHighIcon } from "./Icons/VolumeHighIcon";
-import { Button, ButtonGroup, Card, CardWithImage, Checkbox } from "./stories";
+import {
+  Avatar,
+  Badge,
+  Button,
+  ButtonGroup,
+  Card,
+  CardWithImage,
+  Checkbox,
+  CheckboxGroup,
+  CircularProgress,
+  Input,
+  Progress,
+} from "./stories";
 
 function App() {
   const [value, setValue] = useState(0.5);
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        gap: "1rem",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "darkgray",
-      }}
-    >
-      <Checkbox text="Hello" size="lg" color="primary" />
-      {/* <Slider
-        label="Hello"
-        size="sm"
-        direction="horizontal"
-        color="secondary"
-        value={value}
-        onChange={setValue}
-        maxValue={150}
-        step={20}
-        showSteps
-      /> */}
-
-      <Slider
-        value={value}
-        onChange={setValue}
-        label="Volume"
-        size="lg"
-        direction="horizontal"
-        color="primary"
-        maxValue={150}
-        showSteps
-        step={20}
-      />
-      <Button size="lg">Click me</Button>
-      <ButtonGroup>
-        <Button radius="none" size="md">
-          HELLO
+    <>
+      <div
+        style={{
+          display: "flex",
+          gap: "1rem",
+          flexDirection: "column",
+          background: "gray",
+          width: "100%",
+          padding: "1rem",
+          alignContent: "center",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Button radius="md" size="md">
+          Click me
         </Button>
-        <Button radius="none" size="md">
-          HELLO
+        <Button radius="md" variant="bordered" color="default" blackText>
+          Click me
         </Button>
-        <Button radius="none" size="md">
-          HELLO
-        </Button>
-      </ButtonGroup>
+        <ButtonGroup>
+          <Button label="One" radius="none" color="primary" size="sm" />
+          <Button label="Two" radius="none" color="primary" size="sm" />
+          <Button label="Three" radius="none" color="primary" size="sm" />
+        </ButtonGroup>
 
-      <ButtonGroup>
-        <Button label="One" radius="none" color="primary" size="md" />
-        <Button label="Two" radius="none" color="primary" size="md" />
-        <Button label="Three" radius="none" color="primary" size="md" />
-      </ButtonGroup>
+        <Slider
+          value={value}
+          onChange={setValue}
+          showSteps
+          step={5}
+          size="md"
+          color="default"
+          startContent={<VolumeLowIcon />}
+          endContent={<VolumeHighIcon />}
+          direction="horizontal"
+        />
 
-      <Card cardWidth="md" padding="sm">
-        <CardWithImage />
-      </Card>
+        <Card cardWidth="md" padding="sm">
+          <CardWithImage />
+        </Card>
 
-      {/* <Slider
-        value={value}
-        onChange={setValue}
-        label="Volume"
-        size="md"
-        direction="horizontal"
-        color="primary"
-        maxValue={150}
-        showSteps
-        step={20}
-      />
+        <Slider
+          value={value}
+          onChange={setValue}
+          label="Volume"
+          size="lg"
+          direction="horizontal"
+          color="primary"
+          maxValue={150}
+          showSteps
+          step={20}
+        />
 
-      <Slider
-        value={value}
-        onChange={setValue}
-        label="Volume"
-        size="sm"
-        direction="horizontal"
-        color="primary"
-        maxValue={150}
-        showSteps
-        step={20}
-      /> */}
-
-      {/* <Slider
-        value={value}
-        onChange={setValue}
-        startContent={<VolumeLowIcon />}
-        endContent={<VolumeHighIcon />}
-        size="md"
-        direction="horizontal"
-        color="primary"
-        maxValue={150}
-        showSteps
-        step={20}
-      /> */}
-
-      {/* <Slider
-        step={20}
-        size="lg"
-        direction="horizontal"
-        color="secondary"
-        maxValue={150}
-        value={value}
-        onChange={setValue}
-      /> */}
-    </div>
+        <Avatar avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <Badge badgeContent={2} bordered={false} isCircular variant="solid">
+          <Avatar avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        </Badge>
+        <Checkbox text="Check me" textColor color="primary" />
+        <CheckboxGroup direction="horizontal">
+          <Checkbox text="Check me" textColor color="primary" />
+          <Checkbox text="Check me" textColor color="primary" />
+          <Checkbox text="Check me" textColor color="primary" />
+        </CheckboxGroup>
+        <CircularProgress size="md" color="primary" />
+        <Input />
+        <Progress value={50} />
+        <Progress isIndeterminate />
+        <Progress label="Hola" value={50} valueLabel="50" showPercentageLabel />
+      </div>
+    </>
   );
 }
 
