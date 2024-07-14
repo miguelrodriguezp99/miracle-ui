@@ -12,6 +12,7 @@ import classNames from "classnames";
 
 type Props = {
   placeholder?: string;
+  text?: string;
   color?: SemanticColor;
   size?: InputSizes;
   variant?: InputVariants;
@@ -34,6 +35,7 @@ export const Input = ({
   isDisabled = false,
   type = "text",
   value = "",
+  text = "Email",
   onChange,
   onValueChange,
 }: Props) => {
@@ -70,7 +72,7 @@ export const Input = ({
         htmlFor="email"
         className={classNames(styles.label, styles[`label-${size}`])}
       >
-        Email
+        {text}
       </label>
       {variant === "underlined" && <div className={styles.underline}></div>}
     </div>

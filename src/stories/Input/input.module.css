@@ -4,7 +4,7 @@
 .success,
 .warning,
 .danger {
-  --color: rgb(175, 172, 172);
+  --color: rgb(187, 174, 174);
   --color-2: var(--color-default-button-1);
   --color-3: var(--color-default-button-2);
   --color-4: var(--color-default-button-3);
@@ -69,11 +69,12 @@
   background-color: hsl(240 3.7% 15.88%);
   transition: background-color 0.2s ease-in;
   border: none;
+  font-size: 0.95rem;
 }
 
 .input {
   background-color: var(--color-5);
-  color: var(--color-2);
+  color: var(--color);
 }
 
 .input:hover {
@@ -81,7 +82,7 @@
 }
 
 .input::placeholder {
-  color: var(--color);
+  color: var(--color-2);
 }
 
 .input:focus {
@@ -102,34 +103,67 @@
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
   transform: translateY(-2px) scale(0.75);
-  top: 8px;
+  top: 12px;
 }
 
-.input.has-placeholder + .label {
+.input:focus + .label-small,
+.input:not(:placeholder-shown) + .label-small {
   transform: translateY(-2px) scale(0.75);
   top: 8px;
 }
 
+.input:focus + .label-large,
+.input:not(:placeholder-shown) + .label-large {
+  transform: translateY(-2px) scale(0.75);
+  top: 14px;
+}
+
+.input.has-placeholder + .label {
+  transform: translateY(-2px) scale(0.75);
+  top: 12px;
+}
+
+.input.has-placeholder + .label-small {
+  transform: translateY(-2px) scale(0.75);
+  top: 8px;
+}
+
+.input.has-placeholder + .label-large {
+  transform: translateY(-2px) scale(0.75);
+  top: 14px;
+  font-size: 1rem;
+}
+
 .small {
-  padding: 20px 24px 10px 16px;
+  min-height: 2rem;
+  height: 3rem;
+  padding: 20px 24px 6px 16px;
 }
 
 .medium {
-  padding: 24px 24px 10px 16px;
+  min-height: 2.5rem;
+  height: 3.5rem;
+  padding: 24px 24px 6px 16px;
 }
 
 .large {
+  min-height: 3rem;
+  height: 4rem;
   padding: 30px 30px 10px 20px;
+  font-size: 1.1rem;
 }
 
-.label.label-small,
+.label.label-small {
+  top: 16px;
+  left: 16px;
+}
 .label.label-medium {
-  top: 18px;
+  top: 20px;
   left: 16px;
 }
 
 .label.label-large {
-  top: 20px;
+  top: 24px;
   left: 19px;
 }
 
@@ -201,6 +235,8 @@
     background-color: transparent;
     border-radius: 0;
     padding-left: 5px;
+    min-height: 2.5rem;
+    height: 3.25rem;
   }
 
   .underline {
