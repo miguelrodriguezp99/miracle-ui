@@ -39,7 +39,7 @@ function App() {
           radius="md"
           size="md"
           customColor="#d10"
-          customHoverColor="#A00F0F"
+          customHoverColor="purple"
         >
           Click me
         </Button>
@@ -133,7 +133,7 @@ function App() {
           <Checkbox text="Check me" textColor color="primary" />
           <Checkbox text="Check me" textColor color="primary" />
         </CheckboxGroup>
-        <CircularProgress size="md" color="primary" />
+        <CircularProgress size="md" color="warning" customColor="#ddd" />
         <Input />
         <Progress value={50} />
         <Progress isIndeterminate />

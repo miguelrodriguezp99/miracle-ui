@@ -3,6 +3,7 @@
   font-size: inherit;
   cursor: pointer;
   color: white !important;
+  will-change: transform;
 }
 
 .text-color {

@@ -6,6 +6,7 @@ import { CircularProgressSizes, sizes } from "./constants";
 
 type Props = {
   color: SemanticColor;
+  customColor?: string;
   size?: CircularProgressSizes;
   isDisabled?: boolean;
   label?: string;
@@ -13,6 +14,7 @@ type Props = {
 
 export const CircularProgress = ({
   color = semanticColors.primary,
+  customColor,
   size = sizes.sm,
   isDisabled,
   label,
@@ -59,8 +61,9 @@ export const CircularProgress = ({
           }
           transform="rotate(-90 16 16)"
           strokeLinecap="round"
+          stroke={customColor}
           className={classNames(styles["circle-2"], {
-            [`${color}`]: color,
+            [styles.strokeColor]: !customColor,
           })}
         ></circle>
       </svg>

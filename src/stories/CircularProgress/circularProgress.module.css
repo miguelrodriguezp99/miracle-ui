@@ -22,8 +22,11 @@
 
 .circle-2 {
   height: 100%;
-  stroke: var(--color-2);
   transition: all 0.5;
+}
+
+.strokeColor {
+  stroke: var(--color-2);
 }
 
 .sm {
