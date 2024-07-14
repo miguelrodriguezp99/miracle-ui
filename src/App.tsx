@@ -85,8 +85,8 @@ function App() {
           size="md"
           showSteps
           step={25}
-          color="primary"
           customColor="#d10"
+          customHoverColor="#A00F0F"
           startContent={<VolumeLowIcon />}
           endContent={<VolumeHighIcon />}
           direction="horizontal"

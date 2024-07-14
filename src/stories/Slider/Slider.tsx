@@ -7,8 +7,9 @@ import { SemanticColor, semanticColors } from "../../lib/colors";
 import Button from "../Button";
 
 type Props = {
-  color: SemanticColor;
+  color?: SemanticColor;
   customColor?: string;
+  customHoverColor?: string;
   size?: SliderSizes;
   label?: string;
   isDisabled?: boolean;
@@ -33,6 +34,7 @@ export const Slider = ({
   direction = directions.horizontal,
   color = semanticColors.primary,
   customColor,
+  customHoverColor,
   size = sizes.md,
   showSteps = false,
   step = 5,
@@ -236,6 +238,7 @@ export const Slider = ({
                 onClick={handleDecrement}
                 color={color}
                 customColor={customColor}
+                customHoverColor={customHoverColor}
               >
                 {startContent}
               </Button>
@@ -348,6 +351,7 @@ export const Slider = ({
                 onClick={handleIncrement}
                 color={color}
                 customColor={customColor}
+                customHoverColor={customHoverColor}
               >
                 {endContent}
               </Button>
