@@ -11,6 +11,10 @@ import useRippleEffect from "../../hooks/useRippleEffect";
 interface CardProps {
   children?: React.ReactNode;
   color?: SemanticColor;
+  customColor?: string;
+  customPadding?: string;
+  customRippleColor?: string;
+  customTextColor?: string;
   cardWidth?: CardWidthTypes;
   padding?: PaddingTypes;
   isClickable?: boolean;
@@ -21,6 +25,10 @@ interface CardProps {
 export const Card = ({
   children = "Children",
   color = "default",
+  customColor,
+  customPadding,
+  customRippleColor,
+  customTextColor,
   cardWidth = "full",
   padding,
   isClickable = false,
@@ -29,10 +37,23 @@ export const Card = ({
 }: CardProps) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
 
-  useRippleEffect({ disabledRipple, color, isClickable, ref: cardRef });
+  const cardStyles = {
+    ...(customColor && { backgroundColor: customColor }),
+    ...(customPadding && { padding: customPadding }),
+    ...(customTextColor && { color: customTextColor }),
+  };
+
+  useRippleEffect({
+    disabledRipple,
+    color,
+    customRippleColor,
+    isClickable,
+    ref: cardRef,
+  });
   return (
     <div
       ref={cardRef}
+      style={cardStyles}
       className={classNames(styles.card, {
         [styles[`color-${color}`]]: color, //just applies if the color exists
         [styles[`padding-${padding}`]]: padding,

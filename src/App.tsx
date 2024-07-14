@@ -16,6 +16,7 @@ import {
   Input,
   Progress,
 } from "./stories";
+import { CardProduct } from "./stories/Cards";
 
 function App() {
   const [value, setValue] = useState(0.5);
@@ -41,9 +42,27 @@ function App() {
           Click me
         </Button>
         <ButtonGroup>
-          <Button label="One" radius="none" color="primary" size="sm" />
-          <Button label="Two" radius="none" color="primary" size="sm" />
-          <Button label="Three" radius="none" color="primary" size="sm" />
+          <Button
+            customColor="#d10"
+            label="One"
+            radius="none"
+            color="primary"
+            size="md"
+          />
+          <Button
+            customColor="#d10"
+            label="Two"
+            radius="none"
+            color="primary"
+            size="md"
+          />
+          <Button
+            customColor="#d10"
+            label="Three"
+            radius="none"
+            color="primary"
+            size="md"
+          />
         </ButtonGroup>
 
         {/* <Slider
@@ -69,8 +88,28 @@ function App() {
           maxWidth={500}
         />
 
-        <Card cardWidth="md" padding="sm">
-          <CardWithImage />
+        <Card
+          cardWidth="md"
+          padding="sm"
+          customColor="orange"
+          customTextColor="black"
+          customRippleColor="black"
+          isClickable
+        >
+          <CardWithImage customTextColor="black" />
+        </Card>
+
+        {/* <Card
+          cardWidth="md"
+          padding="sm"
+          isClickable
+          customRippleColor="purple"
+        >
+          <CardWithImage customTextColor="orange" />
+        </Card> */}
+
+        <Card cardWidth="none" isClickable>
+          <CardProduct />
         </Card>
 
         <Avatar avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />

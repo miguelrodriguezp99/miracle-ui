@@ -96,7 +96,6 @@
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  /* margin: 0; */
   line-height: 0;
 }
 
@@ -116,6 +115,10 @@
   font-size: 14px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.56);
+}
+
+.custom-text {
+  filter: opacity(0.8);
 }
 
 .description {

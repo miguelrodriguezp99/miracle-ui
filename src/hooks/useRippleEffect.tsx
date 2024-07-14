@@ -74,7 +74,7 @@ const useRippleEffect = ({
     return () => {
       ref.current?.removeEventListener("click", handleClick);
     };
-  }, [disabledRipple, color, variant, ref, blackText]);
+  }, [disabledRipple, color, variant, ref, blackText, customRippleColor]);
 };
 
 export default useRippleEffect;
