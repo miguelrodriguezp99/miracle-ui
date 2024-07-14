@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Slider from "./stories/Slider";
 import "./App.css";
-import { VolumeLowIcon } from "./Icons/VolumeLowIcon";
-import { VolumeHighIcon } from "./Icons/VolumeHighIcon";
+import { VolumeLowIcon } from "./icons/VolumeLowIcon";
+import { VolumeHighIcon } from "./icons/VolumeHighIcon";
 import {
   Avatar,
   Badge,

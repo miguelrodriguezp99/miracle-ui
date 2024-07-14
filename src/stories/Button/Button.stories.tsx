@@ -3,8 +3,8 @@ import { Button } from "./Button";
 import { semanticColors } from "../../lib/colors";
 import { radius, sizes, variants } from "./constants";
 import React from "react";
-import { CameraIcon } from "../../Icons/CameraIcon";
-import { UserIcon } from "../../Icons/UserIcon";
+import { CameraIcon } from "../../icons/CameraIcon";
+import { UserIcon } from "../../icons/UserIcon";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",

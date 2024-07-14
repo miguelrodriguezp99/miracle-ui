@@ -6,7 +6,8 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import postcss from "rollup-plugin-postcss"; // Importa el plugin postcss
+import postcss from "rollup-plugin-postcss";
+import ignore from "rollup-plugin-ignore";
 
 const packageJson = require("./package.json");
 
@@ -22,11 +23,16 @@ export default [
     ],
     // external: ["react", "react-dom"],
     plugins: [
-      typescript(),
+      typescript({
+        exclude: ["./src/icons/**", "**/*.stories.tsx"],
+      }),
+      ignore(["./src/icons/**", "**/*.stories.tsx"]),
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      postcss(),
+      postcss({
+        exclude: "src/app.css",
+      }),
       terser(),
     ],
   },

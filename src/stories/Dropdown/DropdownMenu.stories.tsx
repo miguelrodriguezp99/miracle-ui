@@ -6,10 +6,10 @@ import DropdownItem from "./components/DropdownItem";
 import DropdownMenu from "./components/DropdownMenu";
 import DropdownTrigger from "./components/DropdownTrigger";
 import { DropdownPositions, positions } from "./constants";
-import { NewFileIcon } from "../../Icons/NewFileIcon";
-import { CopyLinkIcon } from "../../Icons/CopyLinkIcon";
-import { EditFileIcon } from "../../Icons/EditFileIcon";
-import { DeleteFileIcon } from "../../Icons/DeleteFileIcon";
+import { NewFileIcon } from "../../icons/NewFileIcon";
+import { CopyLinkIcon } from "../../icons/CopyLinkIcon";
+import { EditFileIcon } from "../../icons/EditFileIcon";
+import { DeleteFileIcon } from "../../icons/DeleteFileIcon";
 
 interface DropdownArgs {
   isBlackBackground: boolean;
