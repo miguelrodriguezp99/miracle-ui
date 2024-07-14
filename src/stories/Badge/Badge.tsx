@@ -20,17 +20,22 @@ type Props = {
   badgeContent?: string | React.ReactNode;
   isCircular?: boolean;
   bordered?: boolean;
+  customColor?: string;
 };
 
 export const Badge = ({
   children = <Avatar radius="md" name="John" />,
   variant = variants.solid,
   color = semanticColors.danger,
+  customColor,
   position = positions.tr,
   isCircular = false,
   badgeContent = "5",
   bordered = true,
 }: Props) => {
+  const badgeStyles = {
+    ...(customColor && { backgroundColor: customColor }),
+  };
   return (
     <div
       className={classNames(styles["badge-container"], {
@@ -39,6 +44,7 @@ export const Badge = ({
     >
       {children}
       <span
+        style={badgeStyles}
         className={classNames(styles.badge, {
           [styles.square]: !isCircular,
           [styles.circular]: isCircular,

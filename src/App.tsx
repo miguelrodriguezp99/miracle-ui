@@ -26,7 +26,7 @@ function App() {
           display: "flex",
           gap: "1rem",
           flexDirection: "column",
-          background: "gray",
+          background: "black",
           width: "100%",
           padding: "1rem",
           alignContent: "center",
@@ -34,10 +34,10 @@ function App() {
           alignItems: "center",
         }}
       >
-        <Button radius="md" size="md">
+        <Button radius="md" size="md" whiteText customColor="#d10">
           Click me
         </Button>
-        <Button radius="md" variant="bordered" color="default" blackText>
+        <Button radius="md" variant="bordered" color="default">
           Click me
         </Button>
         <ButtonGroup>
@@ -46,36 +46,41 @@ function App() {
           <Button label="Three" radius="none" color="primary" size="sm" />
         </ButtonGroup>
 
+        {/* <Slider
+          value={value}
+          onChange={setValue}
+          size="md"
+          color="success"
+          direction="horizontal"
+          maxWidth={400}
+        /> */}
+
         <Slider
           value={value}
           onChange={setValue}
-          showSteps
-          step={5}
           size="md"
-          color="default"
+          showSteps
+          step={25}
+          color="primary"
+          customColor="#d10"
           startContent={<VolumeLowIcon />}
           endContent={<VolumeHighIcon />}
           direction="horizontal"
+          maxWidth={500}
         />
 
         <Card cardWidth="md" padding="sm">
           <CardWithImage />
         </Card>
 
-        <Slider
-          value={value}
-          onChange={setValue}
-          label="Volume"
-          size="lg"
-          direction="horizontal"
-          color="primary"
-          maxValue={150}
-          showSteps
-          step={20}
-        />
-
         <Avatar avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-        <Badge badgeContent={2} bordered={false} isCircular variant="solid">
+        <Badge
+          customColor="#d10"
+          badgeContent={2}
+          bordered={false}
+          isCircular
+          variant="solid"
+        >
           <Avatar avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         </Badge>
         <Checkbox text="Check me" textColor color="primary" />
