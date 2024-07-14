@@ -51,9 +51,9 @@ export const Input = ({
   };
   return (
     <div
-      className={classNames(styles["input-container"], {
+      className={classNames(styles["input-container"], "input", color, {
         [styles[`width-${width}`]]: width,
-        [styles[color]]: color,
+
         [styles[variant]]: variant,
         [styles["is-disabled"]]: isDisabled,
         [styles["is-read-only"]]: readOnly,
