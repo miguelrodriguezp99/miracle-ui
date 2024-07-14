@@ -1,14 +1,10 @@
-import PropTypes from "prop-types";
 import React from "react";
-// import classNames from "classnames";
 import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
 import Divider from "../Divider/Divider";
 import { Image } from "../Image/Image";
 import { CardFooter } from "./components/CardFooter";
-import { semanticColors } from "../../lib/colors";
-// import { getClasses } from "../../helpers/styles";
 
 interface CardWithDividerProps {
   children?: React.ReactNode;
@@ -17,6 +13,7 @@ interface CardWithDividerProps {
   subtitle?: string;
   description?: string;
   linkText?: string;
+  imgRoute?: string;
 }
 
 export const CardWithDivider = ({
@@ -24,16 +21,12 @@ export const CardWithDivider = ({
   title = "Card with divider",
   subtitle = "Make beautiful websites regardless of your design experience.",
   linkText = "Visit source code on GitHub.",
+  imgRoute = "https://nextui.org/images/hero-card-complete.jpeg",
 }: CardWithDividerProps) => {
   return (
     <>
       <CardHeader padding="md">
-        <Image
-          route="https://nextui.org/images/hero-card-complete.jpeg"
-          alt="image"
-          width="75px"
-          height="75px"
-        />
+        <Image route={imgRoute} alt="image" width="75px" height="75px" />
 
         <div>
           <h2 className={styles.title}>{title}</h2>
@@ -68,12 +61,6 @@ export const CardWithDivider = ({
       </CardFooter>
     </>
   );
-};
-
-CardWithDivider.propTypes = {
-  color: PropTypes.oneOf(Object.entries(semanticColors)),
-  isClickable: PropTypes.bool,
-  isDraggable: PropTypes.bool,
 };
 
 export default CardWithDivider;

@@ -12,7 +12,7 @@ export { default as CardHeader } from "./Cards/components/CardHeader";
 export { default as CardFooter } from "./Cards/components/CardFooter";
 export { default as CardWithDivider } from "./Cards/CardWithDivider";
 export { default as CardWithImage } from "./Cards/CardWithImage";
-export { default as CardStyles } from "./Cards/card.module.css";
+export { default as CardProduct } from "./Cards/CardProduct";
 export { default as CardWithBlurredFooter } from "./Cards/CardWithBlurredFooter";
 
 export { default as Checkbox } from "./Checkbox";

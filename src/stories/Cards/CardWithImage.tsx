@@ -1,13 +1,9 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
 import { Image } from "../Image/Image";
-import { semanticColors } from "../../lib/colors";
 import classNames from "classnames";
-
-// import { getClasses } from "../../helpers/styles";
 
 interface CardWithImageProps {
   title?: string;
@@ -51,12 +47,6 @@ export const CardWithImage = ({
       </CardBody>
     </>
   );
-};
-
-CardWithImage.propTypes = {
-  color: PropTypes.oneOf(Object.entries(semanticColors)),
-  isClickable: PropTypes.bool,
-  isDraggable: PropTypes.bool,
 };
 
 export default CardWithImage;

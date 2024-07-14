@@ -1,12 +1,10 @@
-import PropTypes from "prop-types";
 import React, { useRef } from "react";
 import classNames from "classnames";
 import styles from "./card.module.css";
 
-import options, { CardWidthTypes, PaddingTypes } from "./constants";
-import { semanticColors, SemanticColor } from "../../lib/colors";
+import { CardWidthTypes, PaddingTypes } from "./constants";
+import { SemanticColor } from "../../lib/colors";
 import useRippleEffect from "../../hooks/useRippleEffect";
-// import { getClasses } from "../../helpers/styles";
 
 interface CardProps {
   children?: React.ReactNode;
@@ -66,14 +64,6 @@ export const Card = ({
       {children}
     </div>
   );
-};
-
-Card.propTypes = {
-  color: PropTypes.oneOf(Object.entries(semanticColors)),
-  cardWidth: PropTypes.oneOf(options.cardWidth),
-  padding: PropTypes.oneOf(options.padding),
-  isClickable: PropTypes.bool,
-  isDraggable: PropTypes.bool,
 };
 
 export default Card;

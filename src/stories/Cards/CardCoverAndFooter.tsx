@@ -1,14 +1,10 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
 import { Image } from "../Image/Image";
 import { CardFooter } from "./components";
-import { semanticColors } from "../../lib/colors";
 import Button from "../Button";
-
-// import { getClasses } from "../../helpers/styles";
 
 interface CardCoverAndFooterProps {
   title?: string;
@@ -65,7 +61,7 @@ export const CardCoverAndFooter = ({
 
               {secondFooterText && <p>{secondFooterText}</p>}
             </div>
-            {/* <button className={styles["test-button"]}>{buttonText}</button> */}
+
             <div>
               <Button onClick={onClick} size="sm" radius="lg">
                 {buttonText}
@@ -76,12 +72,6 @@ export const CardCoverAndFooter = ({
       </CardBody>
     </>
   );
-};
-
-CardCoverAndFooter.propTypes = {
-  color: PropTypes.oneOf(Object.entries(semanticColors)),
-  isClickable: PropTypes.bool,
-  isDraggable: PropTypes.bool,
 };
 
 export default CardCoverAndFooter;
