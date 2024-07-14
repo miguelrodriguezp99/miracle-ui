@@ -80,6 +80,10 @@
   color: #fff !important;
 }
 
-.custom-hover:hover {
+.custom-hover-filter:hover {
   filter: brightness(0.75);
+}
+
+.custom-hover-color:hover {
+  background-color: var(--custom-hover-color) !important;
 }

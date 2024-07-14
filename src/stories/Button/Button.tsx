@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./../styles/global.css";
 import styles from "./button.module.css";
 import useRippleEffect from "../../hooks/useRippleEffect";
@@ -16,6 +16,7 @@ interface ButtonProps {
   color?: SemanticColor;
   customColor?: string;
   customRippleColor?: string;
+  customHoverColor?: string;
   variant?: ButtonVariants;
   size?: ButtonSizes;
   radius?: ButtonRadius;
@@ -42,6 +43,7 @@ export const Button = ({
   color = semanticColors.primary,
   customColor,
   customRippleColor,
+  customHoverColor,
   variant = variants.solid,
   startContent,
   endContent,
@@ -64,6 +66,15 @@ export const Button = ({
     ...(customColor && { backgroundColor: customColor }),
   };
 
+  useEffect(() => {
+    if (customHoverColor) {
+      document.documentElement.style.setProperty(
+        "--custom-hover-color",
+        customHoverColor
+      );
+    }
+  }, [customHoverColor]);
+
   return (
     <a
       ref={buttonRef}
@@ -75,14 +86,14 @@ export const Button = ({
         styles.button,
         styles[size],
         styles[`radius-${radius}`],
-
         {
           [styles["is-clickable"]]: isClickable,
           [styles["black-text"]]: blackText,
           [styles["white-text"]]: whiteText,
           [styles["is-disabled"]]: isDisabled,
           [styles["is-icon-only"]]: isIconOnly,
-          [styles["custom-hover"]]: customColor,
+          [styles["custom-hover-filter"]]: customColor && !customHoverColor,
+          [styles["custom-hover-color"]]: customHoverColor,
         }
       )}
       style={buttonStyles}

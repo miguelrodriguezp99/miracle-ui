@@ -35,7 +35,12 @@ function App() {
           alignItems: "center",
         }}
       >
-        <Button radius="md" size="md" whiteText customColor="#d10">
+        <Button
+          radius="md"
+          size="md"
+          customColor="#d10"
+          customHoverColor="#A00F0F"
+        >
           Click me
         </Button>
         <Button radius="md" variant="bordered" color="default">
