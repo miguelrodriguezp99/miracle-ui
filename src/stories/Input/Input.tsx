@@ -12,6 +12,7 @@ import classNames from "classnames";
 
 type Props = {
   placeholder?: string;
+  text?: string;
   color?: SemanticColor;
   size?: InputSizes;
   variant?: InputVariants;
@@ -20,6 +21,7 @@ type Props = {
   isDisabled?: boolean;
   type?: InputTypes;
   value?: string;
+  readOnly?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValueChange?: (value: string) => void;
 };
@@ -34,6 +36,8 @@ export const Input = ({
   isDisabled = false,
   type = "text",
   value = "",
+  text = "Email",
+  readOnly = false,
   onChange,
   onValueChange,
 }: Props) => {
@@ -47,11 +51,12 @@ export const Input = ({
   };
   return (
     <div
-      className={classNames(styles["input-container"], {
+      className={classNames(styles["input-container"], "input", color, {
         [styles[`width-${width}`]]: width,
-        [styles[color]]: color,
+
         [styles[variant]]: variant,
         [styles["is-disabled"]]: isDisabled,
+        [styles["is-read-only"]]: readOnly,
       })}
     >
       <input
@@ -70,7 +75,7 @@ export const Input = ({
         htmlFor="email"
         className={classNames(styles.label, styles[`label-${size}`])}
       >
-        Email
+        {text}
       </label>
       {variant === "underlined" && <div className={styles.underline}></div>}
     </div>

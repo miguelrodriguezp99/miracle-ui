@@ -302,8 +302,14 @@ svg {
   color: black;
 }
 
+/* COMPONENTS */
+
 .button.default {
   color: hsl(210 5.56% 92.94%);
+}
+
+.input.default {
+  --color: rgb(187, 174, 174);
 }
 
 .listItem.solid {
