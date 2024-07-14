@@ -14,6 +14,8 @@ import {
 
 interface ButtonProps {
   color?: SemanticColor;
+  customColor?: string;
+  customRippleColor?: string;
   variant?: ButtonVariants;
   size?: ButtonSizes;
   radius?: ButtonRadius;
@@ -38,6 +40,8 @@ export const Button = ({
   isClickable = true,
   isDisabled = false,
   color = semanticColors.primary,
+  customColor,
+  customRippleColor,
   variant = variants.solid,
   startContent,
   endContent,
@@ -53,7 +57,12 @@ export const Button = ({
     variant,
     ref: buttonRef,
     blackText,
+    customRippleColor,
   });
+
+  const buttonStyles = {
+    ...(customColor && { backgroundColor: customColor }),
+  };
 
   return (
     <a
@@ -73,8 +82,10 @@ export const Button = ({
           [styles["white-text"]]: whiteText,
           [styles["is-disabled"]]: isDisabled,
           [styles["is-icon-only"]]: isIconOnly,
+          [styles["custom-hover"]]: customColor,
         }
       )}
+      style={buttonStyles}
       onClick={isClickable && !isDisabled ? onClick : undefined}
     >
       {startContent}

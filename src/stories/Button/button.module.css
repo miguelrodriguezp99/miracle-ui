@@ -79,3 +79,7 @@
 .white-text {
   color: #fff !important;
 }
+
+.custom-hover:hover {
+  filter: brightness(0.75);
+}

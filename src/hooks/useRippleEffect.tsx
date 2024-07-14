@@ -10,6 +10,7 @@ type Props = {
   color?: SemanticColor;
   variant?: ButtonVariants;
   blackText?: boolean;
+  customRippleColor?: string;
 };
 
 const useRippleEffect = ({
@@ -19,6 +20,7 @@ const useRippleEffect = ({
   isClickable = true,
   ref,
   blackText,
+  customRippleColor,
 }: Props) => {
   useEffect(() => {
     if (disabledRipple) return;
@@ -35,7 +37,13 @@ const useRippleEffect = ({
       const ripples = document.createElement("span");
       ripples.classList.add("ripple");
 
-      if (variant === "bordered" || variant === "flat" || variant === "faded") {
+      if (customRippleColor) {
+        ripples.style.backgroundColor = customRippleColor;
+      } else if (
+        variant === "bordered" ||
+        variant === "flat" ||
+        variant === "faded"
+      ) {
         if (
           variant === "bordered" &&
           blackText &&
