@@ -21,6 +21,7 @@ type Props = {
   isDisabled?: boolean;
   type?: InputTypes;
   value?: string;
+  readOnly?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValueChange?: (value: string) => void;
 };
@@ -36,6 +37,7 @@ export const Input = ({
   type = "text",
   value = "",
   text = "Email",
+  readOnly = false,
   onChange,
   onValueChange,
 }: Props) => {
@@ -54,6 +56,7 @@ export const Input = ({
         [styles[color]]: color,
         [styles[variant]]: variant,
         [styles["is-disabled"]]: isDisabled,
+        [styles["is-read-only"]]: readOnly,
       })}
     >
       <input

@@ -60,6 +60,7 @@ const Template: Story<InputProps> = (
     type?: InputTypes;
     value?: string;
     text?: string;
+    readOnly?: boolean;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onValueChange?: (value: string) => void;
   }
@@ -156,33 +157,15 @@ Underlined.args = {
   text: "Underlined Input",
 };
 
-// export const Primary: Story = {
-//   args: {},
-// };
-
-// export const Faded: Story = {
-//   args: {
-//     variant: "faded",
-//     color: "secondary",
-//   },
-// };
-
-// export const Bordered: Story = {
-//   args: {
-//     variant: "bordered",
-//     color: "success",
-//   },
-// };
-
-// export const Underlined: Story = {
-//   args: {
-//     variant: "underlined",
-//     color: "danger",
-//   },
-// };
-
-// export const Disabled: Story = {
-//   args: {
-//     isDisabled: true,
-//   },
-// };
+export const ReadOnly: Story = Template.bind({});
+ReadOnly.args = {
+  color: semanticColors.default,
+  size: "medium",
+  width: "medium",
+  radius: "medium",
+  variant: "flat",
+  isDisabled: false,
+  type: "text",
+  text: "Read Only Input",
+  readOnly: true,
+};
