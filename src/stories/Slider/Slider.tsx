@@ -8,6 +8,7 @@ import Button from "../Button";
 
 type Props = {
   color: SemanticColor;
+  customColor?: string;
   size?: SliderSizes;
   label?: string;
   isDisabled?: boolean;
@@ -20,6 +21,7 @@ type Props = {
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   value: number;
+  maxWidth?: number;
   onChange: (value: number) => void;
 };
 
@@ -30,6 +32,7 @@ export const Slider = ({
   blackText = false,
   direction = directions.horizontal,
   color = semanticColors.primary,
+  customColor,
   size = sizes.md,
   showSteps = false,
   step = 5,
@@ -37,6 +40,7 @@ export const Slider = ({
   endContent,
   maxValue = 1,
   value,
+  maxWidth = 448,
   onChange: setValue,
 }: Props) => {
   const [isDragging, setIsDragging] = useState(false);
@@ -158,14 +162,19 @@ export const Slider = ({
     });
   };
 
-  const thumbPositionStyle =
-    direction === directions.horizontal
+  const thumbPositionStyle = {
+    ...(direction === directions.horizontal
       ? { left: `${(value / maxValue) * 100}%` }
-      : { bottom: `${(value / maxValue) * 100}%` };
-  const fillerStyle =
-    direction === directions.horizontal
+      : { bottom: `${(value / maxValue) * 100}%` }),
+    ...(customColor && { backgroundColor: customColor }),
+  };
+
+  const fillerStyle = {
+    ...(direction === directions.horizontal
       ? { width: `${(value / maxValue) * 100}%` }
-      : { height: `${(value / maxValue) * 100}%` };
+      : { height: `${(value / maxValue) * 100}%` }),
+    ...(customColor && { backgroundColor: customColor }),
+  };
 
   const steps = showSteps ? Math.round(100 / step) : 0;
 
@@ -175,6 +184,10 @@ export const Slider = ({
 
   return (
     <div
+      style={{
+        width: direction === directions.horizontal ? `${maxWidth}px` : "",
+        height: direction === directions.vertical ? `${maxWidth}px` : ``,
+      }}
       className={classNames(styles.container, color, {
         [styles.disabled]: isDisabled,
         [styles.vertical]: direction === directions.vertical,
@@ -218,7 +231,12 @@ export const Slider = ({
                   direction === directions.vertical,
               })}
             >
-              <Button isIconOnly onClick={handleDecrement}>
+              <Button
+                isIconOnly
+                onClick={handleDecrement}
+                color={color}
+                customColor={customColor}
+              >
                 {startContent}
               </Button>
             </div>
@@ -229,6 +247,16 @@ export const Slider = ({
               [styles.horizontal]: direction === directions.horizontal,
               [styles.maxValued]: value === maxValue,
             })}
+            style={{
+              ...(customColor &&
+                direction === directions.vertical && {
+                  borderBottomColor: customColor,
+                }),
+              ...(customColor &&
+                direction === directions.horizontal && {
+                  borderInlineStartColor: customColor,
+                }),
+            }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
           >
@@ -298,6 +326,10 @@ export const Slider = ({
                         [direction === directions.horizontal ? "left" : "top"]:
                           `${position * 100}%`,
                         backgroundColor: isActiveStep ? "var(--color-3)" : "",
+                        ...(customColor && {
+                          backgroundColor: isActiveStep ? customColor : "",
+                          filter: "brightness(0.7)",
+                        }),
                       }}
                     />
                   );
@@ -311,7 +343,12 @@ export const Slider = ({
                 [styles.endContentVertical]: direction === directions.vertical,
               })}
             >
-              <Button isIconOnly onClick={handleIncrement}>
+              <Button
+                isIconOnly
+                onClick={handleIncrement}
+                color={color}
+                customColor={customColor}
+              >
                 {endContent}
               </Button>
             </div>

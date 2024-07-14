@@ -36,6 +36,9 @@ const meta: Meta<typeof Slider> = {
     label: {
       control: { type: "text" },
     },
+    maxWidth: {
+      control: { type: "number" },
+    },
   },
 };
 export default meta;
@@ -57,6 +60,7 @@ const Template: Story<SliderProps> = (
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number;
     onChange: (value: number) => void;
   }
 ) => {

@@ -4,15 +4,12 @@
 }
 
 .container.horizontal {
-  max-width: 28rem;
   width: 100%;
   flex-direction: column;
 }
 
 .container.vertical {
-  max-height: 28rem;
   height: 100%;
-
   flex-direction: column-reverse;
   align-items: center;
 }
@@ -101,7 +98,7 @@
   border-left: none;
   border-right: none;
   border-top-width: calc(1.5rem / 2);
-  border-top-color: hsla(240, 5%, 14%, 0.411);
+  border-top-color: hsla(240, 5%, 34%, 0.411);
   border-bottom-width: calc(1.5rem / 2);
   border-bottom-color: var(--color-2);
 }
