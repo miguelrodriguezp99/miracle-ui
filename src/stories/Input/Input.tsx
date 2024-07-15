@@ -16,6 +16,7 @@ type Props = {
   color?: SemanticColor;
   backgroundColor?: string;
   textColor?: string;
+  labelColor?: string;
   placeholderColor?: string;
   underlineColor?: string;
   size?: InputSizes;
@@ -34,6 +35,7 @@ export const Input = ({
   color = semanticColors.default,
   backgroundColor,
   textColor,
+  labelColor,
   placeholderColor,
   underlineColor,
   placeholder = "",
@@ -81,6 +83,7 @@ export const Input = ({
         type={type}
         style={{
           backgroundColor,
+          color: textColor,
         }}
         className={classNames(styles.input, styles[size], {
           [styles[`border-radius-${radius}`]]: radius,
@@ -93,7 +96,7 @@ export const Input = ({
       />
       <label
         style={{
-          color: textColor,
+          color: labelColor ? labelColor : textColor,
         }}
         htmlFor="email"
         className={classNames(styles.label, styles[`label-${size}`])}

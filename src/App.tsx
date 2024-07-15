@@ -22,6 +22,7 @@ import {
   Progress,
 } from "./stories";
 import { CardProduct } from "./stories/Cards";
+import Spinner from "./stories/Spinner";
 
 function App() {
   const [value, setValue] = useState(0.5);
@@ -42,13 +43,15 @@ function App() {
           alignItems: "center",
         }}
       >
+        <Spinner color="primary" size="lg" customColor="red" label="Loading" />
         <Input
           size="medium"
-          variant="underlined"
-          textColor="pink"
-          color="secondary"
-          placeholderColor="red"
-          underlineColor="blue"
+          variant="flat"
+          textColor="white"
+          labelColor="pink"
+          color="default"
+          placeholderColor="#D75E5E"
+          underlineColor="red"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />

@@ -8,11 +8,11 @@
   position: relative;
   overflow: hidden;
   color: white;
-  animation: spinner-spin 0.8s ease infinite;
   width: 2.5rem;
   height: 2.5rem;
   shape-rendering: auto;
   will-change: transform;
+  animation: spinner-spin 0.8s ease infinite;
 }
 
 .circle-1 {

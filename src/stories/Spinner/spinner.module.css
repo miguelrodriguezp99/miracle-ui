@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  max-width: fit-content;
+  align-items: center;
+}
+
+.spinner {
+  position: relative;
+  display: flex;
+}
+
+i {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 99999px;
+  border: 3px solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-width: 3px;
+  border-bottom-color: var(--color);
+}
+.i1 {
+  animation: spinner-spin 0.8s ease infinite;
+}
+
+.i2 {
+  animation: spinner-spin 0.8s linear infinite;
+  border-style: dotted;
+}
+
+.sm {
+  width: 2rem;
+  height: 2rem;
+}
+
+.md {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.lg {
+  width: 3rem;
+  height: 3rem;
+}
+
+@keyframes spinner-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
