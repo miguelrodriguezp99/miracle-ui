@@ -2,12 +2,16 @@
   position: relative;
   font-size: inherit;
   cursor: pointer;
-  color: white !important;
+  color: white;
   will-change: transform;
 }
 
 .text-color {
-  color: var(--color) !important;
+  color: var(--color);
+}
+
+.text-black {
+  color: black;
 }
 
 .font-sm {
@@ -30,7 +34,6 @@
 .input-check {
   position: relative;
   display: inline-block;
-
   top: 3px;
   margin-right: 5px;
   border: 2px solid #ccc;

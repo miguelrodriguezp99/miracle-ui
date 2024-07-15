@@ -96,7 +96,7 @@ function App() {
         <Card
           cardWidth="md"
           padding="sm"
-          customColor="orange"
+          customColor="red"
           customTextColor="black"
           customRippleColor="black"
           isClickable
@@ -117,7 +117,7 @@ function App() {
           cardWidth="none"
           isClickable
           customTextColor="black"
-          customColor="orange"
+          customColor="red"
         >
           <CardProduct />
         </Card>
@@ -132,11 +132,11 @@ function App() {
         >
           <Avatar avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         </Badge>
-        <Checkbox text="Check me" textColor color="primary" />
+        <Checkbox text="Check me" customColor="red" />
         <CheckboxGroup direction="horizontal">
-          <Checkbox text="Check me" textColor color="primary" />
-          <Checkbox text="Check me" textColor color="primary" />
-          <Checkbox text="Check me" textColor color="primary" />
+          <Checkbox text="Check me" textColor color="default" />
+          <Checkbox text="Check me" color="default" />
+          <Checkbox text="Check me" color="primary" />
         </CheckboxGroup>
         <CircularProgress size="md" color="warning" customColor="red" />
         <Input />

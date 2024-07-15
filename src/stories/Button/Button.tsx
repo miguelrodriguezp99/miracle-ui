@@ -101,7 +101,7 @@ export const Button = ({
     >
       {startContent}
       {!isIconOnly && children}
-      {isIconOnly && <div>{children}</div>}
+      {isIconOnly && children}
       {endContent}
     </a>
   );

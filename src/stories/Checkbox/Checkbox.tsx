@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SemanticColorCheckbox,
   semanticColorsCheckbox,
@@ -9,7 +9,9 @@ import classNames from "classnames";
 
 type Props = {
   color?: SemanticColorCheckbox;
+  customColor?: string;
   textColor?: boolean;
+  blackText?: boolean;
   size?: CheckboxSize;
   text?: string;
   radius?: CheckboxRadius;
@@ -23,7 +25,9 @@ type Props = {
 
 export const Checkbox = ({
   color = semanticColorsCheckbox.none,
+  customColor,
   textColor,
+  blackText,
   radius = "sm",
   text = "Checkbox",
   size = "md",
@@ -34,6 +38,18 @@ export const Checkbox = ({
   onChange,
   onValueChange,
 }: Props) => {
+  const [checked, setChecked] = useState(isChecked);
+
+  const checkboxStyles = {
+    color:
+      customColor && textColor ? customColor : textColor ? color : undefined,
+  };
+
+  const checkStyles = {
+    backgroundColor: customColor && checked ? customColor : "",
+    borderColor: customColor && checked ? customColor : "",
+  };
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange) {
       onChange(event);
@@ -41,13 +57,17 @@ export const Checkbox = ({
     if (onValueChange) {
       onValueChange(event.target.checked);
     }
+    setChecked(event.target.checked);
   };
+
   return (
     <label
+      style={checkboxStyles}
       className={classNames(styles["checkbox-label"], {
         [styles[`font-${size}`]]: size,
         [color]: color,
-        [styles[`text-color`]]: textColor,
+        [styles[`text-color`]]: textColor && !blackText,
+        [styles[`text-black`]]: blackText,
         [styles["disabled"]]: isDisabled,
       })}
     >
@@ -60,6 +80,7 @@ export const Checkbox = ({
         onChange={handleChange}
       />
       <span
+        style={checkStyles}
         className={classNames(styles["input-check"], {
           [styles[size]]: size,
           [styles[`radius-${radius}`]]: radius,
