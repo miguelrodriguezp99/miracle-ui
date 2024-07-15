@@ -51,7 +51,9 @@ function App() {
             offset={0}
             aria-label="Static Actions"
           >
-            <DropdownItem key="new">New file</DropdownItem>
+            <DropdownItem textColor="aqua" key="new">
+              New file
+            </DropdownItem>
             <DropdownItem key="copy">Copy link</DropdownItem>
             <DropdownItem key="edit">Edit file</DropdownItem>
             <DropdownItem key="delete" color="danger" variant="solid">

@@ -8,6 +8,7 @@ interface DropdownMenuProps {
   children: React.ReactNode;
   position?: DropdownPositions;
   offset?: number;
+  backgroundColor?: string;
   "aria-label"?: string;
 }
 
@@ -15,6 +16,7 @@ const DropdownMenu = ({
   children,
   position = positions.bottom,
   offset = 0,
+  backgroundColor,
 }: DropdownMenuProps) => {
   const { isOpen } = useContext(DropdownContext);
 
@@ -25,6 +27,7 @@ const DropdownMenu = ({
         marginBottom: position === positions.top ? `${offset}px` : undefined,
         marginLeft: position === positions.right ? `${offset}px` : undefined,
         marginRight: position === positions.left ? `${offset}px` : undefined,
+        backgroundColor,
       }}
       className={classNames(styles.listWrapper, styles[position], {
         [styles.menuOpen]: isOpen,

@@ -10,7 +10,8 @@ interface DropdownItemProps {
   children: React.ReactNode;
   color?: SemanticColor;
   variant?: DropdownVariants;
-  disabledRipple?: boolean;
+  textColor?: string;
+  fontSize?: string;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   onClick?: () => void;
@@ -20,8 +21,10 @@ const DropdownItem = ({
   children,
   color = semanticColors.default,
   variant = variants.solid,
+  textColor,
   startContent,
   endContent,
+  fontSize,
   onClick,
 }: DropdownItemProps) => {
   const { toggleMenu } = useContext(DropdownContext);
@@ -48,7 +51,15 @@ const DropdownItem = ({
         </div>
       )}
 
-      <span className={styles.span}>{children}</span>
+      <span
+        style={{
+          color: textColor,
+          fontSize,
+        }}
+        className={styles.span}
+      >
+        {children}
+      </span>
       <div className={classNames(color, "icon", styles.startContent)}>
         {endContent}
       </div>
