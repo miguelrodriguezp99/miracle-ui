@@ -6,10 +6,10 @@ export const variants = {
 export type BadgeVariants = (typeof variants)[keyof typeof variants];
 
 export const positions = {
-  tl: "tl",
-  tr: "tr",
-  bl: "bl",
-  br: "br",
+  "top-left": "top-left",
+  "top-right": "top-right",
+  "bottom-left": "bottom-left",
+  "bottom-right": "bottom-right",
 };
 export type BadgePosition = (typeof positions)[keyof typeof positions];
 

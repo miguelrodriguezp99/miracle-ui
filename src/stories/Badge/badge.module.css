@@ -29,25 +29,25 @@
   border: 2px solid var(--color-5);
 }
 
-.tr {
+.top-right {
   top: var(--offset);
   right: var(--offset);
   transform: translate(50%, -50%);
 }
 
-.tl {
+.top-left {
   top: var(--offset);
   left: var(--offset);
   transform: translate(-50%, -50%);
 }
 
-.br {
+.bottom-right {
   bottom: var(--offset);
   right: var(--offset);
   transform: translate(50%, 50%);
 }
 
-.bl {
+.bottom-left {
   bottom: var(--offset);
   left: var(--offset);
   transform: translate(-50%, 50%);

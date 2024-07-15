@@ -23,7 +23,7 @@
 }
 
 .input::placeholder {
-  color: var(--color-2);
+  color: var(--custom-placeholder-color, --color-2);
 }
 
 .input:focus {
@@ -198,7 +198,7 @@
 
   .label {
     color: var(--color);
-    top: 20px;
+    top: 25px;
     left: 5px;
     transition: all 0.3s ease;
   }

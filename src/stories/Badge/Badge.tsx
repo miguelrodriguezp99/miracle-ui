@@ -28,7 +28,7 @@ export const Badge = ({
   variant = variants.solid,
   color = semanticColors.danger,
   customColor,
-  position = positions.tr,
+  position = positions["top-right"],
   isCircular = false,
   badgeContent = "5",
   bordered = true,

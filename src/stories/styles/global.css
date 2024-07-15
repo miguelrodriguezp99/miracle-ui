@@ -88,6 +88,7 @@ svg {
   --color-faded-1: #3e3e43;
 
   --custom-hover-color: initial;
+  --custom-placeholder-color: initial;
 
   --radius-sm: 8px;
   --radius-md: 12px;

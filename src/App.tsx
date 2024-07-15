@@ -25,6 +25,8 @@ import { CardProduct } from "./stories/Cards";
 
 function App() {
   const [value, setValue] = useState(0.5);
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <>
       <div
@@ -40,6 +42,16 @@ function App() {
           alignItems: "center",
         }}
       >
+        <Input
+          size="medium"
+          variant="underlined"
+          textColor="pink"
+          color="secondary"
+          placeholderColor="red"
+          underlineColor="blue"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
         <Dropdown>
           <DropdownTrigger>
             <Button radius="md" variant="bordered" color="default">
@@ -156,10 +168,14 @@ function App() {
           customColor="#d10"
           badgeContent={2}
           bordered={false}
-          isCircular
           variant="solid"
+          position="top-right"
+          isCircular
         >
-          <Avatar avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+          <Avatar
+            radius="full"
+            avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
         </Badge>
         <Checkbox text="Check me" customColor="red" textColor />
         <CheckboxGroup direction="horizontal">
@@ -168,9 +184,9 @@ function App() {
           <Checkbox text="Check me" color="primary" />
         </CheckboxGroup>
         <CircularProgress size="md" color="warning" customColor="red" />
-        <Input />
+
         <Progress customColor="red" value={50} />
-        <Progress customColor="red" isIndeterminate />
+
         <Progress
           customColor="red"
           label="Hola"

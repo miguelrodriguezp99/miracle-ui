@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   InputRadius,
   InputSizes,
@@ -14,6 +14,10 @@ type Props = {
   placeholder?: string;
   text?: string;
   color?: SemanticColor;
+  backgroundColor?: string;
+  textColor?: string;
+  placeholderColor?: string;
+  underlineColor?: string;
   size?: InputSizes;
   variant?: InputVariants;
   width?: InputWidth;
@@ -28,6 +32,10 @@ type Props = {
 
 export const Input = ({
   color = semanticColors.default,
+  backgroundColor,
+  textColor,
+  placeholderColor,
+  underlineColor,
   placeholder = "",
   size = "medium",
   width = "medium",
@@ -49,11 +57,20 @@ export const Input = ({
       onValueChange(event.target.value);
     }
   };
+
+  useEffect(() => {
+    if (placeholderColor) {
+      document.documentElement.style.setProperty(
+        "--custom-placeholder-color",
+        placeholderColor
+      );
+    }
+  }, [placeholderColor]);
+
   return (
     <div
       className={classNames(styles["input-container"], "input", color, {
         [styles[`width-${width}`]]: width,
-
         [styles[variant]]: variant,
         [styles["is-disabled"]]: isDisabled,
         [styles["is-read-only"]]: readOnly,
@@ -62,6 +79,9 @@ export const Input = ({
       <input
         id="email"
         type={type}
+        style={{
+          backgroundColor,
+        }}
         className={classNames(styles.input, styles[size], {
           [styles[`border-radius-${radius}`]]: radius,
           [styles["has-placeholder"]]: placeholder != "",
@@ -72,12 +92,22 @@ export const Input = ({
         onChange={handleChange}
       />
       <label
+        style={{
+          color: textColor,
+        }}
         htmlFor="email"
         className={classNames(styles.label, styles[`label-${size}`])}
       >
         {text}
       </label>
-      {variant === "underlined" && <div className={styles.underline}></div>}
+      {variant === "underlined" && (
+        <div
+          style={{
+            backgroundColor: underlineColor,
+          }}
+          className={styles.underline}
+        ></div>
+      )}
     </div>
   );
 };
