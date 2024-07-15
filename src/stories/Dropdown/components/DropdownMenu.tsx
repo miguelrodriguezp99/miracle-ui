@@ -17,6 +17,7 @@ const DropdownMenu = ({
   offset = 0,
 }: DropdownMenuProps) => {
   const { isOpen } = useContext(DropdownContext);
+
   return (
     <div
       style={{

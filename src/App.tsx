@@ -13,6 +13,11 @@ import {
   Checkbox,
   CheckboxGroup,
   CircularProgress,
+  Divider,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
   Input,
   Progress,
 } from "./stories";
@@ -35,6 +40,25 @@ function App() {
           alignItems: "center",
         }}
       >
+        <Dropdown>
+          <DropdownTrigger>
+            <Button radius="md" variant="bordered" color="default">
+              Open Menu
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu
+            position={"bottom"}
+            offset={0}
+            aria-label="Static Actions"
+          >
+            <DropdownItem key="new">New file</DropdownItem>
+            <DropdownItem key="copy">Copy link</DropdownItem>
+            <DropdownItem key="edit">Edit file</DropdownItem>
+            <DropdownItem key="delete" color="danger" variant="solid">
+              Delete file
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
         <Button
           radius="md"
           size="md"
@@ -93,6 +117,8 @@ function App() {
           maxWidth={500}
         />
 
+        <Divider />
+
         <Card
           cardWidth="md"
           padding="sm"
@@ -116,8 +142,9 @@ function App() {
         <Card
           cardWidth="none"
           isClickable
-          customTextColor="black"
-          customColor="red"
+          customTextColor="orange"
+          customColor="white"
+          customPadding="20px"
         >
           <CardProduct />
         </Card>
@@ -132,7 +159,7 @@ function App() {
         >
           <Avatar avatar="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         </Badge>
-        <Checkbox text="Check me" customColor="red" />
+        <Checkbox text="Check me" customColor="red" textColor />
         <CheckboxGroup direction="horizontal">
           <Checkbox text="Check me" textColor color="default" />
           <Checkbox text="Check me" color="default" />

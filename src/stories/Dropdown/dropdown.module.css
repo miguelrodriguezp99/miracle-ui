@@ -10,6 +10,7 @@
 }
 
 .listWrapper {
+  pointer-events: none;
   list-style: none;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
   background-color: #27272a;
@@ -82,24 +83,25 @@
   transition: all 0.3s ease;
 }
 
+.menuOpen {
+  pointer-events: auto;
+  opacity: 1;
+}
+
 .menuOpen.bottom {
   transform: translateX(-50%) scale(1);
-  opacity: 1;
 }
 
 .menuOpen.top {
   transform: translateX(-50%) scale(1);
-  opacity: 1;
 }
 
 .menuOpen.left {
   transform: translateY(-50%) scale(1);
-  opacity: 1;
 }
 
 .menuOpen.right {
   transform: translateY(-50%) scale(1);
-  opacity: 1;
 }
 
 .startContent {

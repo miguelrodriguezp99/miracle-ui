@@ -7,7 +7,16 @@ interface DropdownTriggerProps {
 
 const DropdownTrigger: React.FC<DropdownTriggerProps> = ({ children }) => {
   const { toggleMenu } = useContext(DropdownContext);
-  return <div onClick={toggleMenu}>{children}</div>;
+  return (
+    <div
+      onClick={toggleMenu}
+      style={{
+        overflow: "hidden",
+      }}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default DropdownTrigger;
