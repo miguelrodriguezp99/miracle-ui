@@ -6,7 +6,9 @@ import { SliderDirection, SliderSizes } from "./constants";
 declare const meta: Meta<typeof Slider>;
 export default meta;
 export declare const Primary: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color: SemanticColor;
+    color?: SemanticColor | undefined;
+    customColor?: string | undefined;
+    customHoverColor?: string | undefined;
     size?: SliderSizes | undefined;
     label?: string | undefined;
     isDisabled?: boolean | undefined;
@@ -19,10 +21,13 @@ export declare const Primary: import("@storybook/types").AnnotatedStoryFn<import
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number | undefined;
     onChange: (value: number) => void;
 }>;
 export declare const Vertical: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color: SemanticColor;
+    color?: SemanticColor | undefined;
+    customColor?: string | undefined;
+    customHoverColor?: string | undefined;
     size?: SliderSizes | undefined;
     label?: string | undefined;
     isDisabled?: boolean | undefined;
@@ -35,10 +40,13 @@ export declare const Vertical: import("@storybook/types").AnnotatedStoryFn<impor
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number | undefined;
     onChange: (value: number) => void;
 }>;
 export declare const WithLabels: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color: SemanticColor;
+    color?: SemanticColor | undefined;
+    customColor?: string | undefined;
+    customHoverColor?: string | undefined;
     size?: SliderSizes | undefined;
     label?: string | undefined;
     isDisabled?: boolean | undefined;
@@ -51,10 +59,13 @@ export declare const WithLabels: import("@storybook/types").AnnotatedStoryFn<imp
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number | undefined;
     onChange: (value: number) => void;
 }>;
 export declare const WithIcons: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color: SemanticColor;
+    color?: SemanticColor | undefined;
+    customColor?: string | undefined;
+    customHoverColor?: string | undefined;
     size?: SliderSizes | undefined;
     label?: string | undefined;
     isDisabled?: boolean | undefined;
@@ -67,10 +78,13 @@ export declare const WithIcons: import("@storybook/types").AnnotatedStoryFn<impo
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number | undefined;
     onChange: (value: number) => void;
 }>;
 export declare const WithSteps: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color: SemanticColor;
+    color?: SemanticColor | undefined;
+    customColor?: string | undefined;
+    customHoverColor?: string | undefined;
     size?: SliderSizes | undefined;
     label?: string | undefined;
     isDisabled?: boolean | undefined;
@@ -83,10 +97,13 @@ export declare const WithSteps: import("@storybook/types").AnnotatedStoryFn<impo
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number | undefined;
     onChange: (value: number) => void;
 }>;
 export declare const WithIconsSteps: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color: SemanticColor;
+    color?: SemanticColor | undefined;
+    customColor?: string | undefined;
+    customHoverColor?: string | undefined;
     size?: SliderSizes | undefined;
     label?: string | undefined;
     isDisabled?: boolean | undefined;
@@ -99,10 +116,32 @@ export declare const WithIconsSteps: import("@storybook/types").AnnotatedStoryFn
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number | undefined;
+    onChange: (value: number) => void;
+}>;
+export declare const WithIconsStepsVertical: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
+    color?: SemanticColor | undefined;
+    customColor?: string | undefined;
+    customHoverColor?: string | undefined;
+    size?: SliderSizes | undefined;
+    label?: string | undefined;
+    isDisabled?: boolean | undefined;
+    direction?: SliderDirection | undefined;
+    name?: string | undefined;
+    blackText?: boolean | undefined;
+    showSteps?: boolean | undefined;
+    step?: number | undefined;
+    maxValue?: number | undefined;
+    startContent?: React.ReactNode;
+    endContent?: React.ReactNode;
+    value: number;
+    maxWidth?: number | undefined;
     onChange: (value: number) => void;
 }>;
 export declare const Disabled: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color: SemanticColor;
+    color?: SemanticColor | undefined;
+    customColor?: string | undefined;
+    customHoverColor?: string | undefined;
     size?: SliderSizes | undefined;
     label?: string | undefined;
     isDisabled?: boolean | undefined;
@@ -115,5 +154,6 @@ export declare const Disabled: import("@storybook/types").AnnotatedStoryFn<impor
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number | undefined;
     onChange: (value: number) => void;
 }>;

@@ -3,6 +3,7 @@ import { InputRadius, InputSizes, InputTypes, InputVariants, InputWidth } from "
 import { SemanticColor } from "../../lib/colors";
 type Props = {
     placeholder?: string;
+    text?: string;
     color?: SemanticColor;
     size?: InputSizes;
     variant?: InputVariants;
@@ -11,8 +12,9 @@ type Props = {
     isDisabled?: boolean;
     type?: InputTypes;
     value?: string;
+    readOnly?: boolean;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onValueChange?: (value: string) => void;
 };
-export declare const Input: ({ color, placeholder, size, width, radius, variant, isDisabled, type, value, onChange, onValueChange, }: Props) => React.JSX.Element;
+export declare const Input: ({ color, placeholder, size, width, radius, variant, isDisabled, type, value, text, readOnly, onChange, onValueChange, }: Props) => React.JSX.Element;
 export default Input;

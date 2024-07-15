@@ -8,6 +8,7 @@ type Props = {
     color?: SemanticColor;
     variant?: ButtonVariants;
     blackText?: boolean;
+    customRippleColor?: string;
 };
-declare const useRippleEffect: ({ disabledRipple, color, variant, isClickable, ref, blackText, }: Props) => void;
+declare const useRippleEffect: ({ disabledRipple, color, variant, isClickable, ref, blackText, customRippleColor, }: Props) => void;
 export default useRippleEffect;

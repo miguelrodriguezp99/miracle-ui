@@ -4,6 +4,9 @@ import { SemanticColor } from "../../lib/colors";
 import { ButtonVariants, ButtonSizes, ButtonRadius } from "./constants";
 interface ButtonProps {
     color?: SemanticColor;
+    customColor?: string;
+    customRippleColor?: string;
+    customHoverColor?: string;
     variant?: ButtonVariants;
     size?: ButtonSizes;
     radius?: ButtonRadius;
@@ -19,5 +22,5 @@ interface ButtonProps {
     whiteText?: boolean;
     onClick?: () => void;
 }
-export declare const Button: ({ children, disabledRipple, size, radius, isClickable, isDisabled, color, variant, startContent, endContent, isIconOnly, blackText, whiteText, onClick, }: ButtonProps) => React.JSX.Element;
+export declare const Button: ({ children, disabledRipple, size, radius, isClickable, isDisabled, color, customColor, customRippleColor, customHoverColor, variant, startContent, endContent, isIconOnly, blackText, whiteText, onClick, }: ButtonProps) => React.JSX.Element;
 export default Button;

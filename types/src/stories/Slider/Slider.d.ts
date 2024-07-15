@@ -2,7 +2,9 @@ import React from "react";
 import { SliderDirection, SliderSizes } from "./constants";
 import { SemanticColor } from "../../lib/colors";
 type Props = {
-    color: SemanticColor;
+    color?: SemanticColor;
+    customColor?: string;
+    customHoverColor?: string;
     size?: SliderSizes;
     label?: string;
     isDisabled?: boolean;
@@ -15,7 +17,8 @@ type Props = {
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
     value: number;
+    maxWidth?: number;
     onChange: (value: number) => void;
 };
-export declare const Slider: ({ isDisabled, label, blackText, direction, color, size, showSteps, step, startContent, endContent, maxValue, value, onChange: setValue, }: Props) => React.JSX.Element;
+export declare const Slider: ({ name, isDisabled, label, blackText, direction, color, customColor, customHoverColor, size, showSteps, step, startContent, endContent, maxValue, value, maxWidth, onChange: setValue, }: Props) => React.JSX.Element;
 export default Slider;

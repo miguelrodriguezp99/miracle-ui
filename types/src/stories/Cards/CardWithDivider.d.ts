@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React from "react";
 interface CardWithDividerProps {
     children?: React.ReactNode;
@@ -7,13 +6,7 @@ interface CardWithDividerProps {
     subtitle?: string;
     description?: string;
     linkText?: string;
+    imgRoute?: string;
 }
-export declare const CardWithDivider: {
-    ({ children, title, subtitle, linkText, }: CardWithDividerProps): React.JSX.Element;
-    propTypes: {
-        color: PropTypes.Requireable<[string, "default" | "primary" | "secondary" | "success" | "warning" | "danger"]>;
-        isClickable: PropTypes.Requireable<boolean>;
-        isDraggable: PropTypes.Requireable<boolean>;
-    };
-};
+export declare const CardWithDivider: ({ children, title, subtitle, linkText, imgRoute, }: CardWithDividerProps) => React.JSX.Element;
 export default CardWithDivider;
