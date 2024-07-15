@@ -113,7 +113,12 @@ function App() {
           <CardWithImage customTextColor="orange" />
         </Card> */}
 
-        <Card cardWidth="none" isClickable>
+        <Card
+          cardWidth="none"
+          isClickable
+          customTextColor="black"
+          customColor="orange"
+        >
           <CardProduct />
         </Card>
 
@@ -133,11 +138,17 @@ function App() {
           <Checkbox text="Check me" textColor color="primary" />
           <Checkbox text="Check me" textColor color="primary" />
         </CheckboxGroup>
-        <CircularProgress size="md" color="warning" customColor="#ddd" />
+        <CircularProgress size="md" color="warning" customColor="red" />
         <Input />
-        <Progress value={50} />
-        <Progress isIndeterminate />
-        <Progress label="Hola" value={50} valueLabel="50" showPercentageLabel />
+        <Progress customColor="red" value={50} />
+        <Progress customColor="red" isIndeterminate />
+        <Progress
+          customColor="red"
+          label="Hola"
+          value={50}
+          valueLabel="50"
+          showPercentageLabel
+        />
       </div>
     </>
   );

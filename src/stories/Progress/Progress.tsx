@@ -7,6 +7,7 @@ import { ProgressRadius, ProgressSizes, radii, sizes } from "./constants";
 
 interface ProgressProps {
   color?: SemanticColor;
+  customColor?: string;
   size?: ProgressSizes;
   radius?: ProgressRadius;
   value?: number;
@@ -20,6 +21,7 @@ interface ProgressProps {
 
 export const Progress = ({
   color = semanticColors.primary,
+  customColor,
   size = sizes.sm,
   radius = radii.full,
   label,
@@ -32,6 +34,13 @@ export const Progress = ({
 }: ProgressProps) => {
   const percentage = (value / maxValue) * 100;
   const translateXValue = 100 - percentage;
+  const progressStyle = {
+    backgroundColor: customColor ? customColor : color,
+    height: "100%",
+    transition: "transform 0.5s",
+    transitionTimingFunction: "cubic-bezier(.4,0,.2,1)",
+    transform: `translateX(-${translateXValue}%)`,
+  };
 
   return (
     <div className={styles.progressContainer}>
@@ -65,12 +74,7 @@ export const Progress = ({
               [`${color}`]: color,
               [styles["is-indeterminate"]]: isIndeterminate,
             })}
-            style={{
-              height: "100%",
-              transition: "transform 0.5s",
-              transitionTimingFunction: "cubic-bezier(.4,0,.2,1)",
-              transform: `translateX(-${translateXValue}%)`,
-            }}
+            style={progressStyle}
           >
             {" "}
           </div>
