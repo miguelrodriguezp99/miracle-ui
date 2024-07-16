@@ -19,19 +19,11 @@
   display: flex;
   width: 100%;
   transform-origin: 50% 0%;
-
   opacity: 0;
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
   z-index: 1;
-}
-
-.bottom {
-  top: 2.8em;
-  left: 50%;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: 50% 0%;
 }
 
 .top {
@@ -41,16 +33,79 @@
   transform-origin: 50% 100%;
 }
 
+.top-start {
+  bottom: 2.8em;
+  left: 6.3rem;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 100%;
+}
+
+.top-end {
+  bottom: 2.8em;
+  left: 0.5rem;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 100%;
+}
+
+.bottom {
+  top: 2.8em;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 0%;
+}
+
+.bottom-start {
+  top: 2.8em;
+  left: 6.3rem;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 100%;
+}
+
+.bottom-end {
+  top: 2.8em;
+  left: 0.5rem;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 0%;
+}
+
 .left {
-  right: 9.9em;
+  right: 7.1em;
   top: 50%;
   transform: translateY(-50%) scale(0.8);
   transform-origin: 100% 50%;
 }
 
+.left-start {
+  right: 7.1em;
+  top: 4.5rem;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 100% 50%;
+}
+
+.left-end {
+  right: 7.1em;
+  top: -1.85rem;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 100% 50%;
+}
+
 .right {
-  left: 9.9em;
+  left: 7.1em;
   top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 0% 50%;
+}
+
+.right-start {
+  left: 7.1em;
+  top: 4.5rem;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 0% 50%;
+}
+
+.right-end {
+  left: 7.1em;
+  top: -1.85rem;
   transform: translateY(-50%) scale(0.8);
   transform-origin: 0% 50%;
 }
@@ -88,19 +143,19 @@
   opacity: 1;
 }
 
-.menuOpen.bottom {
+.menuOpen.bottom-transform {
   transform: translateX(-50%) scale(1);
 }
 
-.menuOpen.top {
+.menuOpen.top-transform {
   transform: translateX(-50%) scale(1);
 }
 
-.menuOpen.left {
+.menuOpen.left-transform {
   transform: translateY(-50%) scale(1);
 }
 
-.menuOpen.right {
+.menuOpen.right-transform {
   transform: translateY(-50%) scale(1);
 }
 
