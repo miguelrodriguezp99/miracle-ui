@@ -1,5 +1,4 @@
 .dropdown {
-  min-width: 200px;
   position: relative;
   display: grid;
   place-content: center;
@@ -20,6 +19,7 @@
   display: flex;
   width: 100%;
   transform-origin: 50% 0%;
+
   opacity: 0;
   transition:
     transform 0.2s ease,
