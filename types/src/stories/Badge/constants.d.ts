@@ -5,10 +5,10 @@ export declare const variants: {
 };
 export type BadgeVariants = (typeof variants)[keyof typeof variants];
 export declare const positions: {
-    tl: string;
-    tr: string;
-    bl: string;
-    br: string;
+    "top-left": string;
+    "top-right": string;
+    "bottom-left": string;
+    "bottom-right": string;
 };
 export type BadgePosition = (typeof positions)[keyof typeof positions];
 export declare const widths: {

@@ -23,3 +23,5 @@ export { default as Image } from "./Image";
 export { default as Input } from "./Input";
 export { default as Progress } from "./Progress";
 export { default as Slider } from "./Slider";
+export { default as Accordion } from "./Accordion/Accordion";
+export { default as AccordionItem } from "./Accordion/AccordionItem";

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Accordion, AccordionItem } from "./stories";
+import { Accordion, AccordionItem } from "./components";
 
 function App() {
   return (

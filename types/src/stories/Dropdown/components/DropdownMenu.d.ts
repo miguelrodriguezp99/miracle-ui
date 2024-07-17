@@ -4,7 +4,9 @@ interface DropdownMenuProps {
     children: React.ReactNode;
     position?: DropdownPositions;
     offset?: number;
+    width?: number;
+    backgroundColor?: string;
     "aria-label"?: string;
 }
-declare const DropdownMenu: ({ children, position, offset, }: DropdownMenuProps) => React.JSX.Element;
+declare const DropdownMenu: ({ children, position, offset, width, backgroundColor, }: DropdownMenuProps) => React.JSX.Element;
 export default DropdownMenu;

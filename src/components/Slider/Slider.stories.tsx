@@ -47,7 +47,7 @@ type SliderProps = React.ComponentProps<typeof Slider>;
 
 const Template: Story<SliderProps> = (
   args: React.JSX.IntrinsicAttributes & {
-    color: SemanticColor;
+    color?: SemanticColor;
     size?: SliderSizes;
     label?: string;
     isDisabled?: boolean;

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { semanticColors, SemanticColor } from "../lib/colors";
-import { ButtonVariants } from "../stories/Button/constants";
+import { ButtonVariants } from "../components/Button/constants";
 
 type Props = {
   ref: React.RefObject<HTMLElement>;

@@ -5,6 +5,11 @@ type Props = {
     placeholder?: string;
     text?: string;
     color?: SemanticColor;
+    backgroundColor?: string;
+    textColor?: string;
+    labelColor?: string;
+    placeholderColor?: string;
+    underlineColor?: string;
     size?: InputSizes;
     variant?: InputVariants;
     width?: InputWidth;
@@ -16,5 +21,5 @@ type Props = {
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onValueChange?: (value: string) => void;
 };
-export declare const Input: ({ color, placeholder, size, width, radius, variant, isDisabled, type, value, text, readOnly, onChange, onValueChange, }: Props) => React.JSX.Element;
+export declare const Input: ({ color, backgroundColor, textColor, labelColor, placeholderColor, underlineColor, placeholder, size, width, radius, variant, isDisabled, type, value, text, readOnly, onChange, onValueChange, }: Props) => React.JSX.Element;
 export default Input;
