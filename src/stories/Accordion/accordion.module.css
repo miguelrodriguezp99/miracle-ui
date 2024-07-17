@@ -4,18 +4,17 @@
 
 .shadow {
   background-color: var(--color-default-4);
-  padding: 0px 16px;
+  padding: 0 16px;
   border-radius: 12px;
 }
 
 .bordered {
   border: 2px solid var(--color-default-4);
   border-radius: 12px;
-  padding: 0px 16px;
+  padding: 0 16px;
 }
 
 .splitted {
-  padding: 0px 16px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -24,7 +23,7 @@
   > .accordionItem {
     background-color: var(--color-default-4);
     border-radius: 12px;
-    padding: 0px 16px;
+    padding: 0 16px;
   }
 
   .divider {
@@ -43,8 +42,8 @@
   font-family: inherit;
   border: none;
   width: 100%;
+  padding: 0;
   background-color: transparent;
-  padding: 1rem 0;
   gap: 0.75rem;
   display: flex;
   align-items: center;

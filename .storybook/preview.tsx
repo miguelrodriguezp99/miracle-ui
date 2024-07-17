@@ -1,7 +1,7 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
-import "../styles/global.css";
+import "../src/stories/styles/global.css";
 
 const getStyles = ({ __sb }: any) => ({
   display: "flex",

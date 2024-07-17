@@ -9,7 +9,7 @@ function App() {
         style={{
           display: "flex",
           height: "100vh",
-          backgroundColor: "aqua",
+          backgroundColor: "darkred",
         }}
       >
         <div
@@ -26,11 +26,16 @@ function App() {
               fontFamily: "arial",
             }}
           >
-            <Accordion variant="splitted" selectionMode="unique">
-              <AccordionItem />
-              <AccordionItem />
-              <AccordionItem />
-              <AccordionItem isLastItem />
+            <Accordion
+              initialOpenIndexes={[2, 3]}
+              variant="solid"
+              selectionMode="unique"
+              isCompact
+            >
+              <AccordionItem backgroundColor="transparent" />
+              <AccordionItem backgroundColor="transparent" />
+              <AccordionItem backgroundColor="transparent" />
+              <AccordionItem backgroundColor="transparent" />
             </Accordion>
           </div>
         </div>

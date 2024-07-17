@@ -16,8 +16,9 @@ interface AccordionItemProps {
   textBlack?: boolean;
   isLastItem?: boolean;
   backgroundColor?: string;
-  isOpen?: boolean; // Nueva prop
-  onClick?: () => void; // Nueva prop
+  isCompact?: boolean;
+  isOpen?: boolean;
+  onClick?: () => void;
 }
 
 export default function AccordionItem({
@@ -33,10 +34,10 @@ export default function AccordionItem({
   textBlack = false,
   isLastItem = false,
   backgroundColor,
-  isOpen = false, // Valor por defecto
-  onClick, // Nueva prop
+  isOpen = false,
+  isCompact = false,
+  onClick,
 }: AccordionItemProps) {
-  console.log(isOpen);
   return (
     <div
       style={{
@@ -44,11 +45,11 @@ export default function AccordionItem({
       }}
       className={styles.accordionItem}
     >
-      <button
-        onClick={onClick} // Usar la nueva prop onClick
-        className={classNames(styles.accordionButton)}
-      >
+      <button onClick={onClick} className={classNames(styles.accordionButton)}>
         <div
+          style={{
+            padding: isCompact ? "8px 0px" : "16px 0px",
+          }}
           className={classNames(styles.accordionButtonContent, {
             [styles.textBlack]: textBlack,
           })}
