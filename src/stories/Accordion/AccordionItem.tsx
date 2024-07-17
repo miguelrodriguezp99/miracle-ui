@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./accordion.module.css";
 import classNames from "classnames";
 import Divider from "../Divider";
@@ -16,6 +16,8 @@ interface AccordionItemProps {
   textBlack?: boolean;
   isLastItem?: boolean;
   backgroundColor?: string;
+  isOpen?: boolean; // Nueva prop
+  onClick?: () => void; // Nueva prop
 }
 
 export default function AccordionItem({
@@ -31,8 +33,10 @@ export default function AccordionItem({
   textBlack = false,
   isLastItem = false,
   backgroundColor,
+  isOpen = false, // Valor por defecto
+  onClick, // Nueva prop
 }: AccordionItemProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
   return (
     <div
       style={{
@@ -41,7 +45,7 @@ export default function AccordionItem({
       className={styles.accordionItem}
     >
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onClick} // Usar la nueva prop onClick
         className={classNames(styles.accordionButton)}
       >
         <div

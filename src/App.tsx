@@ -26,7 +26,7 @@ function App() {
               fontFamily: "arial",
             }}
           >
-            <Accordion variant="splitted">
+            <Accordion variant="splitted" selectionMode="unique">
               <AccordionItem />
               <AccordionItem />
               <AccordionItem />
