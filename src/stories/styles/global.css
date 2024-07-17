@@ -49,35 +49,35 @@ svg {
 
 :root {
   --color-default: #18181b;
-  --color-default-button: #424247;
+  --color-default: #424247;
   --color-primary: #006fee;
   --color-secondary: #9353d3;
   --color-success: #17c964;
   --color-warning: #f5a524;
   --color-danger: #f31260;
 
-  --color-default-button-1: #39393e;
+  --color-default-1: #39393e;
   --color-primary-1: #005bc4;
   --color-secondary-1: #6020a0;
   --color-success-1: #12a150;
   --color-warning-1: #c4841d;
   --color-danger-1: #c20e4d;
 
-  --color-default-button-2: #39393d;
+  --color-default-2: #39393d;
   --color-primary-2: #004493;
   --color-secondary-2: #481878;
   --color-success-2: #0e793c;
   --color-warning-2: #936316;
   --color-danger-2: #920b3a;
 
-  --color-default-button-3: #2a2a2f;
+  --color-default-3: #2a2a2f;
   --color-primary-3: #002e62;
   --color-secondary-3: #301050;
   --color-success-3: #095028;
   --color-warning-3: #62420e;
   --color-danger-3: #610726;
 
-  --color-default-button-4: #1e1e22;
+  --color-default-4: #1e1e22;
   --color-primary-4: #001731;
   --color-secondary-4: #180828;
   --color-success-4: #052814;
@@ -112,11 +112,11 @@ svg {
 .success,
 .warning,
 .danger {
-  --color: var(--color-default-button);
-  --color-2: var(--color-default-button-1);
-  --color-3: var(--color-default-button-2);
-  --color-4: var(--color-default-button-3);
-  --color-5: var(--color-default-button-4);
+  --color: var(--color-default);
+  --color-2: var(--color-default-1);
+  --color-3: var(--color-default-2);
+  --color-4: var(--color-default-3);
+  --color-5: var(--color-default-4);
   color: white;
 }
 

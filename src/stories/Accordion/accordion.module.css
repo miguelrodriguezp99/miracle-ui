@@ -1,0 +1,105 @@
+.accordion {
+  width: 100%;
+}
+
+.shadow {
+  background-color: var(--color-default-4);
+  padding: 0px 16px;
+  border-radius: 12px;
+}
+
+.bordered {
+  border: 2px solid var(--color-default-4);
+  border-radius: 12px;
+  padding: 0px 16px;
+}
+
+.splitted {
+  padding: 0px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  > .accordionItem {
+    background-color: var(--color-default-4);
+    border-radius: 12px;
+    padding: 0px 16px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+.accordionItem {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: height 0.3s ease;
+}
+
+.accordionButton {
+  font-family: inherit;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  padding: 1rem 0;
+  gap: 0.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: height 0.3s ease;
+}
+
+.accordionButtonContent {
+  display: flex;
+  flex: 1;
+  gap: 3px;
+  flex-direction: column;
+  align-items: start;
+  color: white;
+  transition: height 0.3s ease;
+}
+
+.accordionButtonIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.rotate {
+  transform: rotate(-90deg);
+}
+
+.label {
+  color: rgb(196, 194, 194);
+}
+
+.label.textBlack {
+  color: rgb(56, 56, 56);
+}
+
+.content {
+  color: white;
+}
+
+.textBlack {
+  color: black;
+}
+
+.accordionContent {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordionContent > div {
+  overflow: hidden;
+}
+
+.accordionContent[aria-hidden="true"] {
+  grid-template-rows: 1fr;
+}

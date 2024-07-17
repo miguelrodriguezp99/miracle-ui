@@ -1,12 +1,6 @@
 import React from "react";
 import "./App.css";
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-} from "./stories";
+import { Accordion, AccordionItem } from "./stories";
 
 function App() {
   return (
@@ -14,51 +8,32 @@ function App() {
       <div
         style={{
           display: "flex",
+          height: "100vh",
+          backgroundColor: "aqua",
         }}
       >
-        <Dropdown>
-          <DropdownTrigger>
-            <Button radius="md" variant="bordered" color="default" blackText>
-              Open Menu
-            </Button>
-          </DropdownTrigger>
-          <DropdownMenu
-            position={"bottom"}
-            offset={0}
-            aria-label="Static Actions"
+        <div
+          style={{
+            maxWidth: "600px",
+            width: "100%",
+            height: "430px",
+            backgroundColor: "black",
+            padding: "20px",
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "arial",
+            }}
           >
-            <DropdownItem textColor="aqua" key="new">
-              New file
-            </DropdownItem>
-            <DropdownItem key="copy">Copy link</DropdownItem>
-            <DropdownItem key="edit">Edit file</DropdownItem>
-            <DropdownItem key="delete" color="danger" variant="solid">
-              Delete file
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-
-        <Dropdown>
-          <DropdownTrigger>
-            <Button radius="md" variant="bordered" color="default" blackText>
-              Open Menu
-            </Button>
-          </DropdownTrigger>
-          <DropdownMenu
-            position={"bottom"}
-            offset={0}
-            aria-label="Static Actions"
-          >
-            <DropdownItem textColor="aqua" key="new">
-              New file
-            </DropdownItem>
-            <DropdownItem key="copy">Copy link</DropdownItem>
-            <DropdownItem key="edit">Edit file</DropdownItem>
-            <DropdownItem key="delete" color="danger" variant="solid">
-              Delete file
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+            <Accordion variant="splitted">
+              <AccordionItem />
+              <AccordionItem />
+              <AccordionItem />
+              <AccordionItem isLastItem />
+            </Accordion>
+          </div>
+        </div>
       </div>
     </>
   );
