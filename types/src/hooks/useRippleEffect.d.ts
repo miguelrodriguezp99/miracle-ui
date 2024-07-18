@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { SemanticColor } from "../lib/colors";
-import { ButtonVariants } from "../stories/Button/constants";
+import { ButtonVariants } from "../components/Button/constants";
 type Props = {
     ref: React.RefObject<HTMLElement>;
     disabledRipple?: boolean;

@@ -9,7 +9,7 @@ import {
 } from "./constants";
 import styles from "./badge.module.css";
 import classNames from "classnames";
-import Avatar from "../Avatar";
+import { Avatar } from "../Avatar";
 
 type Props = {
   color?: SemanticColor;
