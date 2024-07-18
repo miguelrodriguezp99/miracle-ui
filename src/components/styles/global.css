@@ -223,6 +223,10 @@ svg {
 
 /* VARIANTS */
 
+button.solid {
+  border: none;
+}
+
 .solid {
   background-color: var(--color);
 }
@@ -245,6 +249,7 @@ svg {
 .light {
   background-color: transparent;
   color: var(--color);
+  border: none;
 }
 
 .has-hover.light:hover {
@@ -255,6 +260,7 @@ svg {
 .flat {
   background-color: var(--color-4);
   color: var(--color);
+  border: none;
 }
 
 .has-hover.flat:hover {
@@ -282,6 +288,7 @@ svg {
   box-shadow:
     0 10px 15px -3px var(--color-2),
     0 4px 6px -4px var(--color-2);
+  border: none;
 }
 
 .has-hover.shadow:hover {
@@ -290,7 +297,7 @@ svg {
 
 .ghost {
   background-color: transparent;
-  border: 2px solid var(--color);
+  border: 2px solid var(--color) !important;
   color: var(--color);
 }
 

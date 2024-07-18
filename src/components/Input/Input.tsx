@@ -27,6 +27,7 @@ type Props = {
   type?: InputTypes;
   value?: string;
   readOnly?: boolean;
+  name?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValueChange?: (value: string) => void;
 };
@@ -48,6 +49,7 @@ export const Input = ({
   value = "",
   text = "Email",
   readOnly = false,
+  name,
   onChange,
   onValueChange,
 }: Props) => {
@@ -81,6 +83,7 @@ export const Input = ({
       <input
         id="email"
         type={type}
+        name={name}
         style={{
           backgroundColor,
           color: textColor,
@@ -91,14 +94,14 @@ export const Input = ({
         })}
         placeholder={placeholder}
         disabled={isDisabled}
-        value={value}
+        defaultValue={value}
         onChange={handleChange}
       />
       <label
         style={{
           color: labelColor ? labelColor : textColor,
         }}
-        htmlFor="email"
+        htmlFor={name}
         className={classNames(styles.label, styles[`label-${size}`])}
       >
         {text}

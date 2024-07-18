@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Accordion, AccordionItem } from "./components";
+import { Accordion, AccordionItem, Button, Input } from "./components";
 
 function App() {
   return (
@@ -26,10 +26,21 @@ function App() {
               fontFamily: "arial",
             }}
           >
+            <div
+              style={{
+                width: "100%",
+                backgroundColor: "green",
+              }}
+            >
+              <form>
+                <Input name="email" />
+                <Button type="submit" radius="none" customWidth="100%" />
+              </form>
+            </div>
             <Accordion
               initialOpenIndexes={[2, 3]}
               variant="solid"
-              selectionMode="unique"
+              selectionMode="multiple"
               isCompact
             >
               <AccordionItem backgroundColor="transparent" />

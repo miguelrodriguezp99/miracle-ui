@@ -9,6 +9,13 @@ export const variants = {
 } as const;
 export type ButtonVariants = (typeof variants)[keyof typeof variants];
 
+export const types = {
+  button: "button",
+  submit: "submit",
+  reset: "reset",
+} as const;
+export type ButtonTypes = (typeof types)[keyof typeof types];
+
 export const sizes = {
   sm: "sm",
   md: "md",

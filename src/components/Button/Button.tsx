@@ -8,6 +8,8 @@ import {
   ButtonVariants,
   ButtonSizes,
   ButtonRadius,
+  ButtonTypes,
+  types,
   variants,
   sizes,
 } from "./constants";
@@ -17,6 +19,7 @@ interface ButtonProps {
   customColor?: string;
   customRippleColor?: string;
   customHoverColor?: string;
+  customWidth?: string;
   variant?: ButtonVariants;
   size?: ButtonSizes;
   radius?: ButtonRadius;
@@ -30,6 +33,7 @@ interface ButtonProps {
   children?: React.ReactNode;
   blackText?: boolean;
   whiteText?: boolean;
+  type?: ButtonTypes;
   onClick?: () => void;
 }
 
@@ -44,15 +48,17 @@ export const Button = ({
   customColor,
   customRippleColor,
   customHoverColor,
+  customWidth,
   variant = variants.solid,
   startContent,
   endContent,
   isIconOnly,
   blackText,
   whiteText,
+  type = types.button,
   onClick,
 }: ButtonProps) => {
-  const buttonRef = useRef<HTMLAnchorElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
   useRippleEffect({
     disabledRipple,
     color,
@@ -64,6 +70,7 @@ export const Button = ({
 
   const buttonStyles = {
     ...(customColor && { backgroundColor: customColor }),
+    ...(customWidth && { width: customWidth }),
   };
 
   useEffect(() => {
@@ -76,8 +83,9 @@ export const Button = ({
   }, [customHoverColor]);
 
   return (
-    <a
+    <button
       ref={buttonRef}
+      type={type}
       className={classNames(
         "button",
         "has-hover",
@@ -103,7 +111,7 @@ export const Button = ({
       {!isIconOnly && children}
       {isIconOnly && children}
       {endContent}
-    </a>
+    </button>
   );
 };
 

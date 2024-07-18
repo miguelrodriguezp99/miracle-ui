@@ -1,6 +1,6 @@
 {
   "name": "mirakle-ui-react",
-  "version": "0.0.35",
+  "version": "0.0.41",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
