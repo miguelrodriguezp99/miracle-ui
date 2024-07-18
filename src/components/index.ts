@@ -1,6 +1,6 @@
-import "./styles/global.css";
+export { default as Avatar } from "./Avatar/Avatar";
+export { default as AvatarGroup } from "./Avatar/AvatarGroup";
 
-export { default as Avatar } from "./Avatar";
 export { default as Badge } from "./Badge";
 export { default as Button } from "./Button";
 export { default as ButtonGroup } from "./ButtonGroup";
