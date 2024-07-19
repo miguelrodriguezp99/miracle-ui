@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import type { Meta, StoryObj } from "@storybook/react";
 import { Badge } from "./Badge";
 import { positions, radii, variants } from "./constants";
-import { semanticColors } from "@mirakle-ui/system20";
+import { semanticColors } from "../../../core/system";
+
 import { Avatar } from "../../avatar/src/Avatar";
 import React from "react";
 

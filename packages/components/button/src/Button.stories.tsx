@@ -3,8 +3,8 @@ import { Button } from "./Button";
 import { semanticColors } from "@mirakle-ui/system20";
 import { radius, sizes, variants } from "./constants";
 import React from "react";
-import { CameraIcon } from "../../../icons/CameraIcon";
-import { UserIcon } from "../../../icons/UserIcon";
+import { CameraIcon } from "./CameraIcon";
+import { UserIcon } from "./UserIcon";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",

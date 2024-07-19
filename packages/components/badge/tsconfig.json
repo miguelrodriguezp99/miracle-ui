@@ -15,5 +15,6 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true
-  }
+  }, 
+
 }

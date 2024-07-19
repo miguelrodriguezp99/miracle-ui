@@ -24,7 +24,12 @@ export default [
     // external: ["react", "react-dom"],
     plugins: [
       typescript({
-        exclude: ["./src/icons/**", "**/*.stories.tsx"],
+        exclude: [
+          "./src/icons/**",
+          "**/*.stories.tsx",
+          "./src/UserIcon.tsx",
+          "./src/CameraIcon.tsx",
+        ],
       }),
       ignore(["./src/icons/**", "**/*.stories.tsx"]),
       peerDepsExternal(),
