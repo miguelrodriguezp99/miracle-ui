@@ -320,6 +320,86 @@
         "implicitDependencies": []
       }
     },
+    "@mirakle-ui/badge": {
+      "name": "@mirakle-ui/badge",
+      "type": "lib",
+      "data": {
+        "root": "packages/components/Badge",
+        "sourceRoot": "packages/components/Badge",
+        "name": "@mirakle-ui/badge",
+        "tags": [
+          "npm:public",
+          "npm:react",
+          "npm:storybook",
+          "npm:ui",
+          "npm:library"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "rollup",
+              "test",
+              "dev"
+            ]
+          },
+          "description": "React UI library with Storybook"
+        },
+        "targets": {
+          "rollup": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "rollup"
+            },
+            "metadata": {
+              "scriptContent": "rollup -c --bundleConfigAsCjs",
+              "runCommand": "npm run rollup"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^rollup"
+            ]
+          },
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "scriptContent": "echo \"Error: no test specified\" && exit 1",
+              "runCommand": "npm run test"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": []
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "metadata": {
+              "scriptContent": "vite",
+              "runCommand": "npm run dev"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": []
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
     "@mirakle-ui/ripple20": {
       "name": "@mirakle-ui/ripple20",
       "type": "lib",
@@ -11796,6 +11876,108 @@
       },
       {
         "source": "@mirakle-ui/button",
+        "target": "npm:classnames",
+        "type": "static"
+      }
+    ],
+    "@mirakle-ui/badge": [
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:react-dom",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:@rollup/plugin-commonjs",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:@rollup/plugin-node-resolve",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:@rollup/plugin-terser",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:@rollup/plugin-typescript",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:@types/react",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:@types/react-dom",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:@typescript-eslint/eslint-plugin",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:@typescript-eslint/parser",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:rollup",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:rollup-plugin-dts",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:rollup-plugin-ignore",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:rollup-plugin-peer-deps-external",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:rollup-plugin-postcss",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "npm:typescript",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "@mirakle-ui/divider",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
+        "target": "@mirakle-ui/system20",
+        "type": "static"
+      },
+      {
+        "source": "@mirakle-ui/badge",
         "target": "npm:classnames",
         "type": "static"
       }

@@ -1,5 +1,5 @@
 import React from "react";
-import { SemanticColor, semanticColors } from "../../lib/colors";
+import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
 import {
   BadgeRadius,
   BadgePosition,
@@ -9,7 +9,6 @@ import {
 } from "./constants";
 import styles from "./badge.module.css";
 import classNames from "classnames";
-import { Avatar } from "../Avatar/src";
 
 type Props = {
   color?: SemanticColor;
@@ -24,7 +23,7 @@ type Props = {
 };
 
 export const Badge = ({
-  children = <Avatar radius="md" name="John" />,
+  children,
   variant = variants.solid,
   color = semanticColors.danger,
   customColor,

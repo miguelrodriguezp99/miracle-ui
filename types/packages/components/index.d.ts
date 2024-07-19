@@ -1,6 +1,6 @@
-export { default as Avatar } from "./Avatar/Avatar";
-export { default as AvatarGroup } from "./Avatar/AvatarGroup";
-export { default as Badge } from "./Badge";
+export { default as Avatar } from "./avatar/src/Avatar";
+export { default as AvatarGroup } from "./avatar/src/AvatarGroup";
+export { default as Badge } from "./badge/src";
 export { default as Button } from "./button/src/Button";
 export { default as ButtonGroup } from "./ButtonGroup";
 export { default as Card } from "./Cards/Card";
