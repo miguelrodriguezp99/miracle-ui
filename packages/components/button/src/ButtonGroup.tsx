@@ -1,6 +1,5 @@
 import React from "react";
-import "./../styles/global.css";
-import styles from "./buttonGroup.module.css";
+import styles from "./button.module.css";
 
 interface ButtonGroupProps {
   children: React.ReactNode;

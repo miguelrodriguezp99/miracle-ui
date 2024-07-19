@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ButtonGroup } from "./ButtonGroup";
-import Button from "../button/src/Button";
+import Button from "./Button";
 import React from "react";
 
 const meta: Meta<typeof ButtonGroup> = {

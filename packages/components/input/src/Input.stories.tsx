@@ -11,7 +11,7 @@ import {
   variants,
   widths,
 } from "./constants";
-import { SemanticColor, semanticColors } from "../../lib/colors";
+import { SemanticColor, semanticColors } from "../../../core/system";
 import { useState } from "react";
 import React from "react";
 

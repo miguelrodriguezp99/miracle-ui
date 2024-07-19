@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   SemanticColorCheckbox,
   semanticColorsCheckbox,
-} from "../../lib/colors";
+} from "@mirakle-ui/system20";
 import styles from "./checkbox.module.css";
 import { CheckboxRadius, CheckboxSize } from "./constants";
 import classNames from "classnames";

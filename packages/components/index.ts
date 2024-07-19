@@ -3,7 +3,7 @@ export { default as AvatarGroup } from "./avatar/src/AvatarGroup";
 
 export { default as Badge } from "./badge/src";
 export { default as Button } from "./button/src/Button";
-export { default as ButtonGroup } from "./ButtonGroup";
+export { default as ButtonGroup } from "./button/src/ButtonGroup";
 
 /* CARDS */
 export { default as Card } from "./Cards/Card";
@@ -15,7 +15,7 @@ export { default as CardWithImage } from "./Cards/CardWithImage";
 export { default as CardProduct } from "./Cards/CardProduct";
 export { default as CardWithBlurredFooter } from "./Cards/CardWithBlurredFooter";
 
-export { default as Checkbox } from "./Checkbox";
+export { default as Checkbox } from "./checkbox/src/Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
 export { default as CircularProgress } from "./CircularProgress";
 export { default as Divider } from "./divider/src/Divider";
@@ -27,7 +27,7 @@ export { default as DropdownMenu } from "./Dropdown/components/DropdownMenu";
 export { default as DropdownItem } from "./Dropdown/components/DropdownItem";
 
 export { default as Image } from "./Image";
-export { default as Input } from "./Input";
+export { default as Input } from "./input/src/Input";
 export { default as Progress } from "./Progress";
 export { default as Slider } from "./Slider";
 

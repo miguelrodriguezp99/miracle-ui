@@ -1,0 +1,26 @@
+import React from "react";
+import { InputRadius, InputSizes, InputTypes, InputVariants, InputWidth } from "./constants";
+import { SemanticColor } from "@mirakle-ui/system20";
+type Props = {
+    placeholder?: string;
+    text?: string;
+    color?: SemanticColor;
+    backgroundColor?: string;
+    textColor?: string;
+    labelColor?: string;
+    placeholderColor?: string;
+    underlineColor?: string;
+    size?: InputSizes;
+    variant?: InputVariants;
+    width?: InputWidth;
+    radius?: InputRadius;
+    isDisabled?: boolean;
+    type?: InputTypes;
+    value?: string;
+    readOnly?: boolean;
+    name?: string;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onValueChange?: (value: string) => void;
+};
+export declare const Input: ({ color, backgroundColor, textColor, labelColor, placeholderColor, underlineColor, placeholder, size, width, radius, variant, isDisabled, type, value, text, readOnly, name, onChange, onValueChange, }: Props) => React.JSX.Element;
+export default Input;
