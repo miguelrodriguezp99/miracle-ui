@@ -6,6 +6,13 @@
   "files": [
     "dist"
   ],
+  "workspaces": [
+    "packages/components/*",
+    "packages/hooks/*",
+    "packages/core/*",
+    "packages/core/react/*",
+    "packages/core/system/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/miguelrodriguezp99/miracle-ui.git"
@@ -36,7 +43,6 @@
     "classnames": "^2.5.1"
   },
   "devDependencies": {
-    "@storybook/theming": "^8.1.9",
     "@chromatic-com/storybook": "^1.5.0",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -51,6 +57,7 @@
     "@storybook/react": "^8.1.6",
     "@storybook/react-vite": "^8.1.6",
     "@storybook/test": "^8.1.6",
+    "@storybook/theming": "^8.1.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
@@ -61,6 +68,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-storybook": "^0.8.0",
+    "lerna": "^8.1.6",
     "rollup": "^4.18.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-ignore": "^1.0.10",
