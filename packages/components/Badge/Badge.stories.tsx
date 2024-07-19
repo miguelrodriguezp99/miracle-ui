@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Badge } from "./Badge";
 import { positions, radii, variants } from "./constants";
 import { semanticColors } from "../../lib/colors";
-import { Avatar } from "../Avatar";
+import { Avatar } from "../Avatar/src";
 import React from "react";
 
 const meta: Meta<typeof Badge> = {
