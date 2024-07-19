@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import React from "react";
-import { Accordion, AccordionItem } from "@mirakle-ui/accordion";
+import Accordion from "./Accordion";
+import AccordionItem from "./AccordionItem";
 import {
   AccordionSelectionModes,
   AccordionVariants,
