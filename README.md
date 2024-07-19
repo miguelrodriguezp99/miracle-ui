@@ -64,3 +64,12 @@ For any inquiries, please reach out to your-email@example.com.
 ---
 
 Thank you for using Mirakle UI! We hope our components make your development process faster and more enjoyable.
+
+npx learn run rollup --scope=@mirakle-ui/button
+npx lerna run rollup
+npx lerna version --no-private
+npx lerna publish --no-private
+
+```
+
+```

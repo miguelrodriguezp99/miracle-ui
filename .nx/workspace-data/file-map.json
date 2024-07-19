@@ -1,0 +1,1329 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.5.1",
+  "deps": {
+    "classnames": "^2.5.1",
+    "@chromatic-com/storybook": "^1.5.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^8.1.6",
+    "@storybook/addon-interactions": "^8.1.6",
+    "@storybook/addon-links": "^8.1.6",
+    "@storybook/addon-onboarding": "^8.1.6",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+    "@storybook/blocks": "^8.1.6",
+    "@storybook/react": "^8.1.6",
+    "@storybook/react-vite": "^8.1.6",
+    "@storybook/test": "^8.1.6",
+    "@storybook/theming": "^8.1.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "chromatic": "^11.5.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "eslint-plugin-storybook": "^0.8.0",
+    "lerna": "^8.1.6",
+    "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-ignore": "^1.0.10",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.1.6",
+    "tslib": "^2.6.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "packages/components/Dropdown/Dropdown.tsx",
+        "hash": "18310689485736494765"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5261253566607485510"
+      },
+      {
+        "file": "packages/components/Dropdown/components/DropdownTrigger.tsx",
+        "hash": "17440120008853891786"
+      },
+      {
+        "file": "packages/components/Progress/Progress.tsx",
+        "hash": "12216103374817311160"
+      },
+      {
+        "file": "packages/components/Cards/CardWithBlurredFooter.tsx",
+        "hash": "1599057362121229885"
+      },
+      {
+        "file": "packages/components/Cards/components/index.ts",
+        "hash": "1132129869262944008"
+      },
+      {
+        "file": "packages/components/Input/input.module.css",
+        "hash": "1899008647730214395"
+      },
+      {
+        "file": "packages/components/Cards/constants.ts",
+        "hash": "5420648427187494189"
+      },
+      {
+        "file": ".storybook/preview.tsx",
+        "hash": "9319072758445483662"
+      },
+      {
+        "file": "packages/components/Avatar/avatar.module.css",
+        "hash": "18095822810000304218"
+      },
+      {
+        "file": "packages/components/Image/image.module.css",
+        "hash": "257588754899958021"
+      },
+      {
+        "file": "packages/components/Cards/CardProduct.tsx",
+        "hash": "13581564020219993905"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/checkboxGroup.module.css",
+        "hash": "5734597722279147008"
+      },
+      {
+        "file": "packages/components/Avatar/Avatar.stories.tsx",
+        "hash": "798216803622893798"
+      },
+      {
+        "file": "packages/components/Cards/CardWithImage.tsx",
+        "hash": "5924236975208144204"
+      },
+      {
+        "file": "packages/components/Spinner/constants.ts",
+        "hash": "4327702463864768086"
+      },
+      {
+        "file": "packages/components/Cards/index.ts",
+        "hash": "9896032335905246549"
+      },
+      {
+        "file": "packages/main.tsx",
+        "hash": "4860707080058564531"
+      },
+      {
+        "file": "packages/components/Input/constants.ts",
+        "hash": "15754902517956613767"
+      },
+      {
+        "file": "packages/icons/NewFileIcon.tsx",
+        "hash": "5963025621774534227"
+      },
+      {
+        "file": "packages/components/Cards/CardWithDivider.tsx",
+        "hash": "15074463449045420793"
+      },
+      {
+        "file": "packages/components/Image/Image.tsx",
+        "hash": "9738766625796840003"
+      },
+      {
+        "file": "packages/components/Dropdown/components/DropdownMenu.tsx",
+        "hash": "14309877893710410990"
+      },
+      {
+        "file": "packages/components/Dropdown/DropdownMenu.stories.tsx",
+        "hash": "13757193705353817395"
+      },
+      {
+        "file": "packages/components/Progress/Progress.stories.tsx",
+        "hash": "9378250275000829719"
+      },
+      {
+        "file": "packages/components/Cards/components/CardBody.tsx",
+        "hash": "9986576947086586786"
+      },
+      {
+        "file": "packages/components/Cards/Card.tsx",
+        "hash": "6127291416088316231"
+      },
+      {
+        "file": "helpers/storybook.jsx",
+        "hash": "13654589920517238912"
+      },
+      {
+        "file": "packages/components/Badge/Badge.stories.tsx",
+        "hash": "3410729670869403692"
+      },
+      {
+        "file": "packages/components/index.ts",
+        "hash": "2914352174722280381"
+      },
+      {
+        "file": "nx.json",
+        "hash": "3285874903806716374"
+      },
+      {
+        "file": "packages/App.css",
+        "hash": "2851448327964673293"
+      },
+      {
+        "file": "packages/components/Spinner/Spinner.stories.tsx",
+        "hash": "7851856791198723243"
+      },
+      {
+        "file": "packages/components/Dropdown/constants.ts",
+        "hash": "9670494854166667112"
+      },
+      {
+        "file": "helpers/storybookts.tsx",
+        "hash": "5517111458812176527"
+      },
+      {
+        "file": ".storybook/manager.ts",
+        "hash": "12724836385602680334"
+      },
+      {
+        "file": "packages/components/Slider/Slider.tsx",
+        "hash": "15440305752928669533"
+      },
+      {
+        "file": "packages/components/Colors/Colors.stories.jsx",
+        "hash": "16580185712506748528"
+      },
+      {
+        "file": "packages/icons/CopyLinkIcon.tsx",
+        "hash": "5951098566561887576"
+      },
+      {
+        "file": "packages/components/Avatar/Avatar.tsx",
+        "hash": "4124329259557997642"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "12665475977364503432"
+      },
+      {
+        "file": "package.json",
+        "hash": "14421719506760987348"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "6090453398496963699"
+      },
+      {
+        "file": "packages/components/Cards/components/CardHeader.tsx",
+        "hash": "14961732649300825661"
+      },
+      {
+        "file": "packages/components/Slider/constants.ts",
+        "hash": "12284602010448452242"
+      },
+      {
+        "file": "packages/components/CircularProgress/constants.ts",
+        "hash": "2280047476788647646"
+      },
+      {
+        "file": "chromatic.config.json",
+        "hash": "8899004864811579736"
+      },
+      {
+        "file": "packages/components/Cards/Card.stories.jsx",
+        "hash": "16745356868798185664"
+      },
+      {
+        "file": "config/cssModules.js",
+        "hash": "10450574067859382707"
+      },
+      {
+        "file": "packages/components/Input/index.ts",
+        "hash": "11858523839063615844"
+      },
+      {
+        "file": "packages/components/CircularProgress/index.ts",
+        "hash": "5489717887606135274"
+      },
+      {
+        "file": "packages/components/Input/Input.stories.tsx",
+        "hash": "6769971024609004128"
+      },
+      {
+        "file": "packages/components/Input/Input.tsx",
+        "hash": "5774120159974375049"
+      },
+      {
+        "file": "packages/components/Cards/card.module.css",
+        "hash": "7395655695198664984"
+      },
+      {
+        "file": "packages/index.ts",
+        "hash": "16063522346463296908"
+      },
+      {
+        "file": "packages/components/Dropdown/index.ts",
+        "hash": "18124018747644532277"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "10808978640996509816"
+      },
+      {
+        "file": "packages/components/Checkbox/constants.ts",
+        "hash": "774584918514669785"
+      },
+      {
+        "file": "packages/components/ButtonGroup/index.ts",
+        "hash": "8696406115039716005"
+      },
+      {
+        "file": "packages/icons/CameraIcon.tsx",
+        "hash": "2592352963203130219"
+      },
+      {
+        "file": "packages/components/Checkbox/Checkbox.stories.tsx",
+        "hash": "11956679529666646193"
+      },
+      {
+        "file": "packages/components/Checkbox/checkbox.module.css",
+        "hash": "8603814191170702877"
+      },
+      {
+        "file": "packages/components/Spinner/Spinner.tsx",
+        "hash": "9725261546511738448"
+      },
+      {
+        "file": "packages/App.tsx",
+        "hash": "12680767809927353311"
+      },
+      {
+        "file": "public/hero-card-complete.jpeg",
+        "hash": "2331273150623759423"
+      },
+      {
+        "file": "packages/icons/AvatarIcon.tsx",
+        "hash": "6484458122267542168"
+      },
+      {
+        "file": "packages/components/Badge/Badge.tsx",
+        "hash": "14972725740632215192"
+      },
+      {
+        "file": "packages/components/Colors/colors.module.css",
+        "hash": "4436440371388118273"
+      },
+      {
+        "file": ".storybook/color-scheme.css",
+        "hash": "3423555515258742346"
+      },
+      {
+        "file": "packages/components/Spinner/spinner.module.css",
+        "hash": "13844834888664678048"
+      },
+      {
+        "file": "packages/components/Cards/CardCover.tsx",
+        "hash": "8482940408362371491"
+      },
+      {
+        "file": "packages/components/Avatar/AvatarIcon.tsx",
+        "hash": "392556230540484046"
+      },
+      {
+        "file": "packages/components/CircularProgress/CircularProgress.tsx",
+        "hash": "10294769358200240041"
+      },
+      {
+        "file": "packages/icons/EyeSlashFilledIcon.tsx",
+        "hash": "7681561616706774445"
+      },
+      {
+        "file": "helpers/styles.js",
+        "hash": "11622997241938226110"
+      },
+      {
+        "file": "packages/icons/UserIcon.tsx",
+        "hash": "17561437448552406343"
+      },
+      {
+        "file": "index.html",
+        "hash": "11758769188012742135"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/index.ts",
+        "hash": "10210289363836448843"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/CheckboxGroup.tsx",
+        "hash": "12682255757911327000"
+      },
+      {
+        "file": "packages/components/Slider/Slider.stories.tsx",
+        "hash": "101239158964801577"
+      },
+      {
+        "file": "packages/icons/VolumeHighIcon.tsx",
+        "hash": "11496628940216747067"
+      },
+      {
+        "file": "packages/components/Spinner/index.ts",
+        "hash": "15327846586145715615"
+      },
+      {
+        "file": "packages/components/ButtonGroup/buttonGroup.module.css",
+        "hash": "5257842373280325316"
+      },
+      {
+        "file": "packages/components/CircularProgress/circularProgress.module.css",
+        "hash": "16669715942951813915"
+      },
+      {
+        "file": "packages/icons/EditFileIcon.tsx",
+        "hash": "753538512994037031"
+      },
+      {
+        "file": "packages/components/Badge/index.ts",
+        "hash": "18436756348789434662"
+      },
+      {
+        "file": "packages/components/Dropdown/components/DropdownItem.tsx",
+        "hash": "4090229401088276476"
+      },
+      {
+        "file": "packages/components/Checkbox/Checkbox.tsx",
+        "hash": "9745792979804914382"
+      },
+      {
+        "file": "packages/components/Slider/index.ts",
+        "hash": "75282504593830606"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2604111426871648879"
+      },
+      {
+        "file": "packages/icons/VolumeLowIcon.tsx",
+        "hash": "11994063480372714302"
+      },
+      {
+        "file": "packages/components/ButtonGroup/ButtonGroup.stories.tsx",
+        "hash": "15835599881669399330"
+      },
+      {
+        "file": "packages/components/Avatar/index.ts",
+        "hash": "11737343101952829"
+      },
+      {
+        "file": "packages/components/Slider/slider.module.css",
+        "hash": "1813035358877253318"
+      },
+      {
+        "file": "packages/components/Dropdown/DropdownContext.tsx",
+        "hash": "6368187128350324933"
+      },
+      {
+        "file": "packages/components/CircularProgress/CircularProgress.stories.tsx",
+        "hash": "14151820508592130796"
+      },
+      {
+        "file": "packages/components/Badge/badge.module.css",
+        "hash": "8572021004154815831"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/CheckboxGroup.stories.tsx",
+        "hash": "8259039217709298428"
+      },
+      {
+        "file": "packages/components/Dropdown/dropdown.module.css",
+        "hash": "11765211607578130753"
+      },
+      {
+        "file": "packages/icons/DeleteFileIcon.tsx",
+        "hash": "16196814198978890566"
+      },
+      {
+        "file": "public/vite.svg",
+        "hash": "16046085400642193116"
+      },
+      {
+        "file": "vite.config.ts",
+        "hash": "9741783092172070544"
+      },
+      {
+        "file": "packages/components/Checkbox/index.ts",
+        "hash": "9347999398177086688"
+      },
+      {
+        "file": "packages/components/Progress/progress.module.css",
+        "hash": "5858177479215822735"
+      },
+      {
+        "file": "packages/components/Progress/index.ts",
+        "hash": "14417495728445677393"
+      },
+      {
+        "file": "packages/components/ButtonGroup/constants.ts",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "rollup.config.js",
+        "hash": "6605282973605336331"
+      },
+      {
+        "file": "packages/lib/colors.ts",
+        "hash": "1424735002064480067"
+      },
+      {
+        "file": "tsconfig.node.json",
+        "hash": "10457744544638714465"
+      },
+      {
+        "file": ".github/workflows/chromatic.yml",
+        "hash": "5504486861577717510"
+      },
+      {
+        "file": "packages/components/Badge/constants.ts",
+        "hash": "14675287018258936936"
+      },
+      {
+        "file": "packages/components/Image/index.ts",
+        "hash": "11674431184147072469"
+      },
+      {
+        "file": "packages/vite-env.d.ts",
+        "hash": "7856441258253745083"
+      },
+      {
+        "file": "packages/icons/icons.module.css",
+        "hash": "2423594607936727902"
+      },
+      {
+        "file": "README.md",
+        "hash": "6192261055538866218"
+      },
+      {
+        "file": "packages/components/ButtonGroup/ButtonGroup.tsx",
+        "hash": "13396645300348114311"
+      },
+      {
+        "file": "packages/icons/EyeFilledIcon.tsx",
+        "hash": "6308927585083132323"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/constants.ts",
+        "hash": "8403503815678428181"
+      },
+      {
+        "file": ".storybook/main.ts",
+        "hash": "17332077763968995595"
+      },
+      {
+        "file": "packages/components/styles/global.css",
+        "hash": "16908743538029158189"
+      },
+      {
+        "file": ".eslintrc.cjs",
+        "hash": "6722509750058128323"
+      },
+      {
+        "file": "packages/components/Avatar/AvatarGroup.tsx",
+        "hash": "3164133626587866137"
+      },
+      {
+        "file": "packages/components/Cards/CardCoverAndFooter.tsx",
+        "hash": "52138690719011960"
+      },
+      {
+        "file": "packages/components/Progress/constants.ts",
+        "hash": "8155427604086562238"
+      },
+      {
+        "file": "packages/components/Avatar/constants.ts",
+        "hash": "899672441129932702"
+      },
+      {
+        "file": "packages/components/Cards/components/CardFooter.tsx",
+        "hash": "5787456878223785817"
+      }
+    ],
+    "projectFileMap": {
+      "@mirakle-ui/accordion": [
+        {
+          "file": "packages/components/accordion/global.d.ts",
+          "hash": "16617459167577925004"
+        },
+        {
+          "file": "packages/components/accordion/package.json",
+          "hash": "3658895067871767709",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:rollup",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-ignore",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-plugin-postcss",
+            "npm:tslib",
+            "npm:typescript",
+            "@mirakle-ui/divider",
+            "@mirakle-ui/system20",
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "packages/components/accordion/rollup.config.js",
+          "hash": "6605282973605336331"
+        },
+        {
+          "file": "packages/components/accordion/src/Accordion.stories.tsx",
+          "hash": "4234667549465886667"
+        },
+        {
+          "file": "packages/components/accordion/src/Accordion.tsx",
+          "hash": "11136975472671501764"
+        },
+        {
+          "file": "packages/components/accordion/src/AccordionItem.tsx",
+          "hash": "3527252226205151503"
+        },
+        {
+          "file": "packages/components/accordion/src/accordion.module.css",
+          "hash": "9115432316004447229"
+        },
+        {
+          "file": "packages/components/accordion/src/constants.ts",
+          "hash": "10353272897060123600"
+        },
+        {
+          "file": "packages/components/accordion/src/index.ts",
+          "hash": "12528700946125767149"
+        },
+        {
+          "file": "packages/components/accordion/tsconfig.json",
+          "hash": "6283985716991723765"
+        }
+      ],
+      "storybook-static": [
+        {
+          "file": "storybook-static/assets/Button-3S4PKBI-.js",
+          "hash": "1271747666175411091"
+        },
+        {
+          "file": "storybook-static/assets/Button-BfyGbg8N.css",
+          "hash": "15708936131971846713"
+        },
+        {
+          "file": "storybook-static/assets/Button.stories-BhzOnJmm.js",
+          "hash": "14386913917283836524"
+        },
+        {
+          "file": "storybook-static/assets/Card-BnO_AXtr.css",
+          "hash": "14743361247808052455"
+        },
+        {
+          "file": "storybook-static/assets/Card.stories-BFMJTauF.js",
+          "hash": "1033759549190257794"
+        },
+        {
+          "file": "storybook-static/assets/CardWithDivider-qCiN7YOj.css",
+          "hash": "12475662683627746663"
+        },
+        {
+          "file": "storybook-static/assets/CardWithDivider.stories-D6CF7ipT.js",
+          "hash": "13443743508152297057"
+        },
+        {
+          "file": "storybook-static/assets/Color-PRSJMWNM-l-48wz-f.js",
+          "hash": "13129739452620481742"
+        },
+        {
+          "file": "storybook-static/assets/Configure-CIavyzws.js",
+          "hash": "4196502590987078877"
+        },
+        {
+          "file": "storybook-static/assets/DocsRenderer-K4EAMTCU-nWK509Q1.js",
+          "hash": "17972602884670562791"
+        },
+        {
+          "file": "storybook-static/assets/Header-BjLH3naM.css",
+          "hash": "7447240841793978087"
+        },
+        {
+          "file": "storybook-static/assets/Header-tKp3DTwC.js",
+          "hash": "16675258137700869079"
+        },
+        {
+          "file": "storybook-static/assets/Header.stories-B_uPQIuU.js",
+          "hash": "1948104169663057621"
+        },
+        {
+          "file": "storybook-static/assets/Page-B9ntr4df.css",
+          "hash": "13590562681850096438"
+        },
+        {
+          "file": "storybook-static/assets/Page.stories-D_XdZ402.js",
+          "hash": "15624823884598421531"
+        },
+        {
+          "file": "storybook-static/assets/Task.stories-BMSO5PfO.js",
+          "hash": "2579254390990701999"
+        },
+        {
+          "file": "storybook-static/assets/WithTooltip-KJL26V4Q-DaPMd0Oj.js",
+          "hash": "815301393026685018"
+        },
+        {
+          "file": "storybook-static/assets/accessibility-W_h2acOZ.png",
+          "hash": "8320090732909952534"
+        },
+        {
+          "file": "storybook-static/assets/addon-library-BWUCAmyN.png",
+          "hash": "16374768047356923990"
+        },
+        {
+          "file": "storybook-static/assets/context-C0qIqeS4.png",
+          "hash": "1348985643342670004"
+        },
+        {
+          "file": "storybook-static/assets/docs---vsFbMi.png",
+          "hash": "18280049778802555454"
+        },
+        {
+          "file": "storybook-static/assets/entry-preview-DQ6J175g.js",
+          "hash": "7683826476986148185"
+        },
+        {
+          "file": "storybook-static/assets/entry-preview-docs-DW7DFaCL.js",
+          "hash": "13327481207324197447"
+        },
+        {
+          "file": "storybook-static/assets/figma-plugin-CH2hELiO.png",
+          "hash": "6723570263244528263"
+        },
+        {
+          "file": "storybook-static/assets/formatter-2WMMO6ZP-BAeLFnnL.js",
+          "hash": "5566199159609961994"
+        },
+        {
+          "file": "storybook-static/assets/iframe-DFS06SAX.js",
+          "hash": "12065842849951984787"
+        },
+        {
+          "file": "storybook-static/assets/index-5YtWdR9a.js",
+          "hash": "5899911664699393947"
+        },
+        {
+          "file": "storybook-static/assets/index-9UrncIcR.js",
+          "hash": "10860054624508579586"
+        },
+        {
+          "file": "storybook-static/assets/index-BDAnVJ5B.js",
+          "hash": "14870298804759199610"
+        },
+        {
+          "file": "storybook-static/assets/index-Bqoxw6Vv.js",
+          "hash": "8351512441872333231"
+        },
+        {
+          "file": "storybook-static/assets/index-BwF_zu8I.js",
+          "hash": "15861671047415108203"
+        },
+        {
+          "file": "storybook-static/assets/index-CEThVCg_.js",
+          "hash": "14083745057588202921"
+        },
+        {
+          "file": "storybook-static/assets/index-DEh8bWyY.js",
+          "hash": "11437627900361988065"
+        },
+        {
+          "file": "storybook-static/assets/index-DXimoRZY.js",
+          "hash": "7259886032237135218"
+        },
+        {
+          "file": "storybook-static/assets/index-DrFu-skq.js",
+          "hash": "3770681121607593569"
+        },
+        {
+          "file": "storybook-static/assets/index-NUp7fKSD.js",
+          "hash": "16570415953781731403"
+        },
+        {
+          "file": "storybook-static/assets/index-xnkZ--kd.js",
+          "hash": "9115782600170500018"
+        },
+        {
+          "file": "storybook-static/assets/jsx-runtime-BZf_YgVj.js",
+          "hash": "9218543770903229409"
+        },
+        {
+          "file": "storybook-static/assets/preview-B4GcaC1c.js",
+          "hash": "3951927543177088274"
+        },
+        {
+          "file": "storybook-static/assets/preview-B4mTwL85.css",
+          "hash": "2692293322324051114"
+        },
+        {
+          "file": "storybook-static/assets/preview-BAz7FMXc.js",
+          "hash": "8546484426540021658"
+        },
+        {
+          "file": "storybook-static/assets/preview-BpcF_O6y.js",
+          "hash": "14903243120875291963"
+        },
+        {
+          "file": "storybook-static/assets/preview-CjaTamvP.js",
+          "hash": "637672482571669207"
+        },
+        {
+          "file": "storybook-static/assets/preview-CwqMn10d.js",
+          "hash": "1369047902554758990"
+        },
+        {
+          "file": "storybook-static/assets/preview-Db4Idchh.js",
+          "hash": "13840321967074577499"
+        },
+        {
+          "file": "storybook-static/assets/preview-FX_UK0w-.js",
+          "hash": "951874511316313748"
+        },
+        {
+          "file": "storybook-static/assets/preview-TCN6m6T-.js",
+          "hash": "9832116644977820555"
+        },
+        {
+          "file": "storybook-static/assets/preview-UNaZQn6M.js",
+          "hash": "17546282689410762101"
+        },
+        {
+          "file": "storybook-static/assets/preview-esLLCCUl.js",
+          "hash": "1534411676174547853"
+        },
+        {
+          "file": "storybook-static/assets/react-18-DU1Jzcwy.js",
+          "hash": "16165690676049058571"
+        },
+        {
+          "file": "storybook-static/assets/share-DGA-UcQf.png",
+          "hash": "2975175390326490054"
+        },
+        {
+          "file": "storybook-static/assets/storybook-BdKXDQ5Z.js",
+          "hash": "5746629417279027777"
+        },
+        {
+          "file": "storybook-static/assets/styling-Bk6zjRzU.png",
+          "hash": "7588361746934983524"
+        },
+        {
+          "file": "storybook-static/assets/syntaxhighlighter-BP7B2CQK-BH-IVg8D.js",
+          "hash": "986201548705775863"
+        },
+        {
+          "file": "storybook-static/assets/testing-cbzR9l9r.png",
+          "hash": "9937432921968504604"
+        },
+        {
+          "file": "storybook-static/assets/theming-D6WJLNoW.png",
+          "hash": "10878554446503237882"
+        },
+        {
+          "file": "storybook-static/favicon.svg",
+          "hash": "7801906886072081162"
+        },
+        {
+          "file": "storybook-static/iframe.html",
+          "hash": "7742225763862272604"
+        },
+        {
+          "file": "storybook-static/index.html",
+          "hash": "8195666179693049114"
+        },
+        {
+          "file": "storybook-static/index.json",
+          "hash": "8004063569763648714"
+        },
+        {
+          "file": "storybook-static/logo.jpeg",
+          "hash": "444222013891597727"
+        },
+        {
+          "file": "storybook-static/logo350x150.png",
+          "hash": "7191831347955993813"
+        },
+        {
+          "file": "storybook-static/logo350x151.png",
+          "hash": "7191831347955993813"
+        },
+        {
+          "file": "storybook-static/project.json",
+          "hash": "1864903532271873168"
+        },
+        {
+          "file": "storybook-static/sb-addons/chromatic-com-storybook-10/manager-bundle.js",
+          "hash": "1982501265358753793"
+        },
+        {
+          "file": "storybook-static/sb-addons/chromatic-com-storybook-10/manager-bundle.js.LEGAL.txt",
+          "hash": "10208364013718361790"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-actions-4/manager-bundle.js",
+          "hash": "10015816149729663828"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-actions-4/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-backgrounds-5/manager-bundle.js",
+          "hash": "12707264111082118644"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-backgrounds-5/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-controls-3/manager-bundle.js",
+          "hash": "17231375735143688530"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-controls-3/manager-bundle.js.LEGAL.txt",
+          "hash": "7306589505509295593"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-measure-8/manager-bundle.js",
+          "hash": "14365028326054936368"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-measure-8/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-outline-9/manager-bundle.js",
+          "hash": "87988845799168411"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-outline-9/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-toolbars-7/manager-bundle.js",
+          "hash": "8779285686844418711"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-toolbars-7/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-viewport-6/manager-bundle.js",
+          "hash": "16909550385300583835"
+        },
+        {
+          "file": "storybook-static/sb-addons/essentials-viewport-6/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/interactions-11/manager-bundle.js",
+          "hash": "10921047204626200561"
+        },
+        {
+          "file": "storybook-static/sb-addons/interactions-11/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/links-2/manager-bundle.js",
+          "hash": "17853299733560152706"
+        },
+        {
+          "file": "storybook-static/sb-addons/links-2/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/onboarding-1/manager-bundle.js",
+          "hash": "4874124366437146119"
+        },
+        {
+          "file": "storybook-static/sb-addons/onboarding-1/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/storybook-12/manager-bundle.js",
+          "hash": "4870788262531790900"
+        },
+        {
+          "file": "storybook-static/sb-addons/storybook-12/manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-addons/storybook-core-server-presets-0/common-manager-bundle.js",
+          "hash": "3145753986166019135"
+        },
+        {
+          "file": "storybook-static/sb-addons/storybook-core-server-presets-0/common-manager-bundle.js.LEGAL.txt",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "storybook-static/sb-common-assets/fonts.css",
+          "hash": "16937497352400184284"
+        },
+        {
+          "file": "storybook-static/sb-common-assets/nunito-sans-bold-italic.woff2",
+          "hash": "16937166808963441226"
+        },
+        {
+          "file": "storybook-static/sb-common-assets/nunito-sans-bold.woff2",
+          "hash": "14169727957364227"
+        },
+        {
+          "file": "storybook-static/sb-common-assets/nunito-sans-italic.woff2",
+          "hash": "13111399484457157170"
+        },
+        {
+          "file": "storybook-static/sb-common-assets/nunito-sans-regular.woff2",
+          "hash": "13367830169426244845"
+        },
+        {
+          "file": "storybook-static/sb-manager/WithTooltip-KJL26V4Q-5LS5AN27.js",
+          "hash": "13664482844198675605"
+        },
+        {
+          "file": "storybook-static/sb-manager/chunk-4FMBEAHW.js",
+          "hash": "7351981053656459505"
+        },
+        {
+          "file": "storybook-static/sb-manager/chunk-6GQRNYH2.js",
+          "hash": "3993947726044487418"
+        },
+        {
+          "file": "storybook-static/sb-manager/chunk-B3YDJJJH.js",
+          "hash": "13100797263399662034"
+        },
+        {
+          "file": "storybook-static/sb-manager/chunk-BLWCBWKL.js",
+          "hash": "11387985566125736406"
+        },
+        {
+          "file": "storybook-static/sb-manager/chunk-GUVK2GTO.js",
+          "hash": "4527082887859388432"
+        },
+        {
+          "file": "storybook-static/sb-manager/chunk-ZR5JZWHI.js",
+          "hash": "2221668285904077970"
+        },
+        {
+          "file": "storybook-static/sb-manager/formatter-2WMMO6ZP-JI7RHVTW.js",
+          "hash": "11981170357761238473"
+        },
+        {
+          "file": "storybook-static/sb-manager/globals-module-info.js",
+          "hash": "13572071285562645876"
+        },
+        {
+          "file": "storybook-static/sb-manager/globals-runtime.js",
+          "hash": "2724927351004895853"
+        },
+        {
+          "file": "storybook-static/sb-manager/globals.js",
+          "hash": "12577395886735087103"
+        },
+        {
+          "file": "storybook-static/sb-manager/index.js",
+          "hash": "6341059287122982176"
+        },
+        {
+          "file": "storybook-static/sb-manager/runtime.js",
+          "hash": "4421832356853515858"
+        },
+        {
+          "file": "storybook-static/sb-manager/syntaxhighlighter-BP7B2CQK-WOJYHKQR.js",
+          "hash": "17892259676211278129"
+        },
+        {
+          "file": "storybook-static/sb-preview/globals.js",
+          "hash": "5156948137387100388"
+        },
+        {
+          "file": "storybook-static/sb-preview/runtime.js",
+          "hash": "4097958971921116374"
+        },
+        {
+          "file": "storybook-static/vite.svg",
+          "hash": "16046085400642193116"
+        }
+      ],
+      "@mirakle-ui/ripple20": [
+        {
+          "file": "packages/hooks/ripple/package.json",
+          "hash": "17646997100091083863",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:classnames",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-ignore",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-plugin-postcss",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:vite",
+            "@mirakle-ui/system20"
+          ]
+        },
+        {
+          "file": "packages/hooks/ripple/rollup.config.js",
+          "hash": "6605282973605336331"
+        },
+        {
+          "file": "packages/hooks/ripple/src/index.ts",
+          "hash": "11869855164920141186"
+        },
+        {
+          "file": "packages/hooks/ripple/src/useRippleEffect.tsx",
+          "hash": "6807887954720866681"
+        },
+        {
+          "file": "packages/hooks/ripple/tsconfig.json",
+          "hash": "14323204159770994126"
+        }
+      ],
+      "@mirakle-ui/divider": [
+        {
+          "file": "packages/components/divider/global.d.ts",
+          "hash": "16617459167577925004"
+        },
+        {
+          "file": "packages/components/divider/package.json",
+          "hash": "10544841222853884627",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:rollup",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-ignore",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-plugin-postcss",
+            "npm:tslib",
+            "npm:typescript",
+            "@mirakle-ui/system20",
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "packages/components/divider/rollup.config.js",
+          "hash": "6605282973605336331"
+        },
+        {
+          "file": "packages/components/divider/src/Divider.stories.tsx",
+          "hash": "2637259056173862568"
+        },
+        {
+          "file": "packages/components/divider/src/Divider.tsx",
+          "hash": "17307983052745575763"
+        },
+        {
+          "file": "packages/components/divider/src/constants.ts",
+          "hash": "13958000410674004231"
+        },
+        {
+          "file": "packages/components/divider/src/divider.module.css",
+          "hash": "4638743944932025231"
+        },
+        {
+          "file": "packages/components/divider/src/index.ts",
+          "hash": "10521423251269334919"
+        },
+        {
+          "file": "packages/components/divider/tsconfig.json",
+          "hash": "2604111426871648879"
+        }
+      ],
+      "@mirakle-ui/react": [
+        {
+          "file": "packages/core/react/package.json",
+          "hash": "2027148545625489784",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:classnames",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-ignore",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-plugin-postcss",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:vite",
+            "@mirakle-ui/accordion",
+            "@mirakle-ui/button",
+            "@mirakle-ui/divider",
+            "@mirakle-ui/ripple20",
+            "@mirakle-ui/system20"
+          ]
+        },
+        {
+          "file": "packages/core/react/rollup.config.js",
+          "hash": "6605282973605336331"
+        },
+        {
+          "file": "packages/core/react/src/index.ts",
+          "hash": "2927046787784714220"
+        },
+        {
+          "file": "packages/core/react/tsconfig.json",
+          "hash": "6283985716991723765"
+        }
+      ],
+      "@mirakle-ui/system20": [
+        {
+          "file": "packages/core/system/package-lock.json",
+          "hash": "3404378906518728776"
+        },
+        {
+          "file": "packages/core/system/package.json",
+          "hash": "3224445046527743249",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:classnames",
+            "npm:eslint",
+            "npm:rollup",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-ignore",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-plugin-postcss",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "packages/core/system/rollup.config.js",
+          "hash": "6605282973605336331"
+        },
+        {
+          "file": "packages/core/system/src/colors.ts",
+          "hash": "18316580732921120855"
+        },
+        {
+          "file": "packages/core/system/src/global.css",
+          "hash": "16940066947556529677"
+        },
+        {
+          "file": "packages/core/system/src/index.ts",
+          "hash": "9599349156966728709"
+        },
+        {
+          "file": "packages/core/system/tsconfig.json",
+          "hash": "2604111426871648879"
+        }
+      ],
+      "@mirakle-ui/button": [
+        {
+          "file": "packages/components/button/global.d.ts",
+          "hash": "16617459167577925004"
+        },
+        {
+          "file": "packages/components/button/package.json",
+          "hash": "9426612307378537737",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@rollup/plugin-commonjs",
+            "npm:@rollup/plugin-node-resolve",
+            "npm:@rollup/plugin-terser",
+            "npm:@rollup/plugin-typescript",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:rollup",
+            "npm:rollup-plugin-dts",
+            "npm:rollup-plugin-ignore",
+            "npm:rollup-plugin-peer-deps-external",
+            "npm:rollup-plugin-postcss",
+            "npm:tslib",
+            "npm:typescript",
+            "@mirakle-ui/ripple20",
+            "@mirakle-ui/system20",
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "packages/components/button/rollup.config.js",
+          "hash": "6605282973605336331"
+        },
+        {
+          "file": "packages/components/button/src/Button.stories.tsx",
+          "hash": "6874161621453918082"
+        },
+        {
+          "file": "packages/components/button/src/Button.tsx",
+          "hash": "3035667736118595174"
+        },
+        {
+          "file": "packages/components/button/src/button.module.css",
+          "hash": "1494569936672063539"
+        },
+        {
+          "file": "packages/components/button/src/constants.ts",
+          "hash": "1411272335471022459"
+        },
+        {
+          "file": "packages/components/button/src/index.ts",
+          "hash": "11544985432868125636"
+        },
+        {
+          "file": "packages/components/button/tsconfig.json",
+          "hash": "2604111426871648879"
+        }
+      ]
+    }
+  }
+}
