@@ -44,508 +44,912 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "packages/components/Dropdown/Dropdown.tsx",
-        "hash": "18310689485736494765"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "5261253566607485510"
-      },
-      {
-        "file": "packages/components/Dropdown/components/DropdownTrigger.tsx",
-        "hash": "17440120008853891786"
-      },
-      {
-        "file": "packages/components/Progress/Progress.tsx",
-        "hash": "12216103374817311160"
-      },
-      {
-        "file": "packages/components/Cards/CardWithBlurredFooter.tsx",
-        "hash": "1599057362121229885"
-      },
-      {
-        "file": "packages/components/Cards/components/index.ts",
-        "hash": "1132129869262944008"
-      },
-      {
-        "file": "packages/components/Input/input.module.css",
-        "hash": "1899008647730214395"
-      },
-      {
-        "file": "packages/components/Cards/constants.ts",
-        "hash": "5420648427187494189"
-      },
-      {
-        "file": ".storybook/preview.tsx",
-        "hash": "9319072758445483662"
-      },
-      {
-        "file": "packages/components/Avatar/avatar.module.css",
-        "hash": "18095822810000304218"
-      },
-      {
-        "file": "packages/components/Image/image.module.css",
-        "hash": "257588754899958021"
-      },
-      {
-        "file": "packages/components/Cards/CardProduct.tsx",
-        "hash": "13581564020219993905"
-      },
-      {
-        "file": "packages/components/CheckboxGroup/checkboxGroup.module.css",
-        "hash": "5734597722279147008"
-      },
-      {
-        "file": "packages/components/Avatar/Avatar.stories.tsx",
-        "hash": "798216803622893798"
-      },
-      {
-        "file": "packages/components/Cards/CardWithImage.tsx",
-        "hash": "5924236975208144204"
-      },
-      {
-        "file": "packages/components/Spinner/constants.ts",
-        "hash": "4327702463864768086"
-      },
-      {
-        "file": "packages/components/Cards/index.ts",
-        "hash": "9896032335905246549"
-      },
-      {
-        "file": "packages/main.tsx",
-        "hash": "4860707080058564531"
-      },
-      {
-        "file": "packages/components/Input/constants.ts",
-        "hash": "15754902517956613767"
-      },
-      {
-        "file": "packages/icons/NewFileIcon.tsx",
-        "hash": "5963025621774534227"
-      },
-      {
-        "file": "packages/components/Cards/CardWithDivider.tsx",
-        "hash": "15074463449045420793"
-      },
-      {
-        "file": "packages/components/Image/Image.tsx",
-        "hash": "9738766625796840003"
-      },
-      {
-        "file": "packages/components/Dropdown/components/DropdownMenu.tsx",
-        "hash": "14309877893710410990"
-      },
-      {
-        "file": "packages/components/Dropdown/DropdownMenu.stories.tsx",
-        "hash": "13757193705353817395"
-      },
-      {
-        "file": "packages/components/Progress/Progress.stories.tsx",
-        "hash": "9378250275000829719"
-      },
-      {
-        "file": "packages/components/Cards/components/CardBody.tsx",
-        "hash": "9986576947086586786"
-      },
-      {
-        "file": "packages/components/Cards/Card.tsx",
-        "hash": "6127291416088316231"
-      },
-      {
-        "file": "helpers/storybook.jsx",
-        "hash": "13654589920517238912"
-      },
-      {
-        "file": "packages/components/Badge/Badge.stories.tsx",
-        "hash": "3410729670869403692"
-      },
-      {
-        "file": "packages/components/index.ts",
-        "hash": "2914352174722280381"
-      },
-      {
-        "file": "nx.json",
-        "hash": "3285874903806716374"
-      },
-      {
-        "file": "packages/App.css",
-        "hash": "2851448327964673293"
-      },
-      {
-        "file": "packages/components/Spinner/Spinner.stories.tsx",
-        "hash": "7851856791198723243"
-      },
-      {
-        "file": "packages/components/Dropdown/constants.ts",
-        "hash": "9670494854166667112"
-      },
-      {
-        "file": "helpers/storybookts.tsx",
-        "hash": "5517111458812176527"
-      },
-      {
-        "file": ".storybook/manager.ts",
-        "hash": "12724836385602680334"
-      },
-      {
-        "file": "packages/components/Slider/Slider.tsx",
-        "hash": "15440305752928669533"
-      },
-      {
-        "file": "packages/components/Colors/Colors.stories.jsx",
-        "hash": "16580185712506748528"
-      },
-      {
-        "file": "packages/icons/CopyLinkIcon.tsx",
-        "hash": "5951098566561887576"
-      },
-      {
-        "file": "packages/components/Avatar/Avatar.tsx",
-        "hash": "4124329259557997642"
-      },
-      {
         "file": "LICENSE",
         "hash": "12665475977364503432"
-      },
-      {
-        "file": "package.json",
-        "hash": "14421719506760987348"
-      },
-      {
-        "file": "lerna.json",
-        "hash": "6090453398496963699"
-      },
-      {
-        "file": "packages/components/Cards/components/CardHeader.tsx",
-        "hash": "14961732649300825661"
-      },
-      {
-        "file": "packages/components/Slider/constants.ts",
-        "hash": "12284602010448452242"
-      },
-      {
-        "file": "packages/components/CircularProgress/constants.ts",
-        "hash": "2280047476788647646"
-      },
-      {
-        "file": "chromatic.config.json",
-        "hash": "8899004864811579736"
-      },
-      {
-        "file": "packages/components/Cards/Card.stories.jsx",
-        "hash": "16745356868798185664"
-      },
-      {
-        "file": "config/cssModules.js",
-        "hash": "10450574067859382707"
-      },
-      {
-        "file": "packages/components/Input/index.ts",
-        "hash": "11858523839063615844"
-      },
-      {
-        "file": "packages/components/CircularProgress/index.ts",
-        "hash": "5489717887606135274"
-      },
-      {
-        "file": "packages/components/Input/Input.stories.tsx",
-        "hash": "6769971024609004128"
-      },
-      {
-        "file": "packages/components/Input/Input.tsx",
-        "hash": "5774120159974375049"
-      },
-      {
-        "file": "packages/components/Cards/card.module.css",
-        "hash": "7395655695198664984"
-      },
-      {
-        "file": "packages/index.ts",
-        "hash": "16063522346463296908"
-      },
-      {
-        "file": "packages/components/Dropdown/index.ts",
-        "hash": "18124018747644532277"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "10808978640996509816"
-      },
-      {
-        "file": "packages/components/Checkbox/constants.ts",
-        "hash": "774584918514669785"
-      },
-      {
-        "file": "packages/components/ButtonGroup/index.ts",
-        "hash": "8696406115039716005"
-      },
-      {
-        "file": "packages/icons/CameraIcon.tsx",
-        "hash": "2592352963203130219"
-      },
-      {
-        "file": "packages/components/Checkbox/Checkbox.stories.tsx",
-        "hash": "11956679529666646193"
-      },
-      {
-        "file": "packages/components/Checkbox/checkbox.module.css",
-        "hash": "8603814191170702877"
-      },
-      {
-        "file": "packages/components/Spinner/Spinner.tsx",
-        "hash": "9725261546511738448"
-      },
-      {
-        "file": "packages/App.tsx",
-        "hash": "12680767809927353311"
-      },
-      {
-        "file": "public/hero-card-complete.jpeg",
-        "hash": "2331273150623759423"
-      },
-      {
-        "file": "packages/icons/AvatarIcon.tsx",
-        "hash": "6484458122267542168"
-      },
-      {
-        "file": "packages/components/Badge/Badge.tsx",
-        "hash": "14972725740632215192"
-      },
-      {
-        "file": "packages/components/Colors/colors.module.css",
-        "hash": "4436440371388118273"
-      },
-      {
-        "file": ".storybook/color-scheme.css",
-        "hash": "3423555515258742346"
-      },
-      {
-        "file": "packages/components/Spinner/spinner.module.css",
-        "hash": "13844834888664678048"
-      },
-      {
-        "file": "packages/components/Cards/CardCover.tsx",
-        "hash": "8482940408362371491"
-      },
-      {
-        "file": "packages/components/Avatar/AvatarIcon.tsx",
-        "hash": "392556230540484046"
-      },
-      {
-        "file": "packages/components/CircularProgress/CircularProgress.tsx",
-        "hash": "10294769358200240041"
-      },
-      {
-        "file": "packages/icons/EyeSlashFilledIcon.tsx",
-        "hash": "7681561616706774445"
-      },
-      {
-        "file": "helpers/styles.js",
-        "hash": "11622997241938226110"
-      },
-      {
-        "file": "packages/icons/UserIcon.tsx",
-        "hash": "17561437448552406343"
-      },
-      {
-        "file": "index.html",
-        "hash": "11758769188012742135"
-      },
-      {
-        "file": "packages/components/CheckboxGroup/index.ts",
-        "hash": "10210289363836448843"
-      },
-      {
-        "file": "packages/components/CheckboxGroup/CheckboxGroup.tsx",
-        "hash": "12682255757911327000"
-      },
-      {
-        "file": "packages/components/Slider/Slider.stories.tsx",
-        "hash": "101239158964801577"
-      },
-      {
-        "file": "packages/icons/VolumeHighIcon.tsx",
-        "hash": "11496628940216747067"
-      },
-      {
-        "file": "packages/components/Spinner/index.ts",
-        "hash": "15327846586145715615"
-      },
-      {
-        "file": "packages/components/ButtonGroup/buttonGroup.module.css",
-        "hash": "5257842373280325316"
-      },
-      {
-        "file": "packages/components/CircularProgress/circularProgress.module.css",
-        "hash": "16669715942951813915"
-      },
-      {
-        "file": "packages/icons/EditFileIcon.tsx",
-        "hash": "753538512994037031"
-      },
-      {
-        "file": "packages/components/Badge/index.ts",
-        "hash": "18436756348789434662"
-      },
-      {
-        "file": "packages/components/Dropdown/components/DropdownItem.tsx",
-        "hash": "4090229401088276476"
-      },
-      {
-        "file": "packages/components/Checkbox/Checkbox.tsx",
-        "hash": "9745792979804914382"
-      },
-      {
-        "file": "packages/components/Slider/index.ts",
-        "hash": "75282504593830606"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "2604111426871648879"
-      },
-      {
-        "file": "packages/icons/VolumeLowIcon.tsx",
-        "hash": "11994063480372714302"
-      },
-      {
-        "file": "packages/components/ButtonGroup/ButtonGroup.stories.tsx",
-        "hash": "15835599881669399330"
-      },
-      {
-        "file": "packages/components/Avatar/index.ts",
-        "hash": "11737343101952829"
-      },
-      {
-        "file": "packages/components/Slider/slider.module.css",
-        "hash": "1813035358877253318"
-      },
-      {
-        "file": "packages/components/Dropdown/DropdownContext.tsx",
-        "hash": "6368187128350324933"
-      },
-      {
-        "file": "packages/components/CircularProgress/CircularProgress.stories.tsx",
-        "hash": "14151820508592130796"
-      },
-      {
-        "file": "packages/components/Badge/badge.module.css",
-        "hash": "8572021004154815831"
-      },
-      {
-        "file": "packages/components/CheckboxGroup/CheckboxGroup.stories.tsx",
-        "hash": "8259039217709298428"
-      },
-      {
-        "file": "packages/components/Dropdown/dropdown.module.css",
-        "hash": "11765211607578130753"
-      },
-      {
-        "file": "packages/icons/DeleteFileIcon.tsx",
-        "hash": "16196814198978890566"
-      },
-      {
-        "file": "public/vite.svg",
-        "hash": "16046085400642193116"
-      },
-      {
-        "file": "vite.config.ts",
-        "hash": "9741783092172070544"
-      },
-      {
-        "file": "packages/components/Checkbox/index.ts",
-        "hash": "9347999398177086688"
-      },
-      {
-        "file": "packages/components/Progress/progress.module.css",
-        "hash": "5858177479215822735"
-      },
-      {
-        "file": "packages/components/Progress/index.ts",
-        "hash": "14417495728445677393"
-      },
-      {
-        "file": "packages/components/ButtonGroup/constants.ts",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "rollup.config.js",
-        "hash": "6605282973605336331"
-      },
-      {
-        "file": "packages/lib/colors.ts",
-        "hash": "1424735002064480067"
-      },
-      {
-        "file": "tsconfig.node.json",
-        "hash": "10457744544638714465"
-      },
-      {
-        "file": ".github/workflows/chromatic.yml",
-        "hash": "5504486861577717510"
-      },
-      {
-        "file": "packages/components/Badge/constants.ts",
-        "hash": "14675287018258936936"
-      },
-      {
-        "file": "packages/components/Image/index.ts",
-        "hash": "11674431184147072469"
-      },
-      {
-        "file": "packages/vite-env.d.ts",
-        "hash": "7856441258253745083"
-      },
-      {
-        "file": "packages/icons/icons.module.css",
-        "hash": "2423594607936727902"
-      },
-      {
-        "file": "README.md",
-        "hash": "6192261055538866218"
-      },
-      {
-        "file": "packages/components/ButtonGroup/ButtonGroup.tsx",
-        "hash": "13396645300348114311"
-      },
-      {
-        "file": "packages/icons/EyeFilledIcon.tsx",
-        "hash": "6308927585083132323"
-      },
-      {
-        "file": "packages/components/CheckboxGroup/constants.ts",
-        "hash": "8403503815678428181"
-      },
-      {
-        "file": ".storybook/main.ts",
-        "hash": "17332077763968995595"
       },
       {
         "file": "packages/components/styles/global.css",
         "hash": "16908743538029158189"
       },
       {
-        "file": ".eslintrc.cjs",
-        "hash": "6722509750058128323"
+        "file": "types/packages/icons/CopyLinkIcon.d.ts",
+        "hash": "7059291055863057385"
+      },
+      {
+        "file": "types/packages/components/Progress/Progress.stories.d.ts",
+        "hash": "7299047056007521443"
+      },
+      {
+        "file": "types/packages/components/Cards/Card.d.ts",
+        "hash": "7261577540751753636"
       },
       {
         "file": "packages/components/Avatar/AvatarGroup.tsx",
         "hash": "3164133626587866137"
       },
       {
-        "file": "packages/components/Cards/CardCoverAndFooter.tsx",
-        "hash": "52138690719011960"
+        "file": "packages/main.tsx",
+        "hash": "4860707080058564531"
+      },
+      {
+        "file": "packages/components/Cards/Card.stories.jsx",
+        "hash": "16745356868798185664"
+      },
+      {
+        "file": ".storybook/color-scheme.css",
+        "hash": "3423555515258742346"
+      },
+      {
+        "file": "types/packages/components/ButtonGroup/index.d.ts",
+        "hash": "1883110072120537782"
+      },
+      {
+        "file": "types/packages/components/CircularProgress/CircularProgress.d.ts",
+        "hash": "10385783087785933115"
+      },
+      {
+        "file": "types/packages/components/Image/index.d.ts",
+        "hash": "9886145238855397755"
+      },
+      {
+        "file": "types/packages/components/Spinner/Spinner.stories.d.ts",
+        "hash": "2211104939402327006"
+      },
+      {
+        "file": "packages/components/Slider/constants.ts",
+        "hash": "12284602010448452242"
+      },
+      {
+        "file": "types/packages/components/Slider/Slider.d.ts",
+        "hash": "11980797164140499354"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2604111426871648879"
+      },
+      {
+        "file": "types/packages/components/index.d.ts",
+        "hash": "4803840149203830854"
+      },
+      {
+        "file": "types/packages/core/react/src/index.d.ts",
+        "hash": "14220339844215511572"
+      },
+      {
+        "file": "types/packages/components/divider/src/Divider.stories.d.ts",
+        "hash": "8294895357474272562"
+      },
+      {
+        "file": "packages/components/Colors/Colors.stories.jsx",
+        "hash": "16580185712506748528"
+      },
+      {
+        "file": "packages/components/Input/Input.tsx",
+        "hash": "5774120159974375049"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/CheckboxGroup.stories.tsx",
+        "hash": "8259039217709298428"
+      },
+      {
+        "file": "helpers/storybook.jsx",
+        "hash": "13654589920517238912"
+      },
+      {
+        "file": "types/packages/components/Cards/index.d.ts",
+        "hash": "12835586882914329673"
+      },
+      {
+        "file": "types/packages/components/Slider/Slider.stories.d.ts",
+        "hash": "8573498076600516830"
       },
       {
         "file": "packages/components/Progress/constants.ts",
         "hash": "8155427604086562238"
       },
       {
-        "file": "packages/components/Avatar/constants.ts",
-        "hash": "899672441129932702"
+        "file": "packages/App.css",
+        "hash": "2851448327964673293"
+      },
+      {
+        "file": "packages/components/Cards/components/CardHeader.tsx",
+        "hash": "14961732649300825661"
+      },
+      {
+        "file": "packages/components/Progress/progress.module.css",
+        "hash": "5858177479215822735"
+      },
+      {
+        "file": "packages/components/ButtonGroup/buttonGroup.module.css",
+        "hash": "5257842373280325316"
+      },
+      {
+        "file": "packages/components/Slider/index.ts",
+        "hash": "75282504593830606"
+      },
+      {
+        "file": "helpers/storybookts.tsx",
+        "hash": "5517111458812176527"
+      },
+      {
+        "file": "packages/components/Cards/card.module.css",
+        "hash": "7395655695198664984"
+      },
+      {
+        "file": "types/packages/components/Input/Input.stories.d.ts",
+        "hash": "6178492785200223256"
+      },
+      {
+        "file": "packages/components/Progress/index.ts",
+        "hash": "14417495728445677393"
+      },
+      {
+        "file": "packages/components/Avatar/index.ts",
+        "hash": "11737343101952829"
+      },
+      {
+        "file": "types/packages/lib/colors.d.ts",
+        "hash": "16808236948396603695"
+      },
+      {
+        "file": "packages/components/Checkbox/Checkbox.stories.tsx",
+        "hash": "11956679529666646193"
+      },
+      {
+        "file": "types/vite.config.d.ts",
+        "hash": "65796926261723415"
+      },
+      {
+        "file": "packages/components/Cards/constants.ts",
+        "hash": "5420648427187494189"
+      },
+      {
+        "file": "packages/components/Slider/slider.module.css",
+        "hash": "1813035358877253318"
+      },
+      {
+        "file": "types/packages/components/Dropdown/components/DropdownItem.d.ts",
+        "hash": "10058953155917469240"
+      },
+      {
+        "file": "packages/components/Checkbox/checkbox.module.css",
+        "hash": "8603814191170702877"
+      },
+      {
+        "file": "packages/components/Dropdown/DropdownContext.tsx",
+        "hash": "6368187128350324933"
+      },
+      {
+        "file": "packages/components/Spinner/spinner.module.css",
+        "hash": "13844834888664678048"
+      },
+      {
+        "file": "README.md",
+        "hash": "6192261055538866218"
+      },
+      {
+        "file": "packages/components/Avatar/AvatarIcon.tsx",
+        "hash": "392556230540484046"
+      },
+      {
+        "file": "packages/components/Dropdown/index.ts",
+        "hash": "18124018747644532277"
+      },
+      {
+        "file": "packages/components/ButtonGroup/ButtonGroup.stories.tsx",
+        "hash": "15835599881669399330"
+      },
+      {
+        "file": ".storybook/preview.tsx",
+        "hash": "9319072758445483662"
+      },
+      {
+        "file": "packages/components/Badge/index.ts",
+        "hash": "18436756348789434662"
+      },
+      {
+        "file": "packages/components/Avatar/Avatar.stories.tsx",
+        "hash": "798216803622893798"
+      },
+      {
+        "file": "types/packages/components/CheckboxGroup/CheckboxGroup.stories.d.ts",
+        "hash": "13287204875479875965"
+      },
+      {
+        "file": "types/packages/components/Avatar/index.d.ts",
+        "hash": "14205396139159692945"
+      },
+      {
+        "file": "types/packages/components/CircularProgress/CircularProgress.stories.d.ts",
+        "hash": "17461450278771521867"
+      },
+      {
+        "file": "packages/icons/DeleteFileIcon.tsx",
+        "hash": "16196814198978890566"
+      },
+      {
+        "file": "packages/icons/EditFileIcon.tsx",
+        "hash": "753538512994037031"
+      },
+      {
+        "file": "types/packages/components/Dropdown/DropdownMenu.stories.d.ts",
+        "hash": "12736272670937796812"
+      },
+      {
+        "file": "types/packages/App.d.ts",
+        "hash": "1405880428413367891"
+      },
+      {
+        "file": "packages/App.tsx",
+        "hash": "12680767809927353311"
+      },
+      {
+        "file": "types/packages/components/button/src/constants.d.ts",
+        "hash": "5289401939941926391"
+      },
+      {
+        "file": "packages/components/ButtonGroup/constants.ts",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "types/packages/components/Avatar/Avatar.stories.d.ts",
+        "hash": "305874598670551663"
+      },
+      {
+        "file": "packages/components/CircularProgress/CircularProgress.tsx",
+        "hash": "10294769358200240041"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/index.ts",
+        "hash": "10210289363836448843"
+      },
+      {
+        "file": "types/packages/components/Cards/components/index.d.ts",
+        "hash": "3285006492184294774"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "10808978640996509816"
+      },
+      {
+        "file": "types/packages/components/accordion/src/index.d.ts",
+        "hash": "13536770531559573231"
+      },
+      {
+        "file": "types/packages/components/button/src/index.d.ts",
+        "hash": "3128197297260833160"
+      },
+      {
+        "file": "packages/components/Image/index.ts",
+        "hash": "11674431184147072469"
+      },
+      {
+        "file": "packages/components/Cards/CardProduct.tsx",
+        "hash": "13581564020219993905"
       },
       {
         "file": "packages/components/Cards/components/CardFooter.tsx",
         "hash": "5787456878223785817"
+      },
+      {
+        "file": "packages/components/Dropdown/components/DropdownItem.tsx",
+        "hash": "4090229401088276476"
+      },
+      {
+        "file": "packages/index.ts",
+        "hash": "16063522346463296908"
+      },
+      {
+        "file": "types/packages/components/Cards/CardProduct.d.ts",
+        "hash": "2620663491899381472"
+      },
+      {
+        "file": "public/hero-card-complete.jpeg",
+        "hash": "2331273150623759423"
+      },
+      {
+        "file": "types/packages/components/Dropdown/constants.d.ts",
+        "hash": "5660335188512756332"
+      },
+      {
+        "file": "packages/components/Dropdown/components/DropdownMenu.tsx",
+        "hash": "14309877893710410990"
+      },
+      {
+        "file": "types/packages/icons/VolumeLowIcon.d.ts",
+        "hash": "1307077237933286914"
+      },
+      {
+        "file": "packages/components/Checkbox/index.ts",
+        "hash": "9347999398177086688"
+      },
+      {
+        "file": "types/packages/components/Badge/constants.d.ts",
+        "hash": "15379427681818227743"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/checkboxGroup.module.css",
+        "hash": "5734597722279147008"
+      },
+      {
+        "file": "packages/components/CircularProgress/circularProgress.module.css",
+        "hash": "16669715942951813915"
+      },
+      {
+        "file": "types/packages/components/Dropdown/DropdownContext.d.ts",
+        "hash": "2701646280570320881"
+      },
+      {
+        "file": "packages/components/ButtonGroup/ButtonGroup.tsx",
+        "hash": "13396645300348114311"
+      },
+      {
+        "file": "types/packages/components/accordion/src/constants.d.ts",
+        "hash": "12435006197374076541"
+      },
+      {
+        "file": "types/packages/icons/AvatarIcon.d.ts",
+        "hash": "13473680135880175978"
+      },
+      {
+        "file": "types/packages/components/ButtonGroup/ButtonGroup.stories.d.ts",
+        "hash": "16720316891408823915"
+      },
+      {
+        "file": ".eslintrc.cjs",
+        "hash": "6722509750058128323"
+      },
+      {
+        "file": "types/packages/components/Dropdown/components/DropdownMenu.d.ts",
+        "hash": "2159337594308692437"
+      },
+      {
+        "file": "types/packages/components/CircularProgress/index.d.ts",
+        "hash": "2593733549767519042"
+      },
+      {
+        "file": "packages/components/Dropdown/Dropdown.tsx",
+        "hash": "18310689485736494765"
+      },
+      {
+        "file": "packages/icons/UserIcon.tsx",
+        "hash": "17561437448552406343"
+      },
+      {
+        "file": "packages/components/Progress/Progress.tsx",
+        "hash": "12216103374817311160"
+      },
+      {
+        "file": "config/cssModules.js",
+        "hash": "10450574067859382707"
+      },
+      {
+        "file": "types/packages/components/Spinner/index.d.ts",
+        "hash": "6440052098319191237"
+      },
+      {
+        "file": "packages/vite-env.d.ts",
+        "hash": "7856441258253745083"
+      },
+      {
+        "file": ".storybook/manager.ts",
+        "hash": "12724836385602680334"
+      },
+      {
+        "file": "types/packages/components/Progress/index.d.ts",
+        "hash": "13801440145768995018"
+      },
+      {
+        "file": "packages/icons/NewFileIcon.tsx",
+        "hash": "5963025621774534227"
+      },
+      {
+        "file": "packages/components/Checkbox/Checkbox.tsx",
+        "hash": "9745792979804914382"
+      },
+      {
+        "file": "types/packages/components/Cards/components/CardBody.d.ts",
+        "hash": "6420388173071810085"
+      },
+      {
+        "file": "packages/components/Badge/constants.ts",
+        "hash": "14675287018258936936"
+      },
+      {
+        "file": "packages/components/Input/Input.stories.tsx",
+        "hash": "6769971024609004128"
+      },
+      {
+        "file": "packages/components/Avatar/constants.ts",
+        "hash": "899672441129932702"
+      },
+      {
+        "file": "packages/components/Progress/Progress.stories.tsx",
+        "hash": "9378250275000829719"
+      },
+      {
+        "file": "types/helpers/storybookts.d.ts",
+        "hash": "16178952118763188891"
+      },
+      {
+        "file": "tsconfig.node.json",
+        "hash": "10457744544638714465"
+      },
+      {
+        "file": "packages/components/Cards/CardWithDivider.tsx",
+        "hash": "15074463449045420793"
+      },
+      {
+        "file": "packages/components/Image/image.module.css",
+        "hash": "257588754899958021"
+      },
+      {
+        "file": "chromatic.config.json",
+        "hash": "8899004864811579736"
+      },
+      {
+        "file": "types/packages/components/Dropdown/components/DropdownTrigger.d.ts",
+        "hash": "8325601806252621899"
+      },
+      {
+        "file": "types/packages/components/ButtonGroup/constants.d.ts",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "types/packages/components/Cards/components/CardHeader.d.ts",
+        "hash": "17466078651316457019"
+      },
+      {
+        "file": "packages/components/Cards/CardCover.tsx",
+        "hash": "8482940408362371491"
+      },
+      {
+        "file": "types/packages/components/Avatar/AvatarGroup.d.ts",
+        "hash": "5958611711376525585"
+      },
+      {
+        "file": "packages/components/ButtonGroup/index.ts",
+        "hash": "8696406115039716005"
+      },
+      {
+        "file": "types/packages/components/Checkbox/Checkbox.d.ts",
+        "hash": "7814675886209054359"
+      },
+      {
+        "file": "types/packages/components/Cards/CardCover.d.ts",
+        "hash": "16985946594850909324"
+      },
+      {
+        "file": "types/packages/components/Input/index.d.ts",
+        "hash": "10256734152706566086"
+      },
+      {
+        "file": "packages/components/Spinner/Spinner.stories.tsx",
+        "hash": "7851856791198723243"
+      },
+      {
+        "file": "types/packages/icons/NewFileIcon.d.ts",
+        "hash": "15116716082246089869"
+      },
+      {
+        "file": "packages/components/Spinner/Spinner.tsx",
+        "hash": "9725261546511738448"
+      },
+      {
+        "file": "types/packages/components/Progress/constants.d.ts",
+        "hash": "8771744611564744524"
+      },
+      {
+        "file": "types/packages/components/Avatar/Avatar.d.ts",
+        "hash": "2973204943768516935"
+      },
+      {
+        "file": "packages/icons/AvatarIcon.tsx",
+        "hash": "6484458122267542168"
+      },
+      {
+        "file": "types/packages/components/Cards/components/CardFooter.d.ts",
+        "hash": "3924375381581983590"
+      },
+      {
+        "file": "packages/components/Slider/Slider.tsx",
+        "hash": "15440305752928669533"
+      },
+      {
+        "file": "types/packages/components/Badge/Badge.stories.d.ts",
+        "hash": "9452890377186284842"
+      },
+      {
+        "file": "types/packages/components/Progress/Progress.d.ts",
+        "hash": "16872862138389166483"
+      },
+      {
+        "file": "types/packages/components/Dropdown/index.d.ts",
+        "hash": "3703425202356536242"
+      },
+      {
+        "file": "packages/icons/icons.module.css",
+        "hash": "2423594607936727902"
+      },
+      {
+        "file": "types/packages/components/Input/constants.d.ts",
+        "hash": "1881590946910353519"
+      },
+      {
+        "file": "types/packages/components/button/src/Button.stories.d.ts",
+        "hash": "8321308445617135554"
+      },
+      {
+        "file": "packages/components/Cards/CardCoverAndFooter.tsx",
+        "hash": "52138690719011960"
+      },
+      {
+        "file": "types/packages/components/Slider/constants.d.ts",
+        "hash": "187382210626231751"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "6090453398496963699"
+      },
+      {
+        "file": "packages/components/Slider/Slider.stories.tsx",
+        "hash": "101239158964801577"
+      },
+      {
+        "file": "vite.config.ts",
+        "hash": "9741783092172070544"
+      },
+      {
+        "file": "types/packages/components/Spinner/constants.d.ts",
+        "hash": "1471868394577354955"
+      },
+      {
+        "file": "types/packages/components/Avatar/AvatarIcon.d.ts",
+        "hash": "850434250281971525"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5261253566607485510"
+      },
+      {
+        "file": "packages/components/Spinner/constants.ts",
+        "hash": "4327702463864768086"
+      },
+      {
+        "file": "packages/components/Checkbox/constants.ts",
+        "hash": "774584918514669785"
+      },
+      {
+        "file": "types/packages/components/Cards/CardWithDivider.d.ts",
+        "hash": "16350449498943763878"
+      },
+      {
+        "file": "packages/components/Badge/badge.module.css",
+        "hash": "8572021004154815831"
+      },
+      {
+        "file": "types/packages/components/Avatar/constants.d.ts",
+        "hash": "11589926523125190168"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/constants.ts",
+        "hash": "8403503815678428181"
+      },
+      {
+        "file": "types/packages/components/Cards/CardWithBlurredFooter.d.ts",
+        "hash": "14611975783241633347"
+      },
+      {
+        "file": "types/packages/components/divider/src/Divider.d.ts",
+        "hash": "17150816413745482487"
+      },
+      {
+        "file": "packages/components/Input/index.ts",
+        "hash": "11858523839063615844"
+      },
+      {
+        "file": "types/packages/icons/EyeFilledIcon.d.ts",
+        "hash": "4382382612774384494"
+      },
+      {
+        "file": "packages/icons/CameraIcon.tsx",
+        "hash": "2592352963203130219"
+      },
+      {
+        "file": "packages/components/Dropdown/components/DropdownTrigger.tsx",
+        "hash": "17440120008853891786"
+      },
+      {
+        "file": "packages/components/Cards/CardWithBlurredFooter.tsx",
+        "hash": "1599057362121229885"
+      },
+      {
+        "file": "types/packages/icons/CameraIcon.d.ts",
+        "hash": "3704021731743433148"
+      },
+      {
+        "file": "packages/components/CircularProgress/index.ts",
+        "hash": "5489717887606135274"
+      },
+      {
+        "file": ".storybook/main.ts",
+        "hash": "17332077763968995595"
+      },
+      {
+        "file": "nx.json",
+        "hash": "3285874903806716374"
+      },
+      {
+        "file": "packages/components/Input/input.module.css",
+        "hash": "1899008647730214395"
+      },
+      {
+        "file": "types/packages/components/ButtonGroup/ButtonGroup.d.ts",
+        "hash": "7736469992364339206"
+      },
+      {
+        "file": "packages/components/CheckboxGroup/CheckboxGroup.tsx",
+        "hash": "12682255757911327000"
+      },
+      {
+        "file": "packages/components/Dropdown/dropdown.module.css",
+        "hash": "11765211607578130753"
+      },
+      {
+        "file": "packages/components/Input/constants.ts",
+        "hash": "15754902517956613767"
+      },
+      {
+        "file": "types/packages/components/Input/Input.d.ts",
+        "hash": "7207466800532730724"
+      },
+      {
+        "file": "types/packages/components/Cards/constants.d.ts",
+        "hash": "10722919044253359197"
+      },
+      {
+        "file": "types/packages/components/Spinner/Spinner.d.ts",
+        "hash": "14522191855094044636"
+      },
+      {
+        "file": "types/packages/components/Cards/CardWithImage.d.ts",
+        "hash": "1010535104177163279"
+      },
+      {
+        "file": "types/packages/components/Slider/index.d.ts",
+        "hash": "3198446224189131020"
+      },
+      {
+        "file": "types/packages/components/accordion/src/AccordionItem.d.ts",
+        "hash": "3266369837034449041"
+      },
+      {
+        "file": "types/packages/components/CheckboxGroup/constants.d.ts",
+        "hash": "1794734212372434819"
+      },
+      {
+        "file": "types/packages/components/Badge/Badge.d.ts",
+        "hash": "15072894913663667464"
+      },
+      {
+        "file": "packages/icons/CopyLinkIcon.tsx",
+        "hash": "5951098566561887576"
+      },
+      {
+        "file": "types/packages/icons/EditFileIcon.d.ts",
+        "hash": "368002343665117472"
+      },
+      {
+        "file": "packages/components/CircularProgress/constants.ts",
+        "hash": "2280047476788647646"
+      },
+      {
+        "file": "types/packages/core/system/src/index.d.ts",
+        "hash": "10617416906195152757"
+      },
+      {
+        "file": "packages/components/Badge/Badge.stories.tsx",
+        "hash": "3410729670869403692"
+      },
+      {
+        "file": "types/packages/icons/DeleteFileIcon.d.ts",
+        "hash": "7669026308031925739"
+      },
+      {
+        "file": "types/packages/hooks/ripple/src/index.d.ts",
+        "hash": "14059395138498639598"
+      },
+      {
+        "file": "types/packages/main.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "public/vite.svg",
+        "hash": "16046085400642193116"
+      },
+      {
+        "file": "packages/components/Badge/Badge.tsx",
+        "hash": "14972725740632215192"
+      },
+      {
+        "file": "types/packages/components/Cards/CardCoverAndFooter.d.ts",
+        "hash": "6560105080312166377"
+      },
+      {
+        "file": "packages/components/Image/Image.tsx",
+        "hash": "9738766625796840003"
+      },
+      {
+        "file": "packages/components/Avatar/avatar.module.css",
+        "hash": "18095822810000304218"
+      },
+      {
+        "file": "packages/components/Cards/components/index.ts",
+        "hash": "1132129869262944008"
+      },
+      {
+        "file": "packages/components/CircularProgress/CircularProgress.stories.tsx",
+        "hash": "14151820508592130796"
+      },
+      {
+        "file": "types/packages/components/button/src/Button.d.ts",
+        "hash": "9253162951145479337"
+      },
+      {
+        "file": "packages/components/Cards/Card.tsx",
+        "hash": "6127291416088316231"
+      },
+      {
+        "file": "index.html",
+        "hash": "11758769188012742135"
+      },
+      {
+        "file": "packages/components/Cards/index.ts",
+        "hash": "9896032335905246549"
+      },
+      {
+        "file": "types/packages/components/CheckboxGroup/CheckboxGroup.d.ts",
+        "hash": "2312064683613815489"
+      },
+      {
+        "file": "packages/icons/VolumeLowIcon.tsx",
+        "hash": "11994063480372714302"
+      },
+      {
+        "file": "packages/components/Spinner/index.ts",
+        "hash": "15327846586145715615"
+      },
+      {
+        "file": "package.json",
+        "hash": "14421719506760987348"
+      },
+      {
+        "file": "packages/icons/EyeFilledIcon.tsx",
+        "hash": "6308927585083132323"
+      },
+      {
+        "file": "helpers/styles.js",
+        "hash": "11622997241938226110"
+      },
+      {
+        "file": "types/packages/components/Image/Image.d.ts",
+        "hash": "17122217921901198332"
+      },
+      {
+        "file": "types/packages/components/Checkbox/index.d.ts",
+        "hash": "17909074648438391016"
+      },
+      {
+        "file": "types/packages/icons/VolumeHighIcon.d.ts",
+        "hash": "9294826145570939600"
+      },
+      {
+        "file": "types/packages/icons/UserIcon.d.ts",
+        "hash": "10302733331247835619"
+      },
+      {
+        "file": "types/packages/components/Badge/index.d.ts",
+        "hash": "12145928589792938470"
+      },
+      {
+        "file": "packages/components/Cards/components/CardBody.tsx",
+        "hash": "9986576947086586786"
+      },
+      {
+        "file": "rollup.config.js",
+        "hash": "6605282973605336331"
+      },
+      {
+        "file": "packages/icons/EyeSlashFilledIcon.tsx",
+        "hash": "7681561616706774445"
+      },
+      {
+        "file": "types/packages/icons/EyeSlashFilledIcon.d.ts",
+        "hash": "13946637028184837725"
+      },
+      {
+        "file": "types/packages/index.d.ts",
+        "hash": "5427156499007266749"
+      },
+      {
+        "file": ".github/workflows/chromatic.yml",
+        "hash": "5504486861577717510"
+      },
+      {
+        "file": "packages/lib/colors.ts",
+        "hash": "1424735002064480067"
+      },
+      {
+        "file": "packages/components/Dropdown/DropdownMenu.stories.tsx",
+        "hash": "13757193705353817395"
+      },
+      {
+        "file": "types/packages/core/system/src/colors.d.ts",
+        "hash": "14225324656744227084"
+      },
+      {
+        "file": "types/packages/components/CheckboxGroup/index.d.ts",
+        "hash": "2474134754245771654"
+      },
+      {
+        "file": "packages/components/index.ts",
+        "hash": "2914352174722280381"
+      },
+      {
+        "file": "types/packages/components/CircularProgress/constants.d.ts",
+        "hash": "17969577855921669247"
+      },
+      {
+        "file": "types/packages/components/Checkbox/constants.d.ts",
+        "hash": "5759594363751475059"
+      },
+      {
+        "file": "packages/components/Colors/colors.module.css",
+        "hash": "4436440371388118273"
+      },
+      {
+        "file": "packages/components/Dropdown/constants.ts",
+        "hash": "9670494854166667112"
+      },
+      {
+        "file": "types/packages/components/accordion/src/Accordion.stories.d.ts",
+        "hash": "6060400246483681027"
+      },
+      {
+        "file": "types/packages/components/divider/src/index.d.ts",
+        "hash": "10645014811866238721"
+      },
+      {
+        "file": "types/packages/components/Checkbox/Checkbox.stories.d.ts",
+        "hash": "11756084028322234614"
+      },
+      {
+        "file": "types/packages/components/accordion/src/Accordion.d.ts",
+        "hash": "8954089610253087306"
+      },
+      {
+        "file": "types/packages/hooks/ripple/src/useRippleEffect.d.ts",
+        "hash": "14951713121942635610"
+      },
+      {
+        "file": "packages/icons/VolumeHighIcon.tsx",
+        "hash": "11496628940216747067"
+      },
+      {
+        "file": "types/packages/components/Dropdown/Dropdown.d.ts",
+        "hash": "14784070333774540374"
+      },
+      {
+        "file": "types/packages/components/divider/src/constants.d.ts",
+        "hash": "16506832138583037499"
+      },
+      {
+        "file": "packages/components/Cards/CardWithImage.tsx",
+        "hash": "5924236975208144204"
+      },
+      {
+        "file": "packages/components/Avatar/Avatar.tsx",
+        "hash": "4124329259557997642"
       }
     ],
     "projectFileMap": {

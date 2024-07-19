@@ -1,0 +1,27 @@
+import React from "react";
+import { SemanticColor } from "@mirakle-ui/system20";
+import { ButtonVariants, ButtonSizes, ButtonRadius, ButtonTypes } from "./constants";
+type ButtonProps = {
+    color?: SemanticColor;
+    customColor?: string;
+    customRippleColor?: string;
+    customHoverColor?: string;
+    customWidth?: string;
+    variant?: ButtonVariants;
+    size?: ButtonSizes;
+    radius?: ButtonRadius;
+    isClickable?: boolean;
+    isDisabled?: boolean;
+    disabledRipple?: boolean;
+    label?: string;
+    startContent?: React.JSX.Element;
+    endContent?: React.ReactNode;
+    isIconOnly?: boolean;
+    children?: React.ReactNode;
+    blackText?: boolean;
+    whiteText?: boolean;
+    type?: ButtonTypes;
+    onClick?: () => void;
+};
+export declare const Button: ({ children, disabledRipple, size, radius, isClickable, isDisabled, color, customColor, customRippleColor, customHoverColor, customWidth, variant, startContent, endContent, isIconOnly, blackText, whiteText, type, onClick, }: ButtonProps) => React.JSX.Element;
+export default Button;
