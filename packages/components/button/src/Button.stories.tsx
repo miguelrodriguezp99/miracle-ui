@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./Button";
-import { semanticColors } from "@mirakle-ui/system20";
+import { semanticColors } from "../../../core/system";
 import { radius, sizes, variants } from "./constants";
 import React from "react";
 import { CameraIcon } from "./CameraIcon";
