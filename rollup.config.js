@@ -13,7 +13,7 @@ const packageJson = require("./package.json");
 
 export default [
   {
-    input: "src/index.ts",
+    input: "packages/index.ts",
     output: [
       {
         file: packageJson.main,
@@ -24,20 +24,20 @@ export default [
     // external: ["react", "react-dom"],
     plugins: [
       typescript({
-        exclude: ["./src/icons/**", "**/*.stories.tsx"],
+        exclude: ["./packages/icons/**", "**/*.stories.tsx"],
       }),
-      ignore(["./src/icons/**", "**/*.stories.tsx"]),
+      ignore(["./packages/icons/**", "**/*.stories.tsx"]),
       peerDepsExternal(),
       resolve(),
       commonjs(),
       postcss({
-        exclude: "src/app.css",
+        exclude: "packages/app.css",
       }),
       terser(),
     ],
   },
   {
-    input: "dist/cjs/types/src/index.d.ts",
+    input: "dist/cjs/types/packages/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts.default()],
     external: [/\.css$/],

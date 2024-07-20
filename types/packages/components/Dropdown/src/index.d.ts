@@ -1,4 +1,4 @@
-export { default as Dropdown } from "./Dropdown";
-export { default as DropdownTrigger } from "./components/DropdownTrigger";
-export { default as DropdownMenu } from "./components/DropdownMenu";
-export { default as DropdownItem } from "./components/DropdownItem";
+export { Dropdown } from "./Dropdown";
+export { DropdownTrigger } from "./components/DropdownTrigger";
+export { DropdownMenu } from "./components/DropdownMenu";
+export { DropdownItem } from "./components/DropdownItem";

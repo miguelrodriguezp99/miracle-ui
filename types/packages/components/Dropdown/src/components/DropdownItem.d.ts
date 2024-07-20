@@ -11,5 +11,5 @@ interface DropdownItemProps {
     endContent?: React.ReactNode;
     onClick?: () => void;
 }
-declare const DropdownItem: ({ children, color, variant, textColor, startContent, endContent, fontSize, onClick, }: DropdownItemProps) => React.JSX.Element;
+export declare const DropdownItem: ({ children, color, variant, textColor, startContent, endContent, fontSize, onClick, }: DropdownItemProps) => React.JSX.Element;
 export default DropdownItem;

@@ -1,5 +1,6 @@
 .badge-container {
   position: relative;
+  width: fit-content;
 }
 
 .badge {

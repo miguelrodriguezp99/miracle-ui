@@ -1,6 +1,6 @@
 export { default as Avatar } from "./avatar/src/Avatar";
 export { default as AvatarGroup } from "./avatar/src/AvatarGroup";
-export { default as Badge } from "./badge/src";
+export { Badge } from "./badge/src";
 export { default as Button } from "./button/src/Button";
 export { default as ButtonGroup } from "./button/src/ButtonGroup";
 export { default as Card } from "./cards/src/Card";
@@ -23,5 +23,6 @@ export { default as Image } from "./Image";
 export { default as Input } from "./input/src/Input";
 export { default as Progress } from "./progress/src/Progress";
 export { default as Slider } from "./slider/src/Slider";
+export { default as Spinner } from "./spinner/src/Spinner";
 export { default as Accordion } from "./accordion/src/Accordion";
 export { default as AccordionItem } from "./accordion/src/AccordionItem";
