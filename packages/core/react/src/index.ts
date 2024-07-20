@@ -5,6 +5,7 @@ export * from "@mirakle-ui/button";
 export * from "@mirakle-ui/checkbox";
 export * from "@mirakle-ui/checkbox-group";
 export * from "@mirakle-ui/divider";
+export * from "@mirakle-ui/dropdown";
 export * from "@mirakle-ui/input";
 export * from "@mirakle-ui/progress";
 export * from "@mirakle-ui/slider";
