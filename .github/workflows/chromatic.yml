@@ -1,3 +1,5 @@
+# .github/workflows/chromatic.yml
+
 name: "Chromatic"
 
 on: push
@@ -13,33 +15,12 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: '14' # O cualquier otra versión LTS que sea compatible con tus dependencias.
-          cache: 'npm'
-      - name: Check for `package-lock.json`
-        id: package-lock-check
-        run: |
-          if [ -f package-lock.json ]; then
-            echo "package-lock.json exists"
-            echo "::set-output name=lockfile_exists::true"
-          else
-            echo "package-lock.json does not exist"
-            echo "::set-output name=lockfile_exists::false"
-          fi
-      - name: Remove `node_modules` and `package-lock.json` if exists
-        if: steps.package-lock-check.outputs.lockfile_exists == 'true'
-        run: |
-          rm -rf node_modules
-          rm -f package-lock.json
-      - name: Clean npm cache
-        run: npm cache clean --force
+          node-version: 20
       - name: Install dependencies
-        run: |
-          if [ "${{ steps.package-lock-check.outputs.lockfile_exists }}" == 'true' ]; then
-            npm ci
-          else
-            npm install
-          fi
+        # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
+        run: npm ci
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
+          # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
