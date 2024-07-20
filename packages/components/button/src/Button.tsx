@@ -37,7 +37,7 @@ type ButtonProps = {
 };
 
 export const Button = ({
-  children = "Button",
+  children = "Button!",
   disabledRipple = false,
   size = sizes.md,
   radius = "full",

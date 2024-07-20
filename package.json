@@ -9,9 +9,7 @@
   "workspaces": [
     "packages/components/*",
     "packages/hooks/*",
-    "packages/core/*",
-    "packages/core/react/*",
-    "packages/core/system/*"
+    "packages/core/*"
   ],
   "repository": {
     "type": "git",
