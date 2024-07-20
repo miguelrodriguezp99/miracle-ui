@@ -29,7 +29,7 @@ export { default as DropdownItem } from "./Dropdown/components/DropdownItem";
 export { default as Image } from "./Image";
 export { default as Input } from "./input/src/Input";
 export { default as Progress } from "./progress/src/Progress";
-export { default as Slider } from "./slider/dist";
+export { default as Slider } from "./slider/src/Slider";
 
 /* ACCORDION */
 export { default as Accordion } from "./accordion/src/Accordion";
