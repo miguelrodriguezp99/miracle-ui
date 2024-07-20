@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
-import { Image } from "../Image/Image";
+import { Image } from "./Image";
 
 interface CardCoverProps {
   title?: string;

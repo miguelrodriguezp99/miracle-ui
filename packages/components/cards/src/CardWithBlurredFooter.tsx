@@ -1,6 +1,6 @@
 import React from "react";
 import CardBody from "./components/CardBody";
-import { Image } from "../Image/Image";
+import { Image } from "./Image";
 import { CardFooter } from "./components";
 import styles from "./card.module.css";
 

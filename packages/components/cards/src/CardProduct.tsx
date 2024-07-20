@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./card.module.css";
 import CardBody from "./components/CardBody";
-import { Image } from "../Image/Image";
+import { Image } from "./Image";
 import { CardFooter } from "./components";
 
 interface CardProductProps {

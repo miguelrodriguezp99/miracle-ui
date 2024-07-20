@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { CheckboxGroup } from "./CheckboxGroup";
-import Checkbox from "../checkbox/src/Checkbox";
+import Checkbox from "@mirakle-ui/checkbox/src/Checkbox";
 import React from "react";
 import { directions, gaps } from "./constants";
 

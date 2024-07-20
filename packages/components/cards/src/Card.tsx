@@ -3,8 +3,8 @@ import classNames from "classnames";
 import styles from "./card.module.css";
 
 import { CardWidthTypes, PaddingTypes } from "./constants";
-import { SemanticColor } from "../../lib/colors";
-import useRippleEffect from "./../../hooks/ripple/src/useRippleEffect";
+import { SemanticColor } from "@mirakle-ui/system20";
+import { useRippleEffect } from "@mirakle-ui/ripple20";
 
 interface CardProps {
   children?: React.ReactNode;

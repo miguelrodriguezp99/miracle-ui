@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
-import { Image } from "../Image/Image";
+import { Image } from "./Image";
 import { CardFooter } from "./components";
-import Button from "../button/src/Button";
+import Button from "@mirakle-ui/button/src/Button";
 
 interface CardCoverAndFooterProps {
   title?: string;

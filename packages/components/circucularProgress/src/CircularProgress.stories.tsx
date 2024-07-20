@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { CircularProgress } from "./CircularProgress";
-import { semanticColors } from "../../lib/colors";
+import { semanticColors } from "@mirakle-ui/system20/src/colors";
 import { sizes } from "./constants";
 
 const meta: Meta<typeof CircularProgress> = {
