@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import type { Meta, StoryFn as Story } from "@storybook/react";
 import { Slider } from "./Slider";
-import { SemanticColor, semanticColors } from "../../lib/colors";
+import { SemanticColor, semanticColors } from "../../../core/system";
 import { sizes, SliderDirection, SliderSizes } from "./constants";
-import { VolumeLowIcon } from "../../icons/VolumeLowIcon";
-import { VolumeHighIcon } from "../../icons/VolumeHighIcon";
+import { VolumeLowIcon } from "../../../icons/VolumeLowIcon";
+import { VolumeHighIcon } from "../../../icons/VolumeHighIcon";
 
 const meta: Meta<typeof Slider> = {
   title: "Components/Slider",

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./spinner.module.css";
 import classNames from "classnames";
-import { SemanticColor, semanticColors } from "../../lib/colors";
+import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
 import { SpinnerSizes, sizes } from "./constants";
 
 type Props = {

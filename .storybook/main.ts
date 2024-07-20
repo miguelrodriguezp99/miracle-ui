@@ -1,6 +1,6 @@
 // @ts-nocheck
 import type { StorybookConfig } from "@storybook/react-vite";
-const cssModules = require("../config/cssModules");
+import cssModules from "../config/cssModules";
 
 const config: StorybookConfig = {
   stories: [

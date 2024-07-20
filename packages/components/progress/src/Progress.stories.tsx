@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Progress } from "./Progress";
 import { radii, sizes } from "./constants";
-import { semanticColors } from "../../lib/colors";
+import { semanticColors } from "../../../core/system";
 
 const meta: Meta<typeof Progress> = {
   title: "Components/Progress",

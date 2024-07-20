@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./slider.module.css";
 import classNames from "classnames";
 import { directions, sizes, SliderDirection, SliderSizes } from "./constants";
-import { SemanticColor, semanticColors } from "../../lib/colors";
-import Button from "../button/src/Button";
+import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { Button } from "@mirakle-ui/button";
 
 type Props = {
   color?: SemanticColor;
