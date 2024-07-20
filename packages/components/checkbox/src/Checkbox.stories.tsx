@@ -2,7 +2,7 @@
 // @ts-nocheck
 import type { Meta, StoryObj } from "@storybook/react";
 import Checkbox from "./Checkbox";
-import { semanticColorsCheckbox } from "../../../lib/colors";
+import { semanticColorsCheckbox } from "../../../core/system/src/colors";
 import { radii, sizes } from "./constants";
 
 const meta: Meta<typeof Checkbox> = {

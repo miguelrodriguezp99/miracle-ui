@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import type { Meta, StoryFn as Story } from "@storybook/react";
 import { Slider } from "./Slider";
-import { SemanticColor, semanticColors } from "../../../core/system";
+import { SemanticColor, semanticColors } from "../../../core/system/src/colors";
 import { sizes, SliderDirection, SliderSizes } from "./constants";
 import { VolumeLowIcon } from "../../../icons/VolumeLowIcon";
 import { VolumeHighIcon } from "../../../icons/VolumeHighIcon";

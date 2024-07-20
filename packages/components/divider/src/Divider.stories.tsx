@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import type { Meta, StoryObj } from "@storybook/react";
 import { Divider } from "./Divider";
 import { directions } from "./constants";
-import { semanticColors } from "../../../core/system";
+import { semanticColors } from "../../../core/system/src/colors";
 
 const meta: Meta<typeof Divider> = {
   title: "Components/Divider",

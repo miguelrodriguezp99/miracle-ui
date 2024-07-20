@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import type { Meta, StoryFn as Story } from "@storybook/react";
 import { Input } from "./Input";
 import {
@@ -11,7 +13,7 @@ import {
   variants,
   widths,
 } from "./constants";
-import { SemanticColor, semanticColors } from "../../../core/system";
+import { semanticColors } from "../../../core/system/src/colors";
 import { useState } from "react";
 import React from "react";
 

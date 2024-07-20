@@ -3,7 +3,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Badge } from "./Badge";
 import { positions, radii, variants } from "./constants";
-import { semanticColors } from "../../../core/system";
+import { semanticColors } from "../../../core/system/src/colors";
 
 import { Avatar } from "../../avatar/src/Avatar";
 import React from "react";
