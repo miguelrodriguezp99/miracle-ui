@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./accordion.module.css";
 import classNames from "classnames";
-import Divider from "@mirakle-ui/divider";
+import { Divider } from "@mirakle-ui/divider";
 
 interface AccordionItemProps {
   title?: string;

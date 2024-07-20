@@ -33,6 +33,7 @@
     "@mirakle-ui/checkbox-group": "^0.0.51",
     "@mirakle-ui/circular-progress": "^0.0.51",
     "@mirakle-ui/divider": "^0.0.51",
+    "@mirakle-ui/dropdown": "0.0.51",
     "@mirakle-ui/input": "^0.0.51",
     "@mirakle-ui/progress": "^0.0.51",
     "@mirakle-ui/slider": "^0.0.51",
