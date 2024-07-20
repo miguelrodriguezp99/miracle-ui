@@ -1,7 +1,9 @@
 {
   "targetDefaults": {
     "rollup": {
-      "dependsOn": []
+      "dependsOn": [
+        "^rollup"
+      ]
     },
     "test": {
       "dependsOn": []
