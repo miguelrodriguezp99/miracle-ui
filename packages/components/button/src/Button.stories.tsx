@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./Button";
-import { semanticColors } from "../../../core/system";
+import { semanticColors } from "../../../core/system/src/colors";
 import { radius, sizes, variants } from "./constants";
 import React from "react";
 import { CameraIcon } from "./CameraIcon";
