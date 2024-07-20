@@ -6,7 +6,7 @@ interface DropdownProps {
   children: React.ReactNode;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ children }) => {
+export const Dropdown: React.FC<DropdownProps> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {

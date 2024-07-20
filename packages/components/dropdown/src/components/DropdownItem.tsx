@@ -16,7 +16,7 @@ interface DropdownItemProps {
   onClick?: () => void;
 }
 
-const DropdownItem = ({
+export const DropdownItem = ({
   children,
   color = semanticColors.default,
   variant = variants.solid,

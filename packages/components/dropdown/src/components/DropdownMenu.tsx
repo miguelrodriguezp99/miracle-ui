@@ -54,7 +54,7 @@ const useDropdownStyle = ({
   return style;
 };
 
-const DropdownMenu = ({
+export const DropdownMenu = ({
   children,
   position = positions.bottom,
   offset = 0,

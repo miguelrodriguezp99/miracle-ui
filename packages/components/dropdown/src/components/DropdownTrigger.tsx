@@ -5,7 +5,9 @@ interface DropdownTriggerProps {
   children: React.ReactNode;
 }
 
-const DropdownTrigger: React.FC<DropdownTriggerProps> = ({ children }) => {
+export const DropdownTrigger: React.FC<DropdownTriggerProps> = ({
+  children,
+}) => {
   const { toggleMenu } = useContext(DropdownContext);
   return (
     <div

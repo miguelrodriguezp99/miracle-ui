@@ -5,7 +5,7 @@ interface DropdownContextType {
   toggleMenu: () => void;
 }
 
-const DropdownContext = createContext<DropdownContextType>({
+export const DropdownContext = createContext<DropdownContextType>({
   isOpen: false,
   toggleMenu: () => {},
 });
