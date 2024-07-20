@@ -21,10 +21,10 @@ export { default as CircularProgress } from "./CircularProgress";
 export { default as Divider } from "./divider/src/Divider";
 
 /* DROPDOWN */
-export { default as Dropdown } from "./Dropdown/Dropdown";
-export { default as DropdownTrigger } from "./Dropdown/components/DropdownTrigger";
-export { default as DropdownMenu } from "./Dropdown/components/DropdownMenu";
-export { default as DropdownItem } from "./Dropdown/components/DropdownItem";
+export { default as Dropdown } from "./dropdown/src/Dropdown";
+export { default as DropdownTrigger } from "./dropdown/src/components/DropdownTrigger";
+export { default as DropdownMenu } from "./dropdown/src/components/DropdownMenu";
+export { default as DropdownItem } from "./dropdown/src/components/DropdownItem";
 
 export { default as Image } from "./Image";
 export { default as Input } from "./input/src/Input";

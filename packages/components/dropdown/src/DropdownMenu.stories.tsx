@@ -1,15 +1,17 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import type { Meta, StoryObj } from "@storybook/react";
 import Dropdown from "./Dropdown";
 import React from "react";
-import Button from "../button/src/Button";
+import Button from "../../button/src/Button";
 import DropdownItem from "./components/DropdownItem";
 import DropdownMenu from "./components/DropdownMenu";
 import DropdownTrigger from "./components/DropdownTrigger";
 import { DropdownPositions, positions } from "./constants";
-import { NewFileIcon } from "../../icons/NewFileIcon";
-import { CopyLinkIcon } from "../../icons/CopyLinkIcon";
-import { EditFileIcon } from "../../icons/EditFileIcon";
-import { DeleteFileIcon } from "../../icons/DeleteFileIcon";
+import { NewFileIcon } from "../../../icons/NewFileIcon";
+import { CopyLinkIcon } from "../../../icons/CopyLinkIcon";
+import { EditFileIcon } from "../../../icons/EditFileIcon";
+import { DeleteFileIcon } from "../../../icons/DeleteFileIcon";
 
 interface DropdownArgs {
   isBlackBackground: boolean;

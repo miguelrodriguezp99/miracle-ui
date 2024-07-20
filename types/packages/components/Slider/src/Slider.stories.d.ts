@@ -1,12 +1,11 @@
 import React from "react";
 import type { Meta } from "@storybook/react";
 import { Slider } from "./Slider";
-import { SemanticColor } from "../../../core/system";
 import { SliderDirection, SliderSizes } from "./constants";
 declare const meta: Meta<typeof Slider>;
 export default meta;
 export declare const Primary: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color?: SemanticColor;
+    color?: import("@mirakle-ui/system20").SemanticColor;
     customColor?: string;
     customHoverColor?: string;
     size?: SliderSizes;
@@ -25,7 +24,7 @@ export declare const Primary: import("@storybook/csf").AnnotatedStoryFn<import("
     onChange: (value: number) => void;
 }>;
 export declare const Vertical: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color?: SemanticColor;
+    color?: import("@mirakle-ui/system20").SemanticColor;
     customColor?: string;
     customHoverColor?: string;
     size?: SliderSizes;
@@ -44,7 +43,7 @@ export declare const Vertical: import("@storybook/csf").AnnotatedStoryFn<import(
     onChange: (value: number) => void;
 }>;
 export declare const WithLabels: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color?: SemanticColor;
+    color?: import("@mirakle-ui/system20").SemanticColor;
     customColor?: string;
     customHoverColor?: string;
     size?: SliderSizes;
@@ -63,7 +62,7 @@ export declare const WithLabels: import("@storybook/csf").AnnotatedStoryFn<impor
     onChange: (value: number) => void;
 }>;
 export declare const WithIcons: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color?: SemanticColor;
+    color?: import("@mirakle-ui/system20").SemanticColor;
     customColor?: string;
     customHoverColor?: string;
     size?: SliderSizes;
@@ -82,7 +81,7 @@ export declare const WithIcons: import("@storybook/csf").AnnotatedStoryFn<import
     onChange: (value: number) => void;
 }>;
 export declare const WithSteps: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color?: SemanticColor;
+    color?: import("@mirakle-ui/system20").SemanticColor;
     customColor?: string;
     customHoverColor?: string;
     size?: SliderSizes;
@@ -101,7 +100,7 @@ export declare const WithSteps: import("@storybook/csf").AnnotatedStoryFn<import
     onChange: (value: number) => void;
 }>;
 export declare const WithIconsSteps: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color?: SemanticColor;
+    color?: import("@mirakle-ui/system20").SemanticColor;
     customColor?: string;
     customHoverColor?: string;
     size?: SliderSizes;
@@ -120,7 +119,7 @@ export declare const WithIconsSteps: import("@storybook/csf").AnnotatedStoryFn<i
     onChange: (value: number) => void;
 }>;
 export declare const WithIconsStepsVertical: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color?: SemanticColor;
+    color?: import("@mirakle-ui/system20").SemanticColor;
     customColor?: string;
     customHoverColor?: string;
     size?: SliderSizes;
@@ -139,7 +138,7 @@ export declare const WithIconsStepsVertical: import("@storybook/csf").AnnotatedS
     onChange: (value: number) => void;
 }>;
 export declare const Disabled: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, {
-    color?: SemanticColor;
+    color?: import("@mirakle-ui/system20").SemanticColor;
     customColor?: string;
     customHoverColor?: string;
     size?: SliderSizes;

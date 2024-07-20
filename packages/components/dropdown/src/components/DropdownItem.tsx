@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import styles from "./../dropdown.module.css";
-import "./../../styles/global.css";
 import DropdownContext from "../DropdownContext";
 import { DropdownVariants, variants } from "../constants";
-import { SemanticColor, semanticColors } from "../../../lib/colors";
+import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
 import classNames from "classnames";
 
 interface DropdownItemProps {
