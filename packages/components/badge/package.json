@@ -29,6 +29,7 @@
     "@mirakle-ui/avatar": "file:../avatar",
     "@mirakle-ui/divider": "file:../divider",
     "@mirakle-ui/system20": "file:../../core/system",
+    "@mirakle-ui/variables": "file:../../core/variables",
     "classnames": "^2.5.1"
   },
   "devDependencies": {

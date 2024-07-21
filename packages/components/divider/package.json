@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@mirakle-ui/system20": "file:../../core/system",
+    "@mirakle-ui/variables": "file:../../core/variables",
     "classnames": "^2.5.1"
   },
   "devDependencies": {
