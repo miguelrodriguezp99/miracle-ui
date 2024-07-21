@@ -3,6 +3,7 @@
 /* eslint-disable no-undef */
 
 import { Command } from "commander";
+import { exec } from "child_process";
 import fs from "fs";
 import path from "path";
 
@@ -207,6 +208,36 @@ program
       console.log(`Added import statement to ${mainFile}.`);
     } else {
       console.error("No suitable main file found.");
+    }
+  });
+
+function runCommand(command) {
+  return new Promise((resolve, reject) => {
+    exec(command, (error, stdout, stderr) => {
+      console.log(`\x1b[34m${stdout} \x1b[0m`);
+      console.log(`\x1b[34m${stderr} \x1b[0m`);
+      if (error) {
+        reject(error);
+      } else {
+        resolve(stdout);
+      }
+    });
+  });
+}
+
+program
+  .command("add <packages...>")
+  .description("Install the specified packages")
+  .action(async (packages) => {
+    for (const pkg of packages) {
+      const command = `npm install @mirakle-ui/${pkg}`;
+      console.log(`\x1b[32mInstalling ${pkg}... \x1b[0m`);
+      try {
+        await runCommand(command);
+        console.log(`\x1b[32m${pkg} installed successfully. \x1b[0m`);
+      } catch (error) {
+        console.log(`\x1b[31m${pkg} installed successfully. \x1b[0m`);
+      }
     }
   });
 
