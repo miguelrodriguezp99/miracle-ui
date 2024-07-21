@@ -4,5 +4,3 @@ export {
   semanticColorsCheckbox,
   semanticColors,
 } from "./colors";
-
-export * from "@mirakle-ui/variables";
