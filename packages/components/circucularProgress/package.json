@@ -1,6 +1,6 @@
 {
   "name": "@mirakle-ui/circular-progress",
-  "version": "0.1.1",
+  "version": "0.1.20",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
