@@ -200,12 +200,12 @@ program
       const mainFileDir = path.dirname(mainFile); // Directorio del archivo principal encontrado
       const cssFilePath = path.join(mainFileDir, "mirakle-ui.css");
       fs.writeFileSync(cssFilePath, cssContent, "utf-8");
-      console.log("mirakle-ui.css created successfully.");
+      console.log(`\x1b[34mmirakle-ui.css created successfully. \x1b[0m`);
 
       const fileContent = fs.readFileSync(mainFile, "utf-8");
       const newContent = `import './mirakle-ui.css';\n${fileContent}`;
       fs.writeFileSync(mainFile, newContent, "utf-8");
-      console.log(`Added import statement to ${mainFile}.`);
+      console.log(`\x1b[34mAdded import statement to ${mainFile}. \x1b[0m`);
     } else {
       console.error("No suitable main file found.");
     }
@@ -226,17 +226,31 @@ function runCommand(command) {
 }
 
 program
-  .command("add <packages...>")
+  .command("add [packages...]")
   .description("Install the specified packages")
-  .action(async (packages) => {
-    for (const pkg of packages) {
-      const command = `npm install @mirakle-ui/${pkg}`;
-      console.log(`\x1b[32mInstalling ${pkg}... \x1b[0m`);
+  .option("--all", "Install @mirakle-ui/react package")
+  .action(async (packages, cmd) => {
+    if (cmd.all) {
+      const command = `npm install @mirakle-ui/react`;
+      console.log(`\x1b[32mInstalling @mirakle-ui/react... \x1b[0m`);
       try {
         await runCommand(command);
-        console.log(`\x1b[32m${pkg} installed successfully. \x1b[0m`);
+        console.log(
+          `\x1b[32m@mirakle-ui/react installed successfully. \x1b[0m`
+        );
       } catch (error) {
-        console.log(`\x1b[31m${pkg} installed successfully. \x1b[0m`);
+        console.log(`\x1b[31mFailed to install @mirakle-ui/react. \x1b[0m`);
+      }
+    } else {
+      for (const pkg of packages) {
+        const command = `npm install @mirakle-ui/${pkg}`;
+        console.log(`\x1b[32mInstalling ${pkg}... \x1b[0m`);
+        try {
+          await runCommand(command);
+          console.log(`\x1b[32m${pkg} installed successfully. \x1b[0m`);
+        } catch (error) {
+          console.log(`\x1b[31mFailed to install ${pkg}. \x1b[0m`);
+        }
       }
     }
   });

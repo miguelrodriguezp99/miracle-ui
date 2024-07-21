@@ -13,7 +13,9 @@ export default {
     exports: "auto",
   },
   plugins: [
-    resolve(),
+    resolve({
+      preferBuiltins: true,
+    }),
     preserveShebangs(),
     terser(), // Minificación (opcional)
     commonjs(),
