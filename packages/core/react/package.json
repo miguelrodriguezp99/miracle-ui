@@ -1,6 +1,6 @@
 {
   "name": "@mirakle-ui/react",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -25,19 +25,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@mirakle-ui/accordion": "^0.1.24",
-    "@mirakle-ui/avatar": "^0.1.24",
-    "@mirakle-ui/badge": "^0.1.24",
-    "@mirakle-ui/button": "^0.1.23",
-    "@mirakle-ui/checkbox": "^0.1.24",
-    "@mirakle-ui/checkbox-group": "^0.1.24",
-    "@mirakle-ui/circular-progress": "^0.1.24",
-    "@mirakle-ui/divider": "^0.1.24",
-    "@mirakle-ui/dropdown": "^0.1.24",
-    "@mirakle-ui/input": "^0.1.24",
-    "@mirakle-ui/progress": "^0.1.24",
-    "@mirakle-ui/slider": "^0.1.24",
-    "@mirakle-ui/system20": "^0.1.23",
+    "@mirakle-ui/accordion": "^0.1.25",
+    "@mirakle-ui/avatar": "^0.1.25",
+    "@mirakle-ui/badge": "^0.1.25",
+    "@mirakle-ui/button": "^0.1.25",
+    "@mirakle-ui/checkbox": "^0.1.25",
+    "@mirakle-ui/checkbox-group": "^0.1.25",
+    "@mirakle-ui/circular-progress": "^0.1.25",
+    "@mirakle-ui/divider": "^0.1.25",
+    "@mirakle-ui/dropdown": "^0.1.25",
+    "@mirakle-ui/input": "^0.1.25",
+    "@mirakle-ui/progress": "^0.1.25",
+    "@mirakle-ui/slider": "^0.1.25",
+    "@mirakle-ui/system20": "^0.1.25",
     "classnames": "^2.5.1"
   },
   "devDependencies": {
