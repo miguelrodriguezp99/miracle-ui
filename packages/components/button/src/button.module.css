@@ -16,6 +16,10 @@
   text-wrap: nowrap;
 }
 
+.button.solid {
+  border: transparent;
+}
+
 .sm {
   height: 32px;
   min-height: 32px;
@@ -103,4 +107,51 @@
 .buttonGroup > :last-child {
   border-top-right-radius: 14px !important;
   border-bottom-right-radius: 14px !important;
+}
+
+.button.default {
+  color: hsl(210 5.56% 92.94%);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.solid:hover {
+  background-color: var(--color-2);
+}
+
+.bordered:hover {
+  background-color: transparent;
+  border-color: var(--color-2);
+}
+
+.light:hover {
+  opacity: 1;
+  background-color: var(--color-4);
+}
+
+.flat:hover {
+  opacity: 1;
+  background-color: var(--color-5);
+}
+
+.faded:hover {
+  opacity: 1;
+  background-color: #212123;
+}
+
+.shadow:hover {
+  background-color: var(--color-2);
+}
+
+.ghost:hover {
+  opacity: 1;
+  background-color: var(--color) !important;
+  color: white;
+}
+
+.warning.ghost:hover,
+.success.ghost:hover {
+  color: black;
 }

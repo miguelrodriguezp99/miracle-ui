@@ -1,0 +1,15 @@
+{
+  "targetDefaults": {
+    "rollup": {
+      "dependsOn": [
+        "^rollup"
+      ]
+    },
+    "test": {
+      "dependsOn": []
+    },
+    "dev": {
+      "dependsOn": []
+    }
+  }
+}

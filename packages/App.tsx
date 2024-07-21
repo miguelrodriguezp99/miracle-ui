@@ -1,6 +1,7 @@
 import React from "react";
-import "./App.css";
-import { Avatar, Badge } from "./components";
+import "./components/styles/global.css";
+import "./app.css";
+import { Button } from "./components";
 
 function App() {
   return (
@@ -13,12 +14,7 @@ function App() {
           padding: "20px",
         }}
       >
-        <Badge>
-          <Avatar
-            radius="lg"
-            avatar="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          />
-        </Badge>
+        <Button />
         <div
           style={{
             fontFamily: "arial",

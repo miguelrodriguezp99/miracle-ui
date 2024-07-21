@@ -73,12 +73,19 @@ export const Input = ({
 
   return (
     <div
-      className={classNames(styles["input-container"], "input", color, {
-        [styles[`width-${width}`]]: width,
-        [styles[variant]]: variant,
-        [styles["is-disabled"]]: isDisabled,
-        [styles["is-read-only"]]: readOnly,
-      })}
+      className={classNames(
+        styles["input-container"],
+        "input",
+        color,
+        styles.input,
+        styles[color],
+        {
+          [styles[`width-${width}`]]: width,
+          [styles[variant]]: variant,
+          [styles["is-disabled"]]: isDisabled,
+          [styles["is-read-only"]]: readOnly,
+        }
+      )}
     >
       <input
         id="email"

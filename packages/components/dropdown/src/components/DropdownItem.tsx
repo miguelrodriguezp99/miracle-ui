@@ -39,9 +39,10 @@ export const DropdownItem = ({
       className={classNames(
         styles.listItem,
         "listItem",
-        "has-hover",
         color,
-        variant
+        variant,
+        styles[color],
+        styles[variant]
       )}
     >
       {startContent && (

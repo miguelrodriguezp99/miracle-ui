@@ -1,6 +1,6 @@
 import Card from ".";
 import { options, products } from "./constants";
-import { semanticColors } from "../../lib/colors";
+import { semanticColors } from "../../../lib/colors";
 import styles from "./card.module.css";
 import CardWithDivider from "./CardWithDivider";
 import CardCover from "./CardCover";
@@ -8,7 +8,7 @@ import CardCoverAndFooter from "./CardCoverAndFooter";
 import CardWithBlurredFooter from "./CardWithBlurredFooter";
 import CardWithImage from "./CardWithImage";
 import CardProduct from "./CardProduct";
-import { getListTemplate, getTemplate } from "../../../helpers/storybook";
+import { getListTemplate, getTemplate } from "../../../../helpers/storybook";
 import CardBody from "./components/CardBody";
 
 const Template = getTemplate(Card, styles);

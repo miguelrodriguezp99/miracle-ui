@@ -6,4 +6,3 @@ export { default as CardProduct } from "./CardProduct";
 export { default as CardWithDivider } from "./CardWithDivider";
 export { default as CardWithImage } from "./CardWithImage";
 export { default as CardWithBlurredFooter } from "./CardWithBlurredFooter";
-export * from "@mirakle-ui/variables";

@@ -13,4 +13,3 @@ export * from "@mirakle-ui/slider";
 export * from "@mirakle-ui/circular-progress";
 export * from "@mirakle-ui/ripple20";
 export * from "@mirakle-ui/system20";
-export * from "@mirakle-ui/variables";

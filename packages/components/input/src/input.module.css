@@ -241,3 +241,7 @@
 .is-read-only {
   pointer-events: none;
 }
+
+.input.default {
+  --color: rgb(187, 174, 174);
+}

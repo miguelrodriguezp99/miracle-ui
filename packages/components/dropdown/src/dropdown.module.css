@@ -168,3 +168,25 @@
   display: flex;
   flex: 1;
 }
+
+.listItem.solid {
+  background-color: transparent;
+}
+
+.listItem.success {
+  color: var(--text);
+}
+
+.listItem.danger {
+  color: var(--color);
+}
+
+.listItem.default {
+  --color-4: hsl(0, 0%, 24%);
+}
+
+.listItem.solid:hover {
+  opacity: 1;
+  background-color: var(--color-4) !important;
+  color: hsl(210 5.56% 92.94%);
+}

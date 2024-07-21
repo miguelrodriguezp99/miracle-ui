@@ -87,9 +87,10 @@ export const Button = ({
       type={type}
       className={classNames(
         "button",
-        "has-hover",
         color,
         variant,
+        styles[variant],
+        styles[color],
         styles.button,
         styles[size],
         styles[`radius-${radius}`],

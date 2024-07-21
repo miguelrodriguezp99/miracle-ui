@@ -1,3 +1,5 @@
+import "./global.css";
+
 export const semanticColors = {
   default: "default",
   primary: "primary",

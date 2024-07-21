@@ -39,14 +39,11 @@ const useRippleEffect = ({
 
     const handleClick = (e: MouseEvent) => {
       if (!ref.current) return;
-
       const rect = ref.current.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-
       const ripples = document.createElement("span");
       ripples.classList.add("ripple");
-
       if (customRippleColor) {
         ripples.style.backgroundColor = customRippleColor;
       } else if (
@@ -60,7 +57,16 @@ const useRippleEffect = ({
           color === semanticColors.default
         ) {
           ripples.classList.add("ripple-dark");
-        } else ripples.classList.add(`ripple-bordered-${color}`);
+        } else if (
+          variant === "bordered" &&
+          !blackText &&
+          color === semanticColors.default
+        ) {
+          ripples.classList.add("ripple-light");
+        } else {
+          ripples.classList.add(`${color}`);
+          ripples.classList.add(`ripple-bordered`);
+        }
       } else if (
         color === semanticColors.success ||
         color === semanticColors.warning
@@ -69,11 +75,9 @@ const useRippleEffect = ({
       } else {
         ripples.classList.add("ripple-light");
       }
-
       ripples.style.left = `${x}px`;
       ripples.style.top = `${y}px`;
       ref.current.appendChild(ripples);
-
       setTimeout(() => {
         ripples.remove();
       }, 1000);
