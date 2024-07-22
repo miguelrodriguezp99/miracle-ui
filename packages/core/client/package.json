@@ -1,6 +1,6 @@
 {
   "name": "mirakle-ui-cli",
-  "version": "0.1.36",
+  "version": "0.1.37",
   "main": "dist/cli.js",
   "bin": {
     "mirakle-ui": "./dist/cli.js"
@@ -22,8 +22,8 @@
   },
   "dependencies": {
     "@mirakle-ui/button": "^0.1.35",
-    "@mirakle-ui/input": "^0.1.36",
-    "@mirakle-ui/react": "^0.1.36",
+    "@mirakle-ui/input": "^0.1.37",
+    "@mirakle-ui/react": "^0.1.37",
     "commander": "^7.2.0",
     "fs-extra": "^10.0.0"
   }
