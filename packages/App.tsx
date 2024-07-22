@@ -1,35 +1,13 @@
 import React from "react";
 import "./components/styles/global.css";
 import "./app.css";
-import { Button, Input } from "./components";
+
+import { Input } from "./components";
 
 function App() {
   return (
     <>
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          backgroundColor: "black",
-          padding: "20px",
-        }}
-      >
-        <Button />
-        <Input />
-        <div
-          style={{
-            fontFamily: "arial",
-          }}
-        >
-          36
-          <div
-            style={{
-              width: "200px",
-              backgroundColor: "green",
-            }}
-          ></div>
-        </div>
-      </div>
+      <Input variant="underlined" color="default" />
     </>
   );
 }

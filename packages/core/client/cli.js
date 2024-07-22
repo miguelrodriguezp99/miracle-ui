@@ -13,7 +13,15 @@ program
   .command("init")
   .description("Initialize mirakle-ui")
   .action(() => {
-    const cssContent = `:root {
+    const cssContent = `
+    
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+    
+  :root {
   --color-faded: #27272a;
   --color-faded-1: #3e3e43;
   --custom-hover-color: initial;

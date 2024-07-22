@@ -77,8 +77,8 @@ export const Input = ({
         styles["input-container"],
         "input",
         color,
-        styles.input,
         styles[color],
+        styles.inputContainer,
         {
           [styles[`width-${width}`]]: width,
           [styles[variant]]: variant,
