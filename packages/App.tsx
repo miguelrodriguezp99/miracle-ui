@@ -12,16 +12,11 @@ function App() {
           display: "flex",
           flexDirection: "column",
           gap: "1rem",
+          backgroundColor: "black",
+          height: "100vh",
         }}
       >
-        <Input
-          variant="flat"
-          labelColor="blue"
-          size="large"
-          placeholder="Enter your email"
-        />
-        <Input variant="flat" size="medium" placeholder="Enter your email" />
-        <Input variant="flat" size="small" placeholder="Enter your email" />
+        <Input variant="underlined" />
       </div>
     </>
   );
