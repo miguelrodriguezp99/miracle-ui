@@ -2,6 +2,7 @@
   position: relative;
   display: grid;
   place-content: center;
+  width: fit-content;
 }
 
 .dropdown * {
@@ -17,97 +18,12 @@
   border-radius: 12px;
   position: absolute;
   display: flex;
-  width: 100%;
   transform-origin: 50% 0%;
   opacity: 0;
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
   z-index: 1;
-}
-
-.top {
-  bottom: 2.8em;
-  left: 50%;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: 50% 100%;
-}
-
-.top-start {
-  bottom: 2.8em;
-  left: 6.3rem;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: 50% 100%;
-}
-
-.top-end {
-  bottom: 2.8em;
-  left: 0.5rem;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: 50% 100%;
-}
-
-.bottom {
-  top: 2.8em;
-  left: 50%;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: 50% 0%;
-}
-
-.bottom-start {
-  top: 2.8em;
-  left: 6.3rem;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: 50% 100%;
-}
-
-.bottom-end {
-  top: 2.8em;
-  left: 0.5rem;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: 50% 0%;
-}
-
-.left {
-  right: 7.1em;
-  top: 50%;
-  transform: translateY(-50%) scale(0.8);
-  transform-origin: 100% 50%;
-}
-
-.left-start {
-  right: 7.1em;
-  top: 4.5rem;
-  transform: translateY(-50%) scale(0.8);
-  transform-origin: 100% 50%;
-}
-
-.left-end {
-  right: 7.1em;
-  top: -1.85rem;
-  transform: translateY(-50%) scale(0.8);
-  transform-origin: 100% 50%;
-}
-
-.right {
-  left: 7.1em;
-  top: 50%;
-  transform: translateY(-50%) scale(0.8);
-  transform-origin: 0% 50%;
-}
-
-.right-start {
-  left: 7.1em;
-  top: 4.5rem;
-  transform: translateY(-50%) scale(0.8);
-  transform-origin: 0% 50%;
-}
-
-.right-end {
-  left: 7.1em;
-  top: -1.85rem;
-  transform: translateY(-50%) scale(0.8);
-  transform-origin: 0% 50%;
 }
 
 .list {
@@ -131,7 +47,6 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  text-align: center;
   cursor: pointer;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -143,19 +58,89 @@
   opacity: 1;
 }
 
-.menuOpen.bottom-transform {
+.top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 100%;
+}
+
+.top-start {
+  bottom: 100%;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 100%;
+}
+
+.top-end {
+  bottom: 100%;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 100%;
+}
+
+.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 0%;
+}
+
+.bottom-start {
+  top: 100%;
+  left: 80px;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 0%;
+}
+
+.bottom-end {
+  top: 100%;
+  right: -120px;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: 50% 0%;
+}
+
+.left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 100% 50%;
+}
+
+.left-start {
+  right: 100%;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 100% 50%;
+}
+
+.left-end {
+  right: 100%;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 100% 50%;
+}
+
+.right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 0% 50%;
+}
+
+.right-start {
+  left: 100%;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 0% 50%;
+}
+
+.right-end {
+  left: 100%;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: 0% 50%;
+}
+
+.menuOpen.vertical-transform {
   transform: translateX(-50%) scale(1);
 }
 
-.menuOpen.top-transform {
-  transform: translateX(-50%) scale(1);
-}
-
-.menuOpen.left-transform {
-  transform: translateY(-50%) scale(1);
-}
-
-.menuOpen.right-transform {
+.menuOpen.horizontal-transform {
   transform: translateY(-50%) scale(1);
 }
 
