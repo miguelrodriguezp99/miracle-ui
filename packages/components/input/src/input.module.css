@@ -22,12 +22,17 @@
   color: var(--color);
 }
 
+.input.default {
+  color: rgb(224, 218, 218);
+}
+
 .input:hover {
   background-color: var(--color-4);
 }
 
 .input::placeholder {
   color: var(--custom-placeholder-color, --color-2);
+  filter: opacity(0.8);
 }
 
 .input:focus {
@@ -43,6 +48,7 @@
   transform: translateY(0) scale(1);
   pointer-events: none;
   color: var(--color);
+  line-height: 1.25rem;
 }
 
 .input:focus + .label,
@@ -76,6 +82,10 @@
 .input.has-placeholder + .label-large {
   transform: translateY(-2px) scale(0.75);
   top: 14px;
+  font-size: 1.25rem;
+}
+
+.input.large {
   font-size: 1rem;
 }
 
@@ -95,7 +105,6 @@
   min-height: 3rem;
   height: 4rem;
   padding: 30px 30px 10px 20px;
-  font-size: 1.1rem;
 }
 
 .label.label-small {

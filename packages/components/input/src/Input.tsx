@@ -95,7 +95,7 @@ export const Input = ({
           backgroundColor,
           color: textColor,
         }}
-        className={classNames(styles.input, styles[size], {
+        className={classNames(styles.input, styles[color], styles[size], {
           [styles[`border-radius-${radius}`]]: radius,
           [styles["has-placeholder"]]: placeholder != "",
         })}

@@ -7,7 +7,22 @@ import { Input } from "./components";
 function App() {
   return (
     <>
-      <Input variant="underlined" color="default" />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+        }}
+      >
+        <Input
+          variant="flat"
+          labelColor="blue"
+          size="large"
+          placeholder="Enter your email"
+        />
+        <Input variant="flat" size="medium" placeholder="Enter your email" />
+        <Input variant="flat" size="small" placeholder="Enter your email" />
+      </div>
     </>
   );
 }
