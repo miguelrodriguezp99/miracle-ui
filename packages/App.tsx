@@ -1,7 +1,7 @@
 import React from "react";
 import "./components/styles/global.css";
 import "./app.css";
-import { Button } from "./components";
+import { Button, Input } from "./components";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         }}
       >
         <Button />
+        <Input />
         <div
           style={{
             fontFamily: "arial",
