@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from "react";
 import styles from "./slider.module.css";
 import classNames from "classnames";
@@ -214,7 +213,7 @@ export const Slider = ({
                   }
                   type="range"
                   value={value}
-                  onChange={() => updateValue}
+                  onChange={(e) => updateValue(Number(e.target.value))}
                 />
               </div>
             </div>
@@ -252,7 +251,7 @@ export const Slider = ({
           </div>
           {endContent && (
             <div
-              className={classNames({
+              className={classNames(styles.endContent, {
                 [styles.endContentVertical]: direction === directions.vertical,
               })}
             >
