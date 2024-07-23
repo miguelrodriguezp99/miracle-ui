@@ -1,15 +1,16 @@
 .accordion {
   width: 100%;
+  --default-color: #1e1e22;
 }
 
 .shadow {
-  background-color: var(--color-default-4);
+  background-color: var(--default-color);
   padding: 0 16px;
   border-radius: 12px;
 }
 
 .bordered {
-  border: 2px solid var(--color-default-4);
+  border: 2px solid var(--default-color);
   border-radius: 12px;
   padding: 0 16px;
 }
@@ -21,7 +22,7 @@
   gap: 10px;
 
   > .accordionItem {
-    background-color: var(--color-default-4);
+    background-color: var(--default-color);
     border-radius: 12px;
     padding: 0 16px;
   }

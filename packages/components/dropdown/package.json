@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@mirakle-ui/system20": "file:../../core/system",
+    "@mirakle-ui/button": "file:../button",
     "classnames": "^2.5.1"
   },
   "devDependencies": {

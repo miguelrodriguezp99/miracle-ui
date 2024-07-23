@@ -17,6 +17,7 @@ interface AccordionItemProps {
   isLastItem?: boolean;
   backgroundColor?: string;
   isCompact?: boolean;
+  dividerColor?: string;
   isOpen?: boolean;
   onClick?: () => void;
 }
@@ -34,6 +35,7 @@ export default function AccordionItem({
   textBlack = false,
   isLastItem = false,
   backgroundColor,
+  dividerColor,
   isOpen = false,
   isCompact = false,
   onClick,
@@ -43,7 +45,7 @@ export default function AccordionItem({
       style={{
         backgroundColor,
       }}
-      className={styles.accordionItem}
+      className={classNames(styles.accordionItem, {})}
     >
       <button onClick={onClick} className={classNames(styles.accordionButton)}>
         <div
@@ -123,7 +125,7 @@ export default function AccordionItem({
 
       {!isLastItem && (
         <div className={styles.divider}>
-          <Divider />
+          <Divider customColor={dividerColor} />
         </div>
       )}
     </div>
