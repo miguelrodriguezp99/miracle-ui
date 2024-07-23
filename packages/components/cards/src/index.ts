@@ -1,5 +1,7 @@
-export { default } from "./Card";
+export { default as Card } from "./Card";
 export { default as CardHeader } from "./components/CardHeader";
+export { default as CardCover } from "./CardCover";
+export { default as CardCoverAndFooter } from "./CardCoverAndFooter";
 export { default as CardBody } from "./components/CardBody";
 export { default as CardFooter } from "./components/CardFooter";
 export { default as CardProduct } from "./CardProduct";

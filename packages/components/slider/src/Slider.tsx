@@ -65,7 +65,7 @@ export const Slider = ({
     setValue(newValue);
   };
 
-  useSlider({ direction, updateValue });
+  const { isDragging } = useSlider({ direction, updateValue });
 
   const handleIncrement = () => {
     //@ts-expect-error types
@@ -196,6 +196,7 @@ export const Slider = ({
                 [styles.vertical]: direction === directions.vertical,
                 [styles.horizontal]: direction === directions.horizontal,
               })}
+              data-dragging={isDragging}
               style={thumbPositionStyle}
             >
               <div className={styles.inputContainer}>

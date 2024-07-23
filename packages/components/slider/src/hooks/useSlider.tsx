@@ -101,6 +101,8 @@ const useSlider = ({ direction, updateValue }: Props) => {
       window.removeEventListener("mousedown", handleMouseDown);
     };
   }, [isDragging, touchIdentifier, updateValueFromEvent]);
+
+  return { isDragging };
 };
 
 export default useSlider;

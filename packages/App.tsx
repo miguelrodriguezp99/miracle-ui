@@ -1,6 +1,6 @@
 import React from "react";
 import "./components/styles/global.css";
-import "./app.css";
+import "./App.css";
 
 import { Slider } from "./components";
 
