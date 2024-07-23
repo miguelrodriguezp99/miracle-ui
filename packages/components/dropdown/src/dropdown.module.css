@@ -60,7 +60,6 @@
 
 .top {
   bottom: 100%;
-  left: 50%;
   transform: translateX(-50%) scale(0.8);
   transform-origin: 50% 100%;
 }
@@ -134,14 +133,6 @@
   left: 100%;
   transform: translateY(-50%) scale(0.8);
   transform-origin: 0% 50%;
-}
-
-.menuOpen.vertical-transform {
-  transform: translateX(-50%) scale(1);
-}
-
-.menuOpen.horizontal-transform {
-  transform: translateY(-50%) scale(1);
 }
 
 .startContent {

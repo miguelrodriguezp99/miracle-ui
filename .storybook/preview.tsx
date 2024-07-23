@@ -15,6 +15,7 @@ const getStyles = ({ __sb }: any) => ({
   height: "100vh",
   gap: "10px 30px",
   backgroundColor: "transparent",
+  fontFamily: "Roboto, sans-serif",
 });
 
 const preview: Preview = {
