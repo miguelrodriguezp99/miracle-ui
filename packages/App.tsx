@@ -2,7 +2,7 @@ import React from "react";
 import "./components/styles/global.css";
 import "./app.css";
 
-import { Card } from "./components";
+import { Slider } from "./components";
 
 function App() {
   return (
@@ -23,12 +23,7 @@ function App() {
             width: "400px",
           }}
         >
-          <Card
-            cardWidth="3xl"
-            padding="md"
-            color="primary"
-            customColor="red"
-          />
+          <Slider showSteps step={20} />
         </div>
       </div>
     </>

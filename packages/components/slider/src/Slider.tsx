@@ -1,10 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./slider.module.css";
 import classNames from "classnames";
 import { directions, sizes, SliderDirection, SliderSizes } from "./constants";
 import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
 import { Button } from "@mirakle-ui/button";
+import useSlider from "./hooks/useSlider";
 
 type Props = {
   color?: SemanticColor;
@@ -21,9 +22,9 @@ type Props = {
   maxValue?: number;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
-  value: number;
+  value?: number;
   maxWidth?: number;
-  onChange: (value: number) => void;
+  onChange?: (value: number) => void;
 };
 
 export const Slider = ({
@@ -41,115 +42,38 @@ export const Slider = ({
   startContent,
   endContent,
   maxValue = 1,
-  value,
+  value: propValue,
   maxWidth = 448,
-  onChange: setValue,
+  onChange: setPropValue,
 }: Props) => {
-  const [isDragging, setIsDragging] = useState(false);
-  const [touchIdentifier, setTouchIdentifier] = useState<number | null>(null);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (isDragging) {
-        updateValueFromMouseEvent(e);
-      }
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      if (isDragging && touchIdentifier !== null) {
-        const touch = Array.from(e.changedTouches).find(
-          (touch) => touch.identifier === touchIdentifier
-        );
-        if (touch) {
-          updateValueFromTouchEvent(touch);
-        }
-      }
-    };
-
-    const handleMouseUp = () => {
-      setIsDragging(false);
-    };
-
-    const handleTouchEnd = (e: TouchEvent) => {
-      const touch = Array.from(e.changedTouches).find(
-        (touch) => touch.identifier === touchIdentifier
-      );
-      if (touch) {
-        updateValueFromTouchEvent(touch);
-      }
-      setIsDragging(false);
-      setTouchIdentifier(null);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleMouseUp);
-    window.addEventListener("touchmove", handleTouchMove);
-    window.addEventListener("touchend", handleTouchEnd);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
-      window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, [isDragging, touchIdentifier]);
-
-  const handleMouseDown = () => {
-    setIsDragging(true);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    const touch = e.changedTouches[0] as unknown as Touch;
-    setTouchIdentifier(touch.identifier);
-    setIsDragging(true);
-    updateValueFromTouchEvent(touch);
-  };
-
-  const updateValueFromMouseEvent = (e: MouseEvent) => {
-    const trackElement = document.querySelector(`.${styles.track}`);
-    if (trackElement) {
-      const { left, top, width, height } = trackElement.getBoundingClientRect();
-      let newValue;
-      if (direction === directions.horizontal) {
-        newValue = (e.clientX - left) / width;
-      } else {
-        newValue = 1 - (e.clientY - top) / height;
-      }
-      updateValue(newValue);
+  const [internalValue, setInternalValue] = useState(propValue || 0.4);
+  const value = propValue !== undefined ? propValue : internalValue;
+  const setValue = (newValue: number) => {
+    if (setPropValue) {
+      setPropValue(newValue);
+    } else {
+      setInternalValue(newValue);
     }
   };
-
-  const updateValueFromTouchEvent = (touch: Touch) => {
-    const trackElement = document.querySelector(`.${styles.track}`);
-    if (trackElement) {
-      const { left, top, width, height } = trackElement.getBoundingClientRect();
-      let newValue;
-      if (direction === directions.horizontal) {
-        newValue = (touch.clientX - left) / width;
-      } else {
-        newValue = 1 - (touch.clientY - top) / height;
-      }
-      updateValue(newValue);
-    }
-  };
-
   const updateValue = (newValue: number) => {
     newValue = Math.max(0, Math.min(newValue, 1)) * maxValue;
 
     if (showSteps) {
-      const stepValue = (step / 100) * maxValue; // Calculate step value based on maxValue
-      newValue = Math.round(newValue / stepValue) * stepValue; // Apply step
+      const stepValue = (step / 100) * maxValue;
+      newValue = Math.round(newValue / stepValue) * stepValue;
     }
 
     setValue(newValue);
   };
+
+  useSlider({ direction, updateValue });
 
   const handleIncrement = () => {
     //@ts-expect-error types
     setValue((prev) => {
       const incrementValue = showSteps
         ? (step / 100) * maxValue
-        : 0.1 * maxValue; // Adjust increment value
+        : 0.1 * maxValue;
       return Math.min(prev + incrementValue, maxValue);
     });
   };
@@ -159,7 +83,7 @@ export const Slider = ({
     setValue((prev) => {
       const decrementValue = showSteps
         ? (step / 100) * maxValue
-        : 0.1 * maxValue; // Adjust decrement value
+        : 0.1 * maxValue;
       return Math.max(prev - decrementValue, 0);
     });
   };
@@ -260,8 +184,6 @@ export const Slider = ({
                   borderInlineStartColor: customColor,
                 }),
             }}
-            onMouseDown={handleMouseDown}
-            onTouchStart={handleTouchStart}
           >
             <div
               className={classNames(styles.filler, {
@@ -275,36 +197,24 @@ export const Slider = ({
                 [styles.vertical]: direction === directions.vertical,
                 [styles.horizontal]: direction === directions.horizontal,
               })}
-              data-dragging={isDragging}
               style={thumbPositionStyle}
             >
               <div className={styles.inputContainer}>
                 <input
                   tabIndex={0}
                   name={name}
-                  id="react-aria8368235164-:rm:-0"
-                  aria-labelledby="react-aria8368235164-:rm:"
+                  id="slider-input"
                   min="0"
                   max={maxValue}
-                  step={showSteps ? `${(step / 100) * maxValue}` : "any"} // Adjust step attribute
+                  step={showSteps ? `${(step / 100) * maxValue}` : "any"}
                   aria-orientation={
                     direction === directions.horizontal
                       ? "horizontal"
                       : "vertical"
                   }
-                  aria-describedby=""
-                  aria-details=""
                   type="range"
                   value={value}
-                  onChange={(e) => {
-                    const newValue = parseFloat(e.target.value);
-                    if (showSteps) {
-                      const stepValue = (step / 100) * maxValue;
-                      setValue(Math.round(newValue / stepValue) * stepValue);
-                    } else {
-                      setValue(newValue);
-                    }
-                  }}
+                  onChange={() => updateValue}
                 />
               </div>
             </div>
