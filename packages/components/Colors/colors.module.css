@@ -22,34 +22,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Roboto", sans-serif;
 }
 
-.color-default {
+.default,
+.primary,
+.secondary,
+.success,
+.warning,
+.danger {
   color: white;
-  background-color: var(--color-default);
+  background-color: var(--color);
 }
 
-.color-primary {
-  color: white;
-  background-color: var(--color-primary);
-}
-
-.color-secondary {
-  color: white;
-  background-color: var(--color-secondary);
-}
-
-.color-success {
+.success {
   color: black;
-  background-color: var(--color-success);
 }
 
-.color-warning {
+.warning {
   color: black;
-  background-color: var(--color-warning);
 }
 
-.color-danger {
+.danger {
   color: white;
-  background-color: var(--color-danger);
 }

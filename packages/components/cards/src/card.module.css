@@ -153,32 +153,32 @@
 
 .color-default {
   color: white;
-  background-color: var(--color-default);
+  background-color: var(--color);
 }
 
 .color-primary {
   color: white;
-  background-color: var(--color-primary);
+  background-color: var(--color);
 }
 
 .color-secondary {
   color: white;
-  background-color: var(--color-secondary);
+  background-color: var(--color);
 }
 
 .color-success {
   color: black;
-  background-color: var(--color-success);
+  background-color: var(--color);
 }
 
 .color-warning {
   color: black;
-  background-color: var(--color-warning);
+  background-color: var(--color);
 }
 
 .color-danger {
   color: white;
-  background-color: var(--color-danger);
+  background-color: var(--color);
 }
 
 .is-clickable {

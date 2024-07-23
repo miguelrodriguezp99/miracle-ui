@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { semanticColors } from "../../lib/colors";
 import styles from "./colors.module.css";
 
@@ -16,7 +17,11 @@ export const SemanticColors = () => (
       {Object.keys(semanticColors).map((color) => (
         <div
           key={color}
-          className={`${styles[`color-${color}`]} ${styles["color-card"]}`}
+          className={classNames(
+            styles[`${color}`],
+            styles["color-card"],
+            color
+          )}
         >
           <span className={styles.text}>{color}</span>
         </div>

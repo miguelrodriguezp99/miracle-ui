@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./card.module.css";
 
 import { CardWidthTypes, PaddingTypes } from "./constants";
-import { SemanticColor } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
 import { useRippleEffect } from "@mirakle-ui/ripple20";
 
 interface CardProps {
@@ -22,7 +22,7 @@ interface CardProps {
 
 export const Card = ({
   children = "Children",
-  color = "default",
+  color = semanticColors.default,
   customColor,
   customPadding,
   customRippleColor,
@@ -52,8 +52,8 @@ export const Card = ({
     <div
       ref={cardRef}
       style={cardStyles}
-      className={classNames(styles.card, {
-        [styles[`color-${color}`]]: color, //just applies if the color exists
+      className={classNames(styles.card, color, {
+        [styles[`color-${color}`]]: color,
         [styles[`padding-${padding}`]]: padding,
         [styles["is-clickable"]]: isClickable,
         [styles["is-draggable"]]: isDraggable,
