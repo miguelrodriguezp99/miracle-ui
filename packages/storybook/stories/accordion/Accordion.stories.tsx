@@ -198,7 +198,12 @@ export const Shadow: Story = {
         selectionMode={selectionMode}
         isCompact={isCompact}
       >
-        <AccordionItem title="Accordion 1" />
+        <AccordionItem
+          title="Accordion 1"
+          labelColor="white"
+          titleColor="red"
+          contentColor="purple"
+        />
         <AccordionItem title="Accordion 2" />
         <AccordionItem title="Accordion 3" />
         <AccordionItem title="Accordion 4" />

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./divider.module.css";
-import { DividerDirection } from "./constants";
+import { DividerDirection, directions } from "./constants";
 import classNames from "classnames";
 import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
 
@@ -12,7 +12,7 @@ type Props = {
 
 export const Divider = ({
   color = semanticColors.default,
-  direction = "horizontal",
+  direction = directions.horizontal,
   customColor,
 }: Props) => {
   return (

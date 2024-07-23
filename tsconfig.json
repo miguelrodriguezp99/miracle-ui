@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",                                
-    "esModuleInterop": true,                                                     
+    "module": "ESNext",
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,                                    
+    "strict": true,
     "skipLibCheck": true,
     "rootDir": ".",
     "jsx": "react",
@@ -17,8 +17,8 @@
     "emitDeclarationOnly": true,
     "baseUrl": ".",
     "paths": {
-      "@packages/*": ["packages/*"],
-      "@components/*": ["packages/components/*"]
+      "@components/*": ["packages/components/*"],
+      "@packages/*": ["packages/*"]
     }
   }
 }

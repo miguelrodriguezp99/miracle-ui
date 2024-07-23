@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { semanticColors } from "../../lib/colors";
+import { semanticColors } from "@mirakle-ui/system20";
 import styles from "./colors.module.css";
 
 export default {
