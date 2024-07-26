@@ -46,7 +46,7 @@ export const DropdownItem = ({
       )}
     >
       {startContent && (
-        <div className={classNames(color, "icon", styles.startContent)}>
+        <div className={classNames(color, styles[color], styles.startContent)}>
           {startContent}
         </div>
       )}
@@ -60,7 +60,14 @@ export const DropdownItem = ({
       >
         {children}
       </span>
-      <div className={classNames(color, "icon", styles.startContent)}>
+      <div
+        className={classNames(
+          color,
+          "icon",
+          styles[color],
+          styles.startContent
+        )}
+      >
         {endContent}
       </div>
     </li>

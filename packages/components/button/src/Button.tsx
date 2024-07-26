@@ -54,6 +54,7 @@ export const Button = ({
   isIconOnly,
   blackText,
   whiteText,
+  label,
   type = types.button,
   onClick,
 }: ButtonProps) => {
@@ -110,6 +111,7 @@ export const Button = ({
       {startContent}
       {!isIconOnly && children}
       {isIconOnly && children}
+      {!children && !children && label}
       {endContent}
     </button>
   );

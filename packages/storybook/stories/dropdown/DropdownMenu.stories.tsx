@@ -43,7 +43,7 @@ type Story = StoryObj<DropdownArgs>;
 export const Primary: Story = {
   args: {
     isBlackBackground: true,
-    offset: 0,
+    offset: 5,
     position: positions.bottom,
   },
   render: ({ isBlackBackground, offset, position }) => (
@@ -64,10 +64,19 @@ export const Primary: Story = {
           offset={offset}
           aria-label="Static Actions"
         >
-          <DropdownItem key="new">New file</DropdownItem>
+          <DropdownItem variant="faded" color="success" key="new">
+            New file
+          </DropdownItem>
           <DropdownItem key="copy">Copy link</DropdownItem>
-          <DropdownItem key="edit">Edit file</DropdownItem>
-          <DropdownItem key="delete" color="danger" variant="solid">
+          <DropdownItem variant="bordered" key="edit">
+            Edit file
+          </DropdownItem>
+          <DropdownItem
+            variant="bordered"
+            key="delete"
+            color="danger"
+            variant="solid"
+          >
             Delete file
           </DropdownItem>
         </DropdownMenu>
@@ -79,7 +88,7 @@ export const Primary: Story = {
 export const WithStarContent: Story = {
   args: {
     isBlackBackground: true,
-    offset: 0,
+    offset: 5,
     position: positions.bottom,
   },
   render: ({ isBlackBackground, offset, position }) => (
@@ -138,7 +147,7 @@ export const WithStarContent: Story = {
 export const WithEndContent: Story = {
   args: {
     isBlackBackground: true,
-    offset: 0,
+    offset: 5,
     position: positions.bottom,
   },
   render: ({ isBlackBackground, offset, position }) => (

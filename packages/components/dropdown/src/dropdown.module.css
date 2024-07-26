@@ -47,6 +47,7 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
+
   cursor: pointer;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -144,17 +145,24 @@
   display: flex;
   flex: 1;
 }
+.listItem {
+  color: var(--color);
+}
 
 .listItem.solid {
   background-color: transparent;
 }
 
-.listItem.success {
-  color: var(--text);
+.listItem.bordered {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  -webkit-font-smoothing: auto;
 }
 
-.listItem.danger {
-  color: var(--color);
+.listItem.faded {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  -webkit-font-smoothing: auto;
 }
 
 .listItem.default {
@@ -163,6 +171,29 @@
 
 .listItem.solid:hover {
   opacity: 1;
-  background-color: var(--color-4) !important;
+  background-color: var(--color-4);
   color: hsl(210 5.56% 92.94%);
+}
+
+.listItem.bordered:hover {
+  opacity: 1;
+  border: 0.5px solid var(--color) !important;
+}
+
+.listItem.light:hover {
+  filter: brightness(0.65);
+}
+
+.listItem.faded:hover {
+  border: 1px solid var(--color);
+  background-color: var(--color-4);
+  color: hsl(210 5.56% 92.94%);
+}
+
+.default {
+  --color: rgb(199, 199, 199);
+}
+
+.startContent {
+  color: var(--color);
 }
