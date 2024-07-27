@@ -2,7 +2,9 @@ import React from "react";
 import "./components/styles/global.css";
 import "./App.css";
 
-import { Slider } from "./components";
+import Switch from "@components/switch/src/Switch";
+import { SunIcon } from "./icons/SunIcon";
+import MoonIcon from "./icons/MoonIcon";
 
 function App() {
   return (
@@ -18,13 +20,18 @@ function App() {
           flexDirection: "column",
         }}
       >
-        <div
-          style={{
-            width: "400px",
-          }}
-        >
-          <Slider showSteps step={20} />
-        </div>
+        <Switch
+          thumbIcon={({ isChecked }) =>
+            isChecked ? <SunIcon /> : <MoonIcon />
+          }
+        />
+        <Switch
+          id="secondSwitch"
+          startContent={<SunIcon />}
+          endContent={<MoonIcon />}
+        />
+
+        <Switch id="thirdSwitch" />
       </div>
     </>
   );

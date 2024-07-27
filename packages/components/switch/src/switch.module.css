@@ -1,0 +1,122 @@
+.container {
+  width: fit-content;
+  display: flex;
+}
+
+.checkboxButton {
+  background-color: #555555;
+  border-radius: 200px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.checkboxButton.sm {
+  width: 48px;
+  height: 24px;
+}
+
+.checkboxButton.md {
+  width: 56px;
+  height: 28px;
+}
+
+.checkboxButton.lg {
+  width: 64px;
+  height: 32px;
+}
+
+.thumb {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8%;
+  width: 40%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  fill: black;
+  color: black;
+  justify-content: center;
+}
+
+input:checked + .checkboxButton {
+  background-color: var(--color);
+}
+
+input:checked + .checkboxButton > .thumb {
+  left: 55%;
+}
+
+input {
+  display: none;
+}
+
+/* INCREMENT WHEN PRESSING THE BUTTON */
+input:not(:checked) + .checkboxButton:active > .thumb {
+  width: 50%;
+}
+
+input:checked + .checkboxButton:active > .thumb {
+  left: calc(55% - 10%);
+  width: 50%;
+}
+
+.customThumbColor > .thumb {
+  background-color: var(--custom-thumb-color, #fff);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.startContent {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-left: 5%;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.startContentChecked {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.endContent {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-right: 0%;
+  transition:
+    transform 0.3s,
+    opacity 0.15s;
+}
+
+.endContentChecked {
+  opacity: 1;
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.label {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
