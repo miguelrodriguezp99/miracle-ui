@@ -71,12 +71,7 @@ export const Primary: Story = {
           <DropdownItem variant="bordered" key="edit">
             Edit file
           </DropdownItem>
-          <DropdownItem
-            variant="bordered"
-            key="delete"
-            color="danger"
-            variant="solid"
-          >
+          <DropdownItem variant="bordered" key="delete" color="danger">
             Delete file
           </DropdownItem>
         </DropdownMenu>
