@@ -36,11 +36,10 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_1a2c38b0d2ea6e6"
+    "chromatic3": "node run-chromatic.js"
   },
   "dependencies": {
     "classnames": "^2.5.1",
-    "@mirakle-ui/ripple20": "^0.1.30",
     "lerna": "^8.1.6"
   },
   "devDependencies": {
@@ -65,6 +64,7 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.3.1",
     "chromatic": "^11.5.3",
+    "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",

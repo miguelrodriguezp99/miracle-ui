@@ -26,7 +26,8 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@mirakle-ui/system20": "*"
+    "@mirakle-ui/system20": "*",
+    "@mirakle-ui/ripple20": "^0.1.30"
   },
   "devDependencies": {},
   "peerDependencies": {
