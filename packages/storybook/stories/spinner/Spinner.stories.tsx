@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Spinner } from "@components/spinner/src/";
-import { semanticColors } from "@mirakle-ui/system20";
+import { semanticColors } from "@packages/core/system/src/colors";
 import { sizes } from "@components/spinner/src/constants";
 
 const meta: Meta<typeof Spinner> = {

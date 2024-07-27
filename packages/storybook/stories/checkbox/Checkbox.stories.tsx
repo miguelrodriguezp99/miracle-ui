@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Checkbox } from "@components/checkbox/src";
-import { semanticColorsCheckbox } from "@mirakle-ui/system20";
+import { semanticColorsCheckbox } from "@packages/core/system/src/colors";
 import { radii, sizes } from "@components/checkbox/src/constants";
 
 const meta: Meta<typeof Checkbox> = {

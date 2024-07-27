@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Badge } from "@components/badge";
 import { positions, radii, variants } from "@components/badge/src/constants";
-import { semanticColors } from "@mirakle-ui/system20";
+import { semanticColors } from "@packages/core/system/src/colors";
 
 import { Avatar } from "@components/avatar";
 import React from "react";

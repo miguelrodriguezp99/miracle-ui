@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Avatar } from "@components/avatar/src/Avatar";
 import { AvatarGroup as Group } from "@components/avatar/src/AvatarGroup";
 import { radii, sizes } from "@components/avatar/src/constants";
-import { semanticColors } from "@mirakle-ui/system20/src/colors";
+import { semanticColors } from "@packages/core/system/src/colors";
 import React from "react";
 
 const meta: Meta<typeof Avatar> = {

@@ -8,7 +8,7 @@ import {
   CardWithBlurredFooter,
 } from "@components/cards/src";
 import { options, products } from "@components/cards/src/constants";
-import { semanticColors } from "@mirakle-ui/system20/src/colors";
+import { semanticColors } from "@packages/core/system/src/colors";
 import styles from "@components/cards/src/card.module.css";
 
 import { getListTemplate, getTemplate } from "../../../../helpers/storybook";

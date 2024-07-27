@@ -13,7 +13,7 @@ import {
   variants,
   widths,
 } from "@components/input/src/constants";
-import { semanticColors } from "@mirakle-ui/system20";
+import { semanticColors } from "@packages/core/system/src/colors";
 import { useState } from "react";
 import React from "react";
 

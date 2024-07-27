@@ -3,7 +3,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Divider } from "@components/divider/src";
 import { directions } from "@components/divider/src/constants";
-import { semanticColors } from "@mirakle-ui/system20";
+import { semanticColors } from "@packages/core/system/src/colors";
 
 const meta: Meta<typeof Divider> = {
   title: "Components/Divider",
