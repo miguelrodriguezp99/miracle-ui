@@ -3,7 +3,10 @@
 import React, { useState } from "react";
 import type { Meta, StoryFn as Story } from "@storybook/react";
 import { Slider } from "@components/slider/src";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import {
+  SemanticColor,
+  semanticColors,
+} from "@packages/core/system/src/colors";
 import {
   sizes,
   SliderDirection,

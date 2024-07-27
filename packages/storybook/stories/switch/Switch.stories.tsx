@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Switch } from "@components/switch/src/";
-import { semanticColors } from "@mirakle-ui/system20";
+import { semanticColors } from "@packages/core/system/src/colors";
 import { sizes } from "@components/switch/src/constants";
 import SunIcon from "@packages/icons/SunIcon";
 import MoonIcon from "@packages/icons/MoonIcon";
