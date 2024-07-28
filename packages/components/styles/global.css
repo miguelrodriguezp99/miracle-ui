@@ -127,6 +127,7 @@
   color: var(--color);
   border: none;
 }
+
 .flat {
   background-color: var(--color-4);
   color: var(--color);

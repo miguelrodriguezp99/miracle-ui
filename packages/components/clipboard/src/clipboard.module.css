@@ -1,0 +1,85 @@
+.clipboard.default {
+  color: white !important;
+}
+
+.clipboard {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+.clipboard.sm {
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.clipboard.md {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.clipboard.lg {
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  border: none;
+  width: 32px;
+  height: 32px;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.clipboardIcon {
+  position: absolute;
+  color: inherit;
+  width: 18px;
+  height: 18px;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.25s ease;
+  background-color: transparent;
+}
+
+.clipboardIcon[aria-copied="true"] {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.copiedIcon {
+  position: absolute;
+  color: inherit;
+  opacity: 0;
+
+  width: 18px;
+  height: 18px;
+}
+
+.copiedIcon[aria-copied="true"] {
+  animation: appear 500ms ease forwards;
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

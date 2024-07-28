@@ -2,16 +2,14 @@ import React from "react";
 import "./components/styles/global.css";
 import "./App.css";
 
-import Switch from "@components/switch/src/Switch";
-import { SunIcon } from "./icons/SunIcon";
-import MoonIcon from "./icons/MoonIcon";
+import { Clipboard } from "@components/clipboard/src";
 
 function App() {
   return (
     <>
       <div
         style={{
-          gap: "10rem",
+          gap: "1rem",
           backgroundColor: "black",
           height: "100vh",
           display: "flex",
@@ -20,18 +18,28 @@ function App() {
           flexDirection: "column",
         }}
       >
-        <Switch
-          thumbIcon={({ isChecked }) =>
-            isChecked ? <SunIcon /> : <MoonIcon />
-          }
-        />
-        <Switch
-          id="secondSwitch"
-          startContent={<SunIcon />}
-          endContent={<MoonIcon />}
-        />
+        <Clipboard size="md" variant="bordered" color="default">
+          <span>npm install @nextui-org/react</span>
+        </Clipboard>
+        <Clipboard size="md" variant="bordered" color="primary">
+          <span>npm install @nextui-org/react</span>
+        </Clipboard>
+        <Clipboard size="md" variant="bordered" color="secondary">
+          <span>npm install @nextui-org/react</span>
+        </Clipboard>
+        <Clipboard size="md" variant="bordered" color="success">
+          <span>npm install @nextui-org/react</span>
+        </Clipboard>
+        <Clipboard size="md" variant="bordered" color="warning">
+          <span>npm install @nextui-org/react</span>
+        </Clipboard>
+        <Clipboard size="md" variant="bordered" color="danger">
+          <span>npm install @nextui-org/react</span>
+        </Clipboard>
 
-        <Switch id="thirdSwitch" />
+        <Clipboard size="md" variant="bordered" color="danger">
+          npm install @nextui-org/react1
+        </Clipboard>
       </div>
     </>
   );
