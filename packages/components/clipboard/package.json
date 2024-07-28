@@ -1,5 +1,5 @@
 {
-  "name": "@mirakle-ui/spinner",
+  "name": "@mirakle-ui/clipboard",
   "version": "0.1.39",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@mirakle-ui/system20": "file:../../core/system",
+    "@mirakle-ui/ripple20": "file:../../hooks/ripple",
     "classnames": "^2.5.1"
   },
   "devDependencies": {

@@ -40,6 +40,15 @@ function App() {
         <Clipboard size="md" variant="bordered" color="danger">
           npm install @nextui-org/react1
         </Clipboard>
+
+        <Clipboard
+          customTextColor="red"
+          size="md"
+          variant="bordered"
+          color="primary"
+        >
+          npm install @nextui-org/react1
+        </Clipboard>
       </div>
     </>
   );

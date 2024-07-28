@@ -39,6 +39,7 @@
     "@mirakle-ui/slider": "^0.1.39",
     "@mirakle-ui/system20": "^0.1.30",
     "@mirakle-ui/switch": "^0.1.39",
+    "@mirakle-ui/clipboard": "^0.1.39",
     "classnames": "^2.5.1"
   },
   "devDependencies": {
