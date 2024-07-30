@@ -30,11 +30,9 @@ export const DropdownMenu = ({
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    if (listWrapperRef.current) {
-      const { offsetWidth, offsetHeight } = listWrapperRef.current;
-      setDimensions({ width: offsetWidth, height: offsetHeight });
-    }
-  }, [dimensions]);
+    const { offsetWidth = 0, offsetHeight = 0 } = listWrapperRef.current || {};
+    setDimensions({ width: offsetWidth, height: offsetHeight });
+  }, []);
 
   const transformStyles = getTransformStyles(isOpen, position, dimensions);
   const offsetStyles = getOffsetStyles(position, offset);

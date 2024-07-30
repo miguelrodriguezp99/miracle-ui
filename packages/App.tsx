@@ -48,28 +48,16 @@ function App() {
               Pane 1
             </div>
 
-            <Resizer direction="vertical" resizeBarSize={1}>
-              <div
-                style={{
-                  display: "grid",
-                  placeItems: "center",
-                  height: "100%",
-                  color: "white",
-                }}
-              >
-                Pane 1
-              </div>
-              <div
-                style={{
-                  display: "grid",
-                  placeItems: "center",
-                  height: "100%",
-                  color: "white",
-                }}
-              >
-                Pane 2
-              </div>
-            </Resizer>
+            <div
+              style={{
+                display: "grid",
+                placeItems: "center",
+                height: "100%",
+                color: "white",
+              }}
+            >
+              Pane 1
+            </div>
           </Resizer>
         </div>
 
@@ -86,8 +74,8 @@ function App() {
             </Button>
           </DropdownTrigger>
           <DropdownMenu
-            position={"bottom-end"}
-            offset={0}
+            position={"top-end"}
+            offset={10}
             aria-label="Static Actions"
           >
             <DropdownItem color="primary" key="new">
