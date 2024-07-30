@@ -3,6 +3,14 @@ import "./components/styles/global.css";
 import "./App.css";
 
 import { Resizer } from "@components/resizer/src/Resizer";
+import {
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from "./components";
+import { UserIcon } from "./icons/UserIcon";
 
 function App() {
   return (
@@ -64,6 +72,38 @@ function App() {
             </Resizer>
           </Resizer>
         </div>
+
+        <Dropdown>
+          <DropdownTrigger>
+            <Button
+              radius="md"
+              variant="bordered"
+              color="default"
+              blackText={true}
+              isIconOnly={true}
+            >
+              <UserIcon />
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu
+            position={"bottom-end"}
+            offset={0}
+            aria-label="Static Actions"
+          >
+            <DropdownItem color="primary" key="new">
+              New file
+            </DropdownItem>
+            <DropdownItem color="default" key="copy">
+              Copy link
+            </DropdownItem>
+            <DropdownItem color="success" key="edit">
+              Edit file
+            </DropdownItem>
+            <DropdownItem key="delete" color="danger" variant="solid">
+              Delete file
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
       </div>
     </>
   );
