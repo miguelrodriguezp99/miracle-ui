@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // run-chromatic.js
 import { execSync } from "child_process";
 import dotenv from "dotenv";

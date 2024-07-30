@@ -1,0 +1,58 @@
+/* resizer.module.css */
+.splitPane {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.pad {
+  overflow: hidden;
+}
+
+.resizerBar {
+  background-color: gray;
+  position: relative;
+  z-index: 1;
+}
+
+.resizerBar::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+}
+
+.horizontal .resizerBar {
+  width: 5px;
+  cursor: col-resize;
+}
+
+.vertical .resizerBar {
+  height: 5px;
+  cursor: row-resize;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.noSelect {
+  user-select: none; /* Para navegadores modernos */
+  -webkit-user-select: none; /* Para Safari y Chrome */
+  -moz-user-select: none; /* Para Firefox */
+  -ms-user-select: none; /* Para Internet Explorer/Edge */
+}

@@ -2,53 +2,68 @@ import React from "react";
 import "./components/styles/global.css";
 import "./App.css";
 
-import { Clipboard } from "@components/clipboard/src";
+import { Resizer } from "@components/resizer/src/Resizer";
 
 function App() {
   return (
     <>
       <div
         style={{
-          gap: "1rem",
-          backgroundColor: "black",
-          height: "100vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          flexDirection: "column",
+          height: "100vh",
+          width: "100vw",
+          backgroundColor: "lightgray",
         }}
       >
-        <Clipboard size="md" variant="bordered" color="default">
-          <span>npm install @nextui-org/react</span>
-        </Clipboard>
-        <Clipboard size="md" variant="bordered" color="primary">
-          <span>npm install @nextui-org/react</span>
-        </Clipboard>
-        <Clipboard size="md" variant="bordered" color="secondary">
-          <span>npm install @nextui-org/react</span>
-        </Clipboard>
-        <Clipboard size="md" variant="bordered" color="success">
-          <span>npm install @nextui-org/react</span>
-        </Clipboard>
-        <Clipboard size="md" variant="bordered" color="warning">
-          <span>npm install @nextui-org/react</span>
-        </Clipboard>
-        <Clipboard size="md" variant="bordered" color="danger">
-          <span>npm install @nextui-org/react</span>
-        </Clipboard>
-
-        <Clipboard size="md" variant="bordered" color="danger">
-          npm install @nextui-org/react1
-        </Clipboard>
-
-        <Clipboard
-          customTextColor="red"
-          size="md"
-          variant="bordered"
-          color="primary"
+        <div
+          style={{
+            display: "grid",
+            placeItems: "center",
+            width: "30%",
+            height: "30%",
+            backgroundColor: "black",
+            borderRadius: "10px",
+            border: "1px solid black",
+          }}
         >
-          npm install @nextui-org/react1
-        </Clipboard>
+          <Resizer resizeBarSize={1} defaultSize="20%">
+            <div
+              style={{
+                display: "grid",
+                placeItems: "center",
+                height: "100%",
+                color: "white",
+              }}
+            >
+              Pane 1
+            </div>
+
+            <Resizer direction="vertical" resizeBarSize={1}>
+              <div
+                style={{
+                  display: "grid",
+                  placeItems: "center",
+                  height: "100%",
+                  color: "white",
+                }}
+              >
+                Pane 1
+              </div>
+              <div
+                style={{
+                  display: "grid",
+                  placeItems: "center",
+                  height: "100%",
+                  color: "white",
+                }}
+              >
+                Pane 2
+              </div>
+            </Resizer>
+          </Resizer>
+        </div>
       </div>
     </>
   );

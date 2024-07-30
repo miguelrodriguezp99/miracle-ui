@@ -36,7 +36,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic3": "node run-chromatic.js"
+    "chromatic": "node run-chromatic.js"
   },
   "dependencies": {
     "classnames": "^2.5.1",
