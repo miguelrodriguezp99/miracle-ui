@@ -28,6 +28,7 @@ type Props = {
   value?: string;
   readOnly?: boolean;
   name?: string;
+  id?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValueChange?: (value: string) => void;
 };
@@ -50,6 +51,7 @@ export const Input = ({
   text = "Email",
   readOnly = false,
   name,
+  id,
   onChange,
   onValueChange,
 }: Props) => {
@@ -88,7 +90,7 @@ export const Input = ({
       )}
     >
       <input
-        id="email"
+        id={id}
         type={type}
         name={name}
         style={{

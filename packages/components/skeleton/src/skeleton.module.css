@@ -1,0 +1,30 @@
+.skeleton-container {
+  position: relative;
+  overflow-x: hidden;
+  display: inline-block;
+}
+
+.skeleton-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(189, 188, 188, 0.6),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+  opacity: 0.25;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
