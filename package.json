@@ -42,7 +42,8 @@
     "classnames": "^2.5.1",
     "lerna": "^8.1.6",
     "@mirakle-ui/ripple20": "^0.1.30",
-    "@mirakle-ui/system20": "^0.1.30"
+    "@mirakle-ui/system20": "^0.1.30",
+    "@mirakle-ui/react": "^0.1.46"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
