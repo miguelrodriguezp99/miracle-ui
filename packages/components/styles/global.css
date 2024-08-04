@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
@@ -9,6 +15,7 @@
   --color-faded-1: #3e3e43;
   --custom-hover-color: initial;
   --custom-placeholder-color: initial;
+  --radius-none: 0px;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 14px;
