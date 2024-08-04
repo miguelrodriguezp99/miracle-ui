@@ -1,11 +1,9 @@
-# .github/workflows/chromatic.yml
-
 name: "Chromatic"
 
 on:
   push:
     branches:
-      - main  # o la rama que desees
+      - main
   workflow_dispatch:
 
 jobs:
@@ -21,10 +19,10 @@ jobs:
         with:
           node-version: 20
       - name: Install dependencies
-        # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
-        run: npm install
+        run: npm ci
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        env:
+          VITE_CHROMATIC_KEY: ${{ secrets.VITE_CHROMATIC_KEY }}
