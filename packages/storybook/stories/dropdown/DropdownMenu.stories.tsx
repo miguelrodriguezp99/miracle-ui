@@ -64,14 +64,12 @@ export const Primary: Story = {
           offset={offset}
           aria-label="Static Actions"
         >
-          <DropdownItem variant="faded" color="success" key="new">
+          <DropdownItem color="success" key="new">
             New file
           </DropdownItem>
           <DropdownItem key="copy">Copy link</DropdownItem>
-          <DropdownItem variant="bordered" key="edit">
-            Edit file
-          </DropdownItem>
-          <DropdownItem variant="bordered" key="delete" color="danger">
+          <DropdownItem key="edit">Edit file</DropdownItem>
+          <DropdownItem key="delete" color="danger">
             Delete file
           </DropdownItem>
         </DropdownMenu>

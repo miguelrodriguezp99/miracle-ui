@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./components/styles/global.css";
 import "./App.css";
-
-import { Tabs, Tab } from "@components/tabs/src";
-import { CameraIcon } from "./icons/CameraIcon";
-import { UserIcon } from "./icons/UserIcon";
-import { VolumeHighIcon } from "./icons/VolumeHighIcon";
+import { Button } from "@mirakle-ui/react";
+import { Modal } from "@components/modal/src";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div
       style={{
@@ -18,131 +16,34 @@ function App() {
       }}
     >
       <div style={{ marginTop: "10px" }}>
-        <Tabs size="sm">
-          <Tab title="Photos" key="photos">
-            <div className="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </div>
-          </Tab>
-          <Tab title="N.Y" key="videos">
-            <div className="content">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </div>
-          </Tab>
-          <Tab title="Links" key="links">
-            <div className="content">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
-            </div>
-          </Tab>
-        </Tabs>
-        <Tabs variant="solid" color="primary">
-          <Tab
-            title={
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  height: "100%",
-                  justifyContent: "center",
-                  width: "100%",
-                  gap: "3px",
-                }}
-              >
-                <CameraIcon />
-                <span>Photos</span>
+        <Modal
+          value={isOpen}
+          setValue={setIsOpen}
+          button={
+            <Button radius="md" color="secondary">
+              Open Modal
+            </Button>
+          }
+        >
+          {({ closeModal }) => (
+            <>
+              <div className="flex flex-col gap-1">Modal Title</div>
+              <div>
+                <p>{isOpen.toString()}</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nullam pulvinar risus non risus hendrerit venenatis.</p>
+                <p>
+                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
+                </p>
               </div>
-            }
-            key="photos"
-          >
-            <div className="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </div>
-          </Tab>
-          <Tab
-            title={
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  height: "100%",
-
-                  justifyContent: "center",
-                  width: "100%",
-                  gap: "3px",
-                }}
-              >
-                <VolumeHighIcon />
-                <span>Volumes</span>
+              <div>
+                <button onClick={closeModal}>Close</button>
+                <button>Action</button>
+                <button onClick={closeModal}>Another Action</button>
               </div>
-            }
-            key="videos"
-          >
-            <div className="content">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </div>
-          </Tab>
-          <Tab
-            title={
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  height: "100%",
-                  justifyContent: "center",
-                  width: "100%",
-                  gap: "3px",
-                }}
-              >
-                <UserIcon />
-                <span>Users</span>
-              </div>
-            }
-            key="links"
-          >
-            <div className="content">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
-            </div>
-          </Tab>
-        </Tabs>
-
-        <Tabs size="lg" radius="full">
-          <Tab title="Photos" key="photos">
-            <div className="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </div>
-          </Tab>
-          <Tab title="N.Y" key="videos">
-            <div className="content">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </div>
-          </Tab>
-          <Tab title="Links" key="links">
-            <div className="content">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
-            </div>
-          </Tab>
-        </Tabs>
+            </>
+          )}
+        </Modal>
       </div>
     </div>
   );

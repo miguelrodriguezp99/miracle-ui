@@ -15,3 +15,7 @@
   color: white;
   margin-top: 10px;
 }
+
+* {
+  font-family: "Roboto", sans-serif;
+}
