@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./tabs.module.css";
 import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
 import classNames from "classnames";
@@ -9,16 +9,20 @@ import {
   TabsVariants,
   variants,
   radii,
+  TabsDirections,
+  directions,
 } from "./constants";
 
 interface TabsProps {
   children?: React.ReactNode;
   color?: SemanticColor;
+  direction?: TabsDirections;
   variant?: TabsVariants;
   size?: TabsSizes;
   radius?: TabsRadius;
   disableShadow?: boolean;
-  contentWidth?: string;
+  textColor?: string;
+  selectedColor?: string;
   customIndicatorColor?: string;
   customBorderRadius?: string;
   customIndicatorBorderRadius?: string;
@@ -32,9 +36,11 @@ export const Tabs = ({
   size = sizes.md,
   radius = radii.md,
   customIndicatorColor,
+  textColor = "white",
+  selectedColor,
+  direction = directions.horizontal,
   children,
   disableShadow = false,
-  contentWidth = "100%",
   customBorderRadius,
   customIndicatorBorderRadius,
   centerTabs,
@@ -45,53 +51,53 @@ export const Tabs = ({
   const indicator = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState(0);
 
+  const updateIndicator = useCallback(() => {
+    if (!indicator.current || !tabsRef.current[activeTab]) return;
+    const currentTab = tabsRef.current[activeTab];
+    const tabRect = currentTab.getBoundingClientRect();
+    const tabListRect = currentTab.parentElement?.getBoundingClientRect();
+
+    if (direction === "horizontal") {
+      indicator.current.style.width =
+        variant === variants.underlined
+          ? `${tabRect.width * 0.8}px`
+          : `${tabRect.width}px`;
+      indicator.current.style.left =
+        variant === variants.underlined
+          ? `${tabRect.left + tabRect.width * 0.1 - (tabListRect?.left || 0)}px`
+          : `${tabRect.left - (tabListRect?.left || 0)}px`;
+    } else {
+      indicator.current.style.height =
+        variant === variants.underlined
+          ? `${tabRect.height * 0.8}px`
+          : `${tabRect.height}px`;
+      indicator.current.style.top =
+        variant === variants.underlined
+          ? `${tabRect.top + tabRect.height * 0.1 - (tabListRect?.top || 0)}px`
+          : `${tabRect.top - (tabListRect?.top || 0)}px`;
+    }
+  }, [activeTab, direction, variant]);
+
   useEffect(() => {
-    const updateIndicator = () => {
-      if (indicator.current && tabsRef.current[activeTab]) {
-        const currentTab = tabsRef.current[activeTab];
-        if (currentTab) {
-          const tabRect = currentTab.getBoundingClientRect();
-          const tabListRect = currentTab.parentElement?.getBoundingClientRect();
-
-          indicator.current.style.width =
-            variant === variants.underlined
-              ? tabRect.width * 0.8 + "px"
-              : tabRect.width + "px";
-          indicator.current.style.left =
-            variant === variants.underlined
-              ? tabRect.left +
-                tabRect.width * 0.1 -
-                (tabListRect?.left || 0) +
-                "px"
-              : tabRect.left - (tabListRect?.left || 0) + "px";
-        }
-      }
-    };
-
     updateIndicator();
     window.addEventListener("resize", updateIndicator);
-
-    return () => {
-      window.removeEventListener("resize", updateIndicator);
-    };
-  }, [activeTab, numOfTabs, variant]);
+    return () => window.removeEventListener("resize", updateIndicator);
+  }, [updateIndicator, direction]);
 
   const handleTabClick = (index: number) => {
     setActiveTab(index);
   };
 
   return (
-    <div
-      style={{
-        width: contentWidth,
-      }}
-      className={styles.wrapper}
-    >
+    <>
       <div
         style={{
           borderRadius: customBorderRadius,
           gridTemplateColumns: `repeat(${numOfTabs}, 1fr)`,
           margin: centerTabs ? "auto" : "0",
+          color: textColor,
+          //@ts-expect-error - custom property
+          "--selected-color": selectedColor,
         }}
         role="tablist"
         aria-label="tabs"
@@ -101,7 +107,7 @@ export const Tabs = ({
           styles[color],
           styles[variant],
           styles[size],
-
+          styles[direction],
           {
             [styles.disabled]: isDisabled,
             [styles.shadow]: !disableShadow,
@@ -117,7 +123,7 @@ export const Tabs = ({
               ? customIndicatorBorderRadius
               : customBorderRadius,
           }}
-          className={classNames(styles.indicator, color, {
+          className={classNames(styles.indicator, color, styles[direction], {
             [styles.shadow]: !disableShadow,
             [styles[`radius-${radius}`]]: radius,
           })}
@@ -136,29 +142,22 @@ export const Tabs = ({
         })}
       </div>
 
-      <div
-        style={{
-          borderRadius: customBorderRadius,
-        }}
-        className={styles.contentContainer}
-      >
-        {React.Children.map(children, (child, index) => {
-          return (
-            <div
-              role="tabpanel"
-              id={`panel-${(child as React.ReactElement).key}`}
-              aria-labelledby={`tab-${(child as React.ReactElement).key}`}
-              tabIndex={0}
-              className={classNames(styles.content, {
-                [styles.notActive]: index !== activeTab,
-              })}
-            >
-              {(child as React.ReactElement).props.children}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+      {React.Children.map(children, (child, index) => {
+        return (
+          <div
+            role="tabpanel"
+            id={`panel-${(child as React.ReactElement).key}`}
+            aria-labelledby={`tab-${(child as React.ReactElement).key}`}
+            tabIndex={index}
+            className={classNames(styles.content, {
+              [styles.notActive]: index !== activeTab,
+            })}
+          >
+            {(child as React.ReactElement).props.children}
+          </div>
+        );
+      })}
+    </>
   );
 };
 

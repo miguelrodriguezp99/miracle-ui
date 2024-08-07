@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Tabs, Tab } from "@components/tabs/src/";
 import {
+  directions,
   sizes,
+  TabsDirections,
   TabsSizes,
   TabsVariants,
   variants,
@@ -16,6 +18,7 @@ interface TabsArgs {
   size: TabsSizes;
   variant: TabsVariants;
   color: SemanticColor;
+  direction: TabsDirections;
   isDisabled: boolean;
 }
 
@@ -42,8 +45,10 @@ const meta: Meta<typeof Tabs> = {
     children: {
       table: { disable: true },
     },
-    contentWidth: {
-      table: { disable: true },
+
+    direction: {
+      options: Object.values(directions),
+      control: { type: "select" },
     },
   },
 };
@@ -66,6 +71,13 @@ const contentStyles = {
   padding: "0.75rem",
   marginTop: "0.75rem",
   width: "fit-content",
+};
+
+const contentStylesVertical = {
+  backgroundColor: "#18181b",
+  color: "white",
+  borderRadius: "10px",
+  padding: "0.75rem",
 };
 
 type Story = StoryObj<TabsArgs>;
@@ -92,30 +104,32 @@ export const WithContent: Story = {
     color: semanticColors.default,
   },
   render: ({ size, variant, color }) => (
-    <Tabs size={size} variant={variant} color={color}>
-      <Tab title="Photos" key="photos">
-        <div style={contentStyles} className="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </div>
-      </Tab>
-      <Tab title="N.Y" key="videos">
-        <div style={contentStyles} className="content">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </div>
-      </Tab>
-      <Tab title="Links" key="links">
-        <div style={contentStyles} className="content">
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.
-        </div>
-      </Tab>
-    </Tabs>
+    <div>
+      <Tabs size={size} variant={variant} color={color}>
+        <Tab title="Photos" key="photos">
+          <div style={contentStyles} className="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </Tab>
+        <Tab title="N.Y" key="videos">
+          <div style={contentStyles} className="content">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </div>
+        </Tab>
+        <Tab title="Links" key="links">
+          <div style={contentStyles} className="content">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </div>
+        </Tab>
+      </Tabs>
+    </div>
   ),
 };
 
@@ -275,5 +289,47 @@ export const Disabled: Story = {
       <Tab title="N.Y" key="videos"></Tab>
       <Tab title="Links" key="links"></Tab>
     </Tabs>
+  ),
+};
+
+export const Vertical: Story = {
+  args: {
+    size: sizes.md,
+    variant: variants.solid,
+    color: semanticColors.default,
+  },
+  render: ({ size, variant, color }) => (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        gap: "10px",
+      }}
+    >
+      <Tabs size={size} variant={variant} color={color} direction="vertical">
+        <Tab title="Photos" key="photos">
+          <div style={contentStylesVertical} className="content">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </div>
+        </Tab>
+        <Tab title="N.Y" key="videos">
+          <div style={contentStylesVertical} className="content">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </div>
+        </Tab>
+        <Tab title="Links" key="links">
+          <div style={contentStylesVertical} className="content">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </div>
+        </Tab>
+      </Tabs>
+    </div>
   ),
 };

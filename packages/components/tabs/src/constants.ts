@@ -14,6 +14,13 @@ export const variants = {
 
 export type TabsVariants = (typeof variants)[keyof typeof variants];
 
+export const directions = {
+  horizontal: "horizontal",
+  vertical: "vertical",
+} as const;
+
+export type TabsDirections = (typeof directions)[keyof typeof directions];
+
 export const radii = {
   none: "none",
   sm: "sm",

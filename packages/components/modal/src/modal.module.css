@@ -1,24 +1,65 @@
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  animation: fadeIn 0.2s;
+  animation: fadeIn 0.35s;
 }
 
 .modalContent {
-  position: relative;
+  position: absolute;
   background-color: #18181b;
   color: white;
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  width: 448px;
+  width: calc(100% - 20px);
+  max-width: 448px;
+}
+
+/* MOBILE */
+@media (width <= 640px) {
+  .modalContent.auto,
+  .modalContent.bottom {
+    bottom: 0;
+    inset: 1 0;
+    animation: slideIn 0.35s;
+  }
+
+  .modalContent.top {
+    top: 0;
+    inset: 1 0;
+    animation: slideIn 0.35s;
+  }
+
+  .modalClosing {
+    animation: slideOut 0.35s !important;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 641px) {
+  .modalContent.bottom {
+    bottom: 11%;
+    inset: 1 0;
+    animation: fadeIn 0.35s;
+  }
+
+  .modalContent.top {
+    top: 11%;
+    inset: 1 0;
+    animation: fadeIn 0.35s;
+  }
+
+  .modalClosing {
+    animation: fadeOut 0.35s;
+  }
 }
 
 .children {
@@ -26,7 +67,7 @@
 }
 
 .modalClosing {
-  animation: fadeOut 0.2s;
+  animation: fadeOut 0.35s;
 }
 
 .closeButton {
@@ -67,5 +108,27 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(30%);
   }
 }

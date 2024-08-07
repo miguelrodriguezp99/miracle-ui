@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./components/styles/global.css";
 import "./App.css";
-import { Button } from "@mirakle-ui/react";
 import { Modal } from "@components/modal/src";
+import { Button } from "./components";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const buttonContainerStyle: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    gap: "10px",
+  };
+
   return (
     <div
       style={{
@@ -13,14 +20,17 @@ function App() {
         height: "100vh",
         width: "100vw",
         backgroundColor: "black",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <div style={{ marginTop: "10px" }}>
         <Modal
           value={isOpen}
           setValue={setIsOpen}
+          placement="bottom"
           button={
-            <Button radius="md" color="secondary">
+            <Button radius="md" color="primary" onClick={() => setIsOpen(true)}>
               Open Modal
             </Button>
           }
@@ -29,17 +39,36 @@ function App() {
             <>
               <div className="flex flex-col gap-1">Modal Title</div>
               <div>
-                <p>{isOpen.toString()}</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Nullam pulvinar risus non risus hendrerit venenatis.</p>
-                <p>
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "18px",
+                    lineHeight: "1.25",
+                    padding: "10px 0px",
+                  }}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam pulvinar risus non risus hendrerit venenatis.
+                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
+                </p>
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "18px",
+                    lineHeight: "1.25",
+                    padding: "10px 0px",
+                  }}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam pulvinar risus non risus hendrerit venenatis.
                   Pellentesque sit amet hendrerit risus, sed porttitor quam.
                 </p>
               </div>
-              <div>
-                <button onClick={closeModal}>Close</button>
-                <button>Action</button>
-                <button onClick={closeModal}>Another Action</button>
+              <div style={buttonContainerStyle}>
+                <Button onClick={closeModal} radius="sm" customColor="red">
+                  Close
+                </Button>
+                <Button radius="sm">Action</Button>
               </div>
             </>
           )}

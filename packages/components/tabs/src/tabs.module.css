@@ -4,11 +4,26 @@
   gap: 0.5rem;
   padding: 0.25rem;
   position: relative;
-  width: fit-content;
+  min-width: min-content;
+  max-width: max-content;
   height: fit-content;
   border-radius: 12px;
   align-items: center;
   overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.success,
+.warning {
+  --selected-color: black;
+}
+
+.tablist.horizontal {
+  flex-direction: row;
+}
+
+.tablist.vertical {
+  flex-direction: column;
 }
 
 .tablist {
@@ -54,10 +69,17 @@
 .indicator {
   position: absolute;
   inset: 0px;
-  margin: var(--padding-v) 0px;
   background-color: var(--color);
   transition: all 0.3s;
   z-index: 0;
+}
+
+.indicator.horizontal {
+  margin: var(--padding-v) 0px;
+}
+
+.indicator.vertical {
+  margin: 0px var(--padding-v);
 }
 
 .indicator.radius-none,
@@ -91,18 +113,22 @@
     0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
+.tab {
+  color: inherit;
+}
+
 .tab:hover {
   filter: opacity(0.6);
 }
 
 .tab.active {
   filter: none;
+  color: var(--selected-color);
 }
 
 .title {
   width: fit-content;
   font-size: var(--font-size);
-  color: white;
 }
 
 .content.notActive {

@@ -1,20 +1,24 @@
 import React, { useRef, useState } from "react";
 import styles from "./modal.module.css";
+import { ModalPlacements, placements } from "./constants";
+import classNames from "classnames";
 
 type ModalProps = {
   button: React.ReactElement;
-  children: (props: { closeModal: () => void }) => React.ReactNode;
-  value?: boolean;
-  setValue?: (value: boolean) => void;
   backgroundColor?: string;
+  placement?: ModalPlacements;
+  value?: boolean;
+  children: (props: { closeModal: () => void }) => React.ReactNode;
+  setValue?: (value: boolean) => void;
 };
 
 export const Modal = ({
   button,
-  children,
+  backgroundColor = "rgba(0, 0, 0, 0.5)",
+  placement = placements.auto,
   value,
   setValue,
-  backgroundColor = "rgba(0, 0, 0, 0.5)",
+  children,
 }: ModalProps) => {
   const [internalOpen, setInternalOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -35,7 +39,7 @@ export const Modal = ({
       setTimeout(() => {
         handleOpen(false);
         modalRef.current?.classList.remove(styles.modalClosing);
-      }, 200);
+      }, 350);
     }
   };
   const stopPropagation = (event: React.MouseEvent) => event.stopPropagation();
@@ -54,8 +58,28 @@ export const Modal = ({
         className={styles.modal}
         onClick={closeModal}
       >
-        <div className={styles.modalContent} onClick={stopPropagation}>
+        <div
+          className={classNames(styles.modalContent, styles[placement])}
+          onClick={stopPropagation}
+        >
           {children({ closeModal })}
+          <button className={styles.closeButton} onClick={closeModal}>
+            <svg
+              aria-hidden="true"
+              fill="white"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path d="M18 6L6 18M6 6l12 12"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </>

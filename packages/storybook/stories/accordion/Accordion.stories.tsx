@@ -264,18 +264,18 @@ export const Custom: Story = {
       >
         <AccordionItem
           title="Accordion 1"
-          backgroundColor="red"
+          backgroundColor="#990000"
           titleColor="white"
           contentColor="white"
         />
         <AccordionItem
           title="Accordion 2"
           titleColor="black"
-          backgroundColor="orange"
+          backgroundColor="lightgray"
         />
         <AccordionItem
           title="Accordion 3"
-          backgroundColor="red"
+          backgroundColor="#990000"
           contentColor="black"
         />
         <AccordionItem

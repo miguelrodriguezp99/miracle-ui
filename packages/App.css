@@ -1,19 +1,5 @@
 .content {
-  font-weight: 600;
   color: white;
-  overflow-wrap: break-word;
-  width: 100%;
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: inherit;
-  height: auto;
-  text-align: left;
-  overflow-y: auto;
-  place-content: inherit;
-  padding: 10px 0px;
-  color: white;
-  margin-top: 10px;
 }
 
 * {
