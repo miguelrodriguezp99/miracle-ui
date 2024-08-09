@@ -13,18 +13,22 @@
 
 .modalContent {
   position: absolute;
-  background-color: #18181b;
   color: white;
   padding: 20px;
-  border-radius: 14px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  border-radius: 14px;
+  /* max-width: 448px; */
   width: 448px;
-  width: calc(100% - 20px);
-  max-width: 448px;
+  background-color: #18181b;
 }
 
 /* MOBILE */
 @media (width <= 640px) {
+  .modalContent {
+    width: calc(100% - 20px);
+  }
+
   .modalContent.auto,
   .modalContent.bottom {
     bottom: 0;
@@ -66,9 +70,9 @@
   font-family: inherit;
 }
 
-.modalClosing {
+/* .modalClosing {
   animation: fadeOut 0.35s;
-}
+} */
 
 .closeButton {
   border: none;

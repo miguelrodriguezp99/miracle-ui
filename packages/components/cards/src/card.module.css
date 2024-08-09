@@ -88,7 +88,7 @@
 
 .title {
   font-size: 22px;
-  line-height: 0;
+  line-height: 1;
   font-weight: 600;
 }
 
@@ -96,12 +96,12 @@
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 0;
+  line-height: 1.5;
 }
 
 .title-cover {
   font-size: 14px;
-  line-height: 0;
+  line-height: 1.2;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.56);
 }
@@ -114,6 +114,7 @@
 .subtitle {
   font-size: 14px;
   font-weight: 400;
+  line-height: 1;
   color: rgba(255, 255, 255, 0.56);
 }
 
@@ -125,12 +126,12 @@
   font-size: 20px;
   font-weight: 600;
   color: white;
-  line-height: 0;
+  line-height: 1.5;
 }
 
 /* PRODUCT CARD */
 .product-container {
-  padding: 0px 10px;
+  padding: 10px 10px;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -383,9 +384,11 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: space-evenly;
-  margin: 0 auto;
   gap: 5px;
-  padding: 3px 0px;
+  padding: 5px 0px;
+  display: flex;
+  text-align: center;
+  align-items: center;
 
   p {
     font-size: 12px;
@@ -398,6 +401,7 @@
     border: none;
     border-radius: 16px;
     padding: 0 12px;
+    min-height: 25px;
     color: white;
     transition: all 0.2s ease-in-out;
   }

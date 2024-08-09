@@ -20,9 +20,17 @@ export const CardWithBlurredFooter = ({
         <Image route={imgRoute} alt="image" width="100%" height="200px" />
 
         <CardFooter padding="none" margin="vxs" absolute isBlurred>
-          <div className={styles["blurred-footer-container"]}>
-            <p>Available soon</p>
-            <button>Notify me</button>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <div className={styles["blurred-footer-container"]}>
+              <p>Available soon</p>
+              <button>Notify me</button>
+            </div>
           </div>
         </CardFooter>
       </CardBody>

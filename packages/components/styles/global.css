@@ -29,6 +29,10 @@
   --text: hsl(210 5.56% 92.94%);
 }
 
+body.dark {
+  --text: hsl(0, 0%, 0%);
+}
+
 .default {
   --color: #424247;
   --color-2: #39393e;
@@ -131,8 +135,8 @@
 
 .light {
   background-color: transparent;
-  color: var(--color);
   border: none;
+  color: var(--color) !important;
 }
 
 .flat {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./components/styles/global.css";
 import "./App.css";
 import { Modal } from "@components/modal/src";
@@ -12,6 +12,10 @@ function App() {
     justifyContent: "flex-end",
     gap: "10px",
   };
+
+  useEffect(() => {
+    document.body.classList.add("light");
+  }, []);
 
   return (
     <div
