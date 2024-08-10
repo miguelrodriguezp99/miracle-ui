@@ -23,16 +23,20 @@ function App() {
         display: "flex",
         height: "100vh",
         width: "100vw",
-        backgroundColor: "black",
+        backgroundColor: "orange",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <div style={{ marginTop: "10px" }}>
+      <h1 style={{ marginBottom: "500px" }}>Modal</h1>
+      <div style={{ marginTop: "200px" }}>
         <Modal
+          size="sm"
           value={isOpen}
           setValue={setIsOpen}
-          placement="bottom"
+          placement="bottomCenter"
+          backdrop="blur"
+          blur={5}
           button={
             <Button radius="md" color="primary" onClick={() => setIsOpen(true)}>
               Open Modal

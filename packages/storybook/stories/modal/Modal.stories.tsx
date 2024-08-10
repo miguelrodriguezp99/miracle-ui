@@ -4,11 +4,41 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Modal } from "@components/modal/src/Modal";
 import React, { useState } from "react";
 import { Button } from "@components/index";
+import { backdrops, placements, sizes } from "@components/modal/src/constants";
 
 const meta: Meta<typeof Modal> = {
   title: "Components/Modal",
   component: Modal,
-  argTypes: {},
+  argTypes: {
+    size: {
+      options: Object.values(sizes),
+      control: { type: "select" },
+    },
+    backdrop: {
+      options: Object.values(backdrops),
+      control: { type: "select" },
+    },
+    placement: {
+      options: Object.values(placements),
+      control: { type: "select" },
+    },
+    blur: {
+      control: { type: "number" },
+    },
+
+    button: {
+      table: { disable: true },
+    },
+    value: {
+      table: { disable: true },
+    },
+    setValue: {
+      table: { disable: true },
+    },
+    children: {
+      table: { disable: true },
+    },
+  },
 };
 export default meta;
 
@@ -27,6 +57,7 @@ const Template = (args: any) => {
   return (
     <div style={{ marginTop: "10px" }}>
       <Modal
+        {...args}
         value={isOpen}
         setValue={setIsOpen}
         button={
@@ -70,4 +101,28 @@ const Template = (args: any) => {
 
 export const Primary: Story = {
   render: (args) => <Template {...args} />,
+};
+
+export const Size: Story = {
+  render: (args) => <Template {...args} />,
+};
+
+Size.args = {
+  size: "xl",
+};
+
+export const Backdrop: Story = {
+  render: (args) => <Template {...args} />,
+};
+
+Backdrop.args = {
+  backdrop: "blur",
+};
+
+export const Placement: Story = {
+  render: (args) => <Template {...args} />,
+};
+
+Placement.args = {
+  placement: "bottom",
 };

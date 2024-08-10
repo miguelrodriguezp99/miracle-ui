@@ -1,13 +1,24 @@
 import React, { useRef, useState } from "react";
 import styles from "./modal.module.css";
-import { ModalPlacements, placements } from "./constants";
+import {
+  backdrops,
+  ModalBackdrops,
+  ModalPlacements,
+  ModalSizes,
+  placements,
+  sizes,
+} from "./constants";
 import classNames from "classnames";
 
 type ModalProps = {
   button: React.ReactElement;
   backgroundColor?: string;
+  blur?: number;
   placement?: ModalPlacements;
+  size?: ModalSizes;
+  customBorderRadius?: string;
   value?: boolean;
+  backdrop?: ModalBackdrops;
   children: (props: { closeModal: () => void }) => React.ReactNode;
   setValue?: (value: boolean) => void;
 };
@@ -15,7 +26,11 @@ type ModalProps = {
 export const Modal = ({
   button,
   backgroundColor = "rgba(0, 0, 0, 0.5)",
+  customBorderRadius,
+  size = sizes.md,
+  blur = 5,
   placement = placements.auto,
+  backdrop = backdrops.opaque,
   value,
   setValue,
   children,
@@ -44,6 +59,16 @@ export const Modal = ({
   };
   const stopPropagation = (event: React.MouseEvent) => event.stopPropagation();
 
+  const backdropStyle = {
+    backgroundColor:
+      backdrop === backdrops.opaque
+        ? backgroundColor
+        : backdrop === backdrops.blur
+          ? backgroundColor
+          : "transparent",
+    backdropFilter: backdrop === backdrops.blur ? `blur(${blur}px)` : "",
+  };
+
   if (!isOpen) return <>{React.cloneElement(button, { onClick: openModal })}</>;
 
   return (
@@ -52,14 +77,28 @@ export const Modal = ({
 
       <div
         ref={modalRef}
+        className={classNames(styles.modal, {
+          [styles.blur]: backdrop === backdrops.blur,
+          [styles.notBlur]: backdrop !== backdrops.blur,
+        })}
         style={{
-          backgroundColor,
+          //@ts-expect-error - custom property
+          "--blur": blur,
         }}
-        className={styles.modal}
         onClick={closeModal}
       >
         <div
-          className={classNames(styles.modalContent, styles[placement])}
+          className={styles.modalBackdrop} // Agregar esta capa
+          style={backdropStyle}
+        />
+        <div
+          style={{
+            borderRadius: customBorderRadius,
+          }}
+          className={classNames(styles.modalContent, styles[placement], {
+            [styles.blur]: backdrop === backdrops.blur,
+            [styles[size]]: size,
+          })}
           onClick={stopPropagation}
         >
           {children({ closeModal })}
