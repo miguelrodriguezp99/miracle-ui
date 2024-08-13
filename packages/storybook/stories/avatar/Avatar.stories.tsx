@@ -80,7 +80,6 @@ export const AvatarGroupHorizontal: Story = {
 export const AvatarGroupVertical: Story = {
   render: () => (
     <Group animation="vertical">
-      {" "}
       {/* Use the renamed import */}
       <Avatar
         bordered

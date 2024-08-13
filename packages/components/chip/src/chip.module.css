@@ -1,0 +1,92 @@
+.chip {
+  border-radius: 99999px;
+  min-width: min-content;
+  max-width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.chip.default,
+.chip.default.light {
+  color: hsl(210 5.56% 92.94%);
+}
+
+.chipContent {
+  color: inherit;
+  display: flex;
+}
+
+.chipContent.sm {
+  padding: 0 4px;
+  font-size: 12px;
+}
+
+.chipContent.md {
+  padding: 0 8px;
+  font-size: 14px;
+}
+
+.chipContent.lg {
+  padding: 0 8px;
+  font-size: 16px;
+}
+
+.chip.sm {
+  padding: 0 4px;
+  height: 1.5rem;
+}
+
+.chip.md {
+  padding: 0 4px;
+  height: 1.75rem;
+}
+
+.chip.lg {
+  padding: 0 8px;
+  height: 2rem;
+}
+
+.radius-none {
+  border-radius: var(--radius-none);
+}
+
+.radius-sm {
+  border-radius: var(--radius-sm);
+}
+
+.radius-md {
+  border-radius: var(--radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--radius-lg);
+}
+
+.radius-full {
+  border-radius: var(--radius-full);
+}
+
+.avatar {
+  max-height: 80%;
+  width: auto;
+}
+
+.onClose {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeIcon {
+  opacity: 0.7;
+  user-select: none;
+  outline: none;
+  transition: opacity 0.3s;
+}
+
+.closeIcon:hover {
+  opacity: 1;
+}

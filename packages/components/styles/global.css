@@ -136,7 +136,7 @@ body.dark {
 .light {
   background-color: transparent;
   border: none;
-  color: var(--color) !important;
+  color: var(--color);
 }
 
 .flat {

@@ -10,6 +10,8 @@ type Props = {
   avatar?: string;
   radius?: AvatarRadius;
   size?: AvatarSizes;
+  customSize?: string;
+  customFontSize?: string;
   color?: SemanticColor;
   bordered?: boolean;
   isDisabled?: boolean;
@@ -20,6 +22,8 @@ export const Avatar = ({
   avatar,
   radius = radii.full,
   size = sizes.md,
+  customSize,
+  customFontSize,
   bordered = false,
   color = semanticColors.default,
   isDisabled,
@@ -43,6 +47,9 @@ export const Avatar = ({
   } else if (name) {
     content = (
       <div
+        style={{
+          fontSize: customFontSize,
+        }}
         className={classNames(styles[`text-container`], {
           [styles[`size-${size}`]]: size,
           [`${color}`]: color,
@@ -57,6 +64,11 @@ export const Avatar = ({
 
   return (
     <div
+      style={{
+        width: customSize,
+        height: customSize,
+        fontSize: "4px",
+      }}
       className={classNames(styles["avatar-container"], {
         [styles[`radius-${radius}`]]: radius,
         [styles["bordered"]]: bordered,
