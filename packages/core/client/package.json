@@ -21,9 +21,6 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
-    "@miracle-ui/button": "^0.0.1",
-    "@miracle-ui/input": "^0.0.1",
-    "@miracle-ui/react": "^0.0.1",
     "commander": "^7.2.0",
     "fs-extra": "^10.0.0"
   }
