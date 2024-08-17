@@ -7,7 +7,7 @@ import {
   InputWidth,
 } from "./constants";
 import styles from "./input.module.css";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 import classNames from "classnames";
 
 type Props = {

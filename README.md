@@ -1,19 +1,19 @@
-# Mirakle UI
+# Miracle UI
 
 <p align="center">
-  <img src="https://github.com/miguelrodriguezp99/miracle-ui/assets/72866796/33c42d25-c3cf-405a-a99f-c1196a08e428" alt="Mirakle UI Logo">
+  <img src="https://github.com/miguelrodriguezp99/miracle-ui/assets/72866796/33c42d25-c3cf-405a-a99f-c1196a08e428" alt="Miracle UI Logo">
 </p>
 
 ## Introduction
 
-Welcome to Mirakle UI, a comprehensive library of ready-to-use React components. Designed for flexibility and ease of use, Mirakle UI allows you to quickly integrate high-quality UI components into any React project.
+Welcome to Miracle UI, a comprehensive library of ready-to-use React components. Designed for flexibility and ease of use, Miracle UI allows you to quickly integrate high-quality UI components into any React project.
 
 ## Installation
 
-To install Mirakle UI in your React project, simply run:
+To install Miracle UI in your React project, simply run:
 
 ```
-npm i mirakle-ui-react
+npm i miracle-ui-react
 ```
 
 ## Usage
@@ -21,13 +21,13 @@ npm i mirakle-ui-react
 Once installed, you can start importing and using the components in your project:
 
 ```
-import { Button, Card } from 'mirakle-ui-react';
+import { Button, Card } from 'miracle-ui-react';
 
 function App() {
   return (
     <div>
       <Card>
-        <h1>Welcome to Mirakle UI</h1>
+        <h1>Welcome to Miracle UI</h1>
         <Button>Click Me</Button>
       </Card>
     </div>
@@ -39,7 +39,7 @@ export default App;
 
 ## Landing Page
 
-We are also working on a comprehensive landing page where you can visually explore all the components Mirakle UI offers. Stay tuned for updates!
+We are also working on a comprehensive landing page where you can visually explore all the components Miracle UI offers. Stay tuned for updates!
 
 [Link to Landing Page](#)
 
@@ -47,7 +47,7 @@ We are also working on a comprehensive landing page where you can visually explo
 
 Explore our components and see them in action with our Storybook. You can find the live Storybook here:
 
-[Mirakle UI Storybook](https://main--66685fb204b9df24515e1b9b.chromatic.com)
+[Miracle UI Storybook](https://main--66685fb204b9df24515e1b9b.chromatic.com)
 
 ## Contributing
 
@@ -63,9 +63,9 @@ For any inquiries, please reach out to your-email@example.com.
 
 ---
 
-Thank you for using Mirakle UI! We hope our components make your development process faster and more enjoyable.
+Thank you for using Miracle UI! We hope our components make your development process faster and more enjoyable.
 
-npx lerna run rollup --scope=@mirakle-ui/button
+npx lerna run rollup --scope=@miracle-ui/button
 npx lerna run rollup
 npx lerna version --no-private
 npx lerna publish --no-private

@@ -1,1 +1,1 @@
-import "./mirakle-ui.css";
+import "./miracle-ui.css";

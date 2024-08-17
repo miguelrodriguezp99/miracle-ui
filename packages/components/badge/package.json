@@ -1,6 +1,6 @@
 {
-  "name": "@mirakle-ui/badge",
-  "version": "0.1.39",
+  "name": "@miracle-ui/badge",
+  "version": "0.0.1",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -26,9 +26,9 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@mirakle-ui/avatar": "file:../avatar",
-    "@mirakle-ui/divider": "file:../divider",
-    "@mirakle-ui/system20": "file:../../core/system",
+    "@miracle-ui/avatar": "file:../avatar",
+    "@miracle-ui/divider": "file:../divider",
+    "@miracle-ui/system": "file:../../core/system",
     "classnames": "^2.5.1"
   },
   "devDependencies": {

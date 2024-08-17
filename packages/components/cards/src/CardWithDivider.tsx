@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./card.module.css";
 import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
-import { Divider } from "@mirakle-ui/divider";
+import { Divider } from "@miracle-ui/divider";
 import { Image } from "./Image";
 import { CardFooter } from "./components/CardFooter";
 

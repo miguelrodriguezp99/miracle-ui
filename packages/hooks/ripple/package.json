@@ -1,6 +1,6 @@
 {
-  "name": "@mirakle-ui/ripple20",
-  "version": "0.1.30",
+  "name": "@miracle-ui/ripple",
+  "version": "0.0.1",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -25,7 +25,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@mirakle-ui/system20": "file:../../core/system"
+    "@miracle-ui/system": "file:../../core/system"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",

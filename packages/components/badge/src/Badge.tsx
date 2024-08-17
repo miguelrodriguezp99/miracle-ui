@@ -1,5 +1,5 @@
 import React from "react";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 import {
   BadgeRadius,
   BadgePosition,

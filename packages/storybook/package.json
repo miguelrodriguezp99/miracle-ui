@@ -1,5 +1,5 @@
 {
-  "name": "@mirakle-ui/storybook",
+  "name": "@miracle-ui/storybook",
   "version": "0.0.1",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
@@ -26,8 +26,8 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@mirakle-ui/system20": "*",
-    "@mirakle-ui/ripple20": "^0.1.30"
+    "@miracle-ui/system": "*",
+    "@miracle-ui/ripple": "^0.1.30"
   },
   "devDependencies": {},
   "peerDependencies": {

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./avatar.module.css";
 import classNames from "classnames";
 import { AvatarSizes } from "./constants";
-import { SemanticColor } from "@mirakle-ui/system20";
+import { SemanticColor } from "@miracle-ui/system";
 
 export type AvatarIconProps = {
   size: AvatarSizes;

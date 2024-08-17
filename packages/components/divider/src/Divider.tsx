@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./divider.module.css";
 import { DividerDirection, directions } from "./constants";
 import classNames from "classnames";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 
 type Props = {
   direction?: DividerDirection;

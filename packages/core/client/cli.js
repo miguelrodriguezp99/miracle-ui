@@ -11,7 +11,7 @@ const program = new Command();
 
 program
   .command("init")
-  .description("Initialize mirakle-ui")
+  .description("Initialize miracle-ui")
   .action(() => {
     const cssContent = `
     
@@ -206,12 +206,12 @@ program
 
     if (mainFile) {
       const mainFileDir = path.dirname(mainFile); // Directorio del archivo principal encontrado
-      const cssFilePath = path.join(mainFileDir, "mirakle-ui.css");
+      const cssFilePath = path.join(mainFileDir, "miracle-ui.css");
       fs.writeFileSync(cssFilePath, cssContent, "utf-8");
-      console.log(`\x1b[34mmirakle-ui.css created successfully. \x1b[0m`);
+      console.log(`\x1b[34mmiracle-ui.css created successfully. \x1b[0m`);
 
       const fileContent = fs.readFileSync(mainFile, "utf-8");
-      const newContent = `import './mirakle-ui.css';\n${fileContent}`;
+      const newContent = `import './miracle-ui.css';\n${fileContent}`;
       fs.writeFileSync(mainFile, newContent, "utf-8");
       console.log(`\x1b[34mAdded import statement to ${mainFile}. \x1b[0m`);
     } else {
@@ -236,22 +236,22 @@ function runCommand(command) {
 program
   .command("add [packages...]")
   .description("Install the specified packages")
-  .option("--all", "Install @mirakle-ui/react package")
+  .option("--all", "Install @miracle-ui/react package")
   .action(async (packages, cmd) => {
     if (cmd.all) {
-      const command = `npm install @mirakle-ui/react`;
-      console.log(`\x1b[32mInstalling @mirakle-ui/react... \x1b[0m`);
+      const command = `npm install @miracle-ui/react`;
+      console.log(`\x1b[32mInstalling @miracle-ui/react... \x1b[0m`);
       try {
         await runCommand(command);
         console.log(
-          `\x1b[32m@mirakle-ui/react installed successfully. \x1b[0m`
+          `\x1b[32m@miracle-ui/react installed successfully. \x1b[0m`
         );
       } catch (error) {
-        console.log(`\x1b[31mFailed to install @mirakle-ui/react. \x1b[0m`);
+        console.log(`\x1b[31mFailed to install @miracle-ui/react. \x1b[0m`);
       }
     } else {
       for (const pkg of packages) {
-        const command = `npm install @mirakle-ui/${pkg}`;
+        const command = `npm install @miracle-ui/${pkg}`;
         console.log(`\x1b[32mInstalling ${pkg}... \x1b[0m`);
         try {
           await runCommand(command);

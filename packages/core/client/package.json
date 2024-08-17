@@ -1,9 +1,9 @@
 {
-  "name": "mirakle-ui-cli",
-  "version": "0.1.46",
+  "name": "miracle-ui-cli",
+  "version": "0.0.1",
   "main": "dist/cli.js",
   "bin": {
-    "mirakle-ui": "./dist/cli.js"
+    "miracle-ui": "./dist/cli.js"
   },
   "type": "module",
   "scripts": {
@@ -21,9 +21,9 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
-    "@mirakle-ui/button": "^0.1.45",
-    "@mirakle-ui/input": "^0.1.45",
-    "@mirakle-ui/react": "^0.1.46",
+    "@miracle-ui/button": "^0.1.45",
+    "@miracle-ui/input": "^0.1.45",
+    "@miracle-ui/react": "^0.1.46",
     "commander": "^7.2.0",
     "fs-extra": "^10.0.0"
   }

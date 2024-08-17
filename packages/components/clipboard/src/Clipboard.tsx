@@ -1,14 +1,14 @@
 import React, { useRef, useState, ReactNode } from "react";
 import styles from "./clipboard.module.css";
 import classNames from "classnames";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 import {
   ClipboardSizes,
   ClipboardVariants,
   variants,
   sizes,
 } from "./constants";
-import { useRippleEffect } from "@mirakle-ui/ripple20";
+import { useRippleEffect } from "@miracle-ui/ripple";
 
 type Props = {
   children: React.ReactNode;

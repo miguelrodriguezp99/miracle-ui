@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
-import { semanticColors, SemanticColor } from "@mirakle-ui/system20";
+import { semanticColors, SemanticColor } from "@miracle-ui/system";
 
 const variants = {
   solid: "solid",

@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./tabs.module.css";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 import classNames from "classnames";
 import {
   sizes,

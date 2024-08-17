@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./switch.module.css";
 import classNames from "classnames";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 import { SwitchSizes, sizes } from "./constants";
 
 type Props = {

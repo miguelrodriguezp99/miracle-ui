@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styles from "./slider.module.css";
 import classNames from "classnames";
 import { directions, sizes, SliderDirection, SliderSizes } from "./constants";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
-import { Button } from "@mirakle-ui/button";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
+import { Button } from "@miracle-ui/button";
 import useSlider from "./hooks/useSlider";
 
 type Props = {

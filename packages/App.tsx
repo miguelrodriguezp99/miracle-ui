@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./components/styles/global.css";
 import "./App.css";
 import { Chip } from "@components/chip/src";
-import { semanticColors } from "@mirakle-ui/system20";
+import { semanticColors } from "@miracle-ui/system";
 import { UserIcon } from "./icons/UserIcon";
 import { Avatar } from "./components";
 

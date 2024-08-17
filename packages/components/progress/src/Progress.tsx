@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./progress.module.css";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 import classNames from "classnames";
 import { ProgressRadius, ProgressSizes, radii, sizes } from "./constants";
 

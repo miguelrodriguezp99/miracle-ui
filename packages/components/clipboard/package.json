@@ -1,6 +1,6 @@
 {
-  "name": "@mirakle-ui/clipboard",
-  "version": "0.1.45",
+  "name": "@miracle-ui/clipboard",
+  "version": "0.0.1",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -26,8 +26,8 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@mirakle-ui/ripple20": "file:../../hooks/ripple",
-    "@mirakle-ui/system20": "file:../../core/system",
+    "@miracle-ui/ripple": "file:../../hooks/ripple",
+    "@miracle-ui/system": "file:../../core/system",
     "classnames": "^2.5.1"
   },
   "devDependencies": {

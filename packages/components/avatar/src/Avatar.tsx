@@ -3,7 +3,7 @@ import styles from "./avatar.module.css";
 import { AvatarRadius, AvatarSizes, radii, sizes } from "./constants";
 import classNames from "classnames";
 import { AvatarIcon } from "./AvatarIcon";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 
 type Props = {
   name?: string;

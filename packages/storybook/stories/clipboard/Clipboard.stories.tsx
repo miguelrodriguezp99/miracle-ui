@@ -28,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: "npm install @mirakle-ui/react",
+    children: "npm install @miracle-ui/react",
   },
 };
 
@@ -37,9 +37,9 @@ export const Multiline: Story = {
     size: "md",
     children: (
       <>
-        <span>npm install @mirakle-ui/react</span>
-        <span>npm install @mirakle-ui/react</span>
-        <span>npm install @mirakle-ui/react</span>
+        <span>npm install @miracle-ui/react</span>
+        <span>npm install @miracle-ui/react</span>
+        <span>npm install @miracle-ui/react</span>
       </>
     ),
   },
@@ -47,7 +47,7 @@ export const Multiline: Story = {
 
 export const Bordered: Story = {
   args: {
-    children: "npm install @mirakle-ui/react",
+    children: "npm install @miracle-ui/react",
     variant: "bordered",
     color: "primary",
   },
@@ -55,7 +55,7 @@ export const Bordered: Story = {
 
 export const Solid: Story = {
   args: {
-    children: "npm install @mirakle-ui/react",
+    children: "npm install @miracle-ui/react",
     variant: "solid",
     color: "success",
   },
@@ -63,7 +63,7 @@ export const Solid: Story = {
 
 export const Shadow: Story = {
   args: {
-    children: "npm install @mirakle-ui/react",
+    children: "npm install @miracle-ui/react",
     variant: "shadow",
     color: "warning",
   },
@@ -71,7 +71,7 @@ export const Shadow: Story = {
 
 export const CustomSymbol: Story = {
   args: {
-    children: "npm install @mirakle-ui/react",
+    children: "npm install @miracle-ui/react",
     customSymbol: "🚀",
   },
 };
@@ -79,7 +79,7 @@ export const CustomSymbol: Story = {
 export const HidedButton: Story = {
   args: {
     size: "md",
-    children: "npm install @mirakle-ui/react",
+    children: "npm install @miracle-ui/react",
     hideButton: true,
   },
 };
@@ -87,7 +87,7 @@ export const HidedButton: Story = {
 export const Custom: Story = {
   args: {
     size: "md",
-    children: "npm install @mirakle-ui/react",
+    children: "npm install @miracle-ui/react",
     customPadding: "0.75rem",
     customTextColor: "black",
     customTextSize: "1rem",

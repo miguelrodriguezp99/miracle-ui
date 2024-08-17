@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./button.module.css";
-import { useRippleEffect } from "@mirakle-ui/ripple20";
-import { semanticColors, SemanticColor } from "@mirakle-ui/system20";
+import { useRippleEffect } from "@miracle-ui/ripple";
+import { semanticColors, SemanticColor } from "@miracle-ui/system";
 import classNames from "classnames";
 import {
   ButtonVariants,

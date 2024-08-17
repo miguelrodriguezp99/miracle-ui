@@ -8,7 +8,7 @@ import {
   sizes,
   variants,
 } from "./constants";
-import { SemanticColor, semanticColors } from "@mirakle-ui/system20";
+import { SemanticColor, semanticColors } from "@miracle-ui/system";
 
 type ChipProps = {
   color?: SemanticColor;
