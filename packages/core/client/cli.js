@@ -9,6 +9,30 @@ import path from "path";
 
 const program = new Command();
 
+// Sobrescribimos el método helpInformation para personalizar la salida de --help
+program.helpInformation = function () {
+  return `
+Usage: miracle-ui [options] [command]
+
+Options:
+  -h, --help         Show this help message
+
+Commands:
+  init               Initialize miracle-ui and create miracle-ui.css
+                     Example: miracle-ui init
+
+  add [packages...]  Install the specified packages
+                     Example: miracle-ui add package-name
+                     Example: miracle-ui add --all (Installs @miracle-ui/react)
+
+Examples:
+  miracle-ui init
+  miracle-ui add button
+  miracle-ui add --all
+
+  `;
+};
+
 program
   .command("init")
   .description("Initialize miracle-ui")
