@@ -1,6 +1,6 @@
 {
   "name": "@miracle-ui/badge",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
