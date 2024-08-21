@@ -133,8 +133,9 @@
 
 .content.notActive {
   visibility: hidden;
-  opacity: 0;
   position: absolute;
+  display: none;
+  opacity: 0;
 }
 
 .tablist.solid {

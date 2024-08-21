@@ -39,11 +39,11 @@
     "chromatic": "node run-chromatic.js"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
-    "lerna": "^8.1.6",
+    "@miracle-ui/react": "^0.0.1",
     "@miracle-ui/ripple": "^0.0.1",
     "@miracle-ui/system": "^0.0.1",
-    "@miracle-ui/react": "^0.0.1"
+    "classnames": "^2.5.1",
+    "lerna": "^8.1.6"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
