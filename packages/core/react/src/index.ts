@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 export * from "@miracle-ui/accordion";
 export * from "@miracle-ui/avatar";
 export * from "@miracle-ui/badge";

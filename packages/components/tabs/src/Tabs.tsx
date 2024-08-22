@@ -51,6 +51,10 @@ export const Tabs = ({
   const indicator = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState(0);
 
+  if (variant === variants.underlined) {
+    disableShadow = true;
+  }
+
   const updateIndicator = useCallback(() => {
     if (!indicator.current || !tabsRef.current[activeTab]) return;
     const currentTab = tabsRef.current[activeTab];

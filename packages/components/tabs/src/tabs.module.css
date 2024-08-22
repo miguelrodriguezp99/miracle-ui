@@ -162,7 +162,7 @@
   }
 
   .title {
-    color: rgb(177, 177, 177);
+    color: var(--inactive-color);
   }
 
   .indicator {
@@ -173,10 +173,10 @@
 }
 
 .tablist.default.underlined {
-  --color: white;
+  --color: var(--active-color);
 
   & .indicator {
-    border-bottom: 2px solid white !important;
+    border-bottom: 2px solid var(--active-color) !important;
   }
 }
 
