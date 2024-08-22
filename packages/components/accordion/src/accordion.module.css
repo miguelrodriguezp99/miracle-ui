@@ -58,7 +58,7 @@
   gap: 3px;
   flex-direction: column;
   align-items: start;
-  color: white;
+  color: var(--text);
   transition: height 0.3s ease;
 }
 
@@ -67,7 +67,7 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
-  color: white;
+  color: var(--text);
 }
 
 .rotate {
@@ -83,7 +83,7 @@
 }
 
 .content {
-  color: white;
+  color: var(--text);
 }
 
 .textBlack {
