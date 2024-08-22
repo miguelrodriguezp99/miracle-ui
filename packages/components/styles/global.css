@@ -26,13 +26,23 @@
   --line-height-sm: 1.25rem;
   --line-height-md: 1.5rem;
   --line-height-lg: 1.75rem;
-  --text: hsl(210 5.56% 92.94%);
+  --text: #09090b;
+
+  --active-color: #09090b;
+  --inactive-color: #71717a;
+
+  scrollbar-width: auto;
+  scrollbar-color: #4b5563 #ffffff;
 }
 
-body.dark {
-  --text: hsl(0, 0%, 0%);
-}
+.dark {
+  scrollbar-width: auto;
+  scrollbar-color: #4b5563 #1a202c;
 
+  --active-color: white;
+  --inactive-color: #b1b1b1;
+  --text: #ecedee;
+}
 .default {
   --color: #424247;
   --color-2: #39393e;
