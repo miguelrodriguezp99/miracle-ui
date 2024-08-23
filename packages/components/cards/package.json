@@ -1,6 +1,6 @@
 {
   "name": "@miracle-ui/card",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
@@ -26,6 +26,7 @@
     "dev": "vite"
   },
   "dependencies": {
+    "@miracle-ui/button": "file:../button",
     "@miracle-ui/divider": "file:../divider",
     "@miracle-ui/ripple": "file:../../hooks/ripple",
     "@miracle-ui/system": "file:../../core/system",
