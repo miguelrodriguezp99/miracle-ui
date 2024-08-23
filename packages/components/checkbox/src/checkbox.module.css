@@ -2,7 +2,7 @@
   position: relative;
   font-size: inherit;
   cursor: pointer;
-  color: white;
+  color: var(--text);
   will-change: transform;
 }
 
@@ -36,7 +36,7 @@
   display: inline-block;
   top: 3px;
   margin-right: 5px;
-  border: 2px solid #ccc;
+  border: 2px solid var(--text);
   transition: 0.5s;
 }
 
@@ -136,8 +136,8 @@
   left: var(--left);
   width: var(--width);
   height: var(--height);
-  border-bottom: var(--border) solid #fff;
-  border-left: var(--border) solid #fff;
+  border-bottom: var(--border) solid var(--text);
+  border-left: var(--border) solid var(--text);
   transform: scale(0) rotate(-45deg);
   transition: 0.5s;
 }

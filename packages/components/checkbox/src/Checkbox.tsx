@@ -11,6 +11,7 @@ type Props = {
   color?: SemanticColorCheckbox;
   customColor?: string;
   textColor?: boolean;
+  textSize?: string;
   blackText?: boolean;
   size?: CheckboxSize;
   text?: string;
@@ -27,6 +28,7 @@ export const Checkbox = ({
   color = semanticColorsCheckbox.none,
   customColor,
   textColor,
+  textSize,
   blackText,
   radius = "sm",
   text = "Checkbox",
@@ -43,6 +45,7 @@ export const Checkbox = ({
   const checkboxStyles = {
     color:
       customColor && textColor ? customColor : textColor ? color : undefined,
+    fontSize: textSize,
   };
 
   const checkStyles = {

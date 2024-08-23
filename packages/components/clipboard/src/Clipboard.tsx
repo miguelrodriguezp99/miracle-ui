@@ -23,6 +23,7 @@ type Props = {
   customBackgroundColor?: string;
   customSymbol?: string;
   hideButton?: boolean;
+  fullWidth?: boolean;
 };
 
 const extractText = (children: ReactNode): string => {
@@ -55,6 +56,7 @@ export const Clipboard = ({
   customBackgroundColor,
   customSymbol,
   hideButton,
+  fullWidth,
 }: Props) => {
   const [copied, setCopied] = useState(false);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -89,6 +91,7 @@ export const Clipboard = ({
         fontSize: customTextSize,
         borderRadius: customBorderRadius,
         backgroundColor: customBackgroundColor,
+        width: fullWidth ? "100%" : "fit-content",
       }}
       className={classNames(
         styles.clipboard,
@@ -100,7 +103,14 @@ export const Clipboard = ({
       )}
     >
       <div className={styles.symbol}>{customSymbol ? customSymbol : "$"}</div>
-      <div className={styles.children}>{children}</div>
+      <div
+        style={{
+          flex: fullWidth ? 1 : "unset",
+        }}
+        className={styles.children}
+      >
+        {children}
+      </div>
       {!hideButton && (
         <div onClick={handleCopy}>
           <button ref={buttonRef} className={styles.button}>

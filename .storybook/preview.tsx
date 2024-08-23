@@ -3,6 +3,8 @@ import type { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import "../packages/components/styles/global.css";
 
+document.documentElement.classList.toggle("dark");
+
 const getStyles = ({ __sb }: any) => ({
   display: "flex",
   alignItems: __sb?.ai || "center",
