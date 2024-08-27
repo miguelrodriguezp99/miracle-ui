@@ -85,6 +85,7 @@ export const Checkbox = ({
       <span
         style={checkStyles}
         className={classNames(styles["input-check"], {
+          [styles[color]]: color,
           [styles[size]]: size,
           [styles[`radius-${radius}`]]: radius,
         })}

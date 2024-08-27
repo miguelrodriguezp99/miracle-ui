@@ -4,10 +4,12 @@
   cursor: pointer;
   color: var(--text);
   will-change: transform;
+  display: inline-flex;
+  align-items: center;
 }
 
 .text-color {
-  color: var(--color);
+  color: var(--color-1) !important;
 }
 
 .text-black {
@@ -34,14 +36,13 @@
 .input-check {
   position: relative;
   display: inline-block;
-  top: 3px;
+
   margin-right: 5px;
   border: 2px solid var(--text);
   transition: 0.5s;
 }
 
 .sm {
-  top: 3px;
   margin-right: 5px;
   width: 18px;
   height: 18px;
@@ -53,7 +54,6 @@
 }
 
 .md {
-  top: 4px;
   margin-right: 7px;
   width: 24px;
   height: 24px;
@@ -65,7 +65,6 @@
 }
 
 .lg {
-  top: 4px;
   margin-right: 10px;
   width: 32px;
   height: 32px;
@@ -140,6 +139,21 @@
   border-left: var(--border) solid var(--text);
   transform: scale(0) rotate(-45deg);
   transition: 0.5s;
+}
+
+.default.input-check::before {
+  border-bottom: var(--border) solid white !important;
+  border-left: var(--border) solid white !important;
+}
+
+.default.input-check::before,
+.primary.input-check::before,
+.secondary.input-check::before,
+.success.input-check::before,
+.warning.input-check::before,
+.danger.input-check::before {
+  border-bottom: var(--border) solid white !important;
+  border-left: var(--border) solid white !important;
 }
 
 label input:checked ~ .input-check::before {
