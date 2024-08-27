@@ -110,7 +110,7 @@
 }
 
 .button.default {
-  color: hsl(210 5.56% 92.94%);
+  color: var(--text);
 }
 
 .button:active {
