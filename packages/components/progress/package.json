@@ -1,6 +1,6 @@
 {
   "name": "@miracle-ui/progress",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
