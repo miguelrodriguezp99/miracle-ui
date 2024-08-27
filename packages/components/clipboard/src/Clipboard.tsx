@@ -122,13 +122,14 @@ export const Clipboard = ({
                 height="1em"
                 role="presentation"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 viewBox="0 0 24 24"
                 width="1em"
-                aria-copied={copied}
-                className={styles.copiedIcon}
+                className={classNames(styles.copiedIcon, {
+                  [styles.visible]: copied,
+                })}
               >
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
@@ -140,13 +141,14 @@ export const Clipboard = ({
                 height="1em"
                 role="presentation"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
                 viewBox="0 0 24 24"
                 width="1em"
-                aria-copied={copied}
-                className={styles.clipboardIcon}
+                className={classNames(styles.clipboardIcon, {
+                  [styles.visible]: !copied,
+                })}
               >
                 <path d="M16 17.1c0 3.5-1.4 4.9-4.9 4.9H6.9C3.4 22 2 20.6 2 17.1v-4.2C2 9.4 3.4 8 6.9 8h4.2c3.5 0 4.9 1.4 4.9 4.9Z"></path>
                 <path d="M8 8V6.9C8 3.4 9.4 2 12.9 2h4.2C20.6 2 22 3.4 22 6.9v4.2c0 3.5-1.4 4.9-4.9 4.9H16"></path>

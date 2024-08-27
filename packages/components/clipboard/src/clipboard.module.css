@@ -81,6 +81,11 @@
   color: white;
 }
 
+.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
