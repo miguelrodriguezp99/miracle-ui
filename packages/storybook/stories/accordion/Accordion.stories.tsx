@@ -263,7 +263,7 @@ export const Custom: Story = {
         initialOpenIndexes={[2, 3]}
       >
         <AccordionItem
-          title="Accordion 1"
+          title="Can Miracle UI be used with frameworks other than React?"
           backgroundColor="#990000"
           titleColor="white"
           contentColor="white"

@@ -75,7 +75,8 @@
 }
 
 .label {
-  color: rgb(196, 194, 194);
+  color: var(--text);
+  filter: brightness(0.8);
 }
 
 .label.textBlack {

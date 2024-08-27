@@ -4,7 +4,7 @@ import CardHeader from "./components/CardHeader";
 import CardBody from "./components/CardBody";
 import { Image } from "./Image";
 import { CardFooter } from "./components";
-import Button from "@miracle-ui/button/src/Button";
+import { Button } from "@miracle-ui/button";
 
 interface CardCoverAndFooterProps {
   title?: string;

@@ -2,8 +2,29 @@ import React from "react";
 import type { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import "../packages/components/styles/global.css";
+import "../packages/components/styles/storybook.css";
 
-document.documentElement.classList.toggle("dark");
+document.documentElement.classList.add("dark");
+
+const addGlobalStyles = () => {
+  const style = document.createElement("style");
+  style.innerHTML = `
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  `;
+  document.body.appendChild(style);
+};
+
+addGlobalStyles();
 
 const getStyles = ({ __sb }: any) => ({
   display: "flex",
@@ -16,7 +37,7 @@ const getStyles = ({ __sb }: any) => ({
   flexWrap: __sb?.fw || "wrap",
   height: "100vh",
   gap: "10px 30px",
-  backgroundColor: "transparent",
+
   fontFamily: "Roboto, sans-serif",
 });
 
@@ -28,7 +49,7 @@ const preview: Preview = {
       const styles = getStyles(context.parameters);
 
       return (
-        <div style={styles}>
+        <div style={styles} className="storybook-container">
           <Story
             {...context}
             args={{ ...context.args, isBlackBackground }}
@@ -40,6 +61,20 @@ const preview: Preview = {
   ],
 
   parameters: {
+    darkMode: {
+      dark: {
+        ...themes.dark,
+        appBg: "black",
+        darkClass: "dark",
+        classTarget: "html-class",
+      },
+      light: {
+        ...themes.normal,
+        appBg: "white",
+        lightClass: "light",
+        classTarget: "html-class",
+      },
+    },
     options: {
       storySort: {
         order: ["Foundations", "Components"],

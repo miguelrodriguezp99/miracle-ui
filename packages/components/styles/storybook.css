@@ -1,0 +1,19 @@
+body.sb-main-padded {
+  padding: 0 !important;
+}
+
+:root {
+  /* Storybook */
+  --background-color: white;
+}
+
+.dark {
+  /* Storybook */
+  --background-color: black;
+}
+
+/* STORYBOOK */
+
+.storybook-container {
+  background-color: var(--background-color);
+}
