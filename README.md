@@ -6,42 +6,19 @@
 
 ## Introduction
 
-Welcome to Miracle UI, a comprehensive library of ready-to-use React components. Designed for flexibility and ease of use, Miracle UI allows you to quickly integrate high-quality UI components into any React project.
+Miracle UI is a collection of components created for React with native CSS, meaning they don't rely on third-party libraries. This makes the components much lighter and faster.
 
-## Installation
+This project is created by a single person with learning objectives in mind. Anyone interested in using it is free to do so. The code is open source and available on GitHub.
 
-To install Miracle UI in your React project, simply run:
+Use Miracle UI components to create web applications and have fun!
 
-```
-npm i miracle-ui-react
-```
+## Getting Started
 
-## Usage
+Visit [Getting Started](https://miracle-ui.vercel.app/#/docs/introduction) to get started with Miracle UI. You can find detailed documentation on how to install and use our components.
 
-Once installed, you can start importing and using the components in your project:
+## Installing Components
 
-```
-import { Button, Card } from 'miracle-ui-react';
-
-function App() {
-  return (
-    <div>
-      <Card>
-        <h1>Welcome to Miracle UI</h1>
-        <Button>Click Me</Button>
-      </Card>
-    </div>
-  );
-}
-
-export default App;
-```
-
-## Landing Page
-
-We are also working on a comprehensive landing page where you can visually explore all the components Miracle UI offers. Stay tuned for updates!
-
-[Link to Landing Page](#)
+Visit [Components](https://miracle-ui.vercel.app/#/docs/installation) to learn how to install Miracle UI components in your project. You can choose between installing the entire library or individual components. You can also use our client library to install components directly from the command line.
 
 ## Storybook
 
@@ -59,22 +36,8 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any inquiries, please reach out to your-email@example.com.
+For any inquiries, please reach out to miguelrodriguez.p99@gmail.com
 
 ---
 
 Thank you for using Miracle UI! We hope our components make your development process faster and more enjoyable.
-
-npx lerna run rollup --scope=@miracle-ui/button
-npx lerna run rollup
-npx lerna version --no-private
-npx lerna publish --no-private
-node dist/cli.js init
-
-```
-
-```
-
-```
-
-```
