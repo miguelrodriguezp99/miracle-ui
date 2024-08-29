@@ -1,6 +1,6 @@
 {
   "name": "miracle-ui-cli",
-  "version": "0.0.17",
+  "version": "0.0.20",
   "main": "dist/cli.js",
   "bin": {
     "miracle-ui": "./dist/cli.js"
