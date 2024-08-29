@@ -17,7 +17,6 @@
   height: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: var(--blur);
 }
 
 .modalContent {
@@ -118,7 +117,7 @@
   }
 
   .modal.blur {
-    animation: blurFadeIn 0.35s;
+    animation: blurFadeIn 0.35s both;
   }
 
   .modalContent.blur {

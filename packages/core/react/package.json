@@ -37,7 +37,7 @@
     "@miracle-ui/divider": "^0.0.20",
     "@miracle-ui/dropdown": "^0.0.20",
     "@miracle-ui/input": "^0.0.20",
-    "@miracle-ui/modal": "^0.0.20",
+    "@miracle-ui/modal": "^0.0.21",
     "@miracle-ui/progress": "^0.0.20",
     "@miracle-ui/resizer": "^0.0.20",
     "@miracle-ui/skeleton": "^0.0.20",

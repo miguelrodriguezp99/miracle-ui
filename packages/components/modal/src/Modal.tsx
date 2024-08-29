@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./modal.module.css";
 import {
   backdrops,
@@ -37,6 +37,7 @@ export const Modal = ({
 }: ModalProps) => {
   const [internalOpen, setInternalOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
+  const backdropRef = useRef<HTMLDivElement>(null);
 
   const isOpen = value !== undefined ? value : internalOpen;
   const handleOpen = (boolean: boolean) => {
@@ -57,6 +58,16 @@ export const Modal = ({
       }, 350);
     }
   };
+
+  useEffect(() => {
+    if (backdrop === backdrops.blur && backdropRef.current) {
+      backdropRef.current.style.display = "none";
+      backdropRef.current.offsetHeight;
+      backdropRef.current.style.display = "";
+      backdropRef.current.classList.add(styles.blur);
+    }
+  }, [backdrop, isOpen]);
+
   const stopPropagation = (event: React.MouseEvent) => event.stopPropagation();
 
   const backdropStyle = {
@@ -66,7 +77,6 @@ export const Modal = ({
         : backdrop === backdrops.blur
           ? backgroundColor
           : "transparent",
-    backdropFilter: backdrop === backdrops.blur ? `blur(${blur}px)` : "",
   };
 
   if (!isOpen) return <>{React.cloneElement(button, { onClick: openModal })}</>;
@@ -83,14 +93,16 @@ export const Modal = ({
         })}
         style={{
           //@ts-expect-error - custom property
-          "--blur": blur,
+          "--blur": `${blur}px`,
         }}
         onClick={closeModal}
       >
         <div
-          className={styles.modalBackdrop} // Agregar esta capa
+          ref={backdropRef}
+          className={styles.modalBackdrop}
           style={backdropStyle}
         />
+
         <div
           style={{
             borderRadius: customBorderRadius,
@@ -124,5 +136,3 @@ export const Modal = ({
     </>
   );
 };
-
-export default Modal;
