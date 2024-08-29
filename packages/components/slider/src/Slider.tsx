@@ -27,7 +27,7 @@ type Props = {
 };
 
 export const Slider = ({
-  name,
+  name = "slider",
   isDisabled,
   label,
   blackText = false,
@@ -65,7 +65,7 @@ export const Slider = ({
     setValue(newValue);
   };
 
-  const { isDragging } = useSlider({ direction, updateValue });
+  const { isDragging } = useSlider({ direction, updateValue, name });
 
   const handleIncrement = () => {
     //@ts-expect-error types
@@ -168,6 +168,7 @@ export const Slider = ({
             </div>
           )}
           <div
+            id={name}
             className={classNames(styles.track, styles[size], {
               [styles.vertical]: direction === directions.vertical,
               [styles.horizontal]: direction === directions.horizontal,

@@ -1,44 +1,44 @@
 import { useCallback, useEffect, useState } from "react";
 import { directions, SliderDirection } from "./../constants";
 
-import styles from "./../slider.module.css";
-
 type Props = {
   direction: SliderDirection;
   value?: number;
   setValue?: (value: number) => void;
   updateValue: (value: number) => void;
+  name?: string;
 };
 
-const useSlider = ({ direction, updateValue }: Props) => {
+const useSlider = ({ direction, updateValue, name }: Props) => {
   const [isDragging, setIsDragging] = useState(false);
   const [touchIdentifier, setTouchIdentifier] = useState<number | null>(null);
 
   const updateValueFromEvent = useCallback(
     (event: MouseEvent | Touch) => {
-      const trackElement = document.querySelector(`.${styles.track}`);
+      const trackElement = document.getElementById(name || "slider");
       if (trackElement) {
         const { left, top, width, height } =
           trackElement.getBoundingClientRect();
         let newValue;
 
-        if (event instanceof MouseEvent) {
-          if (direction === directions.horizontal) {
-            newValue = (event.clientX - left) / width;
-          } else {
-            newValue = 1 - (event.clientY - top) / height;
-          }
+        if (direction === directions.horizontal) {
+          newValue =
+            (event instanceof MouseEvent ? event.clientX : event.clientX) -
+            left;
+          newValue /= width;
         } else {
-          if (direction === directions.horizontal) {
-            newValue = (event.clientX - left) / width;
-          } else {
-            newValue = 1 - (event.clientY - top) / height;
-          }
+          newValue =
+            1 -
+            (event instanceof MouseEvent
+              ? event.clientY
+              : event.clientY - top) /
+              height;
         }
+
         updateValue(newValue);
       }
     },
-    [direction, updateValue]
+    [direction, updateValue, name]
   );
 
   useEffect(() => {
@@ -74,33 +74,40 @@ const useSlider = ({ direction, updateValue }: Props) => {
       setTouchIdentifier(null);
     };
 
-    const handleMouseDown = () => {
-      setIsDragging(true);
+    const handleMouseDown = (e: MouseEvent) => {
+      const trackElement = document.getElementById(name || "track");
+      if (trackElement && trackElement.contains(e.target as Node)) {
+        setIsDragging(true);
+        updateValueFromEvent(e);
+      }
     };
 
     const handleTouchStart = (e: TouchEvent) => {
       const touch = e.changedTouches[0];
-      setTouchIdentifier(touch.identifier);
-      setIsDragging(true);
-      updateValueFromEvent(touch);
+      const trackElement = document.getElementById(name || "track");
+      if (trackElement && trackElement.contains(touch.target as Node)) {
+        setTouchIdentifier(touch.identifier);
+        setIsDragging(true);
+        updateValueFromEvent(touch);
+      }
     };
 
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
     window.addEventListener("touchmove", handleTouchMove);
     window.addEventListener("touchend", handleTouchEnd);
-    window.addEventListener("touchstart", handleTouchStart);
     window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("touchstart", handleTouchStart);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleTouchEnd);
-      window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("touchstart", handleTouchStart);
     };
-  }, [isDragging, touchIdentifier, updateValueFromEvent]);
+  }, [isDragging, touchIdentifier, updateValueFromEvent, name]);
 
   return { isDragging };
 };
