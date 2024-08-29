@@ -1,6 +1,6 @@
 {
   "name": "@miracle-ui/accordion",
-  "version": "0.0.20",
+  "version": "0.0.22",
   "description": "React UI library with Storybook",
   "main": "dist/cjs/index.js",
   "files": [
