@@ -12,6 +12,9 @@ This project is created by a single person with learning objectives in mind. Any
 
 Use Miracle UI components to create web applications and have fun!
 
+[Miracle UI](https://miracle-ui.vercel.app)
+[Miracle UI Storybook](https://main--66685fb204b9df24515e1b9b.chromatic.com)
+
 ## Getting Started
 
 Visit [Getting Started](https://miracle-ui.vercel.app/#/docs/introduction) to get started with Miracle UI. You can find detailed documentation on how to install and use our components.
