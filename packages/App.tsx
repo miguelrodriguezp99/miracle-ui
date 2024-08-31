@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./components/styles/global.css";
 import "./App.css";
-import { Button, Slider } from "./components";
-import { Modal } from "@components/modal/src";
+import {
+  Avatar,
+  Badge,
+  Card,
+  Checkbox,
+  CircularProgress,
+  Input,
+  Slider,
+} from "./components";
+import { Skeleton } from "@components/skeleton/src";
 
 function App() {
   useEffect(() => {
     document.body.classList.add("light");
   }, []);
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-
-  const buttonContainerStyle: React.CSSProperties = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    gap: "10px",
-  };
 
   return (
     <div
@@ -32,82 +30,66 @@ function App() {
         flexDirection: "row",
       }}
     >
+      <Input color="primary" />
+      <Checkbox color="primary" />
       <Slider color="primary" />
-      <div style={{ marginTop: "10px" }}>
-        <Modal
-          blur={10}
-          value={isOpen}
-          setValue={setIsOpen}
-          backdrop="blur"
-          button={
-            <Button radius="md" color="primary" onClick={() => setIsOpen(true)}>
-              Open Modal
-            </Button>
-          }
+      <CircularProgress color="primary" label="Mi label" />
+      <Badge badgeContent={2} customColor="blue">
+        <Avatar name="John Doe" customRadius="10px" size="sm" />
+      </Badge>
+      <Card cardWidth="sm" padding="md" customColor="#18181b">
+        <Skeleton borderRadius="10px">
+          <div
+            style={{
+              width: "100%",
+              height: "75px",
+              backgroundColor: "#27272a",
+              borderRadius: "10px",
+            }}
+          />
+        </Skeleton>
+
+        <div
+          style={{
+            marginTop: "10px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+          }}
         >
-          {({ closeModal }) => (
-            <>
-              <div className="flex flex-col gap-1">Modal Title</div>
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Praesentium, blanditiis ullam, explicabo voluptatem excepturi
-                  corporis labore dignissimos quibusdam dolore incidunt
-                  exercitationem at sed ab autem sapiente dolorum magnam
-                  mollitia aperiam fugiat minus, placeat nisi. A, pariatur
-                  neque, culpa iste molestiae, laborum omnis possimus ipsam
-                  nesciunt officiis assumenda provident consequuntur? Modi magni
-                  ducimus culpa veniam porro assumenda esse hic alias beatae,
-                  obcaecati quaerat laborum mollitia similique numquam nihil
-                  soluta error aliquid repellendus animi omnis, molestias,
-                  quisquam libero sed nisi? Temporibus eveniet earum eum quam
-                  iste laborum exercitationem totam autem sapiente, commodi
-                  praesentium consectetur nemo corrupti nesciunt aliquam
-                  laboriosam sequi nostrum possimus!
-                </p>
-              </div>
-              <div style={buttonContainerStyle}>
-                <Button onClick={closeModal} radius="sm" customColor="red">
-                  Close
-                </Button>
-                <Button radius="sm">Action</Button>
-              </div>
-            </>
-          )}
-        </Modal>
-      </div>
-      <div style={{ marginTop: "10px" }}>
-        <Modal
-          blur={10}
-          value={isOpen2}
-          setValue={setIsOpen2}
-          backdrop="blur"
-          button={
-            <Button
-              radius="md"
-              color="primary"
-              onClick={() => setIsOpen2(true)}
-            >
-              Open Modal
-            </Button>
-          }
-        >
-          {({ closeModal }) => (
-            <>
-              <div className="flex flex-col gap-1">Modal Title</div>
-              <div>
-                <p>aaaa</p>
-              </div>
-              <div style={buttonContainerStyle}>
-                <Button onClick={closeModal} radius="sm" customColor="red">
-                  Close
-                </Button>
-                <Button radius="sm">Action</Button>
-              </div>
-            </>
-          )}
-        </Modal>
-      </div>
+          <Skeleton borderRadius="10px" customWidth>
+            <div
+              style={{
+                width: "120px",
+                height: "12px",
+                backgroundColor: "#27272a",
+                borderRadius: "10px",
+              }}
+            />
+          </Skeleton>
+
+          <Skeleton borderRadius="10px" customWidth>
+            <div
+              style={{
+                width: "140px",
+                height: "12px",
+                backgroundColor: "#27272a",
+                borderRadius: "10px",
+              }}
+            />
+          </Skeleton>
+          <Skeleton borderRadius="10px" customWidth>
+            <div
+              style={{
+                width: "80px",
+                height: "12px",
+                backgroundColor: "#27272a",
+                borderRadius: "10px",
+              }}
+            />
+          </Skeleton>
+        </div>
+      </Card>
     </div>
   );
 }

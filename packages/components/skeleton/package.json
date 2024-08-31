@@ -26,7 +26,7 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@miracle-ui/avatar": "file:../avatar",
+    "@miracle-ui/card": "file:../card",
     "@miracle-ui/divider": "file:../divider",
     "@miracle-ui/system": "file:../../core/system",
     "classnames": "^2.5.1"
