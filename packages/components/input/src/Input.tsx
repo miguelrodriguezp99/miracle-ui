@@ -16,6 +16,7 @@ type Props = {
   color?: SemanticColor;
   backgroundColor?: string;
   textColor?: string;
+  textSize?: string;
   labelColor?: string;
   placeholderColor?: string;
   underlineColor?: string;
@@ -37,6 +38,7 @@ export const Input = ({
   color = semanticColors.default,
   backgroundColor,
   textColor,
+  textSize,
   labelColor,
   placeholderColor,
   underlineColor,
@@ -109,6 +111,7 @@ export const Input = ({
       <label
         style={{
           color: labelColor ? labelColor : textColor,
+          fontSize: textSize,
         }}
         htmlFor={name}
         className={classNames(styles.label, styles[`label-${size}`])}
