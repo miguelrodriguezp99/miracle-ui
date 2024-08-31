@@ -18,6 +18,8 @@ interface CardProps {
   isClickable?: boolean;
   isDraggable?: boolean;
   disabledRipple?: boolean;
+  disabledShadow?: boolean;
+  customShadow?: string;
 }
 
 export const Card = ({
@@ -32,13 +34,16 @@ export const Card = ({
   isClickable = false,
   isDraggable = false,
   disabledRipple = false,
+  disabledShadow,
+  customShadow,
 }: CardProps) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
 
   const cardStyles = {
-    ...(customColor && { backgroundColor: customColor }),
-    ...(customPadding && { padding: customPadding }),
-    ...(customTextColor && { color: customTextColor }),
+    backgroundColor: customColor,
+    padding: customPadding,
+    color: customTextColor,
+    boxShadow: customShadow,
   };
 
   useRippleEffect({
@@ -59,6 +64,7 @@ export const Card = ({
         [styles["is-draggable"]]: isDraggable,
         [styles["card-active"]]: isClickable || isDraggable,
         [styles[`width-${cardWidth}`]]: cardWidth,
+        [styles["shadow"]]: !disabledShadow,
       })}
     >
       {children}
