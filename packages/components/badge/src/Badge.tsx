@@ -20,6 +20,9 @@ type Props = {
   isCircular?: boolean;
   bordered?: boolean;
   customColor?: string;
+  customFontSize?: string;
+  customSize?: string;
+  customBorderRadius?: string;
 };
 
 export const Badge = ({
@@ -31,9 +34,16 @@ export const Badge = ({
   isCircular = false,
   badgeContent = "5",
   bordered = true,
+  customFontSize,
+  customSize,
+  customBorderRadius,
 }: Props) => {
   const badgeStyles = {
-    ...(customColor && { backgroundColor: customColor }),
+    backgroundColor: customColor,
+    fontSize: customFontSize,
+    width: customSize,
+    height: customSize,
+    borderRadius: customBorderRadius,
   };
   return (
     <div
