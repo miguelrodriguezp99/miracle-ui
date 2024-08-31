@@ -10,6 +10,8 @@ type Props = {
   size?: CircularProgressSizes;
   isDisabled?: boolean;
   label?: string;
+  labelColor?: string;
+  labelFontSize?: string;
 };
 
 export const CircularProgress = ({
@@ -18,6 +20,8 @@ export const CircularProgress = ({
   size = sizes.sm,
   isDisabled,
   label,
+  labelColor,
+  labelFontSize,
 }: Props) => {
   const content = (
     <div className={classNames(styles.progress)}>
@@ -76,7 +80,15 @@ export const CircularProgress = ({
       })}
     >
       {content}
-      <span className={styles["label"]}>{label}</span>
+      <span
+        style={{
+          color: labelColor,
+          fontSize: labelFontSize,
+        }}
+        className={styles["label"]}
+      >
+        {label}
+      </span>
     </div>
   ) : (
     content
