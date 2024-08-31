@@ -10,6 +10,7 @@ type Props = {
   avatar?: string;
   radius?: AvatarRadius;
   size?: AvatarSizes;
+  customRadius?: string;
   customSize?: string;
   customFontSize?: string;
   color?: SemanticColor;
@@ -22,6 +23,7 @@ export const Avatar = ({
   avatar,
   radius = radii.full,
   size = sizes.md,
+  customRadius,
   customSize,
   customFontSize,
   bordered = false,
@@ -65,6 +67,7 @@ export const Avatar = ({
   return (
     <div
       style={{
+        borderRadius: customRadius,
         width: customSize,
         height: customSize,
         fontSize: "4px",
