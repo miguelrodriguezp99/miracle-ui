@@ -1,22 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./components/styles/global.css";
 import "./App.css";
-import {
-  Avatar,
-  Badge,
-  Card,
-  Checkbox,
-  CircularProgress,
-  Input,
-  Slider,
-} from "./components";
-import { Skeleton } from "@components/skeleton/src";
+import { Checkbox } from "./components";
 
 function App() {
   useEffect(() => {
     document.body.classList.add("light");
   }, []);
 
+  const [isChecked, setIsChecked] = useState(false);
+
+  console.log(isChecked);
+
+  const customChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(event.target.checked);
+  };
   return (
     <div
       style={{
@@ -30,66 +28,19 @@ function App() {
         flexDirection: "row",
       }}
     >
-      <Input color="primary" />
+      <span
+        style={{
+          color: "black",
+        }}
+      >
+        {isChecked.toString()}
+      </span>
       <Checkbox color="primary" />
-      <Slider color="primary" />
-      <CircularProgress color="primary" label="Mi label" />
-      <Badge badgeContent={2} customColor="blue">
-        <Avatar name="John Doe" customRadius="10px" size="sm" />
-      </Badge>
-      <Card cardWidth="sm" padding="md" customColor="#18181b">
-        <Skeleton borderRadius="10px">
-          <div
-            style={{
-              width: "100%",
-              height: "75px",
-              backgroundColor: "#27272a",
-              borderRadius: "10px",
-            }}
-          />
-        </Skeleton>
-
-        <div
-          style={{
-            marginTop: "10px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          <Skeleton borderRadius="10px" customWidth>
-            <div
-              style={{
-                width: "120px",
-                height: "12px",
-                backgroundColor: "#27272a",
-                borderRadius: "10px",
-              }}
-            />
-          </Skeleton>
-
-          <Skeleton borderRadius="10px" customWidth>
-            <div
-              style={{
-                width: "140px",
-                height: "12px",
-                backgroundColor: "#27272a",
-                borderRadius: "10px",
-              }}
-            />
-          </Skeleton>
-          <Skeleton borderRadius="10px" customWidth>
-            <div
-              style={{
-                width: "80px",
-                height: "12px",
-                backgroundColor: "#27272a",
-                borderRadius: "10px",
-              }}
-            />
-          </Skeleton>
-        </div>
-      </Card>
+      <Checkbox
+        color="primary"
+        externalState={[isChecked, setIsChecked]}
+        customChange={customChange}
+      />
     </div>
   );
 }
