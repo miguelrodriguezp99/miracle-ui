@@ -114,7 +114,11 @@ export const Modal = ({
           onClick={stopPropagation}
         >
           {children({ closeModal })}
-          <button className={styles.closeButton} onClick={closeModal}>
+          <button
+            type="button"
+            className={styles.closeButton}
+            onClick={closeModal}
+          >
             <svg
               aria-hidden="true"
               fill="white"
