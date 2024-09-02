@@ -19,9 +19,10 @@ type Props = {
   isDisabled?: boolean;
   isChecked?: boolean;
   name?: string;
-  value?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValueChange?: (isSelected: boolean) => void;
+  customChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  externalState?: [boolean, React.Dispatch<React.SetStateAction<boolean>>]; // Estado externo opcional
 };
 
 export const Checkbox = ({
@@ -36,11 +37,16 @@ export const Checkbox = ({
   isDisabled = false,
   isChecked = false,
   name,
-  value,
   onChange,
   onValueChange,
+  customChange,
+  externalState,
 }: Props) => {
-  const [checked, setChecked] = useState(isChecked);
+  const [internalChecked, setInternalChecked] = useState(isChecked);
+  const [checked, setChecked] = externalState || [
+    internalChecked,
+    setInternalChecked,
+  ];
 
   const checkboxStyles = {
     color:
@@ -60,6 +66,10 @@ export const Checkbox = ({
     if (onValueChange) {
       onValueChange(event.target.checked);
     }
+    if (customChange) {
+      customChange(event);
+      return;
+    }
     setChecked(event.target.checked);
   };
 
@@ -78,9 +88,9 @@ export const Checkbox = ({
         className={styles["checkbox-input"]}
         type="checkbox"
         name={name}
-        value={value}
-        defaultChecked={isChecked}
+        checked={checked}
         onChange={handleChange}
+        disabled={isDisabled} // Asegúrate de que el checkbox respete la prop isDisabled
       />
       <span
         style={checkStyles}
