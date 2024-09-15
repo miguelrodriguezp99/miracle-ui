@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./components/styles/global.css";
 import "./App.css";
 import { Checkbox } from "./components";
@@ -8,13 +8,13 @@ function App() {
     document.body.classList.add("light");
   }, []);
 
-  const [isChecked, setIsChecked] = useState(false);
-
-  console.log(isChecked);
-
-  const customChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIsChecked(event.target.checked);
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget as HTMLFormElement);
+    const isChecked = formData.get("primary-checkbox") === "on";
+    console.log("Checkbox is checked:", isChecked);
   };
+
   return (
     <div
       style={{
@@ -28,19 +28,10 @@ function App() {
         flexDirection: "row",
       }}
     >
-      <span
-        style={{
-          color: "black",
-        }}
-      >
-        {isChecked.toString()}
-      </span>
-      <Checkbox color="primary" />
-      <Checkbox
-        color="primary"
-        externalState={[isChecked, setIsChecked]}
-        customChange={customChange}
-      />
+      <form onSubmit={handleSubmit}>
+        <Checkbox color="primary" name="primary-checkbox" />
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
